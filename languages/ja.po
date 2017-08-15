@@ -1,0 +1,386 @@
+# Copyright 2017 AnimaGate, Inc.
+msgid ""
+msgstr ""
+"Project-Id-Version: AnimaGate\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-05-11 +900\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.6\n"
+
+# -------------------------------------------------------
+# Post
+# -------------------------------------------------------
+msgid "Edit This Page"
+msgstr "このページを編集"
+
+msgid "Read More"
+msgstr "続きを読む"
+
+msgid "Add Hatena Bookmark"
+msgstr "はてなブックマークに追加"
+
+msgid "e.g."
+msgstr "例 "
+
+msgid "More Articles"
+msgstr "記事一覧を見る"
+
+msgid "published"
+msgstr "公開"
+
+msgid "edited"
+msgstr "編集"
+
+msgid "posts"
+msgstr "件"
+
+msgid "Page Not Found."
+msgstr "ページが見つかりませんでした。"
+
+msgid "Previous"
+msgstr "前のページ"
+
+msgid "Next"
+msgstr "次のページ"
+
+# ---------------------------------
+# functions.php
+# ---------------------------------
+msgid "F j, Y"
+msgstr "Y年n月j日"
+
+msgid "%1$s %2$d"
+msgstr ""
+
+msgid "%s year"
+msgstr "%s年"
+
+msgid "Comments are closed."
+msgstr "コメント欄は閉じられています。"
+
+# -------------------------------------------------------
+# Search
+# -------------------------------------------------------
+msgid "Search"
+msgstr "検索"
+
+msgid "Search Result"
+msgstr "検索結果"
+
+msgid "Search for"
+msgstr "探す"
+
+msgid "Input search word."
+msgstr "検索文字を入力"
+
+# ---------------------------------
+# content.php
+# ---------------------------------
+msgid "Previous page"
+msgstr "前のページ"
+
+msgid "Next page"
+msgstr "次のページ"
+
+# -------------------------------------------------------
+# Customizer
+# -------------------------------------------------------
+# ---------------------------------
+# Common
+# ---------------------------------
+msgid "Main Text"
+msgstr "メインテキスト"
+
+msgid "Sub Text"
+msgstr "サブテキスト"
+
+msgid "Button Text"
+msgstr "ボタンテキスト"
+
+msgid "Button link"
+msgstr "ボタンリンク"
+
+msgid "Button Color"
+msgstr "ボタンカラー"
+
+msgid "Background Color"
+msgstr "背景カラー"
+
+msgid "Upload Image"
+msgstr "画像をアップロード"
+
+msgid "Recentry Article"
+msgstr "最新の投稿"
+
+# ---------------------------------
+# Title_Tagline
+# ---------------------------------
+msgid "Main visual"
+msgstr "メインビジュアル"
+
+msgid "Top Page"
+msgstr "トップページ"
+
+msgid "Upload Logo Image"
+msgstr "ロゴ画像をアップロード"
+
+msgid "Display Site Title"
+msgstr "サイトタイトルを表示"
+
+msgid "Site Conents Width"
+msgstr "サイト コンテンツ幅"
+
+msgid "Site Font Size(Default 16px)"
+msgstr "サイト フォントサイズ(デフォルト:16px)"
+
+msgid "Main Text Color"
+msgstr "メイン テキストカラー"
+
+msgid "Sub Text Color"
+msgstr "サブ テキストカラー"
+
+msgid "Main Color"
+msgstr "メインカラー"
+
+msgid "Sub Color"
+msgstr "サブカラー"
+
+# ---------------------------------
+# Top
+# ---------------------------------
+msgid "Background Opacity(%)"
+msgstr "背景の透明度"
+
+msgid "Setting Front Page"
+msgstr "フロントページ設定"
+
+msgid "Section"
+msgstr "セクション"
+
+msgid "Disabled"
+msgstr "無効"
+
+msgid "Recentry Posts"
+msgstr "最新の投稿"
+
+msgid "Custom"
+msgstr "カスタム"
+
+msgid "Image"
+msgstr "画像"
+
+msgid "Text Align"
+msgstr "テキストの位置"
+
+msgid "Left"
+msgstr "左"
+
+msgid "Center"
+msgstr "中"
+
+msgid "Right"
+msgstr "右"
+
+msgid "Button Text Color"
+msgstr "ボタン テキストカラー"
+
+msgid "Button Link"
+msgstr "ボタンリンク"
+
+msgid "Button Link Color"
+msgstr "ボタン リンクカラー"
+
+msgid "Upload Video"
+msgstr "動画をアップロード"
+
+msgid "Sticky Badge Background Color"
+msgstr "固定記事 バッジ背景カラー"
+
+# ---------------------------------
+# Main Visual
+# ---------------------------------
+msgid "Elegance,Refined,Multifunctional"
+msgstr "優雅、上品、多機能。"
+
+msgid "Beautiful WordPress Theme the Nishiki."
+msgstr "美しいWordPressテーマ 錦(Nishiki)"
+
+msgid "Get started!"
+msgstr "さあ 始めよう！"
+
+# ---------------------------------
+# Post & Page
+# ---------------------------------
+msgid "Post"
+msgstr "投稿ページ"
+
+msgid "Page"
+msgstr "固定ページ"
+
+msgid "Sidebar"
+msgstr "サイドバー"
+
+msgid "Left Sidebar"
+msgstr "左 サイドバー"
+
+msgid "Right Sidebar"
+msgstr "右 サイドバー"
+
+msgid "Bottom Sidebar"
+msgstr "下 サイドバー"
+
+msgid "No Sidebar"
+msgstr "サイドバーなし"
+
+msgid "Sidebar Width"
+msgstr "サイドバーの幅"
+
+msgid "Sidebar Margin"
+msgstr "サイドバーのマージン"
+
+msgid "Title Background Color"
+msgstr "タイトル 背景カラー"
+
+msgid "Title Background Opacity(%)"
+msgstr "タイトル 背景カラー 透明度（%）"
+
+msgid "Display Category"
+msgstr "カテゴリーを表示"
+
+msgid "Display Tag"
+msgstr "タグを表示"
+
+msgid "Display Comment"
+msgstr "コメントを表示"
+
+msgid "Display Author"
+msgstr "著者を表示"
+
+msgid "Display Date"
+msgstr "日付を表示"
+
+msgid "Display Archive"
+msgstr "アーカイブを表示"
+
+msgid "Display Prev & Next Link"
+msgstr "前のページ＆次のページへのリンクを表示"
+
+msgid "Title Text Color"
+msgstr "タイトル テキストカラー"
+
+msgid "Comment Background Color"
+msgstr "コメント 背景カラー"
+
+msgid "Comment Text Color"
+msgstr "コメント テキストカラー"
+
+msgid "Text Color"
+msgstr "テキストカラー"
+
+msgid "Display Eye Catch"
+msgstr "アイキャッチを表示"
+
+msgid "Author Text"
+msgstr "著者テキスト"
+
+msgid "Author"
+msgstr "著者"
+
+msgid "Link Color"
+msgstr "リンクカラー"
+
+# ---------------------------------
+# Archive
+# ---------------------------------
+msgid "Archive Page"
+msgstr "アーカイブページ"
+
+msgid "Article Columns"
+msgstr "記事のカラム"
+
+msgid "Excerpt Text"
+msgstr "抜粋の文字"
+
+msgid "Excerpt Text Num"
+msgstr "抜粋の文字数"
+
+msgid "Column"
+msgstr "カラム"
+
+msgid "Columns"
+msgstr "カラム"
+
+# ---------------------------------
+# Header
+# ---------------------------------
+msgid "Header"
+msgstr "ヘッダー"
+
+msgid "Display Search Button"
+msgstr "検索ボタンを表示"
+
+# ---------------------------------
+# Header
+# ---------------------------------
+msgid "Fixed Header"
+msgstr "ヘッダーを固定する"
+
+# ---------------------------------
+# Header
+# ---------------------------------
+msgid "Header Color"
+msgstr "ヘッダーカラー"
+
+msgid "light"
+msgstr "ライト（明）"
+
+msgid "dark"
+msgstr "ダーク（暗）"
+
+# ---------------------------------
+# Footer
+# ---------------------------------
+msgid "Footer"
+msgstr "フッター"
+
+msgid "Copyright"
+msgstr "コピーライト"
+
+msgid "Open New Window"
+msgstr "新しいウィンドウで開く"
+
+# ---------------------------------
+# Comment
+# ---------------------------------
+msgid "Reply"
+msgstr "返信"
+
+msgid "Your comment is awaiting moderation."
+msgstr "コメントは承認待ちです。"
+
+msgid "Edit"
+msgstr "編集"
+
+msgid "%1$s at %2$s"
+msgstr ""
+
+msgid "%s Comment"
+msgstr "%s コメント"
+
+# ---------------------------------
+# Main Visual
+# ---------------------------------
+#~ msgid "Let's make beautiful website"
+#~ msgstr "美しいウェブサイトを作ろう"
+
+#, fuzzy
+#~ msgid "Input Search Word."
+#~ msgstr "検索文字を入力"
+
+#~ msgid "Original"
+#~ msgstr "オリジナル"
