@@ -1,7 +1,7 @@
 <?php
 // Section
 $wp_customize->add_section('section_archive',array(
-	'title'     =>  __( 'Archive Page', 'nishiki' ),
+	'title'     =>  __( 'Archive Pages', 'nishiki' ),
 	'priority'  =>  60,
 ));
 
@@ -56,7 +56,7 @@ $wp_customize->add_control(
 		$wp_customize,
 		'ctrl_archive_display_date',
 		array(
-			'label'       =>  __( 'Display Date', 'nishiki' ),
+			'label'       =>  __( 'Display Post Date', 'nishiki' ),
 			'section'     =>  'section_archive',
 			'type'        =>  'checkbox',
 			'settings'    =>  'setting_archive_display_date',

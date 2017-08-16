@@ -7,7 +7,7 @@
 						<?php
 						the_archive_title( '<h1>', '</h1>' );
 						?>
-						<div class="taxonomy-description"><?php esc_html_e( 'Search for', 'nishiki' ); ?>:<?php echo get_search_query(); ?></span></div>
+						<div class="taxonomy-description"><?php esc_html_e( 'Search results for', 'nishiki' ); ?>:<?php echo get_search_query(); ?></span></div>
 				</header>
 			<?php endif; ?>
 

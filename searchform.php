@@ -2,7 +2,7 @@
 	<form role="search" method="get" id="searchform" action="<?php echo esc_url(home_url('/')); ?>">
 		<div class="search_inner">
 			<div class="input">
-				<input type="text" value="" name="s" id="s" placeholder="<?php esc_attr_e( 'Input search word.', 'nishiki' ); ?>">
+				<input type="text" value="" name="s" id="s" placeholder="<?php esc_attr_e( 'Enter search word.', 'nishiki' ); ?>">
 			</div>
 			<div class="submit">
 				<button type="submit" id="searchsubmit"><?php esc_html_e( 'Search', 'nishiki' ); ?></button>
