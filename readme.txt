@@ -1,5 +1,5 @@
 === Nishiki ===
-Requires at least: WordPress 4.7
+Requires at least: WordPress 4.5
 Tested up to: WordPress 4.8
 Version: 0.1.0
 License: GPLv3
