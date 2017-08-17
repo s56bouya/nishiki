@@ -102,7 +102,7 @@ $wp_customize->add_control(
 // Main Visual Background Opacity
 $wp_customize->add_setting( 'setting_top_main_visual_background_opacity' , array(
 	'default'     => 30,
-	'transport'   => 'postMessage',
+	'transport'   => '',
 	'sanitize_callback' => 'sanitize_number_range',
 ) );
 

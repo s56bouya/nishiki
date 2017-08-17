@@ -131,7 +131,7 @@ if ( $ctrl_background_color ) {
 // Contents Width
 $wp_customize->add_setting( 'setting_site_contents_width' , array(
 	'default'     => 1200,
-	'transport'   => 'postMessage',
+	'transport'   => '',
 	'sanitize_callback' => 'sanitize_number_range',
 ) );
 
@@ -154,7 +154,7 @@ $wp_customize->add_control(
 // Font Size
 $wp_customize->add_setting( 'setting_site_font_size' , array(
 	'default'     => 16,
-	'transport'   => 'postMessage',
+	'transport'   => '',
 	'sanitize_callback' => 'sanitize_number_range',
 ) );
 

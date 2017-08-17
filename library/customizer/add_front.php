@@ -69,7 +69,7 @@ for ( $i = 1; $i < ( 1 + SECTION_NUM ); ++$i ) {
 	// Background Opacity
 	$wp_customize->add_setting( 'setting_front_page_background_opacity' . $i, array(
 		'default'     => 30,
-		'transport'   => 'postMessage',
+		'transport'   => '',
 		'sanitize_callback' => 'sanitize_number_range',
 	) );
 
