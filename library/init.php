@@ -62,7 +62,7 @@ load_theme_textdomain( 'nishiki', get_template_directory() . '/languages' );
 add_action( 'after_setup_theme', 'register_nav' );
 function register_nav() {
 	// Global Nav
-	register_nav_menu( 'global', 'Global Menu' );
+	register_nav_menu( 'global', __( 'Global Menu', 'nishiki' ) );
 }
 
 /*****************
