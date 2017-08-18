@@ -24,8 +24,10 @@ add_theme_support( 'post-thumbnails' );
 
 // Custom Header
 add_theme_support( 'custom-header', array(
-	'video' => true,
-	'width' => 1200,
+	'width'              => 1900,
+	'height'             => 480,
+	'flex-height'        => true,
+	'video'              => true,
 ) );
 
 // Feed Links

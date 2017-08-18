@@ -1,7 +1,13 @@
 <?php
 if( get_bloginfo( 'description' ) !== '' ){
 	$class = ( has_header_video() ) ? ' main_video' : '';
-	$style = ' style="background-image:url(' . esc_url_raw( get_theme_mod( 'setting_top_main_visual_image', get_template_directory_uri() . '/images/carp.jpg' ) ) . ');"';
+	if( has_header_image() ){
+		$image = get_header_image();
+	} elseif( get_theme_mod( 'setting_top_main_visual_image', get_template_directory_uri() . '/images/carp.jpg' ) !== '' ) {
+		$image = esc_url_raw( get_theme_mod( 'setting_top_main_visual_image', get_template_directory_uri() . '/images/carp.jpg' ) );
+	}
+
+	$style = ' style="background-image:url(' . $image . ');"';
 	echo '<div class="main_visual' . $class . '"' . $style . '><div class="mask bg_dotted"></div>';
 	echo '<div class="main_visual_content container">';
 	if( get_bloginfo( 'description' ) == 'Just another WordPress site' ){

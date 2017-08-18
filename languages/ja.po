@@ -114,7 +114,7 @@ msgstr "背景カラー"
 msgid "Upload Image"
 msgstr "画像をアップロード"
 
-msgid "Recentry Article"
+msgid "Recently Article"
 msgstr "最新の投稿"
 
 # ---------------------------------
@@ -165,7 +165,7 @@ msgstr "セクション"
 msgid "Disabled"
 msgstr "無効"
 
-msgid "Recentry Posts"
+msgid "Recently Posts"
 msgstr "最新の投稿"
 
 msgid "Custom"
