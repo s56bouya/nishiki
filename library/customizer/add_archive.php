@@ -128,7 +128,7 @@ $wp_customize->add_control(
 // Title Background Opacity
 $wp_customize->add_setting( 'setting_archive_title_background_opacity' , array(
 	'default'     => 100,
-	'transport'   => 'postMessage',
+	'transport'   => '',
 	'sanitize_callback' => 'sanitize_number_range',
 ) );
 
@@ -186,7 +186,7 @@ $wp_customize->add_control('ctrl_archive_excerpt_text',array(
 // Excerpt Text Num
 $wp_customize->add_setting( 'setting_archive_excerpt_text_num' , array(
 	'default'           => 50,
-	'transport'         => 'postMessage',
+	'transport'         => '',
 	'sanitize_callback' => 'sanitize_number_range',
 ) );
 

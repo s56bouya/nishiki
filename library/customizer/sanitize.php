@@ -71,7 +71,7 @@ function sanitize_choices_front_page_text_align( $input ) {
 // number
 function sanitize_number_range( $number, $setting ) {
 	$number = absint( $number );
-	$atts = $setting->manager->get_control( $setting->id )->input_attrs;
+	$atts = ( isset( $setting->manager->get_control( $setting->id )->input_attrs ) ? $setting->manager->get_control( $setting->id )->input_attrs : array() );
 	$min = ( isset( $atts['min'] ) ? $atts['min'] : $number );
 	$max = ( isset( $atts['max'] ) ? $atts['max'] : $number );
 	$step = ( isset( $atts['step'] ) ? $atts['step'] : 1 );

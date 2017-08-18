@@ -28,7 +28,7 @@ $wp_customize->add_control('ctrl_page_column',array(
 // Sidebar Width
 $wp_customize->add_setting( 'setting_page_sidebar_width' , array(
 	'default'     => 300,
-	'transport'   => 'postMessage',
+	'transport'   => '',
 	'sanitize_callback' => 'sanitize_number_range',
 ) );
 
@@ -51,7 +51,7 @@ $wp_customize->add_control(
 // Sidebar Margin
 $wp_customize->add_setting( 'setting_page_sidebar_margin' , array(
 	'default'     => 20,
-	'transport'   => 'postMessage',
+	'transport'   => '',
 	'sanitize_callback' => 'sanitize_number_range',
 ) );
 
@@ -94,7 +94,7 @@ $wp_customize->add_control(
 // Title Background Opacity
 $wp_customize->add_setting( 'setting_page_title_background_opacity' , array(
 	'default'     => 100,
-	'transport'   => 'postMessage',
+	'transport'   => '',
 	'sanitize_callback' => 'sanitize_number_range',
 ) );
 
