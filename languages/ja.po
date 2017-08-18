@@ -3,89 +3,129 @@ msgid ""
 msgstr ""
 "Project-Id-Version: AnimaGate\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-05-11 +900\n"
+"POT-Creation-Date: 2017-08-18 20:03+1200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
+"Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.6\n"
+"X-Generator: Poedit 2.0.3\n"
 
-# -------------------------------------------------------
-# Post
-# -------------------------------------------------------
-msgid "Edit This Page"
-msgstr "このページを編集"
-
-msgid "Read More"
-msgstr "続きを読む"
-
-msgid "Add Hatena Bookmark"
-msgstr "はてなブックマークに追加"
-
-msgid "e.g."
-msgstr "例 "
-
-msgid "More Articles"
-msgstr "記事一覧を見る"
-
-msgid "published"
-msgstr "公開"
-
-msgid "edited"
-msgstr "編集"
-
-msgid "posts"
-msgstr "件"
-
+#: 404.php:7 library/init.php:140
 msgid "Page Not Found."
 msgstr "ページが見つかりませんでした。"
 
+#: 404.php:11
+msgid "It looks like nothing was found at the location. Maybe try a search?"
+msgstr "お探しのページは見つかりませんでした。検索をお試しください。"
+
+#: comments.php:27
+#, php-format
+msgid "%1$s Comment"
+msgstr "%s 件のコメント"
+
+# ---------------------------------
+# Comment
+# ---------------------------------
+#: comments.php:43
+msgid "Reply"
+msgstr "返信"
+
+#: comments.php:51
 msgid "Previous"
 msgstr "前のページ"
 
+#: comments.php:52
 msgid "Next"
 msgstr "次のページ"
 
-# ---------------------------------
-# functions.php
-# ---------------------------------
-msgid "F j, Y"
-msgstr "Y年n月j日"
-
-msgid "%1$s %2$d"
-msgstr ""
-
-msgid "%s year"
-msgstr "%s年"
-
+#: comments.php:60
 msgid "Comments are closed."
 msgstr "コメント欄は閉じられています。"
 
-# -------------------------------------------------------
-# Search
-# -------------------------------------------------------
-msgid "Search"
-msgstr "検索"
+#: library/comment.php:18
+msgid "Your comment is awaiting moderation."
+msgstr "コメントは承認待ちです。"
 
-msgid "Search Result"
-msgstr "検索結果"
+#: library/comment.php:29
+#, php-format
+msgid "%1$s at %2$s"
+msgstr "%1$s %2$s"
 
-msgid "Search for"
-msgstr "探す"
-
-msgid "Input search word."
-msgstr "検索文字を入力"
+#: library/comment.php:32
+msgid "(Edit)"
+msgstr "(編集)"
 
 # ---------------------------------
-# content.php
+# Archive
 # ---------------------------------
-msgid "Previous page"
-msgstr "前のページ"
+#: library/customizer/add_archive.php:4
+msgid "Archive Pages"
+msgstr "アーカイブページ"
 
-msgid "Next page"
-msgstr "次のページ"
+#: library/customizer/add_archive.php:15
+msgid "Article Columns"
+msgstr "記事のカラム"
+
+#: library/customizer/add_archive.php:21
+msgid "1 Column"
+msgstr "1カラム"
+
+#: library/customizer/add_archive.php:22
+msgid "2 Columns"
+msgstr "2カラム"
+
+#: library/customizer/add_archive.php:23
+msgid "3 Columns"
+msgstr "3カラム"
+
+#: library/customizer/add_archive.php:39
+msgid "Display Author"
+msgstr "著者を表示"
+
+#: library/customizer/add_archive.php:59
+msgid "Display Post Date"
+msgstr "投稿の日付を表示"
+
+#: library/customizer/add_archive.php:79
+msgid "Display Archive"
+msgstr "アーカイブを表示"
+
+#: library/customizer/add_archive.php:99 library/customizer/add_post.php:188
+msgid "Display Comment"
+msgstr "コメントを表示"
+
+#: library/customizer/add_archive.php:119 library/customizer/add_page.php:85
+#: library/customizer/add_post.php:85
+msgid "Title Background Color"
+msgstr "タイトル 背景カラー"
+
+#: library/customizer/add_archive.php:140 library/customizer/add_page.php:106
+#: library/customizer/add_post.php:106
+msgid "Title Background Opacity(%)"
+msgstr "タイトル 背景カラー 透明度（%）"
+
+#: library/customizer/add_archive.php:162 library/customizer/add_page.php:128
+#: library/customizer/add_post.php:128
+msgid "Title Text Color"
+msgstr "タイトル テキストカラー"
+
+#: library/customizer/add_archive.php:178
+msgid "Excerpt Text"
+msgstr "抜粋の文字"
+
+#: library/customizer/add_archive.php:198
+msgid "Excerpt Text Num"
+msgstr "抜粋の文字数"
+
+# ---------------------------------
+# Footer
+# ---------------------------------
+#: library/customizer/add_footer.php:4
+msgid "Footer"
+msgstr "フッター"
 
 # -------------------------------------------------------
 # Customizer
@@ -93,284 +133,395 @@ msgstr "次のページ"
 # ---------------------------------
 # Common
 # ---------------------------------
+#: library/customizer/add_footer.php:10 library/customizer/add_footer.php:15
+#: library/customizer/add_front.php:111 library/customizer/add_front.php:116
+#: library/customizer/add_top.php:262 parts/footer/content.php:4
+#: parts/footer/content.php:5 parts/front/section.php:11
+#: parts/front/section.php:12
 msgid "Main Text"
 msgstr "メインテキスト"
 
-msgid "Sub Text"
-msgstr "サブテキスト"
+#: library/customizer/add_footer.php:33 library/customizer/add_front.php:164
+#: library/customizer/add_header.php:39 library/customizer/add_top.php:136
+#: library/customizer/add_top.php:205
+msgid "Text Color"
+msgstr "テキストカラー"
 
+#: library/customizer/add_footer.php:54
+msgid "Link Color"
+msgstr "リンクカラー"
+
+#: library/customizer/add_footer.php:66 library/customizer/add_footer.php:71
+#: library/customizer/add_front.php:174 library/customizer/add_front.php:179
+#: library/customizer/add_top.php:152 parts/footer/content.php:7
+#: parts/footer/content.php:9 parts/front/section.php:17
+#: parts/front/section.php:19
 msgid "Button Text"
 msgstr "ボタンテキスト"
 
+#: library/customizer/add_footer.php:85 library/customizer/add_top.php:166
 msgid "Button link"
 msgstr "ボタンリンク"
 
+#: library/customizer/add_footer.php:99 library/customizer/add_front.php:243
+#: library/customizer/add_top.php:221
+msgid "Open New Window"
+msgstr "新しいウィンドウで開く"
+
+#: library/customizer/add_footer.php:117 library/customizer/add_top.php:185
 msgid "Button Color"
 msgstr "ボタンカラー"
 
+#: library/customizer/add_footer.php:133
+msgid "Copyright"
+msgstr "コピーライト"
+
+#: library/customizer/add_footer.php:151 library/customizer/add_front.php:61
+#: library/customizer/add_header.php:19
+#: library/customizer/add_title_tagline.php:126
+#: library/customizer/add_top.php:93
 msgid "Background Color"
 msgstr "背景カラー"
 
-msgid "Upload Image"
-msgstr "画像をアップロード"
+#: library/customizer/add_front.php:4
+msgid "Setting Front Page"
+msgstr "フロントページ設定"
 
-msgid "Recently Article"
-msgstr "最新の投稿"
+#: library/customizer/add_front.php:21
+msgid "Section"
+msgstr "セクション"
 
-# ---------------------------------
-# Title_Tagline
-# ---------------------------------
-msgid "Main visual"
-msgstr "メインビジュアル"
+#: library/customizer/add_front.php:26
+msgid "Disabled"
+msgstr "無効"
 
-msgid "Top Page"
-msgstr "トップページ"
+#: library/customizer/add_front.php:28
+msgid "Custom"
+msgstr "カスタム"
 
-msgid "Upload Logo Image"
-msgstr "ロゴ画像をアップロード"
-
-msgid "Display Site Title"
-msgstr "サイトタイトルを表示"
-
-msgid "Site Conents Width"
-msgstr "サイト コンテンツ幅"
-
-msgid "Site Font Size(Default 16px)"
-msgstr "サイト フォントサイズ(デフォルト:16px)"
-
-msgid "Main Text Color"
-msgstr "メイン テキストカラー"
-
-msgid "Sub Text Color"
-msgstr "サブ テキストカラー"
-
-msgid "Main Color"
-msgstr "メインカラー"
-
-msgid "Sub Color"
-msgstr "サブカラー"
+#: library/customizer/add_front.php:43
+msgid "Image"
+msgstr "画像"
 
 # ---------------------------------
 # Top
 # ---------------------------------
+#: library/customizer/add_front.php:81 library/customizer/add_top.php:114
 msgid "Background Opacity(%)"
 msgstr "背景の透明度"
 
-msgid "Setting Front Page"
-msgstr "フロントページ設定"
+#: library/customizer/add_front.php:124 library/customizer/add_front.php:129
+#: library/customizer/add_top.php:57 library/customizer/add_top.php:270
+#: library/customizer/add_top.php:275 parts/archive/content.php:6
+#: parts/archive/content.php:7 parts/front/section.php:14
+#: parts/front/section.php:15
+msgid "Sub Text"
+msgstr "サブテキスト"
 
-msgid "Section"
-msgstr "セクション"
-
-msgid "Disabled"
-msgstr "無効"
-
-msgid "Recently Posts"
-msgstr "最新の投稿"
-
-msgid "Custom"
-msgstr "カスタム"
-
-msgid "Image"
-msgstr "画像"
-
+#: library/customizer/add_front.php:142
 msgid "Text Align"
 msgstr "テキストの位置"
 
+#: library/customizer/add_front.php:147
 msgid "Left"
 msgstr "左"
 
+#: library/customizer/add_front.php:148
 msgid "Center"
 msgstr "中"
 
+#: library/customizer/add_front.php:149
 msgid "Right"
 msgstr "右"
 
-msgid "Button Text Color"
-msgstr "ボタン テキストカラー"
-
+#: library/customizer/add_front.php:192
 msgid "Button Link"
 msgstr "ボタンリンク"
 
+#: library/customizer/add_front.php:209
+msgid "Button Text Color"
+msgstr "ボタン テキストカラー"
+
+#: library/customizer/add_front.php:228
 msgid "Button Link Color"
 msgstr "ボタン リンクカラー"
-
-msgid "Upload Video"
-msgstr "動画をアップロード"
-
-msgid "Sticky Badge Background Color"
-msgstr "固定記事 バッジ背景カラー"
-
-# ---------------------------------
-# Main Visual
-# ---------------------------------
-msgid "Elegance,Refined,Multifunctional"
-msgstr "優雅、上品、多機能。"
-
-msgid "Beautiful WordPress Theme the Nishiki."
-msgstr "美しいWordPressテーマ 錦(Nishiki)"
-
-msgid "Get started!"
-msgstr "さあ 始めよう！"
-
-# ---------------------------------
-# Post & Page
-# ---------------------------------
-msgid "Post"
-msgstr "投稿ページ"
-
-msgid "Page"
-msgstr "固定ページ"
-
-msgid "Sidebar"
-msgstr "サイドバー"
-
-msgid "Left Sidebar"
-msgstr "左 サイドバー"
-
-msgid "Right Sidebar"
-msgstr "右 サイドバー"
-
-msgid "Bottom Sidebar"
-msgstr "下 サイドバー"
-
-msgid "No Sidebar"
-msgstr "サイドバーなし"
-
-msgid "Sidebar Width"
-msgstr "サイドバーの幅"
-
-msgid "Sidebar Margin"
-msgstr "サイドバーのマージン"
-
-msgid "Title Background Color"
-msgstr "タイトル 背景カラー"
-
-msgid "Title Background Opacity(%)"
-msgstr "タイトル 背景カラー 透明度（%）"
-
-msgid "Display Category"
-msgstr "カテゴリーを表示"
-
-msgid "Display Tag"
-msgstr "タグを表示"
-
-msgid "Display Comment"
-msgstr "コメントを表示"
-
-msgid "Display Author"
-msgstr "著者を表示"
-
-msgid "Display Date"
-msgstr "日付を表示"
-
-msgid "Display Archive"
-msgstr "アーカイブを表示"
-
-msgid "Display Prev & Next Link"
-msgstr "前のページ＆次のページへのリンクを表示"
-
-msgid "Title Text Color"
-msgstr "タイトル テキストカラー"
-
-msgid "Comment Background Color"
-msgstr "コメント 背景カラー"
-
-msgid "Comment Text Color"
-msgstr "コメント テキストカラー"
-
-msgid "Text Color"
-msgstr "テキストカラー"
-
-msgid "Display Eye Catch"
-msgstr "アイキャッチを表示"
-
-msgid "Author Text"
-msgstr "著者テキスト"
-
-msgid "Author"
-msgstr "著者"
-
-msgid "Link Color"
-msgstr "リンクカラー"
-
-# ---------------------------------
-# Archive
-# ---------------------------------
-msgid "Archive Page"
-msgstr "アーカイブページ"
-
-msgid "Article Columns"
-msgstr "記事のカラム"
-
-msgid "Excerpt Text"
-msgstr "抜粋の文字"
-
-msgid "Excerpt Text Num"
-msgstr "抜粋の文字数"
-
-msgid "Column"
-msgstr "カラム"
-
-msgid "Columns"
-msgstr "カラム"
 
 # ---------------------------------
 # Header
 # ---------------------------------
+#: library/customizer/add_header.php:4
 msgid "Header"
 msgstr "ヘッダー"
 
+#: library/customizer/add_header.php:54
 msgid "Display Search Button"
 msgstr "検索ボタンを表示"
 
 # ---------------------------------
 # Header
 # ---------------------------------
+#: library/customizer/add_header.php:68
 msgid "Fixed Header"
 msgstr "ヘッダーを固定する"
 
 # ---------------------------------
 # Header
 # ---------------------------------
-msgid "Header Color"
-msgstr "ヘッダーカラー"
+#: library/customizer/add_header.php:82
+msgid "Fixed Header Color"
+msgstr "ヘッダーの色を固定する"
 
+#: library/customizer/add_header.php:88
 msgid "light"
 msgstr "ライト（明）"
 
+#: library/customizer/add_header.php:89
 msgid "dark"
 msgstr "ダーク（暗）"
 
+#: library/customizer/add_page.php:4
+msgid "Pages"
+msgstr "固定ページ"
+
+#: library/customizer/add_page.php:15 library/customizer/add_post.php:15
+#: library/init.php:190
+msgid "Sidebar"
+msgstr "サイドバー"
+
+#: library/customizer/add_page.php:21 library/customizer/add_post.php:21
+msgid "Left Sidebar"
+msgstr "左 サイドバー"
+
+#: library/customizer/add_page.php:22 library/customizer/add_post.php:22
+msgid "Right Sidebar"
+msgstr "右 サイドバー"
+
+#: library/customizer/add_page.php:23 library/customizer/add_post.php:23
+msgid "Bottom Sidebar"
+msgstr "下 サイドバー"
+
+#: library/customizer/add_page.php:24 library/customizer/add_post.php:24
+msgid "No Sidebar"
+msgstr "サイドバーなし"
+
+#: library/customizer/add_page.php:40 library/customizer/add_post.php:40
+msgid "Sidebar Width"
+msgstr "サイドバーの幅"
+
+#: library/customizer/add_page.php:63 library/customizer/add_post.php:63
+msgid "Sidebar Margin"
+msgstr "サイドバーのマージン"
+
+#: library/customizer/add_page.php:144 library/customizer/add_post.php:224
+msgid "Display Eye Catch"
+msgstr "アイキャッチを表示"
+
 # ---------------------------------
-# Footer
+# Post & Page
 # ---------------------------------
-msgid "Footer"
-msgstr "フッター"
+#: library/customizer/add_post.php:4
+msgid "Posts"
+msgstr "投稿ページ"
 
-msgid "Copyright"
-msgstr "コピーライト"
+#: library/customizer/add_post.php:148
+msgid "Display Category"
+msgstr "カテゴリーを表示"
 
-msgid "Open New Window"
-msgstr "新しいウィンドウで開く"
+#: library/customizer/add_post.php:168
+msgid "Display Tag"
+msgstr "タグを表示"
+
+#: library/customizer/add_post.php:208
+msgid "Display Prev & Next Link"
+msgstr "前のページ＆次のページへのリンクを表示"
+
+#: library/customizer/add_post.php:233 parts/singular/content.php:60
+#: parts/singular/content.php:61
+msgid "Author"
+msgstr "著者"
+
+#: library/customizer/add_post.php:238
+msgid "Author Text Label"
+msgstr "著者のテキストラベル"
+
+#: library/customizer/add_title_tagline.php:15
+msgid "Upload your Logo Image"
+msgstr "ロゴ画像をアップロード"
+
+#: library/customizer/add_title_tagline.php:34
+msgid "Display Site Title"
+msgstr "サイトタイトルを表示"
+
+#: library/customizer/add_title_tagline.php:54
+msgid "Main Text Color"
+msgstr "メイン テキストカラー"
+
+#: library/customizer/add_title_tagline.php:74
+msgid "Sub Text Color"
+msgstr "サブ テキストカラー"
+
+#: library/customizer/add_title_tagline.php:94
+msgid "Main Color"
+msgstr "メインカラー"
+
+#: library/customizer/add_title_tagline.php:114
+msgid "Sub Color"
+msgstr "サブカラー"
+
+#: library/customizer/add_title_tagline.php:143
+msgid "Site Conents Width"
+msgstr "サイト コンテンツ幅"
+
+#: library/customizer/add_title_tagline.php:166
+msgid "Site Font Size(Default 16px)"
+msgstr "サイト フォントサイズ(デフォルト:16px)"
+
+#: library/customizer/add_top.php:4
+msgid "Top Page"
+msgstr "トップページ"
+
+#: library/customizer/add_top.php:18
+msgid "Upload a Video"
+msgstr "動画をアップロード"
 
 # ---------------------------------
-# Comment
+# Title_Tagline
 # ---------------------------------
-msgid "Reply"
-msgstr "返信"
+#: library/customizer/add_top.php:39
+msgid "Main visual"
+msgstr "メインビジュアル"
 
-msgid "Your comment is awaiting moderation."
-msgstr "コメントは承認待ちです。"
+#: library/customizer/add_top.php:52
+msgid "Beautiful WordPress Theme Nishiki."
+msgstr "美しい WordPress テーマ 錦 (Nishiki)"
 
-msgid "Edit"
+#: library/customizer/add_top.php:74
+msgid "Upload an Image"
+msgstr "画像をアップロード"
+
+#: library/customizer/add_top.php:147 parts/front/main_visual.php:22
+#: parts/front/main_visual.php:23
+msgid "Get started!"
+msgstr "さあ 始めよう！"
+
+#: library/customizer/add_top.php:231 library/customizer/add_top.php:246
+#: library/customizer/add_top.php:257 parts/archive/content.php:2
+#: parts/archive/content.php:4
+msgid "Recent Articles"
+msgstr "最新の投稿"
+
+#: library/customizer/add_top.php:293
+msgid "Sticky Badge Background Color"
+msgstr "固定記事 バッジ背景カラー"
+
+#: library/init.php:136
+msgid "posts"
+msgstr "件"
+
+#: library/init.php:169
+#, php-format
+msgid "%1$s %2$d"
+msgstr "%1$s %2$d"
+
+#: library/init.php:171
+#, php-format
+msgid "%s year"
+msgstr "%s年"
+
+#: library/init.php:173
+msgid "Search Result"
+msgstr "検索結果"
+
+# ---------------------------------
+# content.php
+# ---------------------------------
+#: parts/archive/content.php:26
+msgid "Previous page"
+msgstr "前のページ"
+
+#: parts/archive/content.php:27
+msgid "Next page"
+msgstr "次のページ"
+
+#: parts/archive/post.php:14
+msgid "Read More"
+msgstr "続きを読む"
+
+# ---------------------------------
+# Main Visual
+# ---------------------------------
+#: parts/front/main_visual.php:14
+msgid "Elegance,Refined,Multifunctional"
+msgstr "優雅、上品、多機能。"
+
+#: parts/front/main_visual.php:19 parts/front/main_visual.php:20
+msgid "Beautiful WordPress Theme the Nishiki."
+msgstr "美しいWordPressテーマ 錦(Nishiki)"
+
+#: parts/singular/content.php:17
+msgid "published"
+msgstr "公開"
+
+#: parts/singular/content.php:19
+msgid "edited"
 msgstr "編集"
 
-msgid "%1$s at %2$s"
-msgstr ""
+# -------------------------------------------------------
+# Post
+# -------------------------------------------------------
+#: parts/singular/content.php:86
+msgid "Edit This Page"
+msgstr "このページを編集"
 
-msgid "%s Comment"
-msgstr "%s コメント"
+#: search.php:10
+msgid "Search results for"
+msgstr "検索結果"
+
+#: searchform.php:5
+#, fuzzy
+#| msgid "Input search word."
+msgid "Enter search word."
+msgstr "検索文字を入力"
+
+# -------------------------------------------------------
+# Search
+# -------------------------------------------------------
+#: searchform.php:8
+msgid "Search"
+msgstr "検索"
+
+#~ msgid "Add Hatena Bookmark"
+#~ msgstr "はてなブックマークに追加"
+
+#~ msgid "e.g."
+#~ msgstr "例 "
+
+#~ msgid "More Articles"
+#~ msgstr "記事一覧を見る"
+
+# ---------------------------------
+# functions.php
+# ---------------------------------
+#~ msgid "F j, Y"
+#~ msgstr "Y年n月j日"
+
+#~ msgid "Search for"
+#~ msgstr "探す"
+
+#~ msgid "Recently Posts"
+#~ msgstr "最新の投稿"
+
+#~ msgid "Comment Background Color"
+#~ msgstr "コメント 背景カラー"
+
+#~ msgid "Comment Text Color"
+#~ msgstr "コメント テキストカラー"
+
+# ---------------------------------
+# Header
+# ---------------------------------
+#~ msgid "Header Color"
+#~ msgstr "ヘッダーカラー"
 
 # ---------------------------------
 # Main Visual
