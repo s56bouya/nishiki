@@ -114,7 +114,7 @@ msgstr ""
 msgid "Upload Image"
 msgstr ""
 
-msgid "Recentry Article"
+msgid "Recently Article"
 msgstr ""
 
 #---------------------------------
@@ -165,7 +165,7 @@ msgstr ""
 msgid "Disabled"
 msgstr ""
 
-msgid "Recentry Posts"
+msgid "Recently Posts"
 msgstr ""
 
 msgid "Custom"

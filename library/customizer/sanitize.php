@@ -52,7 +52,7 @@ function sanitize_choices_fixed_header_color( $input ) {
 
 // Section
 function sanitize_choices_front_page_section( $input ) {
-	$valid = array( 'disabled', 'recentry', 'custom' );
+	$valid = array( 'disabled', 'recently', 'custom' );
 	if ( in_array( $input, $valid, true ) ) {
 		return $input;
 	}

@@ -1,10 +1,10 @@
 <div class="archives">
-	<?php	if( is_front_page() && get_theme_mod( 'setting_top_recentry_article_main_text', __( 'Recentry Article', 'nishiki' ) ) ) { ?>
+	<?php	if( is_front_page() && get_theme_mod( 'setting_top_recently_article_main_text', __( 'Recently Article', 'nishiki' ) ) ) { ?>
 			<div class="title">
-				<h1><?php echo esc_html( get_theme_mod( 'setting_top_recentry_article_main_text', __( 'Recentry Article', 'nishiki' ) ) ); ?></h1>
+				<h1><?php echo esc_html( get_theme_mod( 'setting_top_recently_article_main_text', __( 'Recently Article', 'nishiki' ) ) ); ?></h1>
 				<?php
-				if( get_theme_mod( 'setting_top_recentry_article_sub_text', __( 'Sub Text', 'nishiki' ) ) ){
-					echo '<span class="sub_text">' . esc_html( get_theme_mod( 'setting_top_recentry_article_sub_text', __( 'Sub Text', 'nishiki' ) ) ) . '</span>';
+				if( get_theme_mod( 'setting_top_recently_article_sub_text', __( 'Sub Text', 'nishiki' ) ) ){
+					echo '<span class="sub_text">' . esc_html( get_theme_mod( 'setting_top_recently_article_sub_text', __( 'Sub Text', 'nishiki' ) ) ) . '</span>';
 				}
 				?>
 			</div>

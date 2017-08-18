@@ -72,7 +72,7 @@ $wp_customize->add_control('ctrl_header_fixed',array(
 	'priority'      =>  2002,
 ));
 
-// Header Hixed Color
+// Fixed Header Color
 $wp_customize->add_setting('setting_header_fixed_color',array(
 	'default'           =>  'dark',
 	'sanitize_callback' =>  'sanitize_choices_fixed_header_color',

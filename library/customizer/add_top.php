@@ -226,14 +226,14 @@ $wp_customize->add_control('ctrl_top_main_visual_main_button_link_target',array(
 ));
 
 
-// recentry article
-$wp_customize->add_section('section_top_recentry_article',array(
-	'title'     =>  __( 'Recentry Article', 'nishiki' ),
+// recently article
+$wp_customize->add_section('section_top_recently_article',array(
+	'title'     =>  __( 'Recently Article', 'nishiki' ),
 	'priority'  =>  10,
 	'panel'     =>  'panel_top',
 ));
 
-$wp_customize->add_setting('setting_top_recentry_article_display',array(
+$wp_customize->add_setting('setting_top_recently_article_display',array(
 	'default' => true,
 	'sanitize_callback' => 'sanitize_checkbox',
 ));
@@ -241,46 +241,46 @@ $wp_customize->add_setting('setting_top_recentry_article_display',array(
 $wp_customize->add_control(
 	new WP_Customize_Control(
 		$wp_customize,
-		'ctrl_recentry_article_display',
+		'ctrl_recently_article_display',
 		array(
-			'label'      => __( 'Recentry Article', 'nishiki' ),
+			'label'      => __( 'Recently Article', 'nishiki' ),
 			'type'       => 'checkbox',
-			'section'    => 'section_top_recentry_article',
-			'settings'   => 'setting_top_recentry_article_display',
+			'section'    => 'section_top_recently_article',
+			'settings'   => 'setting_top_recently_article_display',
 			'priority'=> 10,
 		)
 	)
 );
 
 // main text
-$wp_customize->add_setting('setting_top_recentry_article_main_text',array(
-	'default'   =>  __( 'Recentry Article', 'nishiki' ),
+$wp_customize->add_setting('setting_top_recently_article_main_text',array(
+	'default'   =>  __( 'Recently Article', 'nishiki' ),
 	'sanitize_callback' => 'wp_filter_nohtml_kses',
 ));
 
-$wp_customize->add_control('contrl_top_recentry_article_main_text',array(
+$wp_customize->add_control('contrl_top_recently_article_main_text',array(
 	'label'     =>  __( 'Main Text', 'nishiki' ),
 	'type'      =>  'text',
-	'section'   =>  'section_top_recentry_article',
-	'settings'  =>  'setting_top_recentry_article_main_text',
+	'section'   =>  'section_top_recently_article',
+	'settings'  =>  'setting_top_recently_article_main_text',
 ));
 
 // sub text
-$wp_customize->add_setting('setting_top_recentry_article_sub_text',array(
+$wp_customize->add_setting('setting_top_recently_article_sub_text',array(
 	'default'   =>  __( 'Sub Text', 'nishiki' ),
 	'sanitize_callback' => 'wp_filter_nohtml_kses',
 ));
 
-$wp_customize->add_control('contrl_top_recentry_article_sub_text',array(
+$wp_customize->add_control('contrl_top_recently_article_sub_text',array(
 	'label'     =>  __( 'Sub Text', 'nishiki' ),
 	'type'      =>  'text',
-	'section'   =>  'section_top_recentry_article',
-	'settings'  =>  'setting_top_recentry_article_sub_text',
+	'section'   =>  'section_top_recently_article',
+	'settings'  =>  'setting_top_recently_article_sub_text',
 ));
 
 
 // Sticky Post Background Color
-$wp_customize->add_setting('setting_top_recentry_article_sticky_background_color',array(
+$wp_customize->add_setting('setting_top_recently_article_sticky_background_color',array(
 	'default' => '#557c4c',
 	'sanitize_callback' => 'sanitize_hex_color',
 ));
@@ -288,12 +288,12 @@ $wp_customize->add_setting('setting_top_recentry_article_sticky_background_color
 $wp_customize->add_control(
 	new WP_Customize_Color_Control(
 		$wp_customize,
-		'ctrl_top_recentry_article_sticky_background_color',
+		'ctrl_top_recently_article_sticky_background_color',
 		array(
 			'label'      => __( 'Sticky Badge Background Color', 'nishiki' ),
-			'section'    => 'section_top_recentry_article',
+			'section'    => 'section_top_recently_article',
 			'transport'   => 'postMessage',
-			'settings'   => 'setting_top_recentry_article_sticky_background_color',
+			'settings'   => 'setting_top_recently_article_sticky_background_color',
 			'priority'=> 1030,
 		)
 	)

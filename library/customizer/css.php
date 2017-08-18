@@ -77,8 +77,8 @@ function customizer_css(){
 	 ******************/
 
 	// Recently Post background color
-	$top_recentry_article_sticky_background_color = get_theme_mod( 'setting_top_recentry_article_sticky_background_color', '#557c4c' );
-	$output .= ".articles article.sticky::before{border-color:{$top_recentry_article_sticky_background_color} transparent transparent transparent;}";
+	$top_recently_article_sticky_background_color = get_theme_mod( 'setting_top_recently_article_sticky_background_color', '#557c4c' );
+	$output .= ".articles article.sticky::before{border-color:{$top_recently_article_sticky_background_color} transparent transparent transparent;}";
 
 	/*****************
 	 * Front

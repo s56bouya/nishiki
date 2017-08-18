@@ -24,7 +24,7 @@ for ( $i = 1; $i < ( 1 + SECTION_NUM ); ++$i ) {
 		'type'              =>  'select',
 		'choices'           =>  array(
 			'disabled'         =>  __( 'Disabled', 'nishiki' ),
-//			'recentry'        =>  __( 'Recentry Posts', 'nishiki' ),
+//			'recently'        =>  __( 'Recently Posts', 'nishiki' ),
 			'custom'        =>  __( 'Custom', 'nishiki' ),
 		),
 	));
