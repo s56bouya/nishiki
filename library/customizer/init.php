@@ -56,5 +56,5 @@ function nishiki_panel_count() {
 // Customizer Controll JS
 add_action( 'customize_controls_enqueue_scripts', 'nishiki_panels_js' );
 function nishiki_panels_js() {
-	wp_enqueue_script( 'nishiki-customize-controls', get_theme_file_uri( '/js/customize-controls.js' ), array(), '1.0', true );
+	wp_enqueue_script( 'nishiki-customize-controls', get_template_directory_uri() . '/js/customize-controls.js', array(), '1.0', true );
 }
