@@ -1,7 +1,7 @@
 <?php
 // Section
 $wp_customize->add_section('section_post',array(
-	'title'     =>  __( 'Post', 'nishiki' ),
+	'title'     =>  __( 'Posts', 'nishiki' ),
 	'priority'  =>  40,
 ));
 
@@ -235,7 +235,7 @@ $wp_customize->add_setting('setting_footer_author_text',array(
 ));
 
 $wp_customize->add_control('ctrl_footer_author_text',array(
-	'label'       =>  __( 'Author Text', 'nishiki' ),
+	'label'       =>  __( 'Author Text Label', 'nishiki' ),
 	'type'        =>  'text',
 	'section'     =>  'section_post',
 	'settings'    =>  'setting_footer_author_text',
