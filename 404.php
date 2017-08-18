@@ -8,7 +8,7 @@
 			</div>
 		</header>
 		<div class="container">
-			<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try a search?', 'nishiki' ); ?></p>
+			<p><?php esc_html_e( 'It looks like nothing was found at the location. Maybe try a search?', 'nishiki' ); ?></p>
 			<?php get_search_form(); ?>
 		</div>
 	</main>

@@ -12,7 +12,7 @@ $wp_customize->add_control(
 		$wp_customize,
 		'ctrl_site_logo',
 		array(
-			'label'       =>  __( 'Upload Logo Image', 'nishiki' ),
+			'label'       =>  __( 'Upload your Logo Image', 'nishiki' ),
 			'section'     =>  'title_tagline',
 			'settings'    =>  'setting_site_logo',
 			'priority'    =>  1,

@@ -15,7 +15,7 @@ if ( $ctrl_static_front_page ) {
 // Header Video
 $ctrl_header_video = $wp_customize->get_control('header_video');
 if ( $ctrl_header_video ) {
-	$ctrl_header_video->label = __( 'Upload Video', 'nishiki' );
+	$ctrl_header_video->label = __( 'Upload a Video', 'nishiki' );
 	$ctrl_header_video->section = 'section_top_main_visual';
 	$ctrl_header_video->priority = 3000;
 }
@@ -49,7 +49,7 @@ if ( $ctrl_blogdescription ) {
 
 // Sub text
 $wp_customize->add_setting('setting_top_main_visual_sub_text',array(
-	'default'   =>  __( 'Beautiful WordPress Theme the Nishiki.', 'nishiki' ),
+	'default'   =>  __( 'Beautiful WordPress Theme Nishiki.', 'nishiki' ),
 	'sanitize_callback' => 'wp_filter_nohtml_kses',
 ));
 
@@ -71,7 +71,7 @@ $wp_customize->add_control(
 		$wp_customize,
 		'ctrl_top_main_visual_image',
 		array(
-			'label'      => __( 'Upload Image', 'nishiki' ),
+			'label'      => __( 'Upload an Image', 'nishiki' ),
 			'section'    => 'section_top_main_visual',
 			'settings'   => 'setting_top_main_visual_image',
 			'priority'=> 1,
