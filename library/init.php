@@ -49,6 +49,17 @@ function nishiki_is_static_front_page() {
 }
 
 /*****************
+ * Check function exists
+ *****************/
+
+// Check has_header_video()
+if( ! function_exists( 'has_header_video' ) ){
+	function has_header_video(){
+		return false;
+	}
+}
+
+/*****************
  * Translate
  *****************/
 
