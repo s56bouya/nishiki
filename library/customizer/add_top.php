@@ -226,9 +226,9 @@ $wp_customize->add_control('ctrl_top_main_visual_main_button_link_target',array(
 ));
 
 
-// recently article
+// recent articles
 $wp_customize->add_section('section_top_recently_article',array(
-	'title'     =>  __( 'Recently Article', 'nishiki' ),
+	'title'     =>  __( 'Recent Articles', 'nishiki' ),
 	'priority'  =>  10,
 	'panel'     =>  'panel_top',
 ));
@@ -243,7 +243,7 @@ $wp_customize->add_control(
 		$wp_customize,
 		'ctrl_recently_article_display',
 		array(
-			'label'      => __( 'Recently Article', 'nishiki' ),
+			'label'      => __( 'Recent Articles', 'nishiki' ),
 			'type'       => 'checkbox',
 			'section'    => 'section_top_recently_article',
 			'settings'   => 'setting_top_recently_article_display',
@@ -254,7 +254,7 @@ $wp_customize->add_control(
 
 // main text
 $wp_customize->add_setting('setting_top_recently_article_main_text',array(
-	'default'   =>  __( 'Recently Article', 'nishiki' ),
+	'default'   =>  __( 'Recent Articles', 'nishiki' ),
 	'sanitize_callback' => 'wp_filter_nohtml_kses',
 ));
 

@@ -1,7 +1,7 @@
 <?php
 // Section
 $wp_customize->add_section('section_page',array(
-	'title'     =>  __( 'Page', 'nishiki' ),
+	'title'     =>  __( 'Pages', 'nishiki' ),
 	'priority'  =>  50,
 ));
 
