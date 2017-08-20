@@ -14,9 +14,9 @@ if( has_post_thumbnail() ){
 		<?php the_title( '<h1>', '</h1>' ); ?>
 		<?php if( is_single() && !is_attachment() ){ ?>
 		<div class="date">
-			<time datetime="<?php echo esc_attr( get_the_time('Y-m-d') ); ?>"><?php esc_html_e( 'published', 'nishiki' ); ?>:<?php the_time('Y/m/d') ?></time>
+			<time datetime="<?php echo esc_attr( get_the_time('Y-m-d') ); ?>"><?php esc_html_e( 'published', 'nishiki' ); ?>:<?php the_time( get_option( 'date_format' ) ) ?></time>
 			<?php if( get_the_time('Y-m-d') < get_the_modified_time('Y-m-d') ){ ?>
-				<time datetime="<?php echo esc_attr( get_the_modified_time('c') ); ?>"><?php esc_html_e( 'edited', 'nishiki' ); ?>:<?php the_modified_date('Y/m/d') ?></time>
+				<time datetime="<?php echo esc_attr( get_the_modified_time('c') ); ?>"><?php esc_html_e( 'edited', 'nishiki' ); ?>:<?php the_modified_date( get_option( 'date_format' ) ) ?></time>
 			<?php } ?>
 		</div>
 		<?php
