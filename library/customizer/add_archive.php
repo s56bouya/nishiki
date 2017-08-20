@@ -8,7 +8,7 @@ $wp_customize->add_section('section_archive',array(
 // Article Columns
 $wp_customize->add_setting('setting_archive_article_columns',array(
 	'default'           =>  3,
-	'sanitize_callback' =>  'sanitize_choices_columns',
+	'sanitize_callback' =>  'nishiki_sanitize_choices_columns',
 ));
 
 $wp_customize->add_control('ctrl_archive_article_columns',array(
@@ -28,7 +28,7 @@ $wp_customize->add_control('ctrl_archive_article_columns',array(
 // Display Author
 $wp_customize->add_setting('setting_archive_display_author', array(
 	'default' => true,
-	'sanitize_callback' => 'sanitize_checkbox',
+	'sanitize_callback' => 'nishiki_sanitize_checkbox',
 ));
 
 $wp_customize->add_control(
@@ -48,7 +48,7 @@ $wp_customize->add_control(
 // Display Date
 $wp_customize->add_setting('setting_archive_display_date', array(
 	'default' => true,
-	'sanitize_callback' => 'sanitize_checkbox',
+	'sanitize_callback' => 'nishiki_sanitize_checkbox',
 ));
 
 $wp_customize->add_control(
@@ -68,7 +68,7 @@ $wp_customize->add_control(
 // Display Category
 $wp_customize->add_setting('setting_archive_display_archive', array(
 	'default' => true,
-	'sanitize_callback' => 'sanitize_checkbox',
+	'sanitize_callback' => 'nishiki_sanitize_checkbox',
 ));
 
 $wp_customize->add_control(
@@ -88,7 +88,7 @@ $wp_customize->add_control(
 // Display Comment
 $wp_customize->add_setting('setting_archive_display_comment', array(
 	'default' => true,
-	'sanitize_callback' => 'sanitize_checkbox',
+	'sanitize_callback' => 'nishiki_sanitize_checkbox',
 ));
 
 $wp_customize->add_control(
@@ -129,7 +129,7 @@ $wp_customize->add_control(
 $wp_customize->add_setting( 'setting_archive_title_background_opacity' , array(
 	'default'     => 100,
 	'transport'   => '',
-	'sanitize_callback' => 'sanitize_number_range',
+	'sanitize_callback' => 'nishiki_sanitize_number_range',
 ) );
 
 $wp_customize->add_control(
@@ -187,7 +187,7 @@ $wp_customize->add_control('ctrl_archive_excerpt_text',array(
 $wp_customize->add_setting( 'setting_archive_excerpt_text_num' , array(
 	'default'           => 50,
 	'transport'         => '',
-	'sanitize_callback' => 'sanitize_number_range',
+	'sanitize_callback' => 'nishiki_sanitize_number_range',
 ) );
 
 $wp_customize->add_control(

@@ -47,7 +47,7 @@ $wp_customize->add_control(
 // Display Search Button
 $wp_customize->add_setting('setting_header_search_button',array(
 	'default' => true,
-	'sanitize_callback' => 'sanitize_checkbox',
+	'sanitize_callback' => 'nishiki_sanitize_checkbox',
 ));
 
 $wp_customize->add_control('ctrl_header_search_button',array(
@@ -61,7 +61,7 @@ $wp_customize->add_control('ctrl_header_search_button',array(
 // Header Fixed
 $wp_customize->add_setting('setting_header_fixed',array(
 	'default' => true,
-	'sanitize_callback' => 'sanitize_checkbox',
+	'sanitize_callback' => 'nishiki_sanitize_checkbox',
 ));
 
 $wp_customize->add_control('ctrl_header_fixed',array(
@@ -75,7 +75,7 @@ $wp_customize->add_control('ctrl_header_fixed',array(
 // Fixed Header Color
 $wp_customize->add_setting('setting_header_fixed_color',array(
 	'default'           =>  'dark',
-	'sanitize_callback' =>  'sanitize_choices_fixed_header_color',
+	'sanitize_callback' =>  'nishiki_sanitize_choices_fixed_header_color',
 ));
 
 $wp_customize->add_control('ctrl_header_fixed_color',array(

@@ -4,7 +4,7 @@
 // Upload Logo Image
 $wp_customize->add_setting('setting_site_logo',array(
 	'default' => '',
-	'sanitize_callback' => 'sanitize_image',
+	'sanitize_callback' => 'nishiki_sanitize_image',
 ));
 
 $wp_customize->add_control(
@@ -23,7 +23,7 @@ $wp_customize->add_control(
 // Display Site Title
 $wp_customize->add_setting('setting_site_display_title', array(
 	'default' => true,
-	'sanitize_callback' => 'sanitize_checkbox',
+	'sanitize_callback' => 'nishiki_sanitize_checkbox',
 ));
 
 $wp_customize->add_control(
@@ -132,7 +132,7 @@ if ( $ctrl_background_color ) {
 $wp_customize->add_setting( 'setting_site_contents_width' , array(
 	'default'     => 1200,
 	'transport'   => '',
-	'sanitize_callback' => 'sanitize_number_range',
+	'sanitize_callback' => 'nishiki_sanitize_number_range',
 ) );
 
 $wp_customize->add_control(
@@ -155,7 +155,7 @@ $wp_customize->add_control(
 $wp_customize->add_setting( 'setting_site_font_size' , array(
 	'default'     => 16,
 	'transport'   => '',
-	'sanitize_callback' => 'sanitize_number_range',
+	'sanitize_callback' => 'nishiki_sanitize_number_range',
 ) );
 
 $wp_customize->add_control(

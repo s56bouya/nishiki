@@ -84,8 +84,8 @@ function register_nav() {
 add_filter( 'use_default_gallery_style', '__return_false' );
 
 // Delete .recentcomments CSS
-add_action( 'widgets_init', 'my_remove_recent_comments_style' );
-function my_remove_recent_comments_style() {
+add_action( 'widgets_init', 'nishiki_remove_recent_comments_style' );
+function nishiki_remove_recent_comments_style() {
 	global $wp_widget_factory;
 	remove_action( 'wp_head', array( $wp_widget_factory->widgets['WP_Widget_Recent_Comments'], 'recent_comments_style' ) );
 }
@@ -95,8 +95,8 @@ function my_remove_recent_comments_style() {
  *****************/
 
 // Custom Editor Style
-add_action( 'admin_init', 'custom_editor_style' );
-function custom_editor_style() {
+add_action( 'admin_init', 'nishiki_custom_editor_style' );
+function nishiki_custom_editor_style() {
 	add_editor_style();
 }
 
@@ -105,8 +105,8 @@ function custom_editor_style() {
  *****************/
 
 // Excerpt
-add_filter('excerpt_length', 'home_excerpt_length', 999);
-function home_excerpt_length($excerpt) {
+add_filter('excerpt_length', 'nishiki_home_excerpt_length', 999);
+function nishiki_home_excerpt_length($excerpt) {
 	if( get_theme_mod( 'setting_archive_excerpt_text_num' ) ){
 		$excerpt = intval( get_theme_mod( 'setting_archive_excerpt_text_num' ) );
 	} else {
@@ -117,8 +117,8 @@ function home_excerpt_length($excerpt) {
 }
 
 // Excerpt More
-add_filter('excerpt_more', 'new_excerpt_more');
-function new_excerpt_more($more) {
+add_filter('excerpt_more', 'nishiki_new_excerpt_more');
+function nishiki_new_excerpt_more($more) {
 	if( get_theme_mod( 'setting_archive_excerpt_text' ) ){
 		$more = esc_html( get_theme_mod( 'setting_archive_excerpt_text' ) );
 	} else {
@@ -136,8 +136,8 @@ remove_filter('the_excerpt', 'wpautop');
  *****************/
 
 // Header Title
-add_filter( 'pre_get_document_title', 'header_title' );
-function header_title( $title ) {
+add_filter( 'pre_get_document_title', 'nishiki_header_title' );
+function nishiki_header_title( $title ) {
 	if ( is_author() ) {
 		$title = get_the_author_meta('display_name');
 	} elseif ( is_tag() ) {
@@ -157,15 +157,15 @@ function header_title( $title ) {
 }
 
 // Title Separator
-add_filter( 'document_title_separator', 'header_title_sep' );
-function header_title_sep( $sep ) {
+add_filter( 'document_title_separator', 'nishiki_header_title_sep' );
+function nishiki_header_title_sep( $sep ) {
 	$sep = '|';
 	return $sep;
 }
 
 // Archive Title
-add_filter( 'get_the_archive_title', 'change_archive_title' );
-function change_archive_title($title){
+add_filter( 'get_the_archive_title', 'nishiki_change_archive_title' );
+function nishiki_change_archive_title($title){
 	if( is_category() or is_tag() ) {
 		$title = single_cat_title( '', false );
 	} elseif( is_author() ) {
@@ -194,8 +194,8 @@ function change_archive_title($title){
  *****************/
 
 // Register Widget Area
-add_action( 'widgets_init', 'custom_widgets_init' );
-function custom_widgets_init() {
+add_action( 'widgets_init', 'nishiki_custom_widgets_init' );
+function nishiki_custom_widgets_init() {
 
 	register_sidebar( array(
 		'name'          => __( 'Sidebar', 'nishiki' ),
@@ -212,8 +212,8 @@ function custom_widgets_init() {
  *****************/
 
 // Custom Tag Cloud
-add_filter('widget_tag_cloud_args','custom_tag_cloud');
-function custom_tag_cloud( $args ) {
+add_filter('widget_tag_cloud_args','nishiki_custom_tag_cloud');
+function nishiki_custom_tag_cloud( $args ) {
 	$args['smallest'] = 11;
 	$args['largest'] = 11;
 	return $args;
@@ -224,8 +224,8 @@ function custom_tag_cloud( $args ) {
  *****************/
 
 // Embed Youtube & Vimeo Responsive
-add_filter( 'embed_oembed_html', 'add_oembed_class' );
-function add_oembed_class( $code ){
+add_filter( 'embed_oembed_html', 'nishiki_add_oembed_class' );
+function nishiki_add_oembed_class( $code ){
 	if( (stripos( $code, 'youtube' ) !== FALSE || strpos( $code, 'vimeo' ) ) && stripos( $code, 'iframe' ) !== FALSE )
 		$code = '<div class="embed_video">' . $code . '</div>';
 

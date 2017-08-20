@@ -14,7 +14,7 @@ for ( $i = 1; $i < ( 1 + SECTION_NUM ); ++$i ) {
 	$wp_customize->add_setting( 'setting_front_page_section' . $i, array(
 		'default'           =>  'disabled',
 //		'transport'         => 'postMessage',
-		'sanitize_callback' =>  'sanitize_choices_front_page_section',
+		'sanitize_callback' =>  'nishiki_sanitize_choices_front_page_section',
 	));
 
 	$wp_customize->add_control( 'ctrl_front_page_section' . $i, array(
@@ -32,7 +32,7 @@ for ( $i = 1; $i < ( 1 + SECTION_NUM ); ++$i ) {
 	// Upload Image
 	$wp_customize->add_setting( 'setting_front_page_image' . $i, array(
 		'default' => '',
-		'sanitize_callback' => 'sanitize_image',
+		'sanitize_callback' => 'nishiki_sanitize_image',
 	));
 
 	$wp_customize->add_control(
@@ -70,7 +70,7 @@ for ( $i = 1; $i < ( 1 + SECTION_NUM ); ++$i ) {
 	$wp_customize->add_setting( 'setting_front_page_background_opacity' . $i, array(
 		'default'     => 30,
 		'transport'   => '',
-		'sanitize_callback' => 'sanitize_number_range',
+		'sanitize_callback' => 'nishiki_sanitize_number_range',
 	) );
 
 	$wp_customize->add_control(
@@ -135,7 +135,7 @@ for ( $i = 1; $i < ( 1 + SECTION_NUM ); ++$i ) {
 	// Text align
 	$wp_customize->add_setting( 'setting_front_page_text_align' . $i, array(
 		'default'           =>  'left',
-		'sanitize_callback' =>  'sanitize_choices_front_page_text_align',
+		'sanitize_callback' =>  'nishiki_sanitize_choices_front_page_text_align',
 	));
 
 	$wp_customize->add_control( 'ctrl_front_page_text_align' . $i, array(
@@ -236,7 +236,7 @@ for ( $i = 1; $i < ( 1 + SECTION_NUM ); ++$i ) {
 	// Button Link Target
 	$wp_customize->add_setting('setting_front_page_button_link_target' . $i, array(
 		'default' => false,
-		'sanitize_callback' => 'sanitize_checkbox',
+		'sanitize_callback' => 'nishiki_sanitize_checkbox',
 	));
 
 	$wp_customize->add_control('ctrl_front_page_button_link_target' . $i, array(
@@ -245,6 +245,4 @@ for ( $i = 1; $i < ( 1 + SECTION_NUM ); ++$i ) {
 		'section'     =>  'section_front_page',
 		'settings'    =>  'setting_front_page_button_link_target' . $i,
 	));
-
-
 }

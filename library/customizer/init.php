@@ -4,8 +4,8 @@
 get_template_part( 'library/customizer/extend' );
 
 // Init Customizer
-add_action( "customize_register", "init_customizer" );
-function init_customizer( $wp_customize ) {
+add_action( "customize_register", "nishiki_init_customizer" );
+function nishiki_init_customizer( $wp_customize ) {
 	set_query_var( 'wp_customize', $wp_customize );
 
 	// Sanitize
