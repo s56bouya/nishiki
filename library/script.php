@@ -1,6 +1,6 @@
 <?php
-if ( !function_exists('read_scripts') ) :
-	function read_scripts() {
+if ( ! function_exists('nishiki_read_scripts') ) :
+	function nishiki_read_scripts() {
 
 		// Add Script
 		wp_enqueue_script('jquery');
@@ -13,8 +13,8 @@ if ( !function_exists('read_scripts') ) :
 		wp_register_style( 'google-material-icons', 'https://fonts.googleapis.com/icon?family=Material+Icons', array(), null, false );
 		wp_enqueue_style( 'google-material-icons' );
 		wp_enqueue_style( 'main-css' );
-		wp_add_inline_style( 'main-css', customizer_css() );
+		wp_add_inline_style( 'main-css', nishiki_customizer_css() );
 
 	}
-	add_action( 'wp_enqueue_scripts', 'read_scripts' );
+	add_action( 'wp_enqueue_scripts', 'nishiki_read_scripts' );
 endif;

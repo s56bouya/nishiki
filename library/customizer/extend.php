@@ -34,13 +34,13 @@ if( class_exists( 'WP_Customize_Control' ) ) {
 // Custom Background
 $background_args = array(
 	'default-color'     => '#ffffff',
-	'wp-head-callback'  => 'custom_background_cb',
+	'wp-head-callback'  => 'nishiki_custom_background_cb',
 );
 
 add_theme_support( "custom-background", $background_args );
 
 // custom background callback
-function custom_background_cb() {
+function nishiki_custom_background_cb() {
 	// $background is the saved custom image, or the default image.
 	$background = set_url_scheme( get_background_image() );
 
@@ -112,8 +112,8 @@ function custom_background_cb() {
 }
 
 // Remove Custom-background Class
-add_filter("body_class", "remove_custom_body_classes", 10, 2);
-function remove_custom_body_classes( $classes ){
+add_filter("body_class", "nishiki_remove_custom_body_classes", 10, 2);
+function nishiki_remove_custom_body_classes( $classes ){
 	foreach( $classes as &$str ){
 		if( strpos( $str, "custom-background" ) > -1 ){
 			$str = "";

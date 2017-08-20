@@ -63,7 +63,7 @@ $wp_customize->add_control('contrl_top_main_visual_sub_text',array(
 // image
 $wp_customize->add_setting('setting_top_main_visual_image',array(
 	'default' => get_template_directory_uri() . '/images/carp.jpg',
-	'sanitize_callback' => 'sanitize_image',
+	'sanitize_callback' => 'nishiki_sanitize_image',
 ));
 
 $wp_customize->add_control(
@@ -103,7 +103,7 @@ $wp_customize->add_control(
 $wp_customize->add_setting( 'setting_top_main_visual_background_opacity' , array(
 	'default'     => 30,
 	'transport'   => '',
-	'sanitize_callback' => 'sanitize_number_range',
+	'sanitize_callback' => 'nishiki_sanitize_number_range',
 ) );
 
 $wp_customize->add_control(
@@ -214,7 +214,7 @@ $wp_customize->add_control(
 // main button link target
 $wp_customize->add_setting('setting_top_main_visual_main_button_link_target',array(
 	'default' => false,
-	'sanitize_callback' => 'sanitize_checkbox',
+	'sanitize_callback' => 'nishiki_sanitize_checkbox',
 ));
 
 $wp_customize->add_control('ctrl_top_main_visual_main_button_link_target',array(
@@ -235,7 +235,7 @@ $wp_customize->add_section('section_top_recently_article',array(
 
 $wp_customize->add_setting('setting_top_recently_article_display',array(
 	'default' => true,
-	'sanitize_callback' => 'sanitize_checkbox',
+	'sanitize_callback' => 'nishiki_sanitize_checkbox',
 ));
 
 $wp_customize->add_control(

@@ -92,7 +92,7 @@ $wp_customize->add_control('ctrl_footer_main_button_link',array(
 // Main Button Link Target
 $wp_customize->add_setting('setting_footer_main_button_link_target',array(
 	'default' => false,
-	'sanitize_callback' => 'sanitize_checkbox',
+	'sanitize_callback' => 'nishiki_sanitize_checkbox',
 ));
 
 $wp_customize->add_control('ctrl_footer_main_button_link_target',array(

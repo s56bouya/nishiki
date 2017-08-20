@@ -1,6 +1,6 @@
 <?php
 // Add Costomizer CSS
-function customizer_css(){
+function nishiki_customizer_css(){
 	$bgcolor = get_background_color();
 	$output = '';
 
@@ -70,7 +70,7 @@ function customizer_css(){
 		html,button,input[type=submit]{font-size:{$site_font_size}px;}
 		";
 
-	$output .= custom_background_cb();
+	$output .= nishiki_custom_background_cb();
 
 	/*****************
 	 * Top

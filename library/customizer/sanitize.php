@@ -2,12 +2,12 @@
 
 // text
 //wp_filter_nohtml_kses
-function sanitize_text( $text ) {
+function nishiki_sanitize_text( $text ) {
 	return sanitize_text_field( $text );
 }
 
 // html
-function sanitize_footer_copyright() {
+function nishiki_sanitize_footer_copyright() {
 	$text = get_theme_mod( 'setting_footer_copyright' );
 	$allowed_html = array(
 		'a' => array( 'href' => array (), 'onclick' => array (), 'target' => array(), ),
@@ -19,12 +19,12 @@ function sanitize_footer_copyright() {
 }
 
 // Checkbox
-function sanitize_checkbox( $checked ) {
+function nishiki_sanitize_checkbox( $checked ) {
 	return ( ( isset( $checked ) && true == $checked ) ? true : false );
 }
 
 // Sidebar
-function sanitize_choices( $input ) {
+function nishiki_sanitize_choices( $input ) {
 	$valid = array( 'left', 'right', 'bottom', 'none' );
 	if ( in_array( $input, $valid, true ) ) {
 		return $input;
@@ -33,7 +33,7 @@ function sanitize_choices( $input ) {
 }
 
 // Columns
-function sanitize_choices_columns( $input ) {
+function nishiki_sanitize_choices_columns( $input ) {
 	$valid = array( '1', '2', '3' );
 	if ( in_array( $input, $valid, true ) ) {
 		return $input;
@@ -42,7 +42,7 @@ function sanitize_choices_columns( $input ) {
 }
 
 // Fixed Header Color
-function sanitize_choices_fixed_header_color( $input ) {
+function nishiki_sanitize_choices_fixed_header_color( $input ) {
 	$valid = array( 'light', 'dark' );
 	if ( in_array( $input, $valid, true ) ) {
 		return $input;
@@ -51,7 +51,7 @@ function sanitize_choices_fixed_header_color( $input ) {
 }
 
 // Section
-function sanitize_choices_front_page_section( $input ) {
+function nishiki_sanitize_choices_front_page_section( $input ) {
 	$valid = array( 'disabled', 'recently', 'custom' );
 	if ( in_array( $input, $valid, true ) ) {
 		return $input;
@@ -60,7 +60,7 @@ function sanitize_choices_front_page_section( $input ) {
 }
 
 // Text Align
-function sanitize_choices_front_page_text_align( $input ) {
+function nishiki_sanitize_choices_front_page_text_align( $input ) {
 	$valid = array( 'left', 'center', 'right' );
 	if ( in_array( $input, $valid, true ) ) {
 		return $input;
@@ -69,7 +69,7 @@ function sanitize_choices_front_page_text_align( $input ) {
 }
 
 // number
-function sanitize_number_range( $number, $setting ) {
+function nishiki_sanitize_number_range( $number, $setting ) {
 	$number = absint( $number );
 	$atts = ( isset( $setting->manager->get_control( $setting->id )->input_attrs ) ? $setting->manager->get_control( $setting->id )->input_attrs : array() );
 	$min = ( isset( $atts['min'] ) ? $atts['min'] : $number );
@@ -79,7 +79,7 @@ function sanitize_number_range( $number, $setting ) {
 }
 
 // file uploader
-function sanitize_image( $image, $setting ) {
+function nishiki_sanitize_image( $image, $setting ) {
 	$mimes = array(
 		'jpg|jpeg|jpe' => 'image/jpeg',
 		'gif'          => 'image/gif',

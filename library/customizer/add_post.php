@@ -8,7 +8,7 @@ $wp_customize->add_section('section_post',array(
 // Column
 $wp_customize->add_setting('setting_post_column',array(
 	'default'           =>  'none',
-	'sanitize_callback' =>  'sanitize_choices',
+	'sanitize_callback' =>  'nishiki_sanitize_choices',
 ));
 
 $wp_customize->add_control('ctrl_post_column',array(
@@ -29,7 +29,7 @@ $wp_customize->add_control('ctrl_post_column',array(
 $wp_customize->add_setting( 'setting_post_sidebar_width' , array(
 	'default'     => 300,
 	'transport'   => '',
-	'sanitize_callback' => 'sanitize_number_range',
+	'sanitize_callback' => 'nishiki_sanitize_number_range',
 ) );
 
 $wp_customize->add_control(
@@ -52,7 +52,7 @@ $wp_customize->add_control(
 $wp_customize->add_setting( 'setting_post_sidebar_margin' , array(
 	'default'     => 20,
 	'transport'   => '',
-	'sanitize_callback' => 'sanitize_number_range',
+	'sanitize_callback' => 'nishiki_sanitize_number_range',
 ) );
 
 $wp_customize->add_control(
@@ -95,7 +95,7 @@ $wp_customize->add_control(
 $wp_customize->add_setting( 'setting_post_title_background_opacity' , array(
 	'default'     => 100,
 	'transport'   => '',
-	'sanitize_callback' => 'sanitize_number_range',
+	'sanitize_callback' => 'nishiki_sanitize_number_range',
 ) );
 
 $wp_customize->add_control(
@@ -137,7 +137,7 @@ $wp_customize->add_control(
 // Title Display Category
 $wp_customize->add_setting('setting_post_display_category', array(
 	'default' => true,
-	'sanitize_callback' => 'sanitize_checkbox',
+	'sanitize_callback' => 'nishiki_sanitize_checkbox',
 ));
 
 $wp_customize->add_control(
@@ -157,7 +157,7 @@ $wp_customize->add_control(
 // Title Display Tag
 $wp_customize->add_setting('setting_post_display_tag', array(
 	'default' => true,
-	'sanitize_callback' => 'sanitize_checkbox',
+	'sanitize_callback' => 'nishiki_sanitize_checkbox',
 ));
 
 $wp_customize->add_control(
@@ -177,7 +177,7 @@ $wp_customize->add_control(
 // Title Display Comment
 $wp_customize->add_setting('setting_post_display_comment', array(
 	'default' => true,
-	'sanitize_callback' => 'sanitize_checkbox',
+	'sanitize_callback' => 'nishiki_sanitize_checkbox',
 ));
 
 $wp_customize->add_control(
@@ -197,7 +197,7 @@ $wp_customize->add_control(
 // Title Display Prev Next Link
 $wp_customize->add_setting('setting_post_display_prev_next_link', array(
 	'default' => true,
-	'sanitize_callback' => 'sanitize_checkbox',
+	'sanitize_callback' => 'nishiki_sanitize_checkbox',
 ));
 
 $wp_customize->add_control(
@@ -217,7 +217,7 @@ $wp_customize->add_control(
 // Display Eye Catch
 $wp_customize->add_setting('setting_post_eye_catch',array(
 	'default' => false,
-	'sanitize_callback' => 'sanitize_checkbox',
+	'sanitize_callback' => 'nishiki_sanitize_checkbox',
 ));
 
 $wp_customize->add_control('ctrl_post_eye_catch',array(
