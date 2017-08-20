@@ -5,7 +5,7 @@ if ( ! function_exists('nishiki_read_scripts') ) :
 		// Add Script
 		wp_enqueue_script('jquery');
 		if ( is_single() ) wp_enqueue_script( "comment-reply" );
-		wp_register_script( 'main-js', get_template_directory_uri() . '/main.js', array('jquery'), null, true );
+		wp_register_script( 'main-js', get_template_directory_uri() . '/js/main.js', array('jquery'), null, true );
 		wp_enqueue_script( 'main-js' );
 
 		// Add Style
