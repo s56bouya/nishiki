@@ -20,7 +20,22 @@ Nishiki is a fully responsive theme. Elegance,Refined,Multifunctional.
 3. Click on the 'Activate' button to use your new theme right away.
 4. Navigate to Appearance > Customize in your admin panel and customize to taste.
 
-Nishiki bundles the following third-party resources:
+== Copyright ==
+
+Nishiki WordPress Theme, Copyright 2017 AnimaGate, Inc.
+Nishiki is distributed under the terms of the GNU GPL
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+Nishiki WordPress Theme bundles the following third-party resources:
 
 Material icons
 License: Apache License Version 2.0
