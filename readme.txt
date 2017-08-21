@@ -1,7 +1,7 @@
 === Nishiki ===
 Requires at least: WordPress 4.5
 Tested up to: WordPress 4.8
-Version: 0.1.0
+Version: 0.1.1
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Tags: one-column, two-columns, right-sidebar, left-sidebar, flexible-header, accessibility-ready, custom-colors, custom-header, custom-menu, custom-logo, featured-images, footer-widgets, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, blog, entertainment
@@ -42,6 +42,14 @@ License: Apache License Version 2.0
 Source: https://material.io/icons/
 
 == Changelog ==
+
+= 0.1.1 =
+* Fix : has_header_video() undefined error in WordPress 4.5
+* Add : Theme copyright/license attribute readme.txt
+* Change : Date format
+* Remove : add_nav_menu.php
+* Change : Prefix all the function names
+* Change : Support WP 4.5+
 
 = 0.1.0 =
 * Initial release
