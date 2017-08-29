@@ -1,5 +1,5 @@
 /**
- * Generated on 2017/08/17
+ * Generated on 2017/08/29
  * Author: Tetsuya Imamura(s56bouya)
  */
 
@@ -2140,6 +2140,18 @@ i.material-icons {
     padding-top: 0.4rem;
   }
   .main_visual .main_visual_content .main_button {
+    font-size: 0.8rem;
+  }
+
+  .front-page-section .container .main_text {
+    font-size: 1.1rem;
+    margin-bottom: 0;
+  }
+  .front-page-section .container .sub_text {
+    font-size: 0.8rem;
+    padding-top: 0.4rem;
+  }
+  .front-page-section .container .main_button {
     font-size: 0.8rem;
   }
 
