@@ -43,6 +43,9 @@ Source: https://material.io/icons/
 
 == Changelog ==
 
+= 0.1.3 =
+* Fixed : Archive page column CSS
+
 = 0.1.2 =
 * Change : Theme URI style.css
 
