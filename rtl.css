@@ -1,5 +1,5 @@
 /**
- * Generated on 2017/08/29
+ * Generated on 2017/09/17
  * Author: Tetsuya Imamura(s56bouya)
  */
 
@@ -2003,6 +2003,13 @@ i.material-icons {
   .articles.column_2 article:nth-child(2n) {
     margin-left: 0;
   }
+  .articles.column_1 article {
+    -webkit-flex-basis: calc( 100% );
+    -ms-flex-preferred-size: calc( 100% );
+    flex-basis: calc( 100% );
+    width: calc( 100% );
+    margin-left: 0;
+  }
 }
 @media only screen and (max-width: 1000px) {
   #masthead .site_info {
@@ -2084,11 +2091,10 @@ i.material-icons {
 ***********************/
 @media only screen and (min-width: 1000px) {
   .articles.column_1 article {
-    -webkit-flex-basis: calc(100% - 1rem);
-    -ms-flex-preferred-size: calc(100% - 1rem);
-    flex-basis: calc(100% - 1rem);
-    width: calc(100% - 1rem);
-    margin-left: Infinityrem;
+    -webkit-flex-basis: calc(100%);
+    -ms-flex-preferred-size: calc(100%);
+    flex-basis: calc(100%);
+    width: calc(100%);
   }
   .articles.column_1 article:nth-child(1n) {
     margin-left: 0;
