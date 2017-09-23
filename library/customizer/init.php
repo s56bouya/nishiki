@@ -11,13 +11,11 @@ function nishiki_init_customizer( $wp_customize ) {
 	// Sanitize
 	get_template_part( 'library/customizer/sanitize' );
 
-	// Remove Control
-//	$wp_customize->remove_control("header_image");
-	$wp_customize->remove_control("display_header_text");
-	$wp_customize->remove_control("header_textcolor");
-
-	// Remove Section
-	$wp_customize->remove_section("background_image");
+	// Custom Section
+	$section_background_image = $wp_customize->get_section('background_image');
+	if ( $section_background_image ) {
+		$section_background_image->priority = 999999;
+	}
 
 	get_template_part( 'library/customizer/add_title_tagline' );
 	get_template_part( 'library/customizer/add_header' );
@@ -33,7 +31,7 @@ function nishiki_init_customizer( $wp_customize ) {
 get_template_part( 'library/customizer/css' );
 
 // Front Page Section
-define( 'SECTION_NUM', 4 );
+define( 'NISHIKI_SECTION_NUM', 4 );
 
 // Footer Credit
 define( 'CREDIT', 'Powered by WordPress. The Nishiki theme is Produced by <a target="_blank" href="https://www.animagate.com/">AnimaGate, Inc.</a>' );

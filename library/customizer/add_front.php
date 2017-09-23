@@ -8,7 +8,7 @@ $wp_customize->add_section('section_front_page', array(
 ));
 
 // Text
-for ( $i = 1; $i < ( 1 + SECTION_NUM ); ++$i ) {
+for ( $i = 1; $i < ( 1 + NISHIKI_SECTION_NUM ); ++$i ) {
 
 	// Add Section
 	$wp_customize->add_setting( 'setting_front_page_section' . $i, array(
@@ -109,7 +109,7 @@ for ( $i = 1; $i < ( 1 + SECTION_NUM ); ++$i ) {
 	// Main Text
 	$wp_customize->add_setting( 'setting_front_page_main_text' . $i, array(
 		'default'           => __( 'Main Text', 'nishiki' ),
-		'sanitize_callback' => 'wp_filter_nohtml_kses',
+		'sanitize_callback' => 'sanitize_text_field',
 	) );
 
 	$wp_customize->add_control( 'ctrl_front_page_main_text' . $i, array(
@@ -172,7 +172,7 @@ for ( $i = 1; $i < ( 1 + SECTION_NUM ); ++$i ) {
 	// Button Text
 	$wp_customize->add_setting( 'setting_front_page_button_text' . $i, array(
 		'default'           => __( 'Button Text', 'nishiki' ),
-		'sanitize_callback' => 'wp_filter_nohtml_kses',
+		'sanitize_callback' => 'sanitize_text_field',
 	) );
 
 	$wp_customize->add_control( 'ctrl_front_page_button_text' . $i, array(

@@ -128,9 +128,6 @@ function nishiki_new_excerpt_more($more) {
 	return $more;
 }
 
-// Delete Excerpt <p> Element
-remove_filter('the_excerpt', 'wpautop');
-
 /*****************
  * Title
  *****************/

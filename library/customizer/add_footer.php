@@ -8,7 +8,7 @@ $wp_customize->add_section('section_footer',array(
 // Main Text
 $wp_customize->add_setting('setting_footer_main_text',array(
 	'default' => __( 'Main Text', 'nishiki' ),
-	'sanitize_callback' => 'wp_filter_nohtml_kses',
+	'sanitize_callback' => 'sanitize_text_field',
 ));
 
 $wp_customize->add_control('ctrl_footer_main_text',array(
@@ -64,7 +64,7 @@ $wp_customize->add_control(
 // Main Button Text
 $wp_customize->add_setting('setting_footer_main_button_text',array(
 	'default' => __( 'Button Text', 'nishiki' ),
-	'sanitize_callback' => 'wp_filter_nohtml_kses',
+	'sanitize_callback' => 'sanitize_text_field',
 ));
 
 $wp_customize->add_control('ctrl_footer_main_button_text',array(

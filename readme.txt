@@ -4,7 +4,7 @@ Tested up to: WordPress 4.8
 Version: 0.1.3
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
-Tags: one-column, two-columns, right-sidebar, left-sidebar, flexible-header, accessibility-ready, custom-colors, custom-header, custom-menu, custom-logo, featured-images, footer-widgets, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, blog, entertainment
+Tags: one-column, two-columns, right-sidebar, left-sidebar, flexible-header, accessibility-ready, custom-colors, custom-header, custom-menu, custom-logo, featured-images, footer-widgets, post-formats, sticky-post, theme-options, threaded-comments, translation-ready, blog, entertainment
 
 == Description ==
 
@@ -34,6 +34,9 @@ This program is distributed in the hope that it will be useful,
 but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU General Public License for more details.
+
+screenshot.png used in the screenshot is taken by the theme author and is released under GPL.
+carp.jpg is taken by the theme author and is released under GPL.
 
 Nishiki WordPress Theme bundles the following third-party resources:
 

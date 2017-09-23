@@ -26,23 +26,12 @@ $wp_customize->add_control(
 );
 
 // Text Color
-$wp_customize->add_setting('setting_header_text_color',array(
-	'default' => '#000000',
-	'sanitize_callback' => 'wp_filter_nohtml_kses',
-));
-
-$wp_customize->add_control(
-	new WP_Customize_Color_Control(
-		$wp_customize,
-		'ctrl_header_text_color',
-		array(
-			'label'      => __( 'Text Color', 'nishiki' ),
-			'section'    => 'section_header',
-			'transport'   => 'postMessage',
-			'settings'   => 'setting_header_text_color',
-			'priority'=> 1002,
-		) )
-);
+$ctrl_header_textcolor = $wp_customize->get_control('header_textcolor');
+if ( $ctrl_header_textcolor ) {
+	$ctrl_header_textcolor->section = 'section_header';
+	$ctrl_header_textcolor->label = __( 'Text Color', 'nishiki' );
+	$ctrl_header_textcolor->priority = 1002;
+}
 
 // Display Search Button
 $wp_customize->add_setting('setting_header_search_button',array(

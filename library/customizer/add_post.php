@@ -231,7 +231,7 @@ $wp_customize->add_control('ctrl_post_eye_catch',array(
 // Author Text
 $wp_customize->add_setting('setting_footer_author_text',array(
 	'default' => __( 'Author', 'nishiki' ),
-	'sanitize_callback' => 'wp_filter_nohtml_kses',
+	'sanitize_callback' => 'sanitize_text_field',
 ));
 
 $wp_customize->add_control('ctrl_footer_author_text',array(

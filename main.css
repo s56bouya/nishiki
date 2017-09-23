@@ -1,5 +1,5 @@
 /**
- * Generated on 2017/09/17
+ * Generated on 2017/09/23
  * Author: Tetsuya Imamura(s56bouya)
  */
 
@@ -830,6 +830,7 @@ aside ul li, aside ol li {
   font-size: 0.8rem;
   margin-top: 0.4rem;
   letter-spacing: 0.05rem;
+  display: block;
 }
 .articles article footer i {
   margin-right: 0.15rem;

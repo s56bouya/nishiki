@@ -1,6 +1,4 @@
 <?php
-//global $wp_customize;
-
 // Upload Logo Image
 $wp_customize->add_setting('setting_site_logo',array(
 	'default' => '',
@@ -140,10 +138,10 @@ $wp_customize->add_control(
 		$wp_customize,
 		'ctrl_site_contents_width',
 		array(
-			'label'	=>  __( 'Site Conents Width', 'nishiki' ),
+			'label'	=>  __( 'Site Contents Width', 'nishiki' ),
 			'min' => 500,
 			'max' => 9000,
-			'step' => 10,
+			'step' => 1,
 			'section' => 'title_tagline',
 			'settings'   => 'setting_site_contents_width',
 		)

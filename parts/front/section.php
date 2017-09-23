@@ -1,5 +1,5 @@
 <?php
-	$section_count = SECTION_NUM;
+	$section_count = NISHIKI_SECTION_NUM;
 	for( $i = 1; $i <= $section_count; ++$i ){
 		if( get_theme_mod( 'setting_front_page_section' . $i, 'disabled' ) !== 'disabled' ){
 			$style = get_theme_mod( 'setting_front_page_image' . $i, false ) ? ' style="background-image:url(' . esc_url_raw( get_theme_mod( 'setting_front_page_image' . $i, false ) ) . ');"' : '';
