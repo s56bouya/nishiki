@@ -4,7 +4,7 @@
 	<meta http-equiv="Content-Type" content="text/html">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
-	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=2, user-scalable=1 initial-scale=1" />
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=2, user-scalable=1, initial-scale=1" />
 	<?php if( !is_home() ){ ?>
 		<link rel="prerender" href="<?php echo esc_url( home_url() ); ?>">
 	<?php } ?>
