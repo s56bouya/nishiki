@@ -7,7 +7,7 @@ if( has_post_thumbnail() ){
   	}
 }
 ?>
-<header<?php echo $nishiki_header_class; ?> class="<?php echo esc_attr( get_post_type() ); ?>">
+<header<?php echo wp_kses_post( $nishiki_header_class ); ?> class="<?php echo esc_attr( get_post_type() ); ?>">
 	<div class="mask"></div>
 	<div class="page_header container">
 		<?php the_title( '<h1>', '</h1>' ); ?>
@@ -29,7 +29,7 @@ if( has_post_thumbnail() ){
 					}
 					$output = trim( $output, $separator );
 				}
-				echo '<span class="cat"><i class="material-icons">folder</i>' . $output . '</span>';
+				echo '<span class="cat"><i class="material-icons">folder</i>' . wp_kses_post( $output ) . '</span>';
 			}
 			if( get_theme_mod( 'setting_post_display_tag', true ) && get_the_tags() ){
 				echo '<span class="tag">' . the_tags( '<i class="material-icons">local_offer</i>','/' ) . '</span>';

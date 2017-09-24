@@ -1,6 +1,6 @@
 <?php
 if( get_bloginfo( 'description' ) !== '' ){
-	$class = ( has_header_video() ) ? ' main_video' : '';
+	$nishiki_video_class = ( has_header_video() ) ? ' main_video' : '';
 	if( has_header_image() ){
 		$image = get_header_image();
 	} elseif( get_theme_mod( 'setting_top_main_visual_image', get_template_directory_uri() . '/images/carp.jpg' ) !== '' ) {
@@ -8,7 +8,7 @@ if( get_bloginfo( 'description' ) !== '' ){
 	}
 
 	$style = ' style="background-image:url(' . $image . ');"';
-	echo '<div class="main_visual' . $class . '"' . $style . '><div class="mask bg_dotted"></div>';
+	echo '<div class="main_visual' . esc_attr( $nishiki_video_class ) . '"' . wp_kses_post( $style ) . '><div class="mask bg_dotted"></div>';
 	echo '<div class="main_visual_content container">';
 	if( get_bloginfo( 'description' ) == 'Just another WordPress site' ){
 		$description = __( 'Elegance,Refined,Multifunctional', 'nishiki' );

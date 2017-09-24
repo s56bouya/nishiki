@@ -31,7 +31,7 @@
 				}
 				$output = trim( $output, $separator );
 			}
-			echo '<span class="cat"><i class="material-icons">folder</i>' . $output . '</span>';
+			echo '<span class="cat"><i class="material-icons">folder</i>' . wp_kses_post( $output ) . '</span>';
 		}
 		if( get_theme_mod( 'setting_archive_display_comment', true ) ){
 			$comment_count = wp_count_comments( get_the_ID() );
