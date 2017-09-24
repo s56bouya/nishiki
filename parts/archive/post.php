@@ -10,7 +10,7 @@
 		}
 		?>
 		<div class="post_image<?php echo $noimage; ?>">
-			<?php echo $image; ?>
+			<?php echo wp_kses_post( $image ); ?>
 			<div class="readmore"><span><?php esc_html_e( 'Read More', 'nishiki' ); ?><i class="material-icons">navigate_next</i></span></div>
 		</div>
 		<header><?php the_title( '<h1>', '</h1>' ); ?></header>
