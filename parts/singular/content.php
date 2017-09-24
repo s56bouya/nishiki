@@ -3,7 +3,7 @@ $nishiki_header_class = '';
 if( has_post_thumbnail() ){
 	if( ( is_single() && get_theme_mod( 'setting_post_eye_catch', false ) == true ) or ( is_page() && get_theme_mod( 'setting_page_eye_catch', false ) == true ) ){
 		if( get_the_post_thumbnail_url( get_the_ID(), 'full' ) )
-			$nishiki_header_class = ' style="background-image:url(' . esc_url_raw( get_the_post_thumbnail_url( get_the_ID(), 'full' ) ) . ');"';
+			$nishiki_header_class = ' style="background-image:url(' . esc_url( get_the_post_thumbnail_url( get_the_ID(), 'full' ) ) . ');"';
   	}
 }
 ?>

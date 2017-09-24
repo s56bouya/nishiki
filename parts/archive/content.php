@@ -11,7 +11,7 @@
 	<?php }
 		$columns = get_theme_mod( 'setting_archive_article_columns', '3' );
 	?>
-	<div class="articles<?php echo ' column_' . intval( $columns ); ?>">
+	<div class="articles<?php echo ' column_' . esc_attr( $columns ); ?>">
 		<?php
 		if ( have_posts() ) :
 			while ( have_posts() ) : the_post();

@@ -2,9 +2,9 @@
 	$section_count = NISHIKI_SECTION_NUM;
 	for( $i = 1; $i <= $section_count; ++$i ){
 		if( get_theme_mod( 'setting_front_page_section' . $i, 'disabled' ) !== 'disabled' ){
-			$style = get_theme_mod( 'setting_front_page_image' . $i, false ) ? ' style="background-image:url(' . esc_url_raw( get_theme_mod( 'setting_front_page_image' . $i, false ) ) . ');"' : '';
+			$style = get_theme_mod( 'setting_front_page_image' . $i, false ) ? ' style="background-image:url(' . esc_url( get_theme_mod( 'setting_front_page_image' . $i, false ) ) . ');"' : '';
 			?>
-			<section id="front-page-section<?php echo intval( $i ); ?>"<?php echo $style; ?> class="front-page-section">
+			<section id="front-page-section<?php echo absint( $i ); ?>"<?php echo $style; ?> class="front-page-section">
 				<div class="mask"></div>
 				<div class="container">
 					<?php
