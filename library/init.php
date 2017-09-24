@@ -106,7 +106,7 @@ function nishiki_custom_editor_style() {
 
 // Excerpt
 add_filter('excerpt_length', 'nishiki_home_excerpt_length', 999);
-function nishiki_home_excerpt_length($excerpt) {
+function nishiki_home_excerpt_length( $excerpt ) {
 	if( get_theme_mod( 'setting_archive_excerpt_text_num' ) ){
 		$excerpt = intval( get_theme_mod( 'setting_archive_excerpt_text_num' ) );
 	} else {
@@ -118,7 +118,7 @@ function nishiki_home_excerpt_length($excerpt) {
 
 // Excerpt More
 add_filter('excerpt_more', 'nishiki_new_excerpt_more');
-function nishiki_new_excerpt_more($more) {
+function nishiki_new_excerpt_more( $more ) {
 	if( get_theme_mod( 'setting_archive_excerpt_text' ) ){
 		$more = esc_html( get_theme_mod( 'setting_archive_excerpt_text' ) );
 	} else {
@@ -174,9 +174,10 @@ function nishiki_change_archive_title($title){
 	} elseif( is_day() ){
 		$title = get_the_date( _x( 'F j, Y', 'daily archives date format', 'nishiki' ) );
 	} elseif( is_month() ){
+//		$title = get_the_date( _x( 'F j, Y', 'daily archives date format', 'nishiki' ) );
 		$title = sprintf( __( '%1$s %2$d', 'nishiki' ), get_the_date('M'), get_the_date('Y') );
 	} elseif( is_year() ){
-		$title = sprintf( __( '%s year', 'nishiki' ), get_the_date('Y') );
+		$title = sprintf( esc_html__( '%s year', 'nishiki' ), get_the_date('Y') );
 	} elseif( is_search() ){
 		$title = __( 'Search Result', 'nishiki' );
 	} elseif( is_archive() ){

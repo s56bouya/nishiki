@@ -12,7 +12,7 @@
 		<p class="copyright">
 			<?php
 			if( get_theme_mod( 'setting_footer_copyright', NISHIKI_CREDIT ) ){
-				echo get_theme_mod( 'setting_footer_copyright', NISHIKI_CREDIT );
+				echo esc_html( get_theme_mod( 'setting_footer_copyright', NISHIKI_CREDIT ) );
 			}
 			?>
 		</p>

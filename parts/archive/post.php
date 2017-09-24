@@ -9,7 +9,7 @@
 			$noimage = ' noimage';
 		}
 		?>
-		<div class="post_image<?php echo $noimage; ?>">
+		<div class="post_image<?php echo esc_attr( $noimage ); ?>">
 			<?php echo wp_kses_post( $image ); ?>
 			<div class="readmore"><span><?php esc_html_e( 'Read More', 'nishiki' ); ?><i class="material-icons">navigate_next</i></span></div>
 		</div>

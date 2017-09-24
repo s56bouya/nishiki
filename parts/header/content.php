@@ -1,6 +1,6 @@
 <body <?php body_class(); ?>>
-<?php $fixed = ( get_theme_mod( 'setting_header_fixed', true ) ) ? ' class="fixed"' : ''; ?>
-<div id="masthead"<?php echo $fixed;?>>
+<?php $fixed = ( get_theme_mod( 'setting_header_fixed', true ) ) ? 'fixed' : 'nofixed'; ?>
+<div id="masthead" class="<?php echo esc_attr( $fixed ); ?>">
 	<div class="flex container">
 		<div class="site_info">
 			<a href="<?php echo esc_attr( get_home_url('/') ); ?>">

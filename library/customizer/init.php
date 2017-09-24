@@ -34,7 +34,7 @@ get_template_part( 'library/customizer/css' );
 define( 'NISHIKI_SECTION_NUM', 4 );
 
 // Footer Credit
-define( 'NISHIKI_CREDIT', 'Powered by WordPress. The Nishiki theme is Produced by <a target="_blank" href="https://www.animagate.com/">AnimaGate, Inc.</a>' );
+define( 'NISHIKI_CREDIT', 'Powered by WordPress. The Nishiki theme is Produced by AnimaGate, Inc.' );
 
 function nishiki_panel_count() {
 
