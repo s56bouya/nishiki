@@ -125,7 +125,7 @@ $wp_customize->add_control(
 
 // copyright
 $wp_customize->add_setting('setting_footer_copyright',array(
-	'default' => CREDIT,
+	'default' => NISHIKI_CREDIT,
 	'sanitize_callback' => 'wp_kses_post',
 ));
 

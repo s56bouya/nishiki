@@ -11,8 +11,8 @@
 		?>
 		<p class="copyright">
 			<?php
-			if( get_theme_mod( 'setting_footer_copyright', CREDIT ) ){
-				echo get_theme_mod( 'setting_footer_copyright', CREDIT );
+			if( get_theme_mod( 'setting_footer_copyright', NISHIKI_CREDIT ) ){
+				echo get_theme_mod( 'setting_footer_copyright', NISHIKI_CREDIT );
 			}
 			?>
 		</p>
