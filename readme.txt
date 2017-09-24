@@ -1,7 +1,7 @@
 === Nishiki ===
 Requires at least: WordPress 4.5
-Tested up to: WordPress 4.8
-Version: 0.1.3
+Tested up to: WordPress 4.8.2
+Version: 0.1.4
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Tags: one-column, two-columns, right-sidebar, left-sidebar, flexible-header, accessibility-ready, custom-colors, custom-header, custom-menu, custom-logo, featured-images, footer-widgets, post-formats, sticky-post, theme-options, threaded-comments, translation-ready, blog, entertainment
@@ -46,6 +46,9 @@ Source: https://material.io/icons/
 
 == Changelog ==
 
+= 0.1.4 =
+* Change : Escape and more
+
 = 0.1.3 =
 * Fixed : Archive page column CSS
 
@@ -53,7 +56,7 @@ Source: https://material.io/icons/
 * Change : Theme URI style.css
 
 = 0.1.1 =
-* Fix : has_header_video() undefined error in WordPress 4.5
+* Fixed : has_header_video() undefined error in WordPress 4.5
 * Add : Theme copyright/license attribute readme.txt
 * Change : Date format
 * Remove : add_nav_menu.php

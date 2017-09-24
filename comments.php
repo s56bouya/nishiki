@@ -23,7 +23,7 @@ if ( post_password_required() ) {
 				} else {
 					printf(
 						/* translators: 1: number of comments, 2: post title */
-						_nx(
+			  			_nx(
 							'%1$s Comment', // single
 							'%1$s Comments', // plural
 							$comments_number, // number
