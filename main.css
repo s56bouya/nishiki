@@ -1358,6 +1358,7 @@ input, textarea {
   font-family: 'icomoon';
   content: "\e906";
   display: inline-block;
+  margin-right: 0.2rem;
 }
 .single #edit_link a:hover,
 .page #edit_link a:hover {
@@ -1533,12 +1534,12 @@ aside ul li, aside ol li {
   bottom: 0;
   transition: all 300ms ease-out;
 }
-.articles article .post_image .readmore svg {
-  fill: #fff;
-}
 .articles article .post_image .readmore span {
   border: 1px solid #fff;
   padding: 0.7rem 1.3rem;
+}
+.articles article .post_image .readmore i {
+  font-size: 0.8rem;
 }
 .articles article:hover .post_image .readmore {
   opacity: 1;
