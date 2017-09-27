@@ -29,16 +29,16 @@ if( has_post_thumbnail() ){
 					}
 					$output = trim( $output, $separator );
 				}
-				echo '<span class="cat"><i class="material-icons">folder</i>' . wp_kses_post( $output ) . '</span>';
+				echo '<span class="cat"><i class="icomoon icon-folder-open"></i>' . wp_kses_post( $output ) . '</span>';
 			}
 			if( get_theme_mod( 'setting_post_display_tag', true ) && get_the_tags() ){
-				echo '<span class="tag">' . the_tags( '<i class="material-icons">local_offer</i>','/' ) . '</span>';
+				echo '<span class="tag">' . the_tags( '<i class="icomoon icon-price-tag"></i>','/' ) . '</span>';
 			}
 			if( get_theme_mod( 'setting_post_display_comment', true ) ){
 				$comment_count = wp_count_comments( get_the_ID() );
 				$comment_num = $comment_count->approved;
 				if( $comment_num !== 0 ){
-					echo '<span class="comment"><a href="./#comments"><i class="material-icons">comment</i>' . intval( $comment_num ) . '</a></span>';
+					echo '<span class="comment"><a href="./#comments"><i class="icomoon icon-bubble"></i>' . intval( $comment_num ) . '</a></span>';
 				}
 			}
 		}
@@ -74,8 +74,8 @@ if( has_post_thumbnail() ){
 				if( is_single() ) {
 					if ( get_theme_mod( 'setting_post_display_prev_next_link', true ) ) {
 						the_post_navigation( array(
-								'prev_text' => '<i class="material-icons">navigate_before</i><span>' . "%title" . '</span>',
-								'next_text' => '<span>' . "%title" . '</span>' . '<i class="material-icons">navigate_next</i>'
+								'prev_text' => '<i class="icomoon icon-arrow-left"></i><span>' . "%title" . '</span>',
+								'next_text' => '<span>' . "%title" . '</span>' . '<i class="icomoon icon-arrow-right"></i>'
 							)
 						);
 					}

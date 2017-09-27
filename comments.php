@@ -14,7 +14,7 @@ if ( post_password_required() ) {
 	<?php
 	// You can start editing here -- including this comment!
 	if ( have_comments() ) : ?>
-		<h2 class="comments-title"><i class="material-icons">forum</i>
+		<h2 class="comments-title"><i class="icomoon icon-bubble"></i>
 			<?php
 				$comments_number = get_comments_number();
 				if ( '1' === $comments_number ) {

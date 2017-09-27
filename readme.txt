@@ -40,9 +40,10 @@ carp.jpg is taken by the theme author and is released under GPL.
 
 Nishiki WordPress Theme bundles the following third-party resources:
 
-Material icons
-License: Apache License Version 2.0
-Source: https://material.io/icons/
+IcoMoon License
+License - GPL / CC BY 4.0
+URL: https://icomoon.io/#icons-icomoon
+Created by Keyamoon
 
 == Changelog ==
 

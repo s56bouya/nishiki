@@ -10,8 +10,6 @@ if ( ! function_exists('nishiki_read_scripts') ) :
 
 		// Add Style
 		wp_register_style( 'nishiki-main-css', get_template_directory_uri() . '/main.css', array(), null, false );
-		wp_register_style( 'nishiki-google-material-icons', 'https://fonts.googleapis.com/icon?family=Material+Icons', array(), null, false );
-		wp_enqueue_style( 'nishiki-google-material-icons' );
 		wp_enqueue_style( 'nishiki-main-css' );
 		wp_add_inline_style( 'nishiki-main-css', nishiki_customizer_css() );
 

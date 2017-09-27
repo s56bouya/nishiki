@@ -22,8 +22,8 @@
 	</div>
 	<?php
 	the_posts_pagination( array(
-		'prev_text' => '<i class="material-icons">navigate_before</i><span class="screen-reader-text">' . __( 'Previous page', 'nishiki' ) . '</span>',
-		'next_text' => '<span class="screen-reader-text">' . __( 'Next page', 'nishiki' ) . '</span><i class="material-icons">navigate_next</i>',
+		'prev_text' => '<i class="icomoon icon-arrow-left"></i><span class="screen-reader-text">' . __( 'Previous page', 'nishiki' ) . '</span>',
+		'next_text' => '<span class="screen-reader-text">' . __( 'Next page', 'nishiki' ) . '</span><i class="icomoon icon-arrow-right"></i>',
 		'before_page_number' => '',
 	) );
 	?>

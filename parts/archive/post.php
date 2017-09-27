@@ -5,13 +5,13 @@
 			$image = '<figure>' . get_the_post_thumbnail( get_the_ID(), 'medium' ) . '</figure>';
 			$noimage = '';
 		} else {
-			$image = '<i class="material-icons photo">photo_size_select_actual</i>';
+			$image = '<i class="icomoon icon-image"></i>';
 			$noimage = ' noimage';
 		}
 		?>
 		<div class="post_image<?php echo esc_attr( $noimage ); ?>">
 			<?php echo wp_kses_post( $image ); ?>
-			<div class="readmore"><span><?php esc_html_e( 'Read More', 'nishiki' ); ?><i class="material-icons">navigate_next</i></span></div>
+			<div class="readmore"><span><?php esc_html_e( 'Read More', 'nishiki' ); ?><i class="icomoon icon-arrow-right"></i></span></div>
 		</div>
 		<header><?php the_title( '<h1>', '</h1>' ); ?></header>
 		<div class="excerpt"><?php echo esc_html( get_the_excerpt() ); ?></div>
@@ -31,13 +31,13 @@
 				}
 				$output = trim( $output, $separator );
 			}
-			echo '<span class="cat"><i class="material-icons">folder</i>' . wp_kses_post( $output ) . '</span>';
+			echo '<span class="cat"><i class="icomoon icon-folder-open"></i>' . wp_kses_post( $output ) . '</span>';
 		}
 		if( get_theme_mod( 'setting_archive_display_comment', true ) ){
 			$comment_count = wp_count_comments( get_the_ID() );
 			$comment_num = $comment_count->approved;
 			if( $comment_num !== 0 ){
-				echo '<span class="comment"><i class="material-icons">comment</i>' . intval( $comment_num ) . '</span>';
+				echo '<span class="comment"><i class="icomoon icon-bubble"></i>' . intval( $comment_num ) . '</span>';
 			}
 		}
 		if( get_theme_mod( 'setting_archive_display_author', true ) ) {

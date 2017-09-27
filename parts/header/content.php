@@ -13,10 +13,10 @@
 		</div>
 			<nav class="global_nav" role="navigation">
 				<?php if( get_theme_mod( 'setting_header_search_button', true ) ){ ?>
-					<button id="search_button" class="icon"><i class="material-icons">search</i></button>
+					<button id="search_button" class="icon"><i class="icomoon icon-search"></i></button>
 				<?php } ?>
 				<?php if ( has_nav_menu( 'global' ) ) { ?>
-					<button id="menu_button" class="icon" aria-controls="top-menu"><i class="material-icons">menu</i></button>
+					<button id="menu_button" class="icon" aria-controls="top-menu"><i class="icomoon icon-menu2"></i></button>
 				<?php } ?>
 			</nav>
 	</div>
@@ -24,7 +24,7 @@
 <div id="search_overlay" class="overlay">
 	<div class="overlay_inner centering">
 		<?php echo get_search_form(); ?>
-		<button class="close"><i class="material-icons">close</i></button>
+		<button class="close"><i class="icomoon icon-close"></i></button>
 	</div>
 </div>
 <div id="menu_overlay" class="overlay">
@@ -39,7 +39,7 @@
 		);
 		wp_nav_menu($nav_args);
 		?>
-		<button class="close"><i class="material-icons">close</i></button>
+		<button class="close"><i class="icomoon icon-close"></i></button>
 	</div>
 </div>
 <?php

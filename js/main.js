@@ -10,22 +10,22 @@ jQuery(function() {
     if (jQuery("#wpadminbar").length > 0) {
         i = document.getElementById("wpadminbar").offsetHeight;
     }
-    var l = "window";
+    var o = "window";
     if (jQuery("#masthead").hasClass("fixed")) {
-        l = "#page";
+        o = "#page";
     }
     e.click(function() {
         jQuery("#search_overlay").addClass("display");
         var e = jQuery(window).scrollTop() - i;
-        jQuery(l).addClass("nav_open").css({
+        jQuery(o).addClass("nav_open").css({
             top: -e + "px"
         });
     });
     r.click(function() {
         jQuery("#search_overlay").removeClass("display");
         jQuery(".site_info a").removeClass("overlay");
-        var e = jQuery(l).css("top").replace("px", "") - i;
-        jQuery(l).removeClass("nav_open").css({
+        var e = jQuery(o).css("top").replace("px", "") - i;
+        jQuery(o).removeClass("nav_open").css({
             top: 0
         });
         jQuery(window).scrollTop(-e);
@@ -33,21 +33,21 @@ jQuery(function() {
     s.click(function(e) {
         jQuery("#menu_overlay").addClass("display");
         var r = jQuery(window).scrollTop() - i;
-        jQuery(l).addClass("nav_open").css({
+        jQuery(o).addClass("nav_open").css({
             top: -r + "px"
         });
     });
     a.click(function(e) {
         jQuery("#menu_overlay").removeClass("display");
         jQuery(".site_info a").removeClass("overlay");
-        var r = jQuery(l).css("top").replace("px", "") - i;
-        jQuery(l).removeClass("nav_open").css({
+        var r = jQuery(o).css("top").replace("px", "") - i;
+        jQuery(o).removeClass("nav_open").css({
             top: 0
         });
         jQuery(window).scrollTop(-r);
     });
     jQuery("#menu_overlay .menu-item-has-children").each(function() {
-        jQuery(this).prepend('<i class="material-icons">expand_more</i>');
+        jQuery(this).prepend('<i class="icomoon icon-arrow-down"></i>');
     });
     jQuery("#menu_overlay i").click(function() {
         jQuery(this).siblings("ul").slideToggle(300);
