@@ -175,8 +175,10 @@ function nishiki_change_archive_title($title){
 		$title = get_the_date( _x( 'F j, Y', 'daily archives date format', 'nishiki' ) );
 	} elseif( is_month() ){
 //		$title = get_the_date( _x( 'F j, Y', 'daily archives date format', 'nishiki' ) );
+		/* translators: %s: get_the_date */
 		$title = sprintf( __( '%1$s %2$d', 'nishiki' ), get_the_date('M'), get_the_date('Y') );
 	} elseif( is_year() ){
+		/* translators: %s: get_the_date */
 		$title = sprintf( esc_html__( '%s year', 'nishiki' ), get_the_date('Y') );
 	} elseif( is_search() ){
 		$title = __( 'Search Result', 'nishiki' );

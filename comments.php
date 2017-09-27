@@ -21,14 +21,15 @@ if ( post_password_required() ) {
 					/* translators: %s: post title */
 					printf( esc_html_x( '%s Comment', 'comments title', 'nishiki' ), get_the_title() );
 				} else {
-					printf(
+					printf( // WPCS: XSS OK.
 						/* translators: 1: number of comments, 2: post title */
-			  			_nx(
+			  			esc_html( _nx(
 							'%1$s Comment', // single
 							'%1$s Comments', // plural
 							$comments_number, // number
 							'comments title', // context
 							'nishiki'
+							)
 						), esc_html( number_format_i18n( $comments_number ) ), get_the_title()
 					);
 				}
