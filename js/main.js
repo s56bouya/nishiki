@@ -6,45 +6,45 @@ jQuery(function() {
     var r = jQuery("#search_overlay").find(".close");
     var s = jQuery("#menu_button");
     var a = jQuery("#menu_overlay").find(".close");
-    var l = 0;
+    var i = 0;
     if (jQuery("#wpadminbar").length > 0) {
-        l = document.getElementById("wpadminbar").offsetHeight;
+        i = document.getElementById("wpadminbar").offsetHeight;
     }
-    var i = "body";
+    var l = "window";
     if (jQuery("#masthead").hasClass("fixed")) {
-        i = "#page";
+        l = "#page";
     }
     e.click(function() {
         jQuery("#search_overlay").addClass("display");
-        var e = jQuery("body").scrollTop() - l;
-        jQuery(i).addClass("nav_open").css({
+        var e = jQuery(window).scrollTop() - i;
+        jQuery(l).addClass("nav_open").css({
             top: -e + "px"
         });
     });
     r.click(function() {
         jQuery("#search_overlay").removeClass("display");
         jQuery(".site_info a").removeClass("overlay");
-        var e = jQuery(i).css("top").replace("px", "") - l;
-        jQuery(i).removeClass("nav_open").css({
+        var e = jQuery(l).css("top").replace("px", "") - i;
+        jQuery(l).removeClass("nav_open").css({
             top: 0
         });
-        jQuery("body").scrollTop(-e);
+        jQuery(window).scrollTop(-e);
     });
     s.click(function(e) {
         jQuery("#menu_overlay").addClass("display");
-        var r = jQuery("body").scrollTop() - l;
-        jQuery(i).addClass("nav_open").css({
+        var r = jQuery(window).scrollTop() - i;
+        jQuery(l).addClass("nav_open").css({
             top: -r + "px"
         });
     });
     a.click(function(e) {
         jQuery("#menu_overlay").removeClass("display");
         jQuery(".site_info a").removeClass("overlay");
-        var r = jQuery(i).css("top").replace("px", "") - l;
-        jQuery(i).removeClass("nav_open").css({
+        var r = jQuery(l).css("top").replace("px", "") - i;
+        jQuery(l).removeClass("nav_open").css({
             top: 0
         });
-        jQuery("body").scrollTop(-r);
+        jQuery(window).scrollTop(-r);
     });
     jQuery("#menu_overlay .menu-item-has-children").each(function() {
         jQuery(this).prepend('<i class="material-icons">expand_more</i>');
