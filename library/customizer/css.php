@@ -130,11 +130,12 @@ function nishiki_customizer_css(){
 	$output .= "#masthead{background:{$header_background_color};}";
 
 	// text color
-	$header_text_color = get_theme_mod( 'header_textcolor', '000000' );
+	$header_text_color = ( ! get_header_textcolor() ) ? '#000000' : '#' . get_theme_mod( 'header_textcolor', '000000' );
+
 	$output .= "
-		#masthead .site_info a{color:#{$header_text_color};}
-		#masthead .icon{border-color:#{$header_text_color};color:#{$header_text_color}}
-		#masthead .icon:hover{color:{$header_background_color};background:#{$header_text_color};}"
+		#masthead .site_info a{color:{$header_text_color};}
+		#masthead .icon{border-color:{$header_text_color};color:{$header_text_color}}
+		#masthead .icon:hover{color:{$header_background_color};background:{$header_text_color};}"
 	;
 
 	// Fixed Header Color
@@ -158,9 +159,9 @@ function nishiki_customizer_css(){
 		}
 		$output .= "
 		body.scrolled #masthead{background:{$header_background_color};}
-		body.scrolled #masthead .site_info a{color:#{$header_text_color};}
-		body.scrolled #masthead .icon{border-color:#{$header_text_color};color:#{$header_text_color}}
-		body.scrolled #masthead .icon:hover{color:{$header_background_color};background:#{$header_text_color};}
+		body.scrolled #masthead .site_info a{color:{$header_text_color};}
+		body.scrolled #masthead .icon{border-color:{$header_text_color};color:{$header_text_color}}
+		body.scrolled #masthead .icon:hover{color:{$header_background_color};background:{$header_text_color};}
 		";
 	}
 
