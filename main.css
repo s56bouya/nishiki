@@ -2123,6 +2123,7 @@ select {
   display: inline-block;
   vertical-align: sub;
   font-size: 1rem;
+  margin-right: 0.2rem;
 }
 .comments-area #respond textarea, .comments-area #respond input[type=text],
 .comments-area #respond input[type=email],
