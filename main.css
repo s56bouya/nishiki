@@ -1,5 +1,5 @@
 /**
- * Generated on 2017/09/27
+ * Generated on 2017/10/03
  * Author: Tetsuya Imamura(s56bouya)
  */
 
@@ -679,6 +679,10 @@ input[type="button"]::focus {
 
 input[type=checkbox] {
   -webkit-appearance: checkbox;
+}
+
+input[type=radio] {
+  -webkit-appearance: radio;
 }
 
 a,
@@ -1476,7 +1480,6 @@ aside ul li, aside ol li {
   margin-right: 0.5rem;
 }
 .articles article footer .cat {
-  display: inline-block;
   margin-right: 0.5rem;
 }
 .articles article footer .comment {
