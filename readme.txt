@@ -47,6 +47,11 @@ Created by Keyamoon
 
 == Changelog ==
 
+= 0.1.8 =
+* Add : Input type=radio style
+* Change : Archive category block
+* Change : Script and style handle name
+
 = 0.1.7 =
 * Fixed : Bug fix
 
