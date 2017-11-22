@@ -11,9 +11,13 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.0.3\n"
+"X-Generator: Poedit 1.5.6\n"
 
-#: 404.php:7 library/init.php:140
+#: 404.php:6
+msgid "Page Not Found"
+msgstr "Page Not Found"
+
+#: 404.php:7
 msgid "Page Not Found."
 msgstr "ページが見つかりませんでした。"
 
@@ -344,10 +348,6 @@ msgstr "著者"
 msgid "Author Text Label"
 msgstr "著者のテキストラベル"
 
-#: library/customizer/add_title_tagline.php:15
-msgid "Upload your Logo Image"
-msgstr "ロゴ画像をアップロード"
-
 #: library/customizer/add_title_tagline.php:34
 msgid "Display Site Title"
 msgstr "サイトタイトルを表示"
@@ -369,8 +369,8 @@ msgid "Sub Color"
 msgstr "サブカラー"
 
 #: library/customizer/add_title_tagline.php:143
-msgid "Site Conents Width"
-msgstr "サイト コンテンツ幅"
+msgid "Site Conents Width(Default 1200px)"
+msgstr "サイト コンテンツ全体幅(デフォルト:1200px)"
 
 #: library/customizer/add_title_tagline.php:166
 msgid "Site Font Size(Default 16px)"
@@ -413,6 +413,10 @@ msgstr "最新の投稿"
 #: library/customizer/add_top.php:293
 msgid "Sticky Badge Background Color"
 msgstr "固定記事 バッジ背景カラー"
+
+#: library/customizer/init.php:37
+msgid "Powered by WordPress. The Nishiki theme is Produced by AnimaGate, Inc."
+msgstr "Powered by WordPress. The Nishiki theme is Produced by AnimaGate, Inc."
 
 #: library/init.php:136
 msgid "posts"
@@ -478,9 +482,7 @@ msgid "Search results for"
 msgstr "検索結果"
 
 #: searchform.php:5
-#, fuzzy
-#| msgid "Input search word."
-msgid "Enter search word."
+msgid "Enter a term to search."
 msgstr "検索文字を入力"
 
 # -------------------------------------------------------
@@ -489,6 +491,12 @@ msgstr "検索文字を入力"
 #: searchform.php:8
 msgid "Search"
 msgstr "検索"
+
+#~ msgid "Upload your Logo Image"
+#~ msgstr "ロゴ画像をアップロード"
+
+#~ msgid "Site Conents Width"
+#~ msgstr "サイト コンテンツ幅"
 
 #~ msgid "Add Hatena Bookmark"
 #~ msgstr "はてなブックマークに追加"

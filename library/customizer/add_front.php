@@ -74,7 +74,7 @@ for ( $i = 1; $i < ( 1 + NISHIKI_SECTION_NUM ); ++$i ) {
 	) );
 
 	$wp_customize->add_control(
-		new WP_Customize_Range(
+		new Nishiki_WP_Customize_Range(
 			$wp_customize,
 			'ctrl_front_page_background_opacity' . $i,
 			array(
@@ -122,7 +122,7 @@ for ( $i = 1; $i < ( 1 + NISHIKI_SECTION_NUM ); ++$i ) {
 	// Sub Text
 	$wp_customize->add_setting( 'setting_front_page_sub_text' . $i, array(
 		'default'           => __( 'Sub Text', 'nishiki' ),
-		'sanitize_callback' => 'wp_filter_nohtml_kses',
+		'sanitize_callback' => 'nishiki_sanitize_text',
 	) );
 
 	$wp_customize->add_control( 'ctrl_front_page_sub_text' . $i, array(
@@ -185,7 +185,7 @@ for ( $i = 1; $i < ( 1 + NISHIKI_SECTION_NUM ); ++$i ) {
 	// Button Link
 	$wp_customize->add_setting('setting_front_page_button_link' . $i,array(
 		'default' => '#',
-		'sanitize_callback' => 'wp_filter_nohtml_kses',
+		'sanitize_callback' => 'nishiki_sanitize_text',
 	));
 
 	$wp_customize->add_control('ctrl_front_page_button_link' . $i,array(

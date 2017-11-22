@@ -3,27 +3,43 @@
 <div id="masthead" class="<?php echo esc_attr( $fixed ); ?>">
 	<div class="flex container">
 		<div class="site_info">
-			<a href="<?php echo esc_attr( get_home_url('/') ); ?>">
+			<a href="<?php echo esc_url( get_home_url('/') ); ?>">
 				<?php
-				if( get_theme_mod( 'setting_site_display_title', true ) ){
-					echo esc_html( get_bloginfo('name') );
+				$custom_logo_id = get_theme_mod( 'custom_logo' );
+				$logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+				$site_title = get_theme_mod( 'setting_site_display_title', true );
+				if( has_custom_logo() && $site_title ){
+					$logo_class = 'display_logo_text';
+				} else {
+					$logo_class = 'display_title';
+				}
+
+				if ( has_custom_logo() ) {
+					echo '<img class="' . esc_attr( $logo_class ) . '" src="'. esc_url( $logo[0] ) .'" width="' . intval( $logo[1] ) . '" height="' . intval( $logo[2] ) . '" alt="' . esc_attr( get_bloginfo('name') ) . '">';
+				}
+				if ( $site_title ) {
+					echo '<span class="site_title">' . esc_html( get_bloginfo('name') ) . '</span>';
 				}
 				?>
 			</a>
 		</div>
 			<nav class="global_nav" role="navigation">
 				<?php if( get_theme_mod( 'setting_header_search_button', true ) ){ ?>
-					<button id="search_button" class="icon"><i class="icomoon icon-search"></i></button>
+					<button id="search_button" class="icon">
+						<i class="icomoon icon-search"></i>
+					</button>
 				<?php } ?>
 				<?php if ( has_nav_menu( 'global' ) ) { ?>
-					<button id="menu_button" class="icon" aria-controls="top-menu"><i class="icomoon icon-menu2"></i></button>
+					<button id="menu_button" class="icon" aria-controls="top-menu">
+						<i class="icomoon icon-menu2"></i>
+					</button>
 				<?php } ?>
 			</nav>
 	</div>
 </div>
 <div id="search_overlay" class="overlay">
 	<div class="overlay_inner centering">
-		<?php echo get_search_form(); ?>
+		<?php get_search_form(); ?>
 		<button class="close"><i class="icomoon icon-close"></i></button>
 	</div>
 </div>

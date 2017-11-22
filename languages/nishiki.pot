@@ -1,21 +1,25 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: AnimaGate\n"
+"Project-Id-Version: AnimaGate, Inc.\n"
 "POT-Creation-Date: 2017-08-18 20:03+1200\n"
-"PO-Revision-Date: 2017-08-18 20:03+1200\n"
+"PO-Revision-Date: 2017-11-21 23:12+0900\n"
 "Last-Translator: Tetsuya Imamura <wpdev@animagate.com>\n"
 "Language-Team: Tetsuya Imamura <wpdev@animagate.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.0.3\n"
+"X-Generator: Poedit 1.5.6\n"
 "X-Poedit-Basepath: ..\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-KeywordsList: __;_e;esc_html_e;esc_html__;esc_attr__;esc_attr_e;_n;"
 "_nx\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: 404.php:7 library/init.php:140
+#: 404.php:6
+msgid "Page Not Found"
+msgstr ""
+
+#: 404.php:7
 msgid "Page Not Found."
 msgstr ""
 
@@ -316,10 +320,6 @@ msgstr ""
 msgid "Author Text Label"
 msgstr ""
 
-#: library/customizer/add_title_tagline.php:15
-msgid "Upload your Logo Image"
-msgstr ""
-
 #: library/customizer/add_title_tagline.php:34
 msgid "Display Site Title"
 msgstr ""
@@ -341,7 +341,7 @@ msgid "Sub Color"
 msgstr ""
 
 #: library/customizer/add_title_tagline.php:143
-msgid "Site Conents Width"
+msgid "Site Conents Width(Default 1200px)"
 msgstr ""
 
 #: library/customizer/add_title_tagline.php:166
@@ -381,6 +381,10 @@ msgstr ""
 
 #: library/customizer/add_top.php:293
 msgid "Sticky Badge Background Color"
+msgstr ""
+
+#: library/customizer/init.php:37
+msgid "Powered by WordPress. The Nishiki theme is Produced by AnimaGate, Inc."
 msgstr ""
 
 #: library/init.php:136
@@ -438,7 +442,7 @@ msgid "Search results for"
 msgstr ""
 
 #: searchform.php:5
-msgid "Enter search word."
+msgid "Enter a term to search."
 msgstr ""
 
 #: searchform.php:8

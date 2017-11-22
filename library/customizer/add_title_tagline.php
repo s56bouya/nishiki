@@ -1,23 +1,4 @@
 <?php
-// Upload Logo Image
-$wp_customize->add_setting('setting_site_logo',array(
-	'default' => '',
-	'sanitize_callback' => 'nishiki_sanitize_image',
-));
-
-$wp_customize->add_control(
-	new WP_Customize_Image_Control(
-		$wp_customize,
-		'ctrl_site_logo',
-		array(
-			'label'       =>  __( 'Upload your Logo Image', 'nishiki' ),
-			'section'     =>  'title_tagline',
-			'settings'    =>  'setting_site_logo',
-			'priority'    =>  1,
-		)
-	)
-);
-
 // Display Site Title
 $wp_customize->add_setting('setting_site_display_title', array(
 	'default' => true,
@@ -118,13 +99,25 @@ $wp_customize->add_control(
 	)
 );
 
-// Background Color
-$ctrl_background_color = $wp_customize->get_control('background_color');
-if ( $ctrl_background_color ) {
-	$ctrl_background_color->label = __( 'Background Color', 'nishiki' );
-	$ctrl_background_color->section = 'title_tagline';
-	$ctrl_background_color->priority = 2040;
-}
+// Site Background Color
+$wp_customize->add_setting('setting_site_background_color',array(
+	'default' => '#ffffff',
+	'sanitize_callback' => 'sanitize_hex_color',
+));
+
+$wp_customize->add_control(
+	new WP_Customize_Color_Control(
+		$wp_customize,
+		'ctrl_site_background_color',
+		array(
+			'label'       =>  __( 'Background Color', 'nishiki' ),
+			'section'     =>  'title_tagline',
+			'transport'   =>  'postMessage',
+			'settings'    =>  'setting_site_background_color',
+			'priority'    =>  2040,
+		)
+	)
+);
 
 // Contents Width
 $wp_customize->add_setting( 'setting_site_contents_width' , array(
@@ -134,11 +127,11 @@ $wp_customize->add_setting( 'setting_site_contents_width' , array(
 ) );
 
 $wp_customize->add_control(
-	new WP_Customize_Range(
+	new Nishiki_WP_Customize_Range(
 		$wp_customize,
 		'ctrl_site_contents_width',
 		array(
-			'label'	=>  __( 'Site Contents Width', 'nishiki' ),
+			'label'	=>  __( 'Site Conents Width(Default 1200px)', 'nishiki' ),
 			'min' => 500,
 			'max' => 9000,
 			'step' => 1,
@@ -148,7 +141,6 @@ $wp_customize->add_control(
 	)
 );
 
-
 // Font Size
 $wp_customize->add_setting( 'setting_site_font_size' , array(
 	'default'     => 16,
@@ -157,7 +149,7 @@ $wp_customize->add_setting( 'setting_site_font_size' , array(
 ) );
 
 $wp_customize->add_control(
-	new WP_Customize_Range(
+	new Nishiki_WP_Customize_Range(
 		$wp_customize,
 		'ctrl_site_font_size',
 		array(

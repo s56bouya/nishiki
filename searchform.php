@@ -1,5 +1,5 @@
 <div class="search_box">
-	<form role="search" method="get" id="searchform" action="<?php echo esc_url(home_url('/')); ?>">
+	<form role="search" method="get" id="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>">
 		<div class="search_inner">
 			<div class="input">
 				<input type="text" value="" name="s" id="s" placeholder="<?php esc_attr_e( 'Enter a term to search.', 'nishiki' ); ?>">

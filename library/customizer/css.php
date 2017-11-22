@@ -1,7 +1,6 @@
 <?php
 // Add Costomizer CSS
 function nishiki_customizer_css(){
-	$bgcolor = get_background_color();
 	$output = '';
 
 	/*****************
@@ -30,11 +29,8 @@ function nishiki_customizer_css(){
 		.articles header,.articles header a{color:{$site_main_text_color};}
 		aside .search_box .input input{border-color:{$site_main_text_color};}
 		.nav_pc a{color:{$site_main_text_color};}
-		.nav_pc ul{background-color:#{$bgcolor};}
 		aside .search_box .submit button{border-color:{$site_main_text_color};color:{$site_main_text_color}}
-		aside .search_box .submit button:hover{background:{$site_main_text_color};color:{$bgcolor};}
 		.comments-area .submit{border-color:{$site_main_text_color};}
-		.comments-area .submit:hover{background:{$site_main_text_color};color:{$bgcolor};}
 		.comments-area .submit{color:{$site_main_text_color}}
 		";
 
@@ -70,8 +66,6 @@ function nishiki_customizer_css(){
 		html,button,input[type=submit]{font-size:{$site_font_size}px;}
 		";
 
-	$output .= nishiki_custom_background_cb();
-
 	/*****************
 	 * Top
 	 ******************/
@@ -87,7 +81,7 @@ function nishiki_customizer_css(){
 	// Site Font Size
 	for( $i = 1; $i <= NISHIKI_SECTION_NUM; ++$i ) {
 		// Text Color
-		$front_page_text_color = get_theme_mod( 'setting_front_page_text_color' . $i, '#ffffff' );
+		$front_page_text_color = get_theme_mod( 'setting_front_page_text_color' . $i, '#000000' );
 		$output .= "#front-page-section{$i}{color:{$front_page_text_color};}";
 
 		// Text Align

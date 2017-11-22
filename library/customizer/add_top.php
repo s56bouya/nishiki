@@ -107,7 +107,7 @@ $wp_customize->add_setting( 'setting_top_main_visual_background_opacity' , array
 ) );
 
 $wp_customize->add_control(
-	new WP_Customize_Range(
+	new Nishiki_WP_Customize_Range(
 		$wp_customize,
 		'ctrl_top_main_visual_background_opacity',
 		array(
@@ -159,7 +159,7 @@ $wp_customize->add_control('ctrl_top_main_visual_main_button_text',array(
 // main button link
 $wp_customize->add_setting('setting_top_main_visual_main_button_link',array(
 	'default' => '#',
-	'sanitize_callback' => 'wp_filter_nohtml_kses',
+	'sanitize_callback' => 'nishiki_sanitize_text',
 ));
 
 $wp_customize->add_control('ctrl_top_main_visual_main_button_link',array(

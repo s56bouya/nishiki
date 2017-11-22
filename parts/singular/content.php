@@ -61,7 +61,7 @@ if( has_post_thumbnail() ){
 					}
 					?>
 					<div class="author_image"><?php echo get_avatar( get_the_author_meta( 'ID' ), 90, array( 'extra_attr' => 'data') ); ?></div>
-					<p><a href="<?php echo esc_url_raw( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>"><?php echo esc_html( get_the_author_meta('display_name') ); ?></a></p>
+					<p><a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>"><?php echo esc_html( get_the_author_meta('display_name') ); ?></a></p>
 					<p class="description"><?php the_author_meta( 'description' ); ?></p>
 				</div>
 				<?php

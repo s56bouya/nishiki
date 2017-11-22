@@ -3,8 +3,8 @@
 		<header>
 			<div class="mask"></div>
 			<div class="page_header container">
-			<h1>Page Not Found</h1>
-			<span class="taxonomy-description"><?php esc_html_e( "Page Not Found.", 'nishiki' ); ?></span>
+				<h1><?php esc_html_e( 'Page Not Found', 'nishiki' ); ?></h1>
+				<span class="taxonomy-description"><?php esc_html_e( 'Page Not Found.', 'nishiki' ); ?></span>
 			</div>
 		</header>
 		<div class="container">

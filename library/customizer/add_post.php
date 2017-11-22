@@ -33,7 +33,7 @@ $wp_customize->add_setting( 'setting_post_sidebar_width' , array(
 ) );
 
 $wp_customize->add_control(
-	new WP_Customize_Range(
+	new Nishiki_WP_Customize_Range(
 		$wp_customize,
 		'ctrl_post_sidebar_width',
 		array(
@@ -56,7 +56,7 @@ $wp_customize->add_setting( 'setting_post_sidebar_margin' , array(
 ) );
 
 $wp_customize->add_control(
-	new WP_Customize_Range(
+	new Nishiki_WP_Customize_Range(
 		$wp_customize,
 		'ctrl_post_sidebar_margin',
 		array(
@@ -99,7 +99,7 @@ $wp_customize->add_setting( 'setting_post_title_background_opacity' , array(
 ) );
 
 $wp_customize->add_control(
-	new WP_Customize_Range(
+	new Nishiki_WP_Customize_Range(
 		$wp_customize,
 		'ctrl_post_title_background_opacity',
 		array(

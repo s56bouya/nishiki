@@ -133,7 +133,7 @@ $wp_customize->add_setting( 'setting_archive_title_background_opacity' , array(
 ) );
 
 $wp_customize->add_control(
-	new WP_Customize_Range(
+	new Nishiki_WP_Customize_Range(
 		$wp_customize,
 		'ctrl_archive_title_background_opacity',
 		array(
@@ -191,7 +191,7 @@ $wp_customize->add_setting( 'setting_archive_excerpt_text_num' , array(
 ) );
 
 $wp_customize->add_control(
-	new WP_Customize_Range(
+	new Nishiki_WP_Customize_Range(
 		$wp_customize,
 		'ctrl_archive_excerpt_text_num',
 		array(

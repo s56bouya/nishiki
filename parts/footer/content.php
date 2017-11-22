@@ -6,7 +6,7 @@
 			}
 			if( get_theme_mod( 'setting_footer_main_button_text', __( 'Button Text', 'nishiki' ) ) ){
 				$target = ( get_theme_mod( 'setting_footer_main_button_link_target', false ) == true ) ? ' target="_blank"' : '';
-				echo '<a class="btn"' . esc_attr( $target ) . ' href="' . esc_url_raw( get_theme_mod( 'setting_footer_main_button_link' ) ) . '">' . esc_html( get_theme_mod( 'setting_footer_main_button_text', __( 'Button Text', 'nishiki' ) ) ) . '</a>';
+				echo '<a class="btn"' . esc_attr( $target ) . ' href="' . esc_url( get_theme_mod( 'setting_footer_main_button_link' ) ) . '">' . esc_html( get_theme_mod( 'setting_footer_main_button_text', __( 'Button Text', 'nishiki' ) ) ) . '</a>';
 			}
 		?>
 		<p class="copyright">

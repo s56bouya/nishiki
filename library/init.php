@@ -10,42 +10,57 @@ if ( ! isset( $content_width ) && get_theme_mod( 'setting_site_contents_width', 
  *****************/
 // Html5
 $args = array(
-	'search-form',
-	'comment-form',
-	'comment-list',
+    'comment-form',
+    'comment-list',
 );
-add_theme_support( 'html5', $args );
+add_theme_support('html5', $args);
 
 // Title Tag
 add_theme_support('title-tag');
 
 // Thumbnails
-add_theme_support( 'post-thumbnails' );
+add_theme_support('post-thumbnails');
 
 // Custom Header
 add_theme_support( 'custom-header', array(
-	'width'              => 1900,
-	'height'             => 480,
-	'flex-height'        => true,
-	'video'              => true,
-) );
+    'width'              => 1900,
+    'height'             => 480,
+    'flex-height'        => true,
+    'video'              => true,
+  )
+);
+
+// Custom Logo
+add_theme_support( 'custom-logo' );
+
+function nishiki_custom_logo_setup() {
+	$defaults = array(
+		'height'      => 60,
+		'width'       => 160,
+		'flex-height' => true,
+		'flex-width'  => true,
+		'header-text' => array( 'site-title', 'site-description' ),
+	);
+	add_theme_support( 'custom-logo', $defaults );
+}
+add_action( 'after_setup_theme', 'nishiki_custom_logo_setup' );
 
 // Feed Links
-add_theme_support( 'automatic-feed-links' );
+add_theme_support('automatic-feed-links');
 
 /*****************
  * Check Front Page
  *****************/
 
 // Setting Front Page Check
-add_filter( 'frontpage_template', 'nishiki_front_page_template' );
+add_filter('frontpage_template', 'nishiki_front_page_template');
 function nishiki_front_page_template( $template ) {
-	return is_home() ? '' : $template;
+    return is_home() ? '' : $template;
 }
 
 // Check Front Page
 function nishiki_is_static_front_page() {
-	return ( is_front_page() && ! is_home() );
+    return ( is_front_page() && ! is_home() );
 }
 
 /*****************
@@ -70,8 +85,8 @@ load_theme_textdomain( 'nishiki', get_template_directory() . '/languages' );
  *****************/
 
 // Add Nav
-add_action( 'after_setup_theme', 'register_nav' );
-function register_nav() {
+add_action( 'after_setup_theme', 'nishiki_register_nav' );
+function nishiki_register_nav() {
 	// Global Nav
 	register_nav_menu( 'global', __( 'Global Menu', 'nishiki' ) );
 }
@@ -107,6 +122,10 @@ function nishiki_custom_editor_style() {
 // Excerpt
 add_filter('excerpt_length', 'nishiki_home_excerpt_length', 999);
 function nishiki_home_excerpt_length( $excerpt ) {
+	if ( is_admin() ) {
+		return $excerpt;
+	}
+
 	if( get_theme_mod( 'setting_archive_excerpt_text_num' ) ){
 		$excerpt = intval( get_theme_mod( 'setting_archive_excerpt_text_num' ) );
 	} else {
@@ -119,6 +138,10 @@ function nishiki_home_excerpt_length( $excerpt ) {
 // Excerpt More
 add_filter('excerpt_more', 'nishiki_new_excerpt_more');
 function nishiki_new_excerpt_more( $more ) {
+	if ( is_admin() ) {
+		return $more;
+	}
+
 	if( get_theme_mod( 'setting_archive_excerpt_text' ) ){
 		$more = esc_html( get_theme_mod( 'setting_archive_excerpt_text' ) );
 	} else {
@@ -142,6 +165,8 @@ function nishiki_header_title( $title ) {
 	} elseif( is_post_type_archive() ) {
 		global $wp_query;
 		$title = post_type_archive_title( '', false ) . $wp_query->found_posts . esc_html__( 'posts', 'nishiki' );
+	} elseif ( is_tax() ) {
+		$title = single_term_title( '', false );
 	} elseif ( is_search() ) {
 		$title = esc_html( get_search_query() );
 	} elseif ( is_404() ) {

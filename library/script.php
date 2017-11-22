@@ -4,7 +4,7 @@ if ( ! function_exists('nishiki_read_scripts') ) :
 
 		// Add Script
 		wp_enqueue_script('jquery');
-		if ( is_single() ) wp_enqueue_script( "comment-reply" );
+		if ( is_singular() ) wp_enqueue_script( "comment-reply" );
 		wp_register_script( 'nishiki-main-script', get_template_directory_uri() . '/js/main.js', array('jquery'), null, true );
 		wp_enqueue_script( 'nishiki-main-script' );
 

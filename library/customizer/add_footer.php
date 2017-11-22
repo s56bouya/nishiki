@@ -78,7 +78,7 @@ $wp_customize->add_control('ctrl_footer_main_button_text',array(
 // Main Button Link
 $wp_customize->add_setting('setting_footer_main_button_link',array(
 	'default' => '#',
-	'sanitize_callback' => 'wp_filter_nohtml_kses',
+	'sanitize_callback' => 'nishiki_sanitize_text',
 ));
 
 $wp_customize->add_control('ctrl_footer_main_button_link',array(
