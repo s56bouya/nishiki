@@ -7,19 +7,16 @@ function nishiki_customizer_css(){
 	* Title Tagline
 	******************/
 
-	// Site Logo
-	$site_logo = get_theme_mod( 'setting_site_logo', false );
-	if( $site_logo ){
-		$output .= "
-		.site_info a{background-image:url({$site_logo});padding-left:70px;}
-		@media only screen and (max-width:680px){.site_info a{background-image:url({$site_logo});padding-left:60px;}}
-		";
-	}
-
 	// Site Contents Width
 	$site_contents_width = get_theme_mod( 'setting_site_contents_width', '1200' );
 	$output .= "
 		.container{max-width:{$site_contents_width}px;}
+		";
+
+	// Site Background Color
+	$site_background_color = get_theme_mod( 'setting_site_background_color', '#ffffff' );
+	$output .= "
+		body{background-color:{$site_background_color};}
 		";
 
 	// Site Main Text Color
@@ -29,9 +26,12 @@ function nishiki_customizer_css(){
 		.articles header,.articles header a{color:{$site_main_text_color};}
 		aside .search_box .input input{border-color:{$site_main_text_color};}
 		.nav_pc a{color:{$site_main_text_color};}
-		aside .search_box .submit button{border-color:{$site_main_text_color};color:{$site_main_text_color}}
+		aside .search_box .submit button{border-color:{$site_main_text_color};color:{$site_main_text_color};}
+		aside .search_box .submit button:hover{background:{$site_main_text_color};color:{$site_background_color};}
 		.comments-area .submit{border-color:{$site_main_text_color};}
-		.comments-area .submit{color:{$site_main_text_color}}
+		.comments-area .submit:hover{background:{$site_main_text_color};color:{$site_background_color};}
+		.comments-area .submit{color:{$site_main_text_color};}
+		.entry-content table::-webkit-scrollbar-thumb:horizontal{background-color:{$site_main_text_color};}
 		";
 
 	// Site Sub Text Color
@@ -128,7 +128,7 @@ function nishiki_customizer_css(){
 
 	$output .= "
 		#masthead .site_info a{color:{$header_text_color};}
-		#masthead .icon{border-color:{$header_text_color};color:{$header_text_color}}
+		#masthead .icon{border-color:{$header_text_color};color:{$header_text_color};}
 		#masthead .icon:hover{color:{$header_background_color};background:{$header_text_color};}"
 	;
 
@@ -154,7 +154,7 @@ function nishiki_customizer_css(){
 		$output .= "
 		body.scrolled #masthead{background:{$header_background_color};}
 		body.scrolled #masthead .site_info a{color:{$header_text_color};}
-		body.scrolled #masthead .icon{border-color:{$header_text_color};color:{$header_text_color}}
+		body.scrolled #masthead .icon{border-color:{$header_text_color};color:{$header_text_color};}
 		body.scrolled #masthead .icon:hover{color:{$header_background_color};background:{$header_text_color};}
 		";
 	}
