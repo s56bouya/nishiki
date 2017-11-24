@@ -171,7 +171,7 @@ $wp_customize->add_control(
 // Excerpt Text
 $wp_customize->add_setting('setting_archive_excerpt_text',array(
 	'default' => '...',
-	'sanitize_callback' => 'wp_kses_post',
+	'sanitize_callback' => 'nishiki_sanitize_text',
 ));
 
 $wp_customize->add_control('ctrl_archive_excerpt_text',array(

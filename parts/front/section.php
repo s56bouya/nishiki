@@ -15,8 +15,10 @@
 					echo '<p class="sub_text">' . esc_html( get_theme_mod( 'setting_front_page_sub_text' . $i, __( 'Sub Text', 'nishiki' ) ) ) . '</p>';
 					}
 					if( get_theme_mod( 'setting_front_page_button_text' . $i, __( 'Button Text', 'nishiki' ) ) ){
-						$target = ( get_theme_mod( 'setting_front_page_button_link_target' . $i, false ) == true ) ? ' target="_blank"' : '';
-						echo '<p class="main_button"><a' . esc_attr( $target ) . ' href="' . esc_attr( get_theme_mod( 'setting_front_page_button_link' . $i, '#' ) ) . '">' . esc_html( get_theme_mod( 'setting_front_page_button_text' . $i,  __( 'Button Text', 'nishiki' ) ) ) . '</a></p>';
+						?>
+						<p class="main_button"><a <?php if( get_theme_mod( 'setting_front_page_button_link_target' . $i, false ) == true ){ ?>target="_blank"
+						<?php }
+						echo ' href="' . esc_attr( get_theme_mod( 'setting_front_page_button_link' . $i, '#' ) ) . '">' . esc_html( get_theme_mod( 'setting_front_page_button_text' . $i,  __( 'Button Text', 'nishiki' ) ) ) . '</a></p>';
 					}
 ?>
 				</div>

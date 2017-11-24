@@ -106,16 +106,6 @@ function nishiki_remove_recent_comments_style() {
 }
 
 /*****************
- * Custom Editor Style
- *****************/
-
-// Custom Editor Style
-add_action( 'admin_init', 'nishiki_custom_editor_style' );
-function nishiki_custom_editor_style() {
-	add_editor_style();
-}
-
-/*****************
  * Excerpt
  *****************/
 

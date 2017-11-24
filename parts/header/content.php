@@ -2,6 +2,9 @@
 <?php $fixed = ( get_theme_mod( 'setting_header_fixed', true ) ) ? 'fixed' : 'nofixed'; ?>
 <div id="masthead" class="<?php echo esc_attr( $fixed ); ?>">
 	<div class="flex container">
+		<?php
+		if( get_header_textcolor() !== 'blank' ){
+		?>
 		<div class="site_info">
 			<a href="<?php echo esc_url( get_home_url('/') ); ?>">
 				<?php
@@ -23,6 +26,7 @@
 				?>
 			</a>
 		</div>
+		<?php } ?>
 			<nav class="global_nav" role="navigation">
 				<?php if( get_theme_mod( 'setting_header_search_button', true ) ){ ?>
 					<button id="search_button" class="icon">

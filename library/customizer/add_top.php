@@ -50,7 +50,7 @@ if ( $ctrl_blogdescription ) {
 // Sub text
 $wp_customize->add_setting('setting_top_main_visual_sub_text',array(
 	'default'   =>  __( 'Beautiful WordPress Theme Nishiki.', 'nishiki' ),
-	'sanitize_callback' => 'sanitize_text_field',
+	'sanitize_callback' => 'nishiki_sanitize_text',
 ));
 
 $wp_customize->add_control('contrl_top_main_visual_sub_text',array(
@@ -145,7 +145,7 @@ $wp_customize->add_control(
 // main button text
 $wp_customize->add_setting('setting_top_main_visual_main_button_text',array(
 	'default' => __( 'Get started!', 'nishiki' ),
-	'sanitize_callback' => 'sanitize_text_field',
+	'sanitize_callback' => 'nishiki_sanitize_text',
 ));
 
 $wp_customize->add_control('ctrl_top_main_visual_main_button_text',array(
@@ -255,7 +255,7 @@ $wp_customize->add_control(
 // main text
 $wp_customize->add_setting('setting_top_recently_article_main_text',array(
 	'default'   =>  __( 'Recent Articles', 'nishiki' ),
-	'sanitize_callback' => 'sanitize_text_field',
+	'sanitize_callback' => 'nishiki_sanitize_text',
 ));
 
 $wp_customize->add_control('contrl_top_recently_article_main_text',array(
@@ -268,7 +268,7 @@ $wp_customize->add_control('contrl_top_recently_article_main_text',array(
 // sub text
 $wp_customize->add_setting('setting_top_recently_article_sub_text',array(
 	'default'   =>  __( 'Sub Text', 'nishiki' ),
-	'sanitize_callback' => 'sanitize_text_field',
+	'sanitize_callback' => 'nishiki_sanitize_text',
 ));
 
 $wp_customize->add_control('contrl_top_recently_article_sub_text',array(

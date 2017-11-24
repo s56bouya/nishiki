@@ -109,7 +109,7 @@ for ( $i = 1; $i < ( 1 + NISHIKI_SECTION_NUM ); ++$i ) {
 	// Main Text
 	$wp_customize->add_setting( 'setting_front_page_main_text' . $i, array(
 		'default'           => __( 'Main Text', 'nishiki' ),
-		'sanitize_callback' => 'sanitize_text_field',
+		'sanitize_callback' => 'nishiki_sanitize_text',
 	) );
 
 	$wp_customize->add_control( 'ctrl_front_page_main_text' . $i, array(
@@ -172,7 +172,7 @@ for ( $i = 1; $i < ( 1 + NISHIKI_SECTION_NUM ); ++$i ) {
 	// Button Text
 	$wp_customize->add_setting( 'setting_front_page_button_text' . $i, array(
 		'default'           => __( 'Button Text', 'nishiki' ),
-		'sanitize_callback' => 'sanitize_text_field',
+		'sanitize_callback' => 'nishiki_sanitize_text',
 	) );
 
 	$wp_customize->add_control( 'ctrl_front_page_button_text' . $i, array(

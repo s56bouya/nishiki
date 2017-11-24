@@ -8,7 +8,7 @@ $wp_customize->add_section('section_footer',array(
 // Main Text
 $wp_customize->add_setting('setting_footer_main_text',array(
 	'default' => __( 'Main Text', 'nishiki' ),
-	'sanitize_callback' => 'sanitize_text_field',
+	'sanitize_callback' => 'nishiki_sanitize_text',
 ));
 
 $wp_customize->add_control('ctrl_footer_main_text',array(
@@ -64,7 +64,7 @@ $wp_customize->add_control(
 // Main Button Text
 $wp_customize->add_setting('setting_footer_main_button_text',array(
 	'default' => __( 'Button Text', 'nishiki' ),
-	'sanitize_callback' => 'sanitize_text_field',
+	'sanitize_callback' => 'nishiki_sanitize_text',
 ));
 
 $wp_customize->add_control('ctrl_footer_main_button_text',array(
@@ -126,7 +126,7 @@ $wp_customize->add_control(
 // copyright
 $wp_customize->add_setting('setting_footer_copyright',array(
 	'default' => NISHIKI_CREDIT,
-	'sanitize_callback' => 'wp_kses_post',
+	'sanitize_callback' => 'nishiki_sanitize_footer_copyright',
 ));
 
 $wp_customize->add_control('ctrl_footer_copyright',array(

@@ -61,12 +61,12 @@ $wp_customize->add_control(
 		'ctrl_post_sidebar_margin',
 		array(
 			'label'	=>  __( 'Sidebar Margin', 'nishiki' ),
-			'min' => 0,
-			'max' => 50,
-			'step' => 1,
-			'section' => 'section_post',
-			'settings'   => 'setting_post_sidebar_margin',
-			'priority'          =>  1020,
+			'min'       => 0,
+			'max'       => 50,
+			'step'      => 1,
+			'section'   => 'section_post',
+			'settings'  => 'setting_post_sidebar_margin',
+			'priority'  =>  1020,
 		)
 	)
 );
@@ -231,7 +231,7 @@ $wp_customize->add_control('ctrl_post_eye_catch',array(
 // Author Text
 $wp_customize->add_setting('setting_footer_author_text',array(
 	'default' => __( 'Author', 'nishiki' ),
-	'sanitize_callback' => 'sanitize_text_field',
+	'sanitize_callback' => 'nishiki_sanitize_text',
 ));
 
 $wp_customize->add_control('ctrl_footer_author_text',array(

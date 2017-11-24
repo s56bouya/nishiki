@@ -1,14 +1,13 @@
 <?php
 
-// text
+// Text
 //wp_filter_nohtml_kses
 function nishiki_sanitize_text( $text ) {
 	return sanitize_text_field( $text );
 }
 
-// html
-function nishiki_sanitize_footer_copyright() {
-	$text = get_theme_mod( 'setting_footer_copyright' );
+// Allow HTML
+function nishiki_sanitize_footer_copyright( $text ) {
 	$allowed_html = array(
 		'a' => array( 'href' => array (), 'onclick' => array (), 'target' => array(), ),
 		'br' => array(),
