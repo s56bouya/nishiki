@@ -53,6 +53,7 @@ Created by Keyamoon
 * Fixed: Customizer "Display Site Title and Tagline"
 * Change: Display main visual button
 * Remove: Editor style(add it in the future version)
+* Remove: Trimming thumbnail image & medium image
 
 = 0.1.10 =
 * Change: Customizer CSS
