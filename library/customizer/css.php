@@ -31,7 +31,6 @@ function nishiki_customizer_css(){
 		.comments-area .submit{border-color:{$site_main_text_color};}
 		.comments-area .submit:hover{background:{$site_main_text_color};color:{$site_background_color};}
 		.comments-area .submit{color:{$site_main_text_color};}
-		.entry-content table::-webkit-scrollbar-thumb:horizontal{background-color:{$site_main_text_color};}
 		";
 
 	// Site Sub Text Color
@@ -45,6 +44,7 @@ function nishiki_customizer_css(){
 		.comments-area .comment-form-comment{border-color:{$site_sub_text_color};}
 		.single .entry-content table th,.single .entry-content table td,
 		.page .entry-content table th,.page .entry-content table td{border-color:{$site_sub_text_color};}
+		.entry-content table::-webkit-scrollbar-thumb:horizontal{background-color:{$site_sub_text_color};}
 		";
 
 	// Site Main Color
