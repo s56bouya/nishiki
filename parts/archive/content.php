@@ -3,7 +3,7 @@
 			<div class="title">
 				<h1><?php echo esc_html( get_theme_mod( 'setting_top_recently_article_main_text', __( 'Recent Articles', 'nishiki' ) ) ); ?></h1>
 				<?php
-				if( get_theme_mod( 'setting_top_recently_article_sub_text', __( 'Sub Text', 'nishiki' ) ) ){
+				if( get_theme_mod( 'setting_top_recently_article_sub_text' ) == true ){
 					echo '<span class="sub_text">' . esc_html( get_theme_mod( 'setting_top_recently_article_sub_text', __( 'Sub Text', 'nishiki' ) ) ) . '</span>';
 				}
 				?>

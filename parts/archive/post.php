@@ -37,7 +37,7 @@
 			$comment_count = wp_count_comments( get_the_ID() );
 			$comment_num = $comment_count->approved;
 			if( $comment_num !== 0 ){
-				echo '<span class="comment"><i class="icomoon icon-bubble"></i>' . intval( $comment_num ) . '</span>';
+				echo '<span class="comment"><i class="icomoon icon-bubble"></i>' . absint( $comment_num ) . '</span>';
 			}
 		}
 		if( get_theme_mod( 'setting_archive_display_author', true ) ) {

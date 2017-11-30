@@ -6,7 +6,7 @@
 		if( get_header_textcolor() !== 'blank' ){
 		?>
 		<div class="site_info">
-			<a href="<?php echo esc_url( get_home_url('/') ); ?>">
+			<a href="<?php echo esc_url( home_url('/') ); ?>">
 				<?php
 				$custom_logo_id = get_theme_mod( 'custom_logo' );
 				$logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
@@ -18,7 +18,7 @@
 				}
 
 				if ( has_custom_logo() ) {
-					echo '<img class="' . esc_attr( $logo_class ) . '" src="'. esc_url( $logo[0] ) .'" width="' . intval( $logo[1] ) . '" height="' . intval( $logo[2] ) . '" alt="' . esc_attr( get_bloginfo('name') ) . '">';
+					echo '<img class="' . esc_attr( $logo_class ) . '" src="'. esc_url( $logo[0] ) .'" width="' . absint( $logo[1] ) . '" height="' . absint( $logo[2] ) . '" alt="' . esc_attr( get_bloginfo('name') ) . '">';
 				}
 				if ( $site_title ) {
 					echo '<span class="site_title">' . esc_html( get_bloginfo('name') ) . '</span>';

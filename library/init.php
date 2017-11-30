@@ -79,10 +79,12 @@ function nishiki_is_static_front_page() {
  *****************/
 
 // Check has_header_video()
-if( ! function_exists( 'has_header_video' ) ){
-	function has_header_video(){
-		return false;
+function nishiki_has_header_video() {
+	if ( function_exists('has_header_video') ) {
+		return has_header_video();
 	}
+
+	return false;
 }
 
 /*****************
@@ -109,13 +111,6 @@ function nishiki_register_nav() {
 // Disable Default Gallery Style
 add_filter( 'use_default_gallery_style', '__return_false' );
 
-// Delete .recentcomments CSS
-add_action( 'widgets_init', 'nishiki_remove_recent_comments_style' );
-function nishiki_remove_recent_comments_style() {
-	global $wp_widget_factory;
-	remove_action( 'wp_head', array( $wp_widget_factory->widgets['WP_Widget_Recent_Comments'], 'recent_comments_style' ) );
-}
-
 /*****************
  * Excerpt
  *****************/
@@ -128,7 +123,7 @@ function nishiki_home_excerpt_length( $excerpt ) {
 	}
 
 	if( get_theme_mod( 'setting_archive_excerpt_text_num' ) ){
-		$excerpt = intval( get_theme_mod( 'setting_archive_excerpt_text_num' ) );
+		$excerpt = absint( get_theme_mod( 'setting_archive_excerpt_text_num' ) );
 	} else {
 		$excerpt = 50;
 	}

@@ -1,34 +1,37 @@
 <?php
 
 // Define Extend
-get_template_part( 'library/customizer/extend' );
+require_once( get_template_directory() . '/library/customizer/extend.php');
 
-// Init Customizer
-add_action( "customize_register", "nishiki_init_customizer" );
-function nishiki_init_customizer( $wp_customize ) {
-	set_query_var( 'wp_customize', $wp_customize );
+// Sanitize
+require_once( get_template_directory() . '/library/customizer/sanitize.php');
 
-	// Sanitize
-	get_template_part( 'library/customizer/sanitize' );
+// Title Tagline
+require_once( get_template_directory() . '/library/customizer/add_title_tagline.php');
 
-	// Custom Section
-	$section_background_image = $wp_customize->get_section('background_image');
-	if ( $section_background_image ) {
-		$section_background_image->priority = 999999;
-	}
+// Header
+require_once( get_template_directory() . '/library/customizer/add_header.php');
 
-	get_template_part( 'library/customizer/add_title_tagline' );
-	get_template_part( 'library/customizer/add_header' );
-	get_template_part( 'library/customizer/add_footer' );
-	get_template_part( 'library/customizer/add_top' );
-	get_template_part( 'library/customizer/add_front' );
-	get_template_part( 'library/customizer/add_post' );
-	get_template_part( 'library/customizer/add_page' );
-	get_template_part( 'library/customizer/add_archive' );
-}
+// Footer
+require_once( get_template_directory() . '/library/customizer/add_footer.php');
+
+// Top
+require_once( get_template_directory() . '/library/customizer/add_top.php');
+
+// Front
+require_once( get_template_directory() . '/library/customizer/add_front.php');
+
+// Post
+require_once( get_template_directory() . '/library/customizer/add_post.php');
+
+// Page
+require_once( get_template_directory() . '/library/customizer/add_page.php');
+
+// Archive
+require_once( get_template_directory() . '/library/customizer/add_archive.php');
 
 // Output CSS
-get_template_part( 'library/customizer/css' );
+require_once( get_template_directory() . '/library/customizer/css.php');
 
 // Front Page Section
 define( 'NISHIKI_SECTION_NUM', 4 );

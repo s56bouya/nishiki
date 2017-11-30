@@ -18,7 +18,7 @@
 						?>
 						<p class="main_button"><a <?php if( get_theme_mod( 'setting_front_page_button_link_target' . $i, false ) == true ){ ?>target="_blank"
 						<?php }
-						echo ' href="' . esc_attr( get_theme_mod( 'setting_front_page_button_link' . $i, '#' ) ) . '">' . esc_html( get_theme_mod( 'setting_front_page_button_text' . $i,  __( 'Button Text', 'nishiki' ) ) ) . '</a></p>';
+						echo ' href="' . esc_url( get_theme_mod( 'setting_front_page_button_link' . $i, '#' ) ) . '">' . esc_html( get_theme_mod( 'setting_front_page_button_text' . $i,  __( 'Button Text', 'nishiki' ) ) ) . '</a></p>';
 					}
 ?>
 				</div>

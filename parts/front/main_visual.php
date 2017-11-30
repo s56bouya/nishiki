@@ -1,6 +1,6 @@
 <?php
 if( get_bloginfo( 'description' ) !== '' ){
-	$nishiki_video_class = ( has_header_video() ) ? ' main_video' : '';
+	$nishiki_video_class = ( nishiki_has_header_video() ) ? ' main_video' : '';
 	if( has_header_image() ){
 		$image = get_header_image();
 	} elseif( get_theme_mod( 'setting_top_main_visual_image', get_template_directory_uri() . '/images/carp.jpg' ) !== '' ) {
@@ -13,7 +13,7 @@ if( get_bloginfo( 'description' ) !== '' ){
 	if( get_header_textcolor() !== 'blank' ){
 		echo '<p class="description">' . esc_html( get_bloginfo( 'description' ) ) . '</p>';
 	}
-	if( get_theme_mod( 'setting_top_main_visual_sub_text', __( 'Beautiful WordPress Theme the Nishiki.', 'nishiki' ) ) ){
+	if( get_theme_mod( 'setting_top_main_visual_sub_text' ) == true ){
 		echo '<p class="sub_text">' . esc_html( get_theme_mod( 'setting_top_main_visual_sub_text', __( 'Beautiful WordPress Theme the Nishiki.', 'nishiki' ) ) ) . '</p>';
 	}
 	if( get_theme_mod( 'setting_top_main_visual_main_button_text', __( 'Get started!', 'nishiki' ) ) ){
@@ -38,7 +38,7 @@ if( get_bloginfo( 'description' ) !== '' ){
 		}
 	}
 	echo '</div>';
-	if( has_header_video() ){
+	if( nishiki_has_header_video() ){
 //		var_dump(get_header_video_settings());
 		echo '<div class="custom_header">';
 		the_custom_header_markup();
