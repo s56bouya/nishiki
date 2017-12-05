@@ -1,7 +1,7 @@
 === Nishiki ===
 Requires at least: WordPress 4.5
 Tested up to: WordPress 4.9
-Version: 0.1.13
+Version: 0.1.14
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: one-column, two-columns, right-sidebar, left-sidebar, flexible-header, accessibility-ready, custom-colors, custom-header, custom-menu, custom-logo, featured-images, footer-widgets, post-formats, sticky-post, theme-options, threaded-comments, translation-ready, blog, entertainment
@@ -32,11 +32,11 @@ the Free Software Foundation, either version 2 of the License, or
 
 This program is distributed in the hope that it will be useful,
 but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 GNU General Public License for more details.
 
 All the photos used in the screenshot.png taken by myself, copyright 2017 s56bouya, distributed under the term of GPL.
-carp.jpg is taken by by myself, copyright 2017 s56bouya, distributed under the term of GPL.
+carp.jpg is taken by myself, copyright 2017 s56bouya, distributed under the term of GPL.
 
 Nishiki WordPress Theme bundles the following third-party resources:
 
@@ -46,6 +46,9 @@ URL: https://icomoon.io/#icons-icomoon
 Created by Keyamoon
 
 == Changelog ==
+
+= 0.1.14 =
+* Fixed: Escape
 
 = 0.1.13 =
 * Remove : image_send_to_editor

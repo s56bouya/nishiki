@@ -203,7 +203,7 @@ function nishiki_customizer_css(){
 
 	// Sidebar Width
 	$post_sidebar_width = absint( get_theme_mod( 'setting_post_sidebar_width', '300' ) );
-	$post_column = get_theme_mod( 'setting_post_column', 'none' );
+	$post_column = esc_html( get_theme_mod( 'setting_post_column', 'none' ) );
 	if( $post_column !== 'none' ){
 		$post_sidebar_margin = $post_sidebar_width + absint( get_theme_mod( 'setting_post_sidebar_margin', '20' ) );
 		$output .= ".single #main .column { padding-{$post_column}: {$post_sidebar_margin}px;}";
@@ -230,7 +230,7 @@ function nishiki_customizer_css(){
 
 	// Sidebar Width
 	$page_sidebar_width = absint( get_theme_mod( 'setting_page_sidebar_width','300' ) );
-	$page_column = get_theme_mod( 'setting_page_column', 'none' );
+	$page_column = esc_html( get_theme_mod( 'setting_page_column', 'none' ) );
 	if( $page_column !== 'none' ){
 		$page_sidebar_margin = $page_sidebar_width + absint( get_theme_mod( 'setting_page_sidebar_margin', '20' ) );
 		$output .= ".page #main .column { padding-{$page_column}: {$page_sidebar_margin}px;}";
