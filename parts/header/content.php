@@ -1,5 +1,6 @@
 <body <?php body_class(); ?>>
 <?php $fixed = ( get_theme_mod( 'setting_header_fixed', true ) ) ? 'fixed' : 'nofixed'; ?>
+<?php do_action( 'nishiki_before_site_header' ); ?>
 <div id="masthead" class="<?php echo esc_attr( $fixed ); ?>">
 	<div class="flex container">
 		<?php
@@ -41,6 +42,7 @@
 			</nav>
 	</div>
 </div>
+<?php do_action( 'nishiki_after_site_header' ); ?>
 <div id="search_overlay" class="overlay">
 	<div class="overlay_inner centering">
 		<?php get_search_form(); ?>

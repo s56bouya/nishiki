@@ -10,7 +10,9 @@ if( has_post_thumbnail() ){
 <header<?php echo wp_kses_post( $nishiki_header_class ); ?> class="<?php echo esc_attr( get_post_type() ); ?>">
 	<div class="mask"></div>
 	<div class="page_header container">
+	  <?php do_action( 'nishiki_before_singular_title' ); ?>
 		<?php the_title( '<h1>', '</h1>' ); ?>
+	  <?php do_action( 'nishiki_after_singular_title' ); ?>
 		<?php if( is_single() && !is_attachment() ){ ?>
 		<div class="date">
 			<time datetime="<?php echo esc_attr( get_the_time('Y-m-d') ); ?>"><?php esc_html_e( 'published', 'nishiki' ); ?>:<?php the_time( get_option( 'date_format' ) ) ?></time>
@@ -48,7 +50,9 @@ if( has_post_thumbnail() ){
 <div class="container column">
 	<article>
 		<div class="entry-content">
+			<?php do_action( 'nishiki_before_singular_content' ); ?>
 			<?php the_content(); ?>
+			<?php do_action( 'nishiki_after_singular_content' ); ?>
 			<?php wp_link_pages('before=<div class="pagination">&after=</div>&link_before=<span>&link_after=</span>'); ?>
 		</div>
 			<footer>

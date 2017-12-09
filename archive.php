@@ -4,20 +4,24 @@
 				<header>
 					<div class="mask"></div>
 					<div class="page_header container">
+					  <?php do_action( 'nishiki_before_archive_title' ); ?>
 						<?php if ( is_post_type_archive() ) { ?>
 							<h1><?php post_type_archive_title(); ?></h1>
-							<?php
-						} else {
+						<?php } else {
 							the_archive_title( '<h1>', '</h1>' );
 						}
-						the_archive_description( '<div class="taxonomy-description">', '</div>' );
 						?>
+						<?php do_action( 'nishiki_after_archive_title' ); ?>
+						<?php the_archive_description( '<div class="taxonomy-description">', '</div>' ); ?>
 					</div>
 				</header>
 			<?php endif; ?>
 
 			<div class="container">
+				<?php do_action( 'nishiki_before_archive_content' ); ?>
 				<?php get_template_part( 'parts/archive/content' ); ?>
+				<?php do_action( 'nishiki_after_archive_content' ); ?>
 			</div>
 		</main>
-<?php get_footer();
+<?php
+get_footer();

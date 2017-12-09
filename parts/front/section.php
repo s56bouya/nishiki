@@ -3,6 +3,7 @@
 	for( $i = 1; $i <= $section_count; ++$i ){
 		if( get_theme_mod( 'setting_front_page_section' . $i, 'disabled' ) !== 'disabled' ){
 			$style = get_theme_mod( 'setting_front_page_image' . $i, false ) ? ' style="background-image:url(' . esc_url( get_theme_mod( 'setting_front_page_image' . $i, false ) ) . ');"' : '';
+			do_action( 'nishiki_before_front_page_section' . $i . '_content' );
 			?>
 			<section id="front-page-section<?php echo absint( $i ); ?>"<?php echo wp_kses_post( $style ); ?> class="front-page-section">
 				<div class="mask"></div>
@@ -24,7 +25,7 @@
 				</div>
 			</section>
 <?php
+			do_action( 'nishiki_after_front_page_section' . $i . '_content' );
 		}
 	}
 ?>
-
