@@ -1,5 +1,5 @@
 /**
- * Generated on 2017/11/22
+ * Generated on 2017/12/24
  * Author: Tetsuya Imamura(s56bouya)
  */
 
@@ -2031,32 +2031,6 @@
   box-sizing: border-box;
 }
 
-input[type="submit"],
-input[type="button"] {
-  border-radius: 0;
-  -webkit-box-sizing: content-box;
-  -webkit-appearance: button;
-  appearance: button;
-  border: none;
-  box-sizing: border-box;
-}
-input[type="submit"]::-webkit-search-decoration,
-input[type="button"]::-webkit-search-decoration {
-  display: none;
-}
-input[type="submit"]::focus,
-input[type="button"]::focus {
-  outline-offset: -2px;
-}
-
-input[type=checkbox] {
-  -webkit-appearance: checkbox;
-}
-
-input[type=radio] {
-  -webkit-appearance: radio;
-}
-
 button {
   border-radius: 0;
 }
@@ -3422,7 +3396,40 @@ aside ul li, aside ol li {
 /***************************************
 * Form
 ****************************************/
-input[type="text"], input[type="password"], input[type="email"], textarea {
+input[type="submit"],
+input[type="button"] {
+  border-radius: 0;
+  -webkit-box-sizing: content-box;
+  -webkit-appearance: button;
+  appearance: button;
+  box-sizing: border-box;
+  border-style: solid;
+  padding: 1rem;
+}
+input[type="submit"]::-webkit-search-decoration,
+input[type="button"]::-webkit-search-decoration {
+  display: none;
+}
+input[type="submit"]:focus,
+input[type="button"]:focus {
+  outline-offset: -2px;
+}
+
+input[type=checkbox] {
+  -webkit-appearance: checkbox;
+}
+
+input[type=radio] {
+  -webkit-appearance: radio;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="url"],
+input[type="tel"],
+input[type="date"],
+textarea {
   box-shadow: inset 0 1px 3px #ddd;
   padding: 0.7rem;
   border: 1px solid #ddd;
@@ -3472,7 +3479,6 @@ select {
   resize: vertical;
 }
 .comments-area textarea, .comments-area input {
-  border: none;
   box-sizing: border-box;
   padding: 1rem;
 }

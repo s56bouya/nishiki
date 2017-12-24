@@ -31,6 +31,8 @@ function nishiki_customizer_css(){
 		.comments-area .submit{border-color:{$site_main_text_color};}
 		.comments-area .submit:hover{background:{$site_main_text_color};color:{$site_background_color};}
 		.comments-area .submit{color:{$site_main_text_color};}
+		input[type=\"submit\"]{border-color:{$site_main_text_color};color:{$site_main_text_color};}
+		input:hover[type=\"submit\"]{background:{$site_main_text_color};color:{$site_background_color};}
 		";
 
 	// Site Sub Text Color
@@ -40,11 +42,12 @@ function nishiki_customizer_css(){
 		aside section a,aside section ul li,.comments-area .comment-list li .comment-body,.comments-area .comment-form-comment{border-color:{$site_sub_text_color};}
 		.nav_pc a:hover{color:{$site_sub_text_color};}
 		.comments-area .comment-list li .comment-date,.comments-area cite,.comments-area cite a{color:{$site_sub_text_color};}
-		.comments-area .comment-respond textarea,.comments-area .comment-respond input[type=text],.comments-area .comment-respond input[type=email],.comments-area .comment-respond input[type=url]{border-color:{$site_sub_text_color};}
 		.comments-area .comment-form-comment{border-color:{$site_sub_text_color};}
 		.single .entry-content table th,.single .entry-content table td,
 		.page .entry-content table th,.page .entry-content table td{border-color:{$site_sub_text_color};}
 		.entry-content table::-webkit-scrollbar-thumb:horizontal{background-color:{$site_sub_text_color};}
+		input[type=\"submit\"][disabled]{border-color:{$site_sub_text_color};color:{$site_sub_text_color};pointer-events: none;}
+		input:hover[type=\"submit\"][disabled]{background:none;color:{$site_sub_text_color};}
 		";
 
 	// Site Main Color
