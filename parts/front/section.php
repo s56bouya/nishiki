@@ -2,11 +2,14 @@
 	$section_count = NISHIKI_SECTION_NUM;
 	for( $i = 1; $i <= $section_count; ++$i ){
 		if( get_theme_mod( 'setting_front_page_section' . $i, 'disabled' ) !== 'disabled' ){
-			$style = get_theme_mod( 'setting_front_page_image' . $i, false ) ? ' style="background-image:url(' . esc_url( get_theme_mod( 'setting_front_page_image' . $i, false ) ) . ');"' : '';
+			$image = get_theme_mod( 'setting_front_page_image' . $i, false ) ? esc_url( get_theme_mod( 'setting_front_page_image' . $i, false ) ) : '';
+
 			do_action( 'nishiki_before_front_page_section' . $i . '_content' );
 			?>
-			<section id="front-page-section<?php echo absint( $i ); ?>"<?php echo wp_kses_post( $style ); ?> class="front-page-section">
-				<div class="mask"></div>
+			<section id="front-page-section<?php echo absint( $i ); ?>" class="front-page-section">
+				<?php if ( $image ) { ?>
+					<img data-src="<?php echo $image; ?>">
+				<?php } ?>
 				<div class="container">
 					<?php
 					if( get_theme_mod( 'setting_front_page_main_text' . $i, __( 'Main Text', 'nishiki' ) ) ){

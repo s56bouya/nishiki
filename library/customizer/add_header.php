@@ -20,7 +20,6 @@ function nishiki_init_customizer_header( $wp_customize ) {
 			array(
 				'label'      => __( 'Background Color', 'nishiki' ),
 				'section'    => 'section_header',
-				'transport'   => 'postMessage',
 				'settings'   => 'setting_header_background_color',
 				'priority'=> 1001,
 			)

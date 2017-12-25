@@ -34,7 +34,6 @@ function nishiki_init_customizer_title_tagline( $wp_customize ) {
 			array(
 				'label'       =>  __( 'Main Text Color', 'nishiki' ),
 				'section'     =>  'title_tagline',
-				'transport'   =>  'postMessage',
 				'settings'    =>  'setting_site_main_text_color',
 				'priority'    =>  2000,
 			)
@@ -74,7 +73,6 @@ function nishiki_init_customizer_title_tagline( $wp_customize ) {
 			array(
 				'label'       =>  __( 'Main Color', 'nishiki' ),
 				'section'     =>  'title_tagline',
-				'transport'   =>  'postMessage',
 				'settings'    =>  'setting_site_main_color',
 				'priority'    =>  2020,
 			)
@@ -114,7 +112,6 @@ function nishiki_init_customizer_title_tagline( $wp_customize ) {
 			array(
 				'label'       =>  __( 'Background Color', 'nishiki' ),
 				'section'     =>  'title_tagline',
-				'transport'   =>  'postMessage',
 				'settings'    =>  'setting_site_background_color',
 				'priority'    =>  2040,
 			)
@@ -124,7 +121,6 @@ function nishiki_init_customizer_title_tagline( $wp_customize ) {
 	// Contents Width
 	$wp_customize->add_setting( 'setting_site_contents_width' , array(
 		'default'     => 1200,
-		'transport'   => '',
 		'sanitize_callback' => 'nishiki_sanitize_number_range',
 	) );
 

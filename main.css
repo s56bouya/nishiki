@@ -1,5 +1,5 @@
 /**
- * Generated on 2017/12/24
+ * Generated on 2017/12/25
  * Author: Tetsuya Imamura(s56bouya)
  */
 
@@ -2218,6 +2218,7 @@ input, textarea {
 * Main Visual
 ************************/
 .main_visual {
+  opacity: 0;
   position: relative;
   text-align: center;
   font-weight: bold;
@@ -2226,12 +2227,39 @@ input, textarea {
   background-position: center center;
   -webkit-transform: translatez(0);
   -webkit-transform: translate3d(0, 0, 0);
-  animation: fadeIn 200ms linear 0s alternate;
   height: 30rem;
+}
+.main_visual img {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  opacity: 1;
+  transition: opacity 1s ease;
+  display: block;
+}
+.main_visual img[data-src] {
+  opacity: 0;
+}
+.main_visual.show {
+  transition: opacity 0.3s ease;
+  opacity: 1;
 }
 .main_visual.main_video {
   padding-top: 56.25%;
   height: auto;
+}
+.main_visual::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23929877' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
 }
 .main_visual .main_visual_content {
   position: absolute;
@@ -2260,13 +2288,6 @@ input, textarea {
   padding: 0.7rem 2rem;
   display: inline-block;
   vertical-align: middle;
-}
-.main_visual .mask {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
 }
 
 .hero {
@@ -2297,6 +2318,7 @@ input, textarea {
 * Front Page
 ************************/
 .front-page-section {
+  opacity: 0;
   position: relative;
   padding: 10rem 0;
   font-size: 1.7rem;
@@ -2306,17 +2328,29 @@ input, textarea {
   background-position: center center;
   -webkit-transform: translatez(0);
   -webkit-transform: translate3d(0, 0, 0);
-  animation: fadeIn .2s linear 0s alternate;
 }
-.front-page-section .mask {
+.front-page-section img {
   position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
+  object-fit: cover;
+  opacity: 1;
+  transition: opacity 1s ease;
+  display: block;
+}
+.front-page-section img[data-src] {
+  opacity: 0;
+}
+.front-page-section.show {
+  transition: opacity 0.3s ease;
+  opacity: 1;
 }
 .front-page-section .container {
   position: relative;
+  z-index: 1;
 }
 .front-page-section .container .main_text {
   margin-top: 0;
@@ -2336,6 +2370,14 @@ input, textarea {
   padding: 0.7rem 2rem;
   display: inline-block;
   vertical-align: middle;
+}
+.front-page-section::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
 }
 
 /*********************
@@ -2393,37 +2435,39 @@ input, textarea {
 /***********************
 * Archive Page
 ************************/
-.archive header,
-.search header,
-.paged header,
-.error404 header {
+.archive .site-main > header,
+.search .site-main > header,
+.paged .site-main > header,
+.error404 .site-main > header {
   position: relative;
 }
-.archive header .page_header,
-.search header .page_header,
-.paged header .page_header,
-.error404 header .page_header {
+.archive .site-main > header::after,
+.search .site-main > header::after,
+.paged .site-main > header::after,
+.error404 .site-main > header::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+}
+.archive .site-main > header .page_header,
+.search .site-main > header .page_header,
+.paged .site-main > header .page_header,
+.error404 .site-main > header .page_header {
   text-align: center;
   padding: 8.5rem 0 7.5rem;
   overflow: hidden;
   position: relative;
+  z-index: 1;
 }
-.archive header .page_header h1,
-.search header .page_header h1,
-.paged header .page_header h1,
-.error404 header .page_header h1 {
+.archive .site-main > header .page_header h1,
+.search .site-main > header .page_header h1,
+.paged .site-main > header .page_header h1,
+.error404 .site-main > header .page_header h1 {
   font-size: 1.8rem;
   margin: 0 auto 1rem;
-}
-.archive header .mask,
-.search header .mask,
-.paged header .mask,
-.error404 header .mask {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
 }
 
 /***********************
@@ -2490,9 +2534,10 @@ input, textarea {
 }
 .single header .page_header,
 .page header .page_header {
-  padding: 8.5rem 0 7.5rem;
   position: relative;
+  padding: 8.5rem 0 7.5rem;
   overflow: hidden;
+  z-index: 1;
 }
 .single header .page_header h1,
 .page header .page_header h1 {
@@ -2514,13 +2559,14 @@ input, textarea {
 .page header i {
   margin-right: 0.3rem;
 }
-.single header .mask,
-.page header .mask {
+.single header::after,
+.page header::after {
   position: absolute;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
 }
 .single .social_top,
 .page .social_top {

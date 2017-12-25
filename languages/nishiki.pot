@@ -198,6 +198,14 @@ msgstr ""
 msgid "Background Opacity(%)"
 msgstr ""
 
+#: library/customizer/add_front.php:63 library/customizer/add_top.php:95
+msgid "Color above the image"
+msgstr ""
+
+#: library/customizer/add_front.php:81 library/customizer/add_top.php:114
+msgid "Color above the image Opacity(%)"
+msgstr ""
+
 #: library/customizer/add_front.php:124 library/customizer/add_front.php:129
 #: library/customizer/add_top.php:57 library/customizer/add_top.php:270
 #: library/customizer/add_top.php:275 parts/archive/content.php:6

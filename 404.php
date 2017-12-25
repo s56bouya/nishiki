@@ -1,7 +1,6 @@
 <?php get_header(); ?>
 	<main id="main" class="site-main" role="main">
 		<header>
-			<div class="mask"></div>
 			<div class="page_header container">
 			  <?php do_action( 'nishiki_before_404_title' ); ?>
 				<h1><?php esc_html_e( 'Page Not Found', 'nishiki' ); ?></h1>

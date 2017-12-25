@@ -96,12 +96,12 @@ function nishiki_customizer_css(){
 
 		// Background Color
 		$front_page_background_color = esc_html( get_theme_mod( 'setting_front_page_background_color' . $i, '#000000' ) );
-		$output .= "#front-page-section{$i} .mask{background-color:{$front_page_background_color};}";
+		$output .= "#front-page-section{$i}::after{background-color:{$front_page_background_color};}";
 
 		// Background Opacity
 		$front_page_background_opacity = absint( get_theme_mod( 'setting_front_page_background_opacity' . $i, '30' ) );
 		$front_page_opacity = $front_page_background_opacity / 100;
-		$output .= "#front-page-section{$i} .mask{opacity:{$front_page_opacity};}";
+		$output .= "#front-page-section{$i}::after{opacity:{$front_page_opacity};}";
 
 		// Button Text Color
 		$front_page_button_text_color = esc_html( get_theme_mod( 'setting_front_page_button_text_color' . $i, '#ffffff' ) );
@@ -170,12 +170,12 @@ function nishiki_customizer_css(){
 
 	// Background Color
 	$main_visual_background_color = esc_html( get_theme_mod( 'setting_top_main_visual_background_color', '#000000' ) );
-	$output .= ".main_visual .mask{background-color:{$main_visual_background_color};}";
+	$output .= ".main_visual::after{background-color:{$main_visual_background_color};}";
 
 	// Background Opacity
 	$main_visual_background_opacity = absint( get_theme_mod( 'setting_top_main_visual_background_opacity', '30' ) );
 	$main_visual_opacity = $main_visual_background_opacity / 100;
-	$output .= ".main_visual .mask{opacity:{$main_visual_opacity};}";
+	$output .= ".main_visual::after{opacity:{$main_visual_opacity};}";
 
 	// button text color
 	$header_main_visual_main_button_text_color = esc_html( get_theme_mod( 'setting_top_main_visual_main_button_text_color', '#ffffff' ) );
@@ -193,12 +193,12 @@ function nishiki_customizer_css(){
 
 	// Title Background Color
 	$post_title_background_color = esc_html( get_theme_mod( 'setting_post_title_background_color', '#000000' ) );
-	$output .= ".single header .mask{background-color:{$post_title_background_color};}";
+	$output .= ".single header::after{background-color:{$post_title_background_color};}";
 
 	// Title Background Opacity
 	$post_title_background_opacity = absint( get_theme_mod( 'setting_post_title_background_opacity', '100' ) );
 	$post_header_opacity = $post_title_background_opacity / 100;
-	$output .= ".single header .mask{opacity:{$post_header_opacity};}";
+	$output .= ".single header::after{opacity:{$post_header_opacity};}";
 
 	// Title Text Color
 	$post_title_text_color = esc_html( get_theme_mod( 'setting_post_title_text_color', '#ffffff' ) );
@@ -220,12 +220,12 @@ function nishiki_customizer_css(){
 
 	// Title Background Color
 	$page_title_background_color = esc_html( get_theme_mod( 'setting_page_title_background_color', '#000000' ) );
-	$output .= ".page header .mask{background-color:{$page_title_background_color};}";
+	$output .= ".page header::after{background-color:{$page_title_background_color};}";
 
 	// Title Background Opacity
 	$page_title_background_opacity = absint( get_theme_mod( 'setting_page_title_background_opacity', '100' ) );
 	$page_header_opacity = $page_title_background_opacity / 100;
-	$output .= ".page header .mask{opacity:{$page_header_opacity};}";
+	$output .= ".page header::after{opacity:{$page_header_opacity};}";
 
 	// Title Text Color
 	$page_title_text_color = esc_html( get_theme_mod( 'setting_page_title_text_color', '#ffffff' ) );
@@ -247,12 +247,12 @@ function nishiki_customizer_css(){
 
 	// Title Background Color
 	$archive_title_background_color = esc_html( get_theme_mod( 'setting_archive_title_background_color', '#000000' ) );
-	$output .= ".archive header .mask,.error404 header .mask,.search header .mask,.paged header .mask{background-color:{$archive_title_background_color};}";
+	$output .= ".archive header::after,.error404 header::after,.search header::after,.paged header::after{background-color:{$archive_title_background_color};}";
 
 	// Title Background Opacity
 	$archive_title_background_opacity = absint( get_theme_mod( 'setting_archive_title_background_opacity', '100' ) );
 	$archive_header_opacity = $archive_title_background_opacity / 100;
-	$output .= ".archive header .mask,.error404 header .mask,.search header .mask,.paged header .mask{opacity:{$archive_header_opacity};}";
+	$output .= ".archive header::after,.error404 header::after,.search header::after,.paged header::after{opacity:{$archive_header_opacity};}";
 
 	// Title Text Color
 	$archive_title_text_color = esc_html( get_theme_mod( 'setting_archive_title_text_color', '#ffffff' ) );

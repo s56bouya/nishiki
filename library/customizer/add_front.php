@@ -60,9 +60,8 @@ function nishiki_init_customizer_front( $wp_customize ) {
 				$wp_customize,
 				'ctrl_front_page_background_color' . $i,
 				array(
-					'label'       => __( 'Background Color', 'nishiki' ),
+					'label'       => __( 'Color above the image', 'nishiki' ),
 					'section'     => 'section_front_page',
-					'transport'   => 'postMessage',
 					'settings'    => 'setting_front_page_background_color' . $i,
 				)
 			)
@@ -71,7 +70,6 @@ function nishiki_init_customizer_front( $wp_customize ) {
 		// Background Opacity
 		$wp_customize->add_setting( 'setting_front_page_background_opacity' . $i, array(
 			'default'     => 30,
-			'transport'   => '',
 			'sanitize_callback' => 'nishiki_sanitize_number_range',
 		) );
 
@@ -80,7 +78,7 @@ function nishiki_init_customizer_front( $wp_customize ) {
 				$wp_customize,
 				'ctrl_front_page_background_opacity' . $i,
 				array(
-					'label'	=>  __( 'Background Opacity(%)', 'nishiki' ),
+					'label'	=>  __( 'Color above the image Opacity(%)', 'nishiki' ),
 					'min' => 0,
 					'max' => 100,
 					'step' => 1,
@@ -210,7 +208,6 @@ function nishiki_init_customizer_front( $wp_customize ) {
 				array(
 					'label'      => __( 'Button Text Color', 'nishiki' ),
 					'section'    => 'section_front_page',
-					'transport'   => 'postMessage',
 					'settings'   => 'setting_front_page_button_text_color' . $i,
 				)
 			)

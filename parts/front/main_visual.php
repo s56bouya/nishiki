@@ -7,8 +7,8 @@ if( get_bloginfo( 'description' ) !== '' ){
 		$image = esc_url( get_theme_mod( 'setting_top_main_visual_image', get_template_directory_uri() . '/images/carp.jpg' ) );
 	}
 
-	$style = ' style="background-image:url(' . $image . ');"';
-	echo '<div class="main_visual' . esc_attr( $nishiki_video_class ) . '"' . wp_kses_post( $style ) . '><div class="mask bg_dotted"></div>';
+	echo '<div class="main_visual' . esc_attr( $nishiki_video_class ) . '">';
+	echo '<img data-src="' . $image . '">';
 	echo '<div class="main_visual_content container">';
 	if( get_header_textcolor() !== 'blank' ){
 		echo '<p class="description">' . esc_html( get_bloginfo( 'description' ) ) . '</p>';

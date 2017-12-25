@@ -120,7 +120,6 @@ function nishiki_init_customizer_archive( $wp_customize ) {
 			array(
 				'label'       => __( 'Title Background Color', 'nishiki' ),
 				'section'     => 'section_archive',
-				'transport'   => 'postMessage',
 				'settings'    => 'setting_archive_title_background_color',
 				'priority'    => 1030,
 			)
@@ -130,7 +129,6 @@ function nishiki_init_customizer_archive( $wp_customize ) {
 	// Title Background Opacity
 	$wp_customize->add_setting( 'setting_archive_title_background_opacity' , array(
 		'default'     => 100,
-		'transport'   => '',
 		'sanitize_callback' => 'nishiki_sanitize_number_range',
 	) );
 
@@ -188,7 +186,6 @@ function nishiki_init_customizer_archive( $wp_customize ) {
 	// Excerpt Text Num
 	$wp_customize->add_setting( 'setting_archive_excerpt_text_num' , array(
 		'default'           => 50,
-		'transport'         => '',
 		'sanitize_callback' => 'nishiki_sanitize_number_range',
 	) );
 

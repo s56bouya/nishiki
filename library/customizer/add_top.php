@@ -92,9 +92,8 @@ function nishiki_init_customizer_top( $wp_customize ) {
 			$wp_customize,
 			'ctrl_top_main_visual_background_color',
 			array(
-				'label'      => __( 'Background Color', 'nishiki' ),
+				'label'      => __( 'Color above the image', 'nishiki' ),
 				'section'    => 'section_top_main_visual',
-				'transport'   => 'postMessage',
 				'settings'   => 'setting_top_main_visual_background_color',
 				'priority'=> 1030,
 			)
@@ -104,7 +103,6 @@ function nishiki_init_customizer_top( $wp_customize ) {
 	// Main Visual Background Opacity
 	$wp_customize->add_setting( 'setting_top_main_visual_background_opacity' , array(
 		'default'     => 30,
-		'transport'   => '',
 		'sanitize_callback' => 'nishiki_sanitize_number_range',
 	) );
 
@@ -113,7 +111,7 @@ function nishiki_init_customizer_top( $wp_customize ) {
 			$wp_customize,
 			'ctrl_top_main_visual_background_opacity',
 			array(
-				'label'	=>  __( 'Background Opacity(%)', 'nishiki' ),
+				'label'	=>  __( 'Color above the image Opacity(%)', 'nishiki' ),
 				'min' => 0,
 				'max' => 100,
 				'step' => 1,
@@ -185,7 +183,6 @@ function nishiki_init_customizer_top( $wp_customize ) {
 			array(
 				'label'      => __( 'Button Color', 'nishiki' ),
 				'section'    => 'section_top_main_visual',
-				'transport'   => 'postMessage',
 				'settings'   => 'setting_top_main_visual_main_button_color',
 				'priority'=> 2003,
 			)
@@ -293,7 +290,6 @@ function nishiki_init_customizer_top( $wp_customize ) {
 			array(
 				'label'      => __( 'Sticky Badge Background Color', 'nishiki' ),
 				'section'    => 'section_top_recently_article',
-				'transport'   => 'postMessage',
 				'settings'   => 'setting_top_recently_article_sticky_background_color',
 				'priority'=> 1030,
 			)

@@ -30,7 +30,6 @@ function nishiki_init_customizer_page( $wp_customize ) {
 	// Sidebar Width
 	$wp_customize->add_setting( 'setting_page_sidebar_width' , array(
 		'default'     => 300,
-		'transport'   => '',
 		'sanitize_callback' => 'nishiki_sanitize_number_range',
 	) );
 
@@ -86,7 +85,6 @@ function nishiki_init_customizer_page( $wp_customize ) {
 			array(
 				'label'       =>  __( 'Title Background Color', 'nishiki' ),
 				'section'     =>  'section_page',
-				'transport'   =>  'postMessage',
 				'settings'    =>  'setting_page_title_background_color',
 				'priority'    =>  1030,
 			)
@@ -96,7 +94,6 @@ function nishiki_init_customizer_page( $wp_customize ) {
 	// Title Background Opacity
 	$wp_customize->add_setting( 'setting_page_title_background_opacity' , array(
 		'default'     => 100,
-		'transport'   => '',
 		'sanitize_callback' => 'nishiki_sanitize_number_range',
 	) );
 

@@ -8,7 +8,6 @@ if( has_post_thumbnail() ){
 }
 ?>
 <header<?php echo wp_kses_post( $nishiki_header_class ); ?> class="<?php echo esc_attr( get_post_type() ); ?>">
-	<div class="mask"></div>
 	<div class="page_header container">
 	  <?php do_action( 'nishiki_before_singular_title' ); ?>
 		<?php the_title( '<h1>', '</h1>' ); ?>

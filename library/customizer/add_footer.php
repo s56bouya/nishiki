@@ -34,7 +34,6 @@ function nishiki_init_customizer_footer( $wp_customize ) {
 			array(
 				'label'         => __( 'Text Color', 'nishiki' ),
 				'section'       => 'section_footer',
-				'transport'     => 'postMessage',
 				'settings'      => 'setting_footer_text_color',
 				'priority'      => 1002,
 			)
@@ -118,7 +117,6 @@ function nishiki_init_customizer_footer( $wp_customize ) {
 			array(
 				'label'       =>  __( 'Button Color', 'nishiki' ),
 				'section'     =>  'section_footer',
-				'transport'   =>  'postMessage',
 				'settings'    =>  'setting_footer_main_button_color',
 				'priority'    =>  2003,
 			)
