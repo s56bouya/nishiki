@@ -11,7 +11,7 @@
 ///	jQuery("[id^='customize-control-ctrl_front_page_section_']").css("background-color","#9f9");
 		var section = jQuery("[id^='customize-control-ctrl_front_page_section']");
 		var section_count = section.length;
-		jQuery("[id^='customize-control-ctrl_front_page_section']").find('.customize-control-title').css({'border':'1px solid','padding':'0.2rem 0.4rem'});
+		jQuery("[id^='customize-control-ctrl_front_page_section']").find('.customize-control-title').css({'font-weight':'normal','color':'#fff','background':'#313a6f','padding':'0.2rem 0.6rem'});
 
 		for (var i = 1; i <= section_count ; i++){
 			// Only show the color hue control when there's a custom color scheme.

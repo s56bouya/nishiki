@@ -2,8 +2,7 @@
 	$section_count = NISHIKI_SECTION_NUM;
 	for( $i = 1; $i <= $section_count; ++$i ){
 		if( get_theme_mod( 'setting_front_page_section' . $i, 'disabled' ) !== 'disabled' ){
-			$image = get_theme_mod( 'setting_front_page_image' . $i, false ) ? esc_url( get_theme_mod( 'setting_front_page_image' . $i, false ) ) : '';
-
+			$image = get_theme_mod( 'setting_front_page_image' . $i, get_template_directory_uri() . '/images/sky.jpg' );
 			do_action( 'nishiki_before_front_page_section' . $i . '_content' );
 			?>
 			<section id="front-page-section<?php echo absint( $i ); ?>" class="front-page-section">

@@ -1,5 +1,5 @@
 /**
- * Generated on 2017/12/25
+ * Generated on 2018/01/04
  * Author: Tetsuya Imamura(s56bouya)
  */
 
@@ -2020,7 +2020,6 @@
 
 * {
   -webkit-appearance: none;
-  font-family: "Roboto", "Droid Sans", "Meiryo", "Hiragino Kaku Gothic Pro", "MS PMincho", "sans-serif";
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -2043,6 +2042,10 @@ input[type=submit],
 svg,
 svg:hover {
   transition: all 300ms ease;
+}
+
+body, button, input, select, textarea {
+  font-family: "Roboto", "Droid Sans", "Meiryo", "Hiragino Kaku Gothic Pro", "MS PMincho", "sans-serif";
 }
 
 body {

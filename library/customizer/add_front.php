@@ -33,7 +33,7 @@ function nishiki_init_customizer_front( $wp_customize ) {
 
 		// Upload Image
 		$wp_customize->add_setting( 'setting_front_page_image' . $i, array(
-			'default' => '',
+			'default' => get_template_directory_uri() . '/images/sky.jpg',
 			'sanitize_callback' => 'nishiki_sanitize_image',
 		));
 
@@ -69,7 +69,7 @@ function nishiki_init_customizer_front( $wp_customize ) {
 
 		// Background Opacity
 		$wp_customize->add_setting( 'setting_front_page_background_opacity' . $i, array(
-			'default'     => 30,
+			'default'     => 10,
 			'sanitize_callback' => 'nishiki_sanitize_number_range',
 		) );
 
