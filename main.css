@@ -1,5 +1,5 @@
 /**
- * Generated on 2018/01/04
+ * Generated on 2018/01/13
  * Author: Tetsuya Imamura(s56bouya)
  */
 
@@ -2522,8 +2522,8 @@ input, textarea {
 .page .sidebar-bottom aside {
   width: 100%;
 }
-.single header,
-.page header {
+.single #main > header,
+.page #main > header {
   position: relative;
   background-size: cover;
   background-position: center center;
@@ -2531,39 +2531,39 @@ input, textarea {
   -webkit-transform: translate3d(0, 0, 0);
   animation: fadeIn 200ms linear 0s alternate;
 }
-.single header.page,
-.page header.page {
+.single #main > header.page,
+.page #main > header.page {
   text-align: center;
 }
-.single header .page_header,
-.page header .page_header {
+.single #main > header .page_header,
+.page #main > header .page_header {
   position: relative;
   padding: 8.5rem 0 7.5rem;
   overflow: hidden;
   z-index: 1;
 }
-.single header .page_header h1,
-.page header .page_header h1 {
+.single #main > header .page_header h1,
+.page #main > header .page_header h1 {
   font-size: 1.8rem;
   margin: 0 auto 1rem;
 }
-.single header .date time,
-.page header .date time {
+.single #main > header .date time,
+.page #main > header .date time {
   display: inline-block;
   font-size: 0.9rem;
   margin-bottom: 0.3rem;
 }
-.single header .cat, .single header .tag,
-.page header .cat,
-.page header .tag {
+.single #main > header .cat, .single #main > header .tag,
+.page #main > header .cat,
+.page #main > header .tag {
   margin-right: 1rem;
 }
-.single header i,
-.page header i {
+.single #main > header i,
+.page #main > header i {
   margin-right: 0.3rem;
 }
-.single header::after,
-.page header::after {
+.single #main > header::after,
+.page #main > header::after {
   position: absolute;
   top: 0;
   left: 0;
