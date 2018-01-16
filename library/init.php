@@ -151,29 +151,6 @@ function nishiki_new_excerpt_more( $more ) {
  * Title
  *****************/
 
-// Header Title
-add_filter( 'pre_get_document_title', 'nishiki_header_title' );
-function nishiki_header_title( $title ) {
-	if ( is_author() ) {
-		$title = get_the_author_meta('display_name');
-	} elseif ( is_tag() ) {
-		$title = single_tag_title( '', false );
-	} elseif( is_post_type_archive() ) {
-		global $wp_query;
-		$title = post_type_archive_title( '', false ) . $wp_query->found_posts . esc_html__( 'posts', 'nishiki' );
-	} elseif ( is_tax() ) {
-		$title = single_term_title( '', false );
-	} elseif ( is_search() ) {
-		$title = esc_html( get_search_query() );
-	} elseif ( is_404() ) {
-		$title = esc_html__( "Page Not Found.", 'nishiki' );
-	} else {
-		$title = single_cat_title( '', false );
-	}
-
-	return $title;
-}
-
 // Title Separator
 add_filter( 'document_title_separator', 'nishiki_header_title_sep' );
 function nishiki_header_title_sep( $sep ) {

@@ -2,15 +2,17 @@
 	<a href="<?php the_permalink(); ?>">
 		<?php
 		if( has_post_thumbnail( get_the_ID() ) ) {
-			$image = '<figure>' . get_the_post_thumbnail( get_the_ID(), 'medium' ) . '</figure>';
 			$noimage = '';
 		} else {
-			$image = '<i class="icomoon icon-image"></i>';
 			$noimage = ' noimage';
 		}
 		?>
 		<div class="post_image<?php echo esc_attr( $noimage ); ?>">
-			<?php echo wp_kses_post( $image ); ?>
+			<?php if( $noimage == '' ){ ?>
+				<figure><?php the_post_thumbnail( get_the_ID(), 'medium' ); ?></figure>
+			<?php } else { ?>
+				<i class="icomoon icon-image"></i>
+			<?php } ?>
 			<div class="readmore"><span><?php esc_html_e( 'Read More', 'nishiki' ); ?><i class="icomoon icon-arrow-right"></i></span></div>
 		</div>
 		<header><?php the_title( '<h1>', '</h1>' ); ?></header>
