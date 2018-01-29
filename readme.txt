@@ -1,7 +1,7 @@
 === Nishiki ===
 Requires at least: WordPress 4.5
-Tested up to: WordPress 4.9.1
-Version: 0.1.21
+Tested up to: WordPress 4.9.2
+Version: 0.1.22
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: one-column, two-columns, right-sidebar, left-sidebar, flexible-header, accessibility-ready, custom-colors, custom-header, custom-menu, custom-logo, featured-images, footer-widgets, post-formats, sticky-post, theme-options, threaded-comments, translation-ready, blog, entertainment
@@ -50,6 +50,10 @@ URL: https://icomoon.io/#icons-icomoon
 Created by Keyamoon
 
 == Changelog ==
+
+= 0.1.22 =
+* Add : Support WP 4.9.2
+* Change: do_action position(nishiki_before_singular_content,nishiki_after_singular_content)
 
 = 0.1.21 =
 * Fixed: Lazy Load(https://wordpress.org/plugins/lazy-load/) plugin Conflict

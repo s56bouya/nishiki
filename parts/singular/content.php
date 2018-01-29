@@ -48,13 +48,13 @@ if( has_post_thumbnail() ){
 </header>
 <div class="container column">
 	<article>
+	  <?php do_action( 'nishiki_before_singular_content' ); ?>
 		<div class="entry-content">
-			<?php do_action( 'nishiki_before_singular_content' ); ?>
 			<?php the_content(); ?>
-			<?php do_action( 'nishiki_after_singular_content' ); ?>
 			<?php wp_link_pages('before=<div class="pagination">&after=</div>&link_before=<span>&link_after=</span>'); ?>
 		</div>
-			<footer>
+	  <?php do_action( 'nishiki_after_singular_content' ); ?>
+		<footer>
 				<?php if( is_single() ){ ?>
 
 				<div class="author_info">
