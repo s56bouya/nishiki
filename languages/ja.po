@@ -283,13 +283,17 @@ msgstr "ヘッダーを固定する"
 msgid "Fixed Header Color"
 msgstr "ヘッダーの色を固定する"
 
-#: library/customizer/add_header.php:88
+#: library/customizer/add_header.php:78
 msgid "light"
 msgstr "ライト（明）"
 
-#: library/customizer/add_header.php:89
+#: library/customizer/add_header.php:79
 msgid "dark"
 msgstr "ダーク（暗）"
+
+#: library/customizer/add_header.php:90
+msgid "Header Menu Panel + Text"
+msgstr "PC表示の時にメニューテキストを表示する"
 
 #: library/customizer/add_page.php:4
 msgid "Pages"
@@ -475,8 +479,8 @@ msgid "published"
 msgstr "公開"
 
 #: parts/singular/content.php:19
-msgid "edited"
-msgstr "編集"
+msgid "updated"
+msgstr "更新"
 
 # -------------------------------------------------------
 # Post
@@ -499,6 +503,9 @@ msgstr "検索文字を入力"
 #: searchform.php:8
 msgid "Search"
 msgstr "検索"
+
+#~ msgid "edited"
+#~ msgstr "編集"
 
 #~ msgid "Upload your Logo Image"
 #~ msgstr "ロゴ画像をアップロード"

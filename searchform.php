@@ -1,6 +1,6 @@
-<div class="search_box">
+<div class="search-box">
 	<form role="search" method="get" id="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>">
-		<div class="search_inner">
+		<div class="search-inner">
 			<div class="input">
 				<input type="text" value="<?php the_search_query(); ?>" name="s" id="s" placeholder="<?php esc_attr_e( 'Enter a term to search.', 'nishiki' ); ?>">
 			</div>

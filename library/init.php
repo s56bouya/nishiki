@@ -34,8 +34,8 @@ function nishiki_custom_theme_support() {
 
 	// Custom Logo
 	add_theme_support( 'custom-logo', array(
-			'height'        => 60,
-			'width'         => 160,
+			'height'        => 80,
+			'width'         => 240,
 			'flex-height'   => true,
 			'flex-width'    => true,
 			'header-text'   => array( 'site-title', 'site-description' ),
@@ -85,6 +85,22 @@ function nishiki_has_header_video() {
 	}
 
 	return false;
+}
+
+/*****************
+ * Custom header
+ *****************/
+
+add_filter( 'header_video_settings', 'nishiki_header_video_settings');
+function nishiki_header_video_settings( $settings ) {
+	$settings['minWidth'] = 320;
+	$settings['minHeight'] = 180;
+	return $settings;
+}
+
+add_filter( 'get_header_image_tag', 'nishiki_header_image_tag', 10, 3 );
+function nishiki_header_image_tag( $html, $header, $attr ){
+	return '<img class="header-image" data-src="' . $attr['src'] . '" width="' . $attr['width'] . '" height="' . $attr['height'] . '" alt="' . $attr['alt'] . '" data-srcset="' . $attr['srcset'] . '" sizes="' . $attr['sizes'] . '">';
 }
 
 /*****************
@@ -225,7 +241,7 @@ function nishiki_custom_tag_cloud( $args ) {
 add_filter( 'embed_oembed_html', 'nishiki_add_oembed_class' );
 function nishiki_add_oembed_class( $code ){
 	if( (stripos( $code, 'youtube' ) !== FALSE || strpos( $code, 'vimeo' ) ) && stripos( $code, 'iframe' ) !== FALSE )
-		$code = '<div class="embed_video">' . $code . '</div>';
+		$code = '<div class="embed-video">' . $code . '</div>';
 
 	return $code;
 }

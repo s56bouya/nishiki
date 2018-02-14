@@ -1,5 +1,5 @@
-<div class="footer_content">
-	<div class="footer_inner">
+<div class="footer-content">
+	<div class="footer-inner">
 		<?php
 			if( get_theme_mod( 'setting_footer_main_text' ) == true ){
 				echo '<h3>' . esc_html( get_theme_mod( 'setting_footer_main_text', __( 'Main Text', 'nishiki' ) ) ) . '</h3>';

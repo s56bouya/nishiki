@@ -7,7 +7,7 @@
 			$noimage = ' noimage';
 		}
 		?>
-		<div class="post_image<?php echo esc_attr( $noimage ); ?>">
+		<div class="post-image<?php echo esc_attr( $noimage ); ?>">
 			<?php if( $noimage == '' ){ ?>
 				<figure><?php the_post_thumbnail( get_the_ID(), 'medium' ); ?></figure>
 			<?php } else { ?>

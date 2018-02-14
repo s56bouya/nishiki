@@ -258,12 +258,16 @@ msgstr ""
 msgid "Fixed Header Color"
 msgstr ""
 
-#: library/customizer/add_header.php:88
+#: library/customizer/add_header.php:78
 msgid "light"
 msgstr ""
 
-#: library/customizer/add_header.php:89
+#: library/customizer/add_header.php:79
 msgid "dark"
+msgstr ""
+
+#: library/customizer/add_header.php:90
+msgid "Header Menu Panel + Text"
 msgstr ""
 
 #: library/customizer/add_page.php:4
@@ -438,7 +442,7 @@ msgid "published"
 msgstr ""
 
 #: parts/singular/content.php:19
-msgid "edited"
+msgid "updated"
 msgstr ""
 
 #: parts/singular/content.php:86

@@ -8,7 +8,7 @@ if( has_post_thumbnail() ){
 }
 ?>
 <header<?php echo wp_kses_post( $nishiki_header_class ); ?> class="<?php echo esc_attr( get_post_type() ); ?>">
-	<div class="page_header container">
+	<div class="page-header container">
 	  <?php do_action( 'nishiki_before_singular_title' ); ?>
 		<?php the_title( '<h1>', '</h1>' ); ?>
 	  <?php do_action( 'nishiki_after_singular_title' ); ?>
@@ -16,7 +16,7 @@ if( has_post_thumbnail() ){
 		<div class="date">
 			<time datetime="<?php echo esc_attr( get_the_time('Y-m-d') ); ?>"><?php esc_html_e( 'published', 'nishiki' ); ?>:<?php the_time( get_option( 'date_format' ) ) ?></time>
 			<?php if( get_the_time('Y-m-d') < get_the_modified_time('Y-m-d') ){ ?>
-				<time datetime="<?php echo esc_attr( get_the_modified_time('c') ); ?>"><?php esc_html_e( 'edited', 'nishiki' ); ?>:<?php the_modified_date( get_option( 'date_format' ) ) ?></time>
+				<time datetime="<?php echo esc_attr( get_the_modified_time('c') ); ?>"><?php esc_html_e( 'updated', 'nishiki' ); ?>:<?php the_modified_date( get_option( 'date_format' ) ) ?></time>
 			<?php } ?>
 		</div>
 		<?php
@@ -57,7 +57,7 @@ if( has_post_thumbnail() ){
 		<footer>
 				<?php if( is_single() ){ ?>
 
-				<div class="author_info">
+				<div class="author-info">
 					<?php
 					if( get_theme_mod( 'setting_footer_author_text', __( 'Author', 'nishiki' ) ) ){
 						echo '<span>' . esc_html( get_theme_mod( 'setting_footer_author_text', __( 'Author', 'nishiki' ) ) ) . '</span>';
@@ -85,7 +85,7 @@ if( has_post_thumbnail() ){
 				}
 				?>
 			</footer>
-		<?php edit_post_link( __('Edit This Page', 'nishiki'), '<p id="edit_link">', '</p>'); ?>
+		<?php edit_post_link( __('Edit This Page', 'nishiki'), '<p id="edit-link">', '</p>'); ?>
 	</article>
 
 	<?php

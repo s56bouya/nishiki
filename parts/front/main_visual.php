@@ -1,20 +1,31 @@
 <?php
 if( get_bloginfo( 'description' ) !== '' ){
-	$nishiki_video_class = ( nishiki_has_header_video() ) ? ' main_video' : '';
-	if( has_header_image() ){
-		$image = get_header_image();
-	} elseif( get_theme_mod( 'setting_top_main_visual_image', get_template_directory_uri() . '/images/carp.jpg' ) !== '' ) {
-		$image = esc_url( get_theme_mod( 'setting_top_main_visual_image', get_template_directory_uri() . '/images/carp.jpg' ) );
+	$nishiki_video_class = ( nishiki_has_header_video() ) ? ' main-video' : '';
+	if( nishiki_has_header_video() ) {
+	  $nishiki_video_class = ' main-video';
+  } elseif ( is_random_header_image() ){
+	  $nishiki_video_class = ' main-random-header-image';
+	} else {
+	  $nishiki_video_class = ' main-header-image';
 	}
 
-	echo '<div class="main_visual' . esc_attr( $nishiki_video_class ) . '">';
-	echo '<img data-src="' . $image . '">';
-	echo '<div class="main_visual_content container">';
+	echo '<div class="main-visual' . esc_attr( $nishiki_video_class ) . '">';
+	if( has_header_image() or nishiki_has_header_video() ){
+		//		var_dump(get_header_video_settings());
+	  echo '<div class="custom-header">';
+		the_custom_header_markup();
+	  echo '</div>';
+	} elseif( get_theme_mod( 'setting_top_main_visual_image', get_template_directory_uri() . '/images/carp.jpg' ) !== '' ) {
+		$image = esc_url( get_theme_mod( 'setting_top_main_visual_image', get_template_directory_uri() . '/images/carp.jpg' ) );
+		echo '<img data-src="' . $image . '">';
+	}
+
+	echo '<div class="main-visual-content container">';
 	if( get_header_textcolor() !== 'blank' ){
 		echo '<p class="description">' . esc_html( get_bloginfo( 'description' ) ) . '</p>';
 	}
 	if( get_theme_mod( 'setting_top_main_visual_sub_text' ) == true ){
-		echo '<p class="sub_text">' . esc_html( get_theme_mod( 'setting_top_main_visual_sub_text', __( 'Beautiful WordPress Theme the Nishiki.', 'nishiki' ) ) ) . '</p>';
+		echo '<p class="sub-text">' . esc_html( get_theme_mod( 'setting_top_main_visual_sub_text', __( 'Beautiful WordPress Theme the Nishiki.', 'nishiki' ) ) ) . '</p>';
 	}
 	if( get_theme_mod( 'setting_top_main_visual_main_button_text', __( 'Get started!', 'nishiki' ) ) ){
 		if( get_theme_mod( 'setting_top_main_visual_main_button_link', false ) === false ){
@@ -31,18 +42,13 @@ if( get_bloginfo( 'description' ) !== '' ){
 		}
 		if( $main_visual_button_display === true ) {
 			?>
-			<p class="main_button">
+			<p class="main-button">
 			<a <?php if ( get_theme_mod( 'setting_top_main_visual_main_button_link_target', false ) == true ) { ?>target="_blank"
 			<?php }
 			echo 'href="' . esc_url( $main_visual_button_link ) . '">' . esc_html( get_theme_mod( 'setting_top_main_visual_main_button_text', __( 'Get started!', 'nishiki' ) ) ) . '</a></p>';
 		}
 	}
 	echo '</div>';
-	if( nishiki_has_header_video() ){
-//		var_dump(get_header_video_settings());
-		echo '<div class="custom_header">';
-		the_custom_header_markup();
-		echo '</div>';
-	}
+
 	echo '</div>';
 }

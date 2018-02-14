@@ -4,14 +4,14 @@
 				<h1><?php echo esc_html( get_theme_mod( 'setting_top_recently_article_main_text', __( 'Recent Articles', 'nishiki' ) ) ); ?></h1>
 				<?php
 				if( get_theme_mod( 'setting_top_recently_article_sub_text' ) == true ){
-					echo '<span class="sub_text">' . esc_html( get_theme_mod( 'setting_top_recently_article_sub_text', __( 'Sub Text', 'nishiki' ) ) ) . '</span>';
+					echo '<span class="sub-text">' . esc_html( get_theme_mod( 'setting_top_recently_article_sub_text', __( 'Sub Text', 'nishiki' ) ) ) . '</span>';
 				}
 				?>
 			</div>
 	<?php }
 		$columns = get_theme_mod( 'setting_archive_article_columns', '3' );
 	?>
-	<div class="articles<?php echo ' column_' . esc_attr( $columns ); ?>">
+	<div class="articles<?php echo ' column-' . esc_attr( $columns ); ?>">
 		<?php
 		if ( have_posts() ) :
 			while ( have_posts() ) : the_post();

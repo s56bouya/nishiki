@@ -79,4 +79,19 @@ function nishiki_init_customizer_header( $wp_customize ) {
 			'dark' =>  __( 'dark', 'nishiki' ),
 		),
 	));
+
+	// Header Menu Collapse
+	$wp_customize->add_setting('setting_header_menu_collapse',array(
+		'default' => false,
+		'sanitize_callback' => 'nishiki_sanitize_checkbox',
+	));
+
+	$wp_customize->add_control('ctrl_header_menu_collapse',array(
+		'label'         =>  __( 'Header Menu Panel + Text', 'nishiki' ),
+		'type'          =>  'checkbox',
+		'section'       =>  'section_header',
+		'settings'      =>  'setting_header_menu_collapse',
+		'priority'      =>  2004,
+	));
+
 }

@@ -24,10 +24,10 @@ function nishiki_customizer_css(){
 	$output .= "
 		body,.articles a{color:{$site_main_text_color};}
 		.articles header,.articles header a{color:{$site_main_text_color};}
-		aside .search_box .input input{border-color:{$site_main_text_color};}
+		aside .search-box .input input{border-color:{$site_main_text_color};}
 		.nav_pc a{color:{$site_main_text_color};}
-		aside .search_box .submit button{border-color:{$site_main_text_color};color:{$site_main_text_color};}
-		aside .search_box .submit button:hover{background:{$site_main_text_color};color:{$site_background_color};}
+		aside .search-box .submit button{border-color:{$site_main_text_color};color:{$site_main_text_color};}
+		aside .search-box .submit button:hover{background:{$site_main_text_color};color:{$site_background_color};}
 		.comments-area .submit{border-color:{$site_main_text_color};}
 		.comments-area .submit:hover{background:{$site_main_text_color};color:{$site_background_color};}
 		.comments-area .submit{color:{$site_main_text_color};}
@@ -53,14 +53,14 @@ function nishiki_customizer_css(){
 	// Site Main Color
 	$site_main_color = esc_html( get_theme_mod( 'setting_site_main_color', '#0a88cc' ) );
 	$output .= "
-		.entry-content a,aside a,.comments-area a,.pagination a,.author_info a,.post-navigation a{color:{$site_main_color};}
+		.entry-content a,aside a,.comments-area a,.pagination a,.author-info a,.post-navigation a{color:{$site_main_color};}
 		aside .tagcloud a{border-color:{$site_main_color};}
 		";
 
 	// Site Sub Color
 	$site_sub_color = esc_html( get_theme_mod( 'setting_site_sub_color', '#0044a3' ) );
 	$output .= "
-		.entry-content a:hover,aside a:hover,.comments-area a:hover,.pagination a:hover,.author_info a:hover,.post-navigation a:hover{color:{$site_sub_color};}
+		.entry-content a:hover,aside a:hover,.comments-area a:hover,.pagination a:hover,.author-info a:hover,.post-navigation a:hover{color:{$site_sub_color};}
 		";
 
 	// Site Font Size
@@ -91,7 +91,7 @@ function nishiki_customizer_css(){
 		$front_page_text_align = esc_html( get_theme_mod( 'setting_front_page_text_align' . $i, 'left' ) );
 		$output .= "#front-page-section{$i}{text-align:{$front_page_text_align};}";
 		if( $front_page_text_align !== 'center' ){
-			$output .= "#front-page-section{$i} .sub_text{padding-{$front_page_text_align}:0;}";
+			$output .= "#front-page-section{$i} .sub-text{padding-{$front_page_text_align}:0;}";
 		}
 
 		// Background Color
@@ -105,14 +105,14 @@ function nishiki_customizer_css(){
 
 		// Button Text Color
 		$front_page_button_text_color = esc_html( get_theme_mod( 'setting_front_page_button_text_color' . $i, '#ffffff' ) );
-		$output .= "#front-page-section{$i} .main_button a{color:{$front_page_button_text_color};}";
+		$output .= "#front-page-section{$i} .main-button a{color:{$front_page_button_text_color};}";
 
 		// Button Link Color
 		$front_page_button_link_color = esc_html( get_theme_mod( 'setting_front_page_button_link_color' . $i, '#000000' ) );
-		$output .= "#front-page-section{$i} .main_button a{background-color:{$front_page_button_link_color};}";
+		$output .= "#front-page-section{$i} .main-button a{background-color:{$front_page_button_link_color};}";
 
 		// Button Hover
-		$output .= "#front-page-section{$i} .main_button a:hover{background-color:{$front_page_button_text_color};color:{$front_page_button_link_color};}";
+		$output .= "#front-page-section{$i} .main-button a:hover{background-color:{$front_page_button_text_color};color:{$front_page_button_link_color};}";
 
 	}
 
@@ -128,9 +128,9 @@ function nishiki_customizer_css(){
 	$header_text_color = ( ! get_header_textcolor() ) ? '#000000' : '#' . esc_html( get_theme_mod( 'header_textcolor', '000000' ) );
 
 	$output .= "
-		#masthead .site_info a{color:{$header_text_color};}
-		#masthead .icon{border-color:{$header_text_color};color:{$header_text_color};}
-		#masthead .icon:hover{color:{$header_background_color};background:{$header_text_color};}"
+		#masthead .site-info a{color:{$header_text_color};}
+		#masthead button.icon{border-color:{$header_text_color};color:{$header_text_color};}
+		#masthead button.icon:hover{color:{$header_background_color};background:{$header_text_color};}"
 	;
 
 	// Fixed Header Color
@@ -140,23 +140,50 @@ function nishiki_customizer_css(){
 		if( $header_fixed_color == 'light' ){
 			$output .= "
 			#masthead.fixed{background:rgba(255,255,255,0.6);}
-			#masthead.fixed .site_info a{color:#000;}
+			#masthead.fixed .site-info a{color:#000;}
 			#masthead.fixed .icon{border-color:#000;color:#000;}
 			#masthead.fixed .icon:hover{background-color:#000;color:#fff;}
+			@media only screen and (min-width: 769px){
+			#masthead.fixed #menu-collapse a{color:#000;}
+			#masthead.fixed #menu-collapse a:hover{background-color:#ffffff88;}
+			#masthead.fixed #menu-collapse > ul > li > a::after{border-color:#000;}
+			#masthead.fixed #menu-collapse > ul > li > ul{background-color:#ffffffcc;}
+			}
 			";
 		} elseif( $header_fixed_color == 'dark' ){
 			$output .= "
 			#masthead.fixed{background:rgba(0,0,0,0.2);}
-			#masthead.fixed .site_info a{color:#fff;}
+			#masthead.fixed .site-info a{color:#fff;}
 			#masthead.fixed .icon{border-color:#fff;color:#fff;}
 			#masthead.fixed .icon:hover{background-color:#fff;color:#000;}
+			@media only screen and (min-width: 769px){
+			#masthead.fixed #menu-collapse a{color:#fff;}
+			#masthead.fixed #menu-collapse a:hover{background-color:#000000aa;}
+			#masthead.fixed #menu-collapse > ul > li > a::after{border-color:#fff;}
+			#masthead.fixed #menu-collapse > ul > li > ul{background-color:#00000060;}
+			}
 			";
 		}
 		$output .= "
 		body.scrolled #masthead{background:{$header_background_color};}
-		body.scrolled #masthead .site_info a{color:{$header_text_color};}
+		body.scrolled #masthead .site-info a{color:{$header_text_color};}
 		body.scrolled #masthead .icon{border-color:{$header_text_color};color:{$header_text_color};}
-		body.scrolled #masthead .icon:hover{color:{$header_background_color};background:{$header_text_color};}
+		body.scrolled #masthead .icon:hover{color:{$header_background_color};background-color:{$header_text_color};}
+		@media only screen and (min-width: 769px){
+		body.scrolled #masthead #menu-collapse a{color:{$header_text_color};}
+		body.scrolled #masthead #menu-collapse a:hover{color:{$header_background_color};background-color:{$header_text_color};}
+		body.scrolled #masthead #menu-collapse > ul > li > a::after{border-bottom:1px solid {$header_text_color};}
+		body.scrolled #masthead #menu-collapse > ul > li > ul{background-color:{$header_background_color}ee;}
+		}
+		";
+	} else {
+		$output .= "
+		@media only screen and (min-width: 769px){
+		body #masthead #menu-collapse a{color:{$header_text_color};}
+		body #masthead #menu-collapse a:hover{color:{$header_background_color};background-color:{$header_text_color};}
+		body #masthead #menu-collapse > ul > li > a::after{border-bottom:1px solid {$header_text_color};}
+		body #masthead #menu-collapse > ul > li > ul{background-color:{$header_background_color}ee;background-image:none;}
+		}
 		";
 	}
 
@@ -166,26 +193,26 @@ function nishiki_customizer_css(){
 
 	// Text Color
 	$top_main_visual_text_color = esc_html( get_theme_mod( 'setting_top_main_visual_text_color', '#ffffff' ) );
-	$output .= ".main_visual{color:{$top_main_visual_text_color};}";
+	$output .= ".main-visual{color:{$top_main_visual_text_color};}";
 
 	// Background Color
 	$main_visual_background_color = esc_html( get_theme_mod( 'setting_top_main_visual_background_color', '#000000' ) );
-	$output .= ".main_visual::after{background-color:{$main_visual_background_color};}";
+	$output .= ".main-visual::after{background-color:{$main_visual_background_color};}";
 
 	// Background Opacity
 	$main_visual_background_opacity = absint( get_theme_mod( 'setting_top_main_visual_background_opacity', '30' ) );
 	$main_visual_opacity = $main_visual_background_opacity / 100;
-	$output .= ".main_visual::after{opacity:{$main_visual_opacity};}";
+	$output .= ".main-visual::after{opacity:{$main_visual_opacity};}";
 
 	// button text color
 	$header_main_visual_main_button_text_color = esc_html( get_theme_mod( 'setting_top_main_visual_main_button_text_color', '#ffffff' ) );
-	$output .= ".main_visual .main_visual_content a{color:{$header_main_visual_main_button_text_color};}";
+	$output .= ".main-visual .main-visual-content a{color:{$header_main_visual_main_button_text_color};}";
 
 	// button color
 	$header_main_visual_main_button_color = esc_html( get_theme_mod( 'setting_top_main_visual_main_button_color', '#895892' ) );
 	$output .= "
-		.main_visual .main_visual_content a{background-color:{$header_main_visual_main_button_color};}
-		.main_visual .main_visual_content a:hover{color:{$header_main_visual_main_button_color};background-color:{$header_main_visual_main_button_text_color};}";
+		.main-visual .main-visual-content a{background-color:{$header_main_visual_main_button_color};}
+		.main-visual .main-visual-content a:hover{color:{$header_main_visual_main_button_color};background-color:{$header_main_visual_main_button_text_color};}";
 
 	/*****************
 	 * Post
@@ -202,7 +229,7 @@ function nishiki_customizer_css(){
 
 	// Title Text Color
 	$post_title_text_color = esc_html( get_theme_mod( 'setting_post_title_text_color', '#ffffff' ) );
-	$output .= ".single .page_header,.single .page_header a{color:{$post_title_text_color};}";
+	$output .= ".single .page-header,.single .page-header a{color:{$post_title_text_color};}";
 
 	// Sidebar Width
 	$post_sidebar_width = absint( get_theme_mod( 'setting_post_sidebar_width', '300' ) );
@@ -229,7 +256,7 @@ function nishiki_customizer_css(){
 
 	// Title Text Color
 	$page_title_text_color = esc_html( get_theme_mod( 'setting_page_title_text_color', '#ffffff' ) );
-	$output .= ".page .page_header{color:{$page_title_text_color};}";
+	$output .= ".page .page-header{color:{$page_title_text_color};}";
 
 	// Sidebar Width
 	$page_sidebar_width = absint( get_theme_mod( 'setting_page_sidebar_width','300' ) );
@@ -256,7 +283,7 @@ function nishiki_customizer_css(){
 
 	// Title Text Color
 	$archive_title_text_color = esc_html( get_theme_mod( 'setting_archive_title_text_color', '#ffffff' ) );
-	$output .= ".archive .page_header,.error404 .page_header,.search .page_header,.paged .page_header{color:{$archive_title_text_color};}";
+	$output .= ".archive .page-header,.error404 .page-header,.search .page-header,.paged .page-header{color:{$archive_title_text_color};}";
 
 	/*****************
 	 * Footer

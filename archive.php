@@ -2,7 +2,7 @@
 		<main id="main" class="site-main" role="main">
 			<?php if ( have_posts() ) : ?>
 				<header>
-					<div class="page_header container">
+					<div class="page-header container">
 					  <?php do_action( 'nishiki_before_archive_title' ); ?>
 						<?php if ( is_post_type_archive() ) { ?>
 							<h1><?php post_type_archive_title(); ?></h1>
