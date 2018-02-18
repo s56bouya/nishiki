@@ -51,6 +51,9 @@ Created by Keyamoon
 
 == Changelog ==
 
+= 0.1.24 =
+* Change : Adjust CSS between letters and lines.
+
 = 0.1.23 =
 * Add : Support WP 4.9.4
 * Add : Responsive Menu(Header Menu Collapse)

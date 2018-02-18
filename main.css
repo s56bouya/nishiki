@@ -1,5 +1,5 @@
 /**
- * Generated on 2018/02/14
+ * Generated on 2018/02/18
  * Author: Tetsuya Imamura(s56bouya)
  */
 
@@ -2053,7 +2053,7 @@ body {
   margin: 0;
   padding: 0;
   z-index: 0;
-  letter-spacing: 0.1178rem;
+  letter-spacing: 0.06rem;
 }
 body.scrolled #masthead {
   transition: all 300ms ease;
@@ -2460,11 +2460,12 @@ input, textarea {
   margin-top: 0;
 }
 .front-page-section .container .sub-text {
+  display: inline-block;
   font-size: 1rem;
   border-top: 1px solid;
-  display: inline-block;
   margin: 0;
   padding: 1rem 2rem 0;
+  line-height: 1.76;
 }
 .front-page-section .container .main-button {
   margin-bottom: 0;
@@ -2489,6 +2490,7 @@ input, textarea {
 ***********************/
 #footer {
   font-size: 0.9rem;
+  line-height: 1.66;
 }
 #footer .wrap {
   text-align: center;
@@ -2529,7 +2531,6 @@ input, textarea {
 #footer .wrap .copyright {
   margin: 0;
   padding: 0.7rem 0;
-  font-size: 1rem;
 }
 #footer .wrap .copyright .copymark {
   vertical-align: middle;
@@ -2565,6 +2566,7 @@ input, textarea {
   overflow: hidden;
   position: relative;
   z-index: 1;
+  line-height: 1.4;
 }
 .archive .site-main > header .page-header h1,
 .search .site-main > header .page-header h1,
@@ -2642,6 +2644,7 @@ input, textarea {
   padding: 8.5rem 0 7.5rem;
   overflow: hidden;
   z-index: 1;
+  line-height: 1.4;
 }
 .single #main > header .page-header h1,
 .page #main > header .page-header h1 {
@@ -2732,23 +2735,31 @@ input, textarea {
 .single .entry-content h3,
 .page .entry-content h3 {
   font-size: 1.4rem;
+  margin: 1rem 0;
 }
 .single .entry-content h4,
 .page .entry-content h4 {
-  font-size: 1.3rem;
+  font-size: 1.25rem;
+  margin: 1rem 0;
 }
 .single .entry-content h5,
 .page .entry-content h5 {
-  font-size: 1.2rem;
+  font-size: 1.15rem;
+  margin: 1rem 0;
+}
+.single .entry-content h6,
+.page .entry-content h6 {
+  font-size: 1.1rem;
+  margin: 1rem 0;
 }
 .single .entry-content iframe,
 .page .entry-content iframe {
   max-width: 100%;
 }
-.single .entry-content p, .single .entry-content li,
-.page .entry-content p,
-.page .entry-content li {
+.single .entry-content p,
+.page .entry-content p {
   font-size: 1.05rem;
+  margin: 1rem 0;
 }
 .single .entry-content .button,
 .page .entry-content .button {
@@ -2757,15 +2768,21 @@ input, textarea {
 .single .entry-content ul li, .single .entry-content ol li,
 .page .entry-content ul li,
 .page .entry-content ol li {
+  font-size: 1.05rem;
   word-break: break-word;
+  line-height: 1.55;
 }
 .single .entry-content ul,
 .page .entry-content ul {
-  margin: 1.8rem 0;
+  margin: 1.5rem 0;
 }
 .single .entry-content ul li,
 .page .entry-content ul li {
   margin-bottom: 0.5rem;
+}
+.single .entry-content ul li:first-child,
+.page .entry-content ul li:first-child {
+  margin-top: 0;
 }
 .single .entry-content ul li:last-child,
 .page .entry-content ul li:last-child {
@@ -2912,9 +2929,12 @@ aside ul, aside ol {
   list-style-type: none;
 }
 aside ul li, aside ol li {
-  padding: 0.5rem 0;
   border-width: 0 0 1px 0;
   border-style: dotted;
+}
+aside ul li a, aside ol li a {
+  display: block;
+  padding: 0.5rem 0;
 }
 
 /***********************
@@ -2942,14 +2962,16 @@ aside ul li, aside ol li {
   height: auto;
 }
 .articles article header {
-  margin: 0.5rem 0;
+  margin: 0.7rem 0 0.2rem;
 }
 .articles article header h1 {
   margin: 0;
   font-size: 1.1rem;
+  line-height: 1.5;
 }
-.articles article header .excerpt {
-  font-size: 0.8rem;
+.articles article .excerpt {
+  font-size: 0.85rem;
+  line-height: 1.55;
 }
 .articles article footer {
   font-size: 0.8rem;
@@ -3039,14 +3061,13 @@ aside ul li, aside ol li {
 .entry-content .pagination, .archives .pagination {
   text-align: center;
   margin: 1.5rem 0 0;
-  font-weight: bold;
   font-size: 1.2rem;
 }
 .entry-content .pagination a, .archives .pagination a {
   text-decoration: none;
 }
 .entry-content .pagination i, .archives .pagination i {
-  font-weight: bold;
+  font-size: 1rem;
 }
 .entry-content .pagination span, .archives .pagination span {
   margin: 0 0.7rem;
@@ -3074,10 +3095,11 @@ aside ul li, aside ol li {
 * Post Navigation
 ************************/
 .post-navigation {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   margin-bottom: 1.5rem;
   float: left;
   width: 100%;
+  line-height: 1.4;
 }
 .post-navigation .nav-links a {
   display: flex;
@@ -3086,7 +3108,7 @@ aside ul li, aside ol li {
 }
 .post-navigation .nav-links i {
   display: inline;
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 .post-navigation .nav-links .nav-previous {
   float: left;
@@ -3577,6 +3599,7 @@ select {
 ****************************************/
 .comments-area {
   margin-bottom: 3rem;
+  line-height: 1.66;
   /*
   * Comment Respond
   */
@@ -3604,6 +3627,12 @@ select {
 }
 .comments-area .comments-title i {
   font-size: 1.8rem;
+}
+.comments-area .comment-reply-title {
+  margin-bottom: 0.5rem;
+}
+.comments-area .comment-notes {
+  margin-top: 0;
 }
 .comments-area .comment-list {
   margin: 0;
@@ -3674,22 +3703,22 @@ select {
 /*********************
 * Widget Area
 ***********************/
-.calendar-wrap table {
+#wp-calendar {
   width: 100%;
   border-collapse: collapse;
   box-sizing: border-box;
   line-height: 1.8;
   vertical-align: top;
 }
-.calendar-wrap table thead {
+#wp-calendar thead {
   border-width: 0 0 2px 0;
   border-style: solid;
 }
-.calendar-wrap table tbody tr {
+#wp-calendar tbody tr {
   border-width: 0 0 1px 0;
   border-style: solid;
 }
-.calendar-wrap table th, .calendar-wrap table td {
+#wp-calendar th, #wp-calendar td {
   padding: .5rem;
   font-size: .8rem;
   text-align: center;
@@ -4001,16 +4030,16 @@ i.icomoon {
     height: 40px;
   }
 
+  .single #main > header .page-header h1,
+  .page #main > header .page-header h1 {
+    font-size: 1.4rem;
+  }
   .single #main .column article, .single #main .column aside,
   .page #main .column article,
   .page #main .column aside {
     width: 100%;
     float: none;
     margin: 0;
-  }
-  .single header .page-header h1,
-  .page header .page-header h1 {
-    font-size: 1.4rem;
   }
 
   .single article header h1,
@@ -4023,24 +4052,33 @@ i.icomoon {
   }
   .single .entry-content h2,
   .page .entry-content h2 {
-    font-size: 1.25rem;
-    margin: 2rem 0 0.4rem;
-    padding: 1.1rem 0 1rem;
+    font-size: 1.35rem;
+    margin: 2rem 0 1rem;
+    padding: 0.7rem 0;
   }
   .single .entry-content h3,
   .page .entry-content h3 {
-    font-size: 1.15rem;
+    font-size: 1.25rem;
   }
   .single .entry-content h4,
   .page .entry-content h4 {
-    font-size: 1.1rem;
+    font-size: 1.15rem;
   }
   .single .entry-content h5,
   .page .entry-content h5 {
+    font-size: 1.1rem;
+  }
+  .single .entry-content h6,
+  .page .entry-content h6 {
     font-size: 1rem;
   }
   .single .entry-content p,
   .page .entry-content p {
+    font-size: 1rem;
+  }
+  .single .entry-content ul li, .single .entry-content ol li,
+  .page .entry-content ul li,
+  .page .entry-content ol li {
     font-size: 1rem;
   }
   .single .entry-content table,
