@@ -49,6 +49,15 @@ function nishiki_custom_theme_support() {
 add_action( 'after_setup_theme', 'nishiki_custom_theme_support' );
 
 /*****************
+ * Add Editor Style
+ *****************/
+
+function nishiki_editor_style() {
+	add_editor_style();
+}
+add_action( 'admin_init', 'nishiki_editor_style' );
+
+/*****************
  * Add Pingback
  *****************/
 
