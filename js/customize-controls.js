@@ -49,7 +49,7 @@
 				wp.customize.control( 'ctrl_front_page_background_opacity' + i, function( control ) {
 					var visibility = function() {
 						if ( 'custom' === setting.get() ) {
-							console.log('test');
+							//console.log('test');
 							control.container.slideDown( 180 );
 						} else {
 							control.container.slideUp( 180 );
@@ -192,6 +192,8 @@
 
 			});
 		}
+
+
 
 		// Detect when the front page sections section is expanded (or closed) so we can adjust the preview accordingly.
 		// wp.customize.section( 'section_front_page', function( section ) {

@@ -1,6 +1,6 @@
 <?php
-// Add Rrange Customizer
-if( class_exists( 'WP_Customize_Control' ) ) {
+if ( class_exists('WP_Customize_Control') ) {
+	// Add Range Customizer
 	class Nishiki_WP_Customize_Range extends WP_Customize_Control {
 		public $type = 'range';
 
@@ -30,3 +30,5 @@ if( class_exists( 'WP_Customize_Control' ) ) {
 		}
 	}
 }
+
+

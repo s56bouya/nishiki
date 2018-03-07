@@ -1,5 +1,5 @@
 /**
- * Generated on 2018/02/20
+ * Generated on 2018/03/07
  * Author: Tetsuya Imamura(s56bouya)
  */
 
@@ -2021,8 +2021,8 @@ body#tinymce.wp-editor {
   margin: 0;
   padding: 0;
   z-index: 0;
-  letter-spacing: 0.06rem;
-  line-height: 1.76;
+  letter-spacing: 0.07rem;
+  line-height: 1.86;
   word-wrap: break-word;
   position: relative;
   max-width: 1200px;
@@ -2110,7 +2110,7 @@ body#tinymce.wp-editor table th, body#tinymce.wp-editor table td {
   padding: 1rem;
   font-size: 1rem;
   text-align: left;
-  line-height: 1.76;
+  line-height: 1.86;
   border-width: 1px;
   border-style: solid;
 }
@@ -2133,24 +2133,24 @@ body#tinymce.wp-editor h2 {
   border-top-width: 1px;
   border-bottom-style: solid;
   border-bottom-width: 1px;
-  margin: 3rem 0 1rem;
+  margin: 3.5rem 0 1rem;
   padding: 1.5rem 0 1.4rem;
 }
 body#tinymce.wp-editor h3 {
   font-size: 1.4rem;
-  margin: 1rem 0;
+  margin: 2rem 0 1rem;
 }
 body#tinymce.wp-editor h4 {
-  font-size: 1.25rem;
-  margin: 1rem 0;
+  font-size: 1.2rem;
+  margin: 1.5rem 0 1rem;
 }
 body#tinymce.wp-editor h5 {
   font-size: 1.15rem;
-  margin: 1rem 0;
+  margin: 1.5rem 0 1rem;
 }
 body#tinymce.wp-editor h6 {
   font-size: 1.1rem;
-  margin: 1rem 0;
+  margin: 1.3rem 0;
 }
 body#tinymce.wp-editor iframe {
   max-width: 100%;
@@ -2232,10 +2232,10 @@ body#tinymce.wp-editor a {
 
 @media only screen and (max-width: 1000px) {
   body#tinymce.wp-editor {
-    line-height: 1.66;
+    line-height: 1.76;
   }
   body#tinymce.wp-editor h2 {
-    font-size: 1.35rem;
+    font-size: 1.4rem;
     margin: 2rem 0 1rem;
     padding: 0.7rem 0;
   }
@@ -2246,7 +2246,7 @@ body#tinymce.wp-editor a {
     font-size: 1.15rem;
   }
   body#tinymce.wp-editor h5 {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   }
   body#tinymce.wp-editor h6 {
     font-size: 1rem;
