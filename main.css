@@ -1,5 +1,5 @@
 /**
- * Generated on 2018/03/07
+ * Generated on 2018/03/13
  * Author: Tetsuya Imamura(s56bouya)
  */
 
@@ -2530,8 +2530,9 @@ body.scrolled #masthead {
   padding: 0;
 }
 #footer .wrap .copyright {
-  margin: 0;
+  margin: 0 auto;
   padding: 0.7rem 0;
+  width: 95%;
 }
 #footer .wrap .copyright .copymark {
   vertical-align: middle;
@@ -2723,6 +2724,10 @@ body.scrolled #masthead {
   max-width: 100%;
   height: auto;
 }
+.single .entry-content img.wp-more-tag,
+.page .entry-content img.wp-more-tag {
+  height: 1rem;
+}
 .single .entry-content h2,
 .page .entry-content h2 {
   font-size: 1.7rem;
@@ -2770,8 +2775,7 @@ body.scrolled #masthead {
 .page .entry-content ul li,
 .page .entry-content ol li {
   font-size: 1.05rem;
-  word-break: break-word;
-  line-height: 1.55;
+  line-height: 1.86;
 }
 .single .entry-content ul,
 .page .entry-content ul {
@@ -2795,7 +2799,7 @@ body.scrolled #masthead {
 }
 .single .entry-content ol li,
 .page .entry-content ol li {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.8rem;
 }
 .single .entry-content ol li:last-child,
 .page .entry-content ol li:last-child {
@@ -3705,28 +3709,34 @@ select {
 /*********************
 * Widget Area
 ***********************/
-#wp-calendar {
+.widget .search-box {
+  margin: 1.5rem 0;
+}
+.widget .search-box #searchform .search-inner input[type="text"] {
+  box-shadow: none;
+  background: inherit;
+}
+.widget #wp-calendar {
   width: 100%;
   border-collapse: collapse;
   box-sizing: border-box;
   line-height: 1.8;
   vertical-align: top;
 }
-#wp-calendar thead {
+.widget #wp-calendar thead {
   border-width: 0 0 2px 0;
   border-style: solid;
 }
-#wp-calendar tbody tr {
+.widget #wp-calendar tbody tr {
   border-width: 0 0 1px 0;
   border-style: solid;
 }
-#wp-calendar th, #wp-calendar td {
+.widget #wp-calendar th, .widget #wp-calendar td {
   padding: .5rem;
   font-size: .8rem;
   text-align: center;
 }
-
-.tagcloud a {
+.widget .tagcloud a {
   font-size: 1rem;
   display: inline-block;
   margin-bottom: 0.5rem;
@@ -4082,6 +4092,7 @@ i.icomoon {
   .page .entry-content ul li,
   .page .entry-content ol li {
     font-size: 1rem;
+    line-height: 1.76;
   }
   .single .entry-content table,
   .page .entry-content table {

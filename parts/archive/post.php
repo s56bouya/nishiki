@@ -9,7 +9,7 @@
 		?>
 		<div class="post-image<?php echo esc_attr( $noimage ); ?>">
 			<?php if( $noimage == '' ){ ?>
-				<figure><?php the_post_thumbnail( get_the_ID(), 'medium' ); ?></figure>
+				<figure><?php the_post_thumbnail( 'large' ); ?></figure>
 			<?php } else { ?>
 				<i class="icomoon icon-image"></i>
 			<?php } ?>

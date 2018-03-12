@@ -1,5 +1,5 @@
 /**
- * Generated on 2018/03/07
+ * Generated on 2018/03/13
  * Author: Tetsuya Imamura(s56bouya)
  */
 
@@ -2127,6 +2127,9 @@ body#tinymce.wp-editor img {
   max-width: 100%;
   height: auto;
 }
+body#tinymce.wp-editor img.wp-more-tag {
+  height: 1rem;
+}
 body#tinymce.wp-editor h2 {
   font-size: 1.7rem;
   border-top-style: solid;
@@ -2164,8 +2167,7 @@ body#tinymce.wp-editor .button {
 }
 body#tinymce.wp-editor ul li, body#tinymce.wp-editor ol li {
   font-size: 1.05rem;
-  word-break: break-word;
-  line-height: 1.55;
+  line-height: 1.86;
 }
 body#tinymce.wp-editor ul {
   margin: 1.5rem 0;
@@ -2183,7 +2185,7 @@ body#tinymce.wp-editor ol {
   margin: 1rem 0 1rem 0;
 }
 body#tinymce.wp-editor ol li {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.8rem;
 }
 body#tinymce.wp-editor ol li:last-child {
   margin-bottom: 0;
