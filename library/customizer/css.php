@@ -81,7 +81,6 @@ function nishiki_customizer_css(){
 	 * Front
 	 ******************/
 
-	// Site Font Size
 	for( $i = 1; $i <= NISHIKI_SECTION_NUM; ++$i ) {
 		// Text Color
 		$front_page_text_color = esc_html( get_theme_mod( 'setting_front_page_text_color' . $i, '#000000' ) );
@@ -93,6 +92,10 @@ function nishiki_customizer_css(){
 		if( $front_page_text_align !== 'center' ){
 			$output .= "#front-page-section{$i} .sub-text{padding-{$front_page_text_align}:0;}";
 		}
+
+		// Image Placeholder Grayscale
+		$front_page_image_placeholder_grayscale = absint( get_theme_mod( 'setting_front_page_image_placeholder_grayscale' . $i, '100' ) );
+		$output .= "#front-page-section{$i} img.img-placeholder{filter:blur(15px) grayscale({$front_page_image_placeholder_grayscale}%);}";
 
 		// Background Color
 		$front_page_background_color = esc_html( get_theme_mod( 'setting_front_page_background_color' . $i, '#000000' ) );
@@ -194,6 +197,10 @@ function nishiki_customizer_css(){
 	// Text Color
 	$top_main_visual_text_color = esc_html( get_theme_mod( 'setting_top_main_visual_text_color', '#ffffff' ) );
 	$output .= ".main-visual{color:{$top_main_visual_text_color};}";
+
+	// Image Placeholder Grayscale
+	$main_visual_image_placeholder_grayscale = absint( get_theme_mod( 'setting_top_main_visual_image_placeholder_grayscale', '100' ) );
+	$output .= ".main-visual img.img-placeholder{filter:blur(15px) grayscale({$main_visual_image_placeholder_grayscale}%);}";
 
 	// Background Color
 	$main_visual_background_color = esc_html( get_theme_mod( 'setting_top_main_visual_background_color', '#000000' ) );

@@ -31,6 +31,34 @@
 					setting.bind( visibility );
 				});
 
+				// Image Placeholder Display
+				wp.customize.control( 'ctrl_front_page_image_placeholder_display' + i, function( control ) {
+					var visibility = function() {
+						if ( 'custom' === setting.get() ) {
+							control.container.slideDown( 180 );
+						} else {
+							control.container.slideUp( 180 );
+						}
+					};
+
+					visibility();
+					setting.bind( visibility );
+				});
+
+				// Image Placeholder Grayscale
+				wp.customize.control( 'ctrl_front_page_image_placeholder_grayscale' + i, function( control ) {
+					var visibility = function() {
+						if ( 'custom' === setting.get() ) {
+							control.container.slideDown( 180 );
+						} else {
+							control.container.slideUp( 180 );
+						}
+					};
+
+					visibility();
+					setting.bind( visibility );
+				});
+
 				// Background Color
 				wp.customize.control( 'ctrl_front_page_background_color' + i, function( control ) {
 					var visibility = function() {

@@ -33,7 +33,7 @@ function nishiki_init_customizer_front( $wp_customize ) {
 
 		// Upload Image
 		$wp_customize->add_setting( 'setting_front_page_image' . $i, array(
-			'default' => get_template_directory_uri() . '/images/sky.jpg',
+			'default' => '',
 			'sanitize_callback' => 'nishiki_sanitize_image',
 		));
 
@@ -45,6 +45,42 @@ function nishiki_init_customizer_front( $wp_customize ) {
 					'label'       =>  __( 'Image', 'nishiki' ) . $i,
 					'section'     =>  'section_front_page',
 					'settings'    =>  'setting_front_page_image' . $i,
+				)
+			)
+		);
+
+		// Image Placeholder Display
+		$wp_customize->add_setting('setting_front_page_image_placeholder_display' . $i, array(
+			'default' => false,
+			'transport'     => 'postMessage',
+			'sanitize_callback' => 'nishiki_sanitize_checkbox',
+		));
+
+		$wp_customize->add_control('ctrl_front_page_image_placeholder_display' . $i, array(
+			'label'       =>  __( 'Display image placeholder', 'nishiki' ),
+			'type'        =>  'checkbox',
+			'section'     =>  'section_front_page',
+			'settings'    =>  'setting_front_page_image_placeholder_display' . $i,
+		));
+
+		// Image Placeholder Grayscale
+		$wp_customize->add_setting( 'setting_front_page_image_placeholder_grayscale' . $i, array(
+			'default'     => 100,
+			'transport'     => 'postMessage',
+			'sanitize_callback' => 'nishiki_sanitize_number_range',
+		) );
+
+		$wp_customize->add_control(
+			new Nishiki_WP_Customize_Range(
+				$wp_customize,
+				'ctrl_front_page_image_placeholder_grayscale' . $i,
+				array(
+					'label'	=>  __( 'Adjust image placeholder grayscale(%)', 'nishiki' ),
+					'min' => 0,
+					'max' => 100,
+					'step' => 1,
+					'section' => 'section_front_page',
+					'settings'   => 'setting_front_page_image_placeholder_grayscale' . $i,
 				)
 			)
 		);

@@ -194,6 +194,12 @@ msgstr ""
 msgid "Image"
 msgstr ""
 
+msgid "Display image placeholder"
+msgstr ""
+
+msgid "Adjust image placeholder grayscale(%)"
+msgstr ""
+
 #: library/customizer/add_front.php:81 library/customizer/add_top.php:114
 msgid "Background Opacity(%)"
 msgstr ""

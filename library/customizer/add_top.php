@@ -64,7 +64,7 @@ function nishiki_init_customizer_top( $wp_customize ) {
 
 	// image
 	$wp_customize->add_setting('setting_top_main_visual_image',array(
-		'default' => get_template_directory_uri() . '/images/carp.jpg',
+		'default' => '',
 		'sanitize_callback' => 'nishiki_sanitize_image',
 	));
 
@@ -77,6 +77,44 @@ function nishiki_init_customizer_top( $wp_customize ) {
 				'section'    => 'section_top_main_visual',
 				'settings'   => 'setting_top_main_visual_image',
 				'priority'=> 1,
+			)
+		)
+	);
+
+	// Main Visual Image Placeholder Display
+	$wp_customize->add_setting('setting_top_main_visual_image_placeholder_display', array(
+		'default' => false,
+		'transport'     => 'postMessage',
+		'sanitize_callback' => 'nishiki_sanitize_checkbox',
+	));
+
+	$wp_customize->add_control('ctrl_top_main_visual_image_placeholder_display', array(
+		'label'       =>  __( 'Display image placeholder', 'nishiki' ),
+		'type'        =>  'checkbox',
+		'section'     =>  'section_top_main_visual',
+		'settings'    =>  'setting_top_main_visual_image_placeholder_display',
+		'priority'=> 5,
+	));
+
+	// Main Visual Image Placeholder Grayscale
+	$wp_customize->add_setting( 'setting_top_main_visual_image_placeholder_grayscale', array(
+		'default'     => 100,
+		'transport'     => 'postMessage',
+		'sanitize_callback' => 'nishiki_sanitize_number_range',
+	) );
+
+	$wp_customize->add_control(
+		new Nishiki_WP_Customize_Range(
+			$wp_customize,
+			'ctrl_top_main_visual_image_placeholder_grayscale',
+			array(
+				'label'	=>  __( 'Adjust image placeholder grayscale(%)', 'nishiki' ),
+				'min' => 0,
+				'max' => 100,
+				'step' => 1,
+				'section' => 'section_top_main_visual',
+				'settings'   => 'setting_top_main_visual_image_placeholder_grayscale',
+				'priority'=> 5,
 			)
 		)
 	);

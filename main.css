@@ -1,5 +1,5 @@
 /**
- * Generated on 2018/03/13
+ * Generated on 2018/03/15
  * Author: Tetsuya Imamura(s56bouya)
  */
 
@@ -2281,7 +2281,6 @@ body.scrolled #masthead {
 * Main Visual
 ************************/
 .main-visual {
-  opacity: 0;
   position: relative;
   text-align: center;
   font-weight: bold;
@@ -2293,22 +2292,25 @@ body.scrolled #masthead {
   height: 30rem;
 }
 .main-visual img {
+  opacity: 0;
   position: absolute;
-  z-index: -1;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
   object-fit: cover;
-  opacity: 1;
-  transition: opacity 1s ease;
   display: block;
+  transition: opacity 600ms linear;
 }
-.main-visual img[data-src] {
-  opacity: 0;
+.main-visual img.imgloaded {
+  opacity: 1;
+}
+.main-visual img.img-placeholder {
+  opacity: 1;
+  transform: scale(1.08);
 }
 .main-visual.show {
-  transition: opacity 0.3s ease;
+  transition: opacity 0.3s linear;
   opacity: 1;
 }
 .main-visual.main-video {
@@ -2348,13 +2350,6 @@ body.scrolled #masthead {
 }
 .main-visual.main-video .custom-header .wp-custom-header button {
   display: none;
-}
-.main-visual .custom-header img {
-  width: 100%;
-  max-width: 100%;
-}
-.main-visual .custom-header img[data-srcset] {
-  opacity: 0;
 }
 .main-visual::after {
   position: absolute;
@@ -2423,7 +2418,6 @@ body.scrolled #masthead {
 * Front Page
 ************************/
 .front-page-section {
-  opacity: 0;
   position: relative;
   padding: 10rem 0;
   font-size: 1.7rem;
@@ -2442,12 +2436,16 @@ body.scrolled #masthead {
   top: 0;
   left: 0;
   object-fit: cover;
-  opacity: 1;
+  opacity: 0;
   transition: opacity 1s ease;
   display: block;
 }
-.front-page-section img[data-src] {
-  opacity: 0;
+.front-page-section img.imgloaded {
+  opacity: 1;
+}
+.front-page-section img.img-placeholder {
+  opacity: 1;
+  transform: scale(1.08);
 }
 .front-page-section.show {
   transition: opacity 0.3s ease;
@@ -2467,6 +2465,7 @@ body.scrolled #masthead {
   border-top: 1px solid;
   margin: 0;
   padding: 1rem 2rem 0;
+  line-height: 1.78;
 }
 .front-page-section .container .main-button {
   margin-bottom: 0;

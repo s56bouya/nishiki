@@ -22,6 +22,8 @@ function nishiki_custom_theme_support() {
 
 	// Thumbnails
 	add_theme_support('post-thumbnails');
+	set_post_thumbnail_size( 640, 360, true );
+	add_image_size( 'nishiki-thumbnail', 64, 36, true );
 
 	// Custom Header
 	add_theme_support( 'custom-header', array(
@@ -102,8 +104,8 @@ function nishiki_has_header_video() {
 
 add_filter( 'header_video_settings', 'nishiki_header_video_settings');
 function nishiki_header_video_settings( $settings ) {
-	$settings['minWidth'] = 320;
-	$settings['minHeight'] = 180;
+	$settings['minWidth'] = 640;
+	$settings['minHeight'] = 360;
 	return $settings;
 }
 
