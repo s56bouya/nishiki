@@ -198,37 +198,34 @@ nishiki_registerListener("scroll", nishiki_lazyLoad);
 /*!
  * Lazyload
  */
-/*!
- * Lazyload
- */
 function nishiki_lazyLoad() {
     clearTimeout(timer);
     timer = setTimeout(function() {
         setTimeout(function() {
-            var e = document.getElementById("content");
+            var e = document.getElementById("main");
             if (e) {
-                var i = e.getElementsByTagName("img");
+                var i = e.getElementsByTagName("section");
                 var s;
                 for (var a = 0; a < i.length; a++) {
                     if (nishiki_inView(i[a]) && i[a].classList.contains("imgloaded") === false) {
-                        if (i[a].classList.contains("header-image")) {
-                            if (i[a].hasAttribute("data-src") === true) {
-                                i[a].src = i[a].getAttribute("data-src");
-                                i[a].removeAttribute("data-src");
+                        if (i[a].classList.contains("main-has-header-image")) {
+                            var n = i[a].querySelector(".header-image");
+                            if (n.hasAttribute("data-src") === true) {
+                                n.src = n.getAttribute("data-src");
+                                n.removeAttribute("data-src");
                             }
                             if (i[a].hasAttribute("data-srcset") === true) {
-                                i[a].srcset = i[a].getAttribute("data-srcset");
-                                i[a].removeAttribute("data-srcset");
+                                n.srcset = i[a].getAttribute("data-srcset");
+                                n.removeAttribute("data-srcset");
                             }
-                            i[a].offsetTop;
-                            i[a].classList.add("imgloaded");
+                            n.offsetTop;
+                            n.classList.add("imgloaded");
                         } else {
-                            s = i[a].parentNode;
-                            if (s.hasAttribute("data-src") === true) {
+                            if (i[a].hasAttribute("data-src") === true) {
                                 i[a].classList.add("imgloaded");
-                                var n = new Image();
-                                n.src = s.getAttribute("data-src");
-                                n.onload = nishiki_imgloaded(s, n);
+                                var t = new Image();
+                                t.src = i[a].getAttribute("data-src");
+                                t.onload = nishiki_imgloaded(i[a], t);
                             }
                         }
                     }

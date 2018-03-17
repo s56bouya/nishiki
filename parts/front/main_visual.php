@@ -1,26 +1,26 @@
 <?php
 $nishiki_main_visual_class = '';
 $image_large = '';
+$image = '';
 if ( nishiki_has_header_video() ) {
-	$nishiki_main_visual_class = ' main-video';
+	$nishiki_main_visual_class .= ' main-video';
 } elseif ( has_header_image() ) {
-	if( is_random_header_image() ){
-	  $nishiki_main_visual_class = ' main-random-header-image';
+	$nishiki_main_visual_class .= ' main-has-header-image';
+	if ( is_random_header_image() ) {
+		$nishiki_main_visual_class .= ' main-random-header-image';
 	} else {
-	  $nishiki_main_visual_class = ' main-custom-header-image';
+		$nishiki_main_visual_class .= ' main-custom-header-image';
 	}
-}
-
-if ( get_theme_mod( 'setting_top_main_visual_image' ) && ! has_header_image() ) {
+} elseif( get_theme_mod( 'setting_top_main_visual_image' ) ) {
 	$nishiki_main_visual_class .= ' main-header-image';
 	$image = esc_url( get_theme_mod('setting_top_main_visual_image') );
 	$image_large = ' data-src="' . $image . '"';
 } else {
-	$image = '';
-	$image_large = '';
+	$nishiki_main_visual_class = ' main-default-header-image';
+	$image_large = ' data-src="' . esc_url( get_template_directory_uri() ) . '/images/carp.jpg' . '"';
 }
 
-echo '<div class="main-visual' . esc_attr( $nishiki_main_visual_class ) . '"' . $image_large .'>';
+echo '<section id="main-visual" class="main-visual' . esc_attr( $nishiki_main_visual_class ) . '"' . $image_large .'>';
 if( has_header_image() or nishiki_has_header_video() or is_random_header_image() ){
 	//		var_dump(get_header_video_settings());
 	echo '<div class="custom-header">';
@@ -42,15 +42,11 @@ if( has_header_image() or nishiki_has_header_video() or is_random_header_image()
 	if( $image_data[3] === true && get_theme_mod( 'setting_top_main_visual_image_placeholder_display' ) ){
 	  $image_thumbnail = esc_url( $image_data[0] );
 	  echo '<img class="img-placeholder" src="' . $image_thumbnail . '" alt="">';
-	} else {
-	  echo '<img src="' . $image . '" alt="">';
 	}
-} else {
-	echo '<img class="imgloaded" src="' . get_template_directory_uri() . '/images/carp.jpg' . '" alt="">';
 }
 
 echo '<div class="main-visual-content container">';
-if( get_header_textcolor() !== 'blank' ){
+if( get_header_textcolor() ){
 	echo '<p class="description">' . esc_html( get_bloginfo( 'description' ) ) . '</p>';
 }
 if( get_theme_mod( 'setting_top_main_visual_sub_text' ) == true ){
@@ -79,4 +75,4 @@ if( get_theme_mod( 'setting_top_main_visual_main_button_text', __( 'Get started!
 }
 echo '</div>';
 
-echo '</div>';
+echo '</section>';

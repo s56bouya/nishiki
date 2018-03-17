@@ -1,5 +1,5 @@
 /**
- * Generated on 2018/03/15
+ * Generated on 2018/03/17
  * Author: Tetsuya Imamura(s56bouya)
  */
 
@@ -2368,6 +2368,7 @@ body.scrolled #masthead {
   transform: translate(-50%, -50%);
   z-index: 1;
   line-height: 1.55;
+  backface-visibility: hidden;
 }
 .main-visual .main-visual-content .description {
   font-size: 1.7rem;
@@ -2455,6 +2456,7 @@ body.scrolled #masthead {
   position: relative;
   z-index: 1;
   line-height: 1.55;
+  backface-visibility: hidden;
 }
 .front-page-section .container .main-text {
   margin-top: 0;
