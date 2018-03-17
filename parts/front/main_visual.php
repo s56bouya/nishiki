@@ -46,7 +46,7 @@ if( has_header_image() or nishiki_has_header_video() or is_random_header_image()
 }
 
 echo '<div class="main-visual-content container">';
-if( get_header_textcolor() ){
+if( get_bloginfo( 'description' ) || get_header_textcolor() ){
 	echo '<p class="description">' . esc_html( get_bloginfo( 'description' ) ) . '</p>';
 }
 if( get_theme_mod( 'setting_top_main_visual_sub_text' ) == true ){
