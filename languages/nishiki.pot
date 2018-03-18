@@ -338,6 +338,10 @@ msgstr ""
 msgid "Author Text Label"
 msgstr ""
 
+#: library/customizer/add_post.php:244
+msgid "Author Name Archive Link"
+msgstr ""
+
 #: library/customizer/add_title_tagline.php:34
 msgid "Display Site Title"
 msgstr ""
