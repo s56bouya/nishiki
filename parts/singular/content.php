@@ -64,8 +64,19 @@ if( has_post_thumbnail() ){
 					}
 					?>
 					<div class="author_image"><?php echo get_avatar( get_the_author_meta( 'ID' ), 90, array( 'extra_attr' => 'data') ); ?></div>
-					<p><a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>"><?php echo esc_html( get_the_author_meta('display_name') ); ?></a></p>
+					<p class="display-name">
+					<?php
+					$author_display_name = 	get_the_author_meta('display_name');
+					if( get_theme_mod( 'setting_footer_author_name_archive_link', true ) ){
+						echo '<a href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( $author_display_name ) . '</a>';
+					} else {
+						echo esc_html( $author_display_name );
+					}
+					?>
+					</p>
+					<?php do_action( 'nishiki_before_single_author_description' ); ?>
 					<p class="description"><?php the_author_meta( 'description' ); ?></p>
+					<?php do_action( 'nishiki_after_single_author_description' ); ?>
 				</div>
 				<?php
 				}

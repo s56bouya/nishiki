@@ -141,7 +141,7 @@ function nishiki_init_customizer_post( $wp_customize ) {
 	$wp_customize->add_control(
 		new WP_Customize_Control(
 			$wp_customize,
-			'ctrl_post_display_author',
+			'ctrl_post_display_category',
 			array(
 				'label'       =>  __( 'Display Category', 'nishiki' ),
 				'section'     =>  'section_post',
@@ -239,4 +239,19 @@ function nishiki_init_customizer_post( $wp_customize ) {
 		'settings'    =>  'setting_footer_author_text',
 		'priority'    =>  1110,
 	));
+
+	// Author Name Link
+	$wp_customize->add_setting('setting_footer_author_name_archive_link',array(
+		'default' => true,
+		'sanitize_callback' => 'nishiki_sanitize_text',
+	));
+
+	$wp_customize->add_control('ctrl_footer_author_name_archive_link',array(
+		'label'       =>  __( 'Author Name Archive Link', 'nishiki' ),
+		'type'        =>  'checkbox',
+		'section'     =>  'section_post',
+		'settings'    =>  'setting_footer_author_name_archive_link',
+		'priority'    =>  1120,
+	));
+
 }

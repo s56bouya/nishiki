@@ -1,5 +1,5 @@
 /**
- * Generated on 2018/03/17
+ * Generated on 2018/03/18
  * Author: Tetsuya Imamura(s56bouya)
  */
 
@@ -2905,13 +2905,15 @@ body.scrolled #masthead {
   text-align: center;
   margin: 3rem auto 2rem;
   padding: 1.5rem 1rem;
+  font-size: 0.9rem;
+  line-height: 1.76;
 }
 .author-info a {
   text-decoration: none;
 }
 .author-info span {
   display: inline-block;
-  padding: 0.3rem 0.3rem 0.5rem;
+  padding: 0.3rem 0.3rem 1rem;
 }
 .author-info .author-image {
   margin-bottom: 1rem;
@@ -3104,12 +3106,15 @@ aside ul li a, aside ol li a {
 .post-navigation {
   font-size: 1.1rem;
   margin-bottom: 1.5rem;
-  float: left;
-  width: 100%;
-  line-height: 1.4;
+  line-height: 1.76;
+}
+.post-navigation .nav-links {
+  display: flex;
+  justify-content: flex-end;
 }
 .post-navigation .nav-links a {
   display: flex;
+  width: 100%;
   align-items: center;
   padding: 1rem 0;
 }
@@ -3118,7 +3123,8 @@ aside ul li a, aside ol li a {
   font-size: 0.9rem;
 }
 .post-navigation .nav-links .nav-previous {
-  float: left;
+  justify-content: flex-start;
+  margin-right: auto;
 }
 .post-navigation .nav-links .nav-previous a {
   justify-content: flex-start;
@@ -3127,7 +3133,7 @@ aside ul li a, aside ol li a {
   margin-right: 0.5rem;
 }
 .post-navigation .nav-links .nav-next {
-  float: right;
+  justify-content: flex-end;
 }
 .post-navigation .nav-links .nav-next a {
   justify-content: flex-end;
@@ -3136,7 +3142,8 @@ aside ul li a, aside ol li a {
   margin-left: 0.5rem;
 }
 .post-navigation .nav-links div {
-  width: 50%;
+  flex-basis: 50%;
+  display: flex;
   word-wrap: break-word;
 }
 
