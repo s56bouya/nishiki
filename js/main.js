@@ -208,18 +208,20 @@ function nishiki_lazyLoad() {
                 var s;
                 for (var a = 0; a < i.length; a++) {
                     if (nishiki_inView(i[a]) && i[a].classList.contains("imgloaded") === false) {
-                        if (i[a].classList.contains("main-has-header-image")) {
+                        if (i[a].classList.contains("has-header-image") || i[a].classList.contains("main-video")) {
                             var n = i[a].querySelector(".header-image");
-                            if (n.hasAttribute("data-src") === true) {
-                                n.src = n.getAttribute("data-src");
-                                n.removeAttribute("data-src");
+                            if (n) {
+                                if (n.hasAttribute("data-src") === true) {
+                                    n.src = n.getAttribute("data-src");
+                                    n.removeAttribute("data-src");
+                                }
+                                if (i[a].hasAttribute("data-srcset") === true) {
+                                    n.srcset = i[a].getAttribute("data-srcset");
+                                    n.removeAttribute("data-srcset");
+                                }
+                                n.offsetTop;
+                                n.classList.add("imgloaded");
                             }
-                            if (i[a].hasAttribute("data-srcset") === true) {
-                                n.srcset = i[a].getAttribute("data-srcset");
-                                n.removeAttribute("data-srcset");
-                            }
-                            n.offsetTop;
-                            n.classList.add("imgloaded");
                         } else {
                             if (i[a].hasAttribute("data-src") === true) {
                                 i[a].classList.add("imgloaded");

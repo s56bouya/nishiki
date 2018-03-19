@@ -7,35 +7,6 @@ function nishiki_init_customizer_top( $wp_customize ) {
 		'priority'  =>  30,
 	));
 
-	// Static Front Page
-	$ctrl_static_front_page = $wp_customize->get_section('static_front_page');
-	if ( $ctrl_static_front_page ) {
-		$ctrl_static_front_page->panel = 'panel_top';
-		$ctrl_static_front_page->priority = 1003;
-	}
-
-	// Header Video
-	$ctrl_header_video = $wp_customize->get_control('header_video');
-	if ( $ctrl_header_video ) {
-		$ctrl_header_video->label = __( 'Upload a Video', 'nishiki' );
-		$ctrl_header_video->section = 'section_top_main_visual';
-		$ctrl_header_video->priority = 3000;
-	}
-
-	// External Header Video
-	$ctrl_external_header_video = $wp_customize->get_control('external_header_video');
-	if ( $ctrl_external_header_video ) {
-		$ctrl_external_header_video->section = 'section_top_main_visual';
-		$ctrl_external_header_video->priority = 3100;
-	}
-
-	// Header Image
-	$ctrl_header_image = $wp_customize->get_control('header_image');
-	if ( $ctrl_header_image ) {
-		$ctrl_header_image->section = 'section_top_main_visual';
-		$ctrl_header_image->priority = 3200;
-	}
-
 	// Section
 	$wp_customize->add_section('section_top_main_visual',array(
 		'title'     =>  __( 'Main visual', 'nishiki' ),
@@ -43,43 +14,19 @@ function nishiki_init_customizer_top( $wp_customize ) {
 		'panel'     =>  'panel_top',
 	));
 
-	// main text(description)
-	$ctrl_blogdescription = $wp_customize->get_control('blogdescription');
-	if ( $ctrl_blogdescription ) {
-		$ctrl_blogdescription->section = 'section_top_main_visual';
+	// Static Front Page
+	$ctrl_static_front_page = $wp_customize->get_section('static_front_page');
+	if ( $ctrl_static_front_page ) {
+		$ctrl_static_front_page->panel = 'panel_top';
+		$ctrl_static_front_page->priority = 1003;
 	}
 
-	// Sub text
-	$wp_customize->add_setting('setting_top_main_visual_sub_text',array(
-		'default'   =>  '',
-		'sanitize_callback' => 'nishiki_sanitize_text',
-	));
-
-	$wp_customize->add_control('contrl_top_main_visual_sub_text',array(
-		'label'     =>  __( 'Sub Text', 'nishiki' ),
-		'type'      =>  'text',
-		'section'   =>  'section_top_main_visual',
-		'settings'  =>  'setting_top_main_visual_sub_text',
-	));
-
-	// image
-	$wp_customize->add_setting('setting_top_main_visual_image',array(
-		'default' => '',
-		'sanitize_callback' => 'nishiki_sanitize_image',
-	));
-
-	$wp_customize->add_control(
-		new WP_Customize_Image_Control(
-			$wp_customize,
-			'ctrl_top_main_visual_image',
-			array(
-				'label'      => __( 'Upload an Image', 'nishiki' ),
-				'section'    => 'section_top_main_visual',
-				'settings'   => 'setting_top_main_visual_image',
-				'priority'=> 1,
-			)
-		)
-	);
+	// Header Image
+	$ctrl_header_image = $wp_customize->get_control('header_image');
+	if ( $ctrl_header_image ) {
+		$ctrl_header_image->section = 'section_top_main_visual';
+		$ctrl_header_image->priority = 1000;
+	}
 
 	// Main Visual Image Placeholder Display
 	$wp_customize->add_setting('setting_top_main_visual_image_placeholder_display', array(
@@ -93,7 +40,7 @@ function nishiki_init_customizer_top( $wp_customize ) {
 		'type'        =>  'checkbox',
 		'section'     =>  'section_top_main_visual',
 		'settings'    =>  'setting_top_main_visual_image_placeholder_display',
-		'priority'=> 5,
+		'priority'=> 1010,
 	));
 
 	// Main Visual Image Placeholder Grayscale
@@ -114,10 +61,11 @@ function nishiki_init_customizer_top( $wp_customize ) {
 				'step' => 1,
 				'section' => 'section_top_main_visual',
 				'settings'   => 'setting_top_main_visual_image_placeholder_grayscale',
-				'priority'=> 5,
+				'priority'=> 1020,
 			)
 		)
 	);
+
 
 	// Main Visual Background Color
 	$wp_customize->add_setting('setting_top_main_visual_background_color',array(
@@ -149,16 +97,52 @@ function nishiki_init_customizer_top( $wp_customize ) {
 			$wp_customize,
 			'ctrl_top_main_visual_background_opacity',
 			array(
-				'label'	=>  __( 'Color above the image Opacity(%)', 'nishiki' ),
-				'min' => 0,
-				'max' => 100,
-				'step' => 1,
-				'section' => 'section_top_main_visual',
-				'settings'   => 'setting_top_main_visual_background_opacity',
-				'priority'          =>  1040,
+				'label'	    =>  __( 'Color above the image Opacity(%)', 'nishiki' ),
+				'min'       => 0,
+				'max'       => 100,
+				'step'      => 1,
+				'section'   => 'section_top_main_visual',
+				'settings'  => 'setting_top_main_visual_background_opacity',
+				'priority'  =>  1040,
 			)
 		)
 	);
+
+	// Header Video
+	$ctrl_header_video = $wp_customize->get_control('header_video');
+	if ( $ctrl_header_video ) {
+		$ctrl_header_video->label = __( 'Upload a Video', 'nishiki' );
+		$ctrl_header_video->section = 'section_top_main_visual';
+		$ctrl_header_video->priority = 1050;
+	}
+
+	// External Header Video
+	$ctrl_external_header_video = $wp_customize->get_control('external_header_video');
+	if ( $ctrl_external_header_video ) {
+		$ctrl_external_header_video->section = 'section_top_main_visual';
+		$ctrl_external_header_video->priority = 1060;
+	}
+
+	// main text(description)
+	$ctrl_blogdescription = $wp_customize->get_control('blogdescription');
+	if ( $ctrl_blogdescription ) {
+		$ctrl_blogdescription->section = 'section_top_main_visual';
+		$ctrl_blogdescription->priority = 1070;
+	}
+
+	// Sub text
+	$wp_customize->add_setting('setting_top_main_visual_sub_text',array(
+		'default'   =>  '',
+		'sanitize_callback' => 'nishiki_sanitize_text',
+	));
+
+	$wp_customize->add_control('contrl_top_main_visual_sub_text',array(
+		'label'     =>  __( 'Sub Text', 'nishiki' ),
+		'type'      =>  'text',
+		'section'   =>  'section_top_main_visual',
+		'settings'  =>  'setting_top_main_visual_sub_text',
+		'priority'  => 1080,
+	));
 
 	// Text Color
 	$wp_customize->add_setting('setting_top_main_visual_text_color',array(
@@ -175,7 +159,7 @@ function nishiki_init_customizer_top( $wp_customize ) {
 				'section'     =>  'section_top_main_visual',
 				'transport'   =>  'postMessage',
 				'settings'    =>  'setting_top_main_visual_text_color',
-				'priority'    =>  1001,
+				'priority'    =>  1090,
 			)
 		)
 	);
@@ -238,7 +222,7 @@ function nishiki_init_customizer_top( $wp_customize ) {
 			$wp_customize,
 			'ctrl_top_main_visual_main_button_text_color',
 			array(
-				'label'      => __( 'Text Color', 'nishiki' ),
+				'label'      => __( 'Button Text Color', 'nishiki' ),
 				'section'    => 'section_top_main_visual',
 				'transport'   => 'postMessage',
 				'settings'   => 'setting_top_main_visual_main_button_text_color',
@@ -261,6 +245,25 @@ function nishiki_init_customizer_top( $wp_customize ) {
 		'priority'=> 2004,
 	));
 
+	// image
+	$wp_customize->add_setting('setting_top_main_visual_image',array(
+		'default' => '',
+		'sanitize_callback' => 'nishiki_sanitize_image',
+	));
+
+	$wp_customize->add_control(
+		new WP_Customize_Image_Control(
+			$wp_customize,
+			'ctrl_top_main_visual_image',
+			array(
+				'label'      => __( 'Upload an Image', 'nishiki' ),
+				'description' => '※ Important: In the future, this setting will be abolished with several version upgrades. Please use Header Image instead.（※重要：今後、数回のバージョンアップでこの設定項目は廃止されます。廃止される前に「ヘッダー画像」に設定を変更してください。）',
+				'section'    => 'section_top_main_visual',
+				'settings'   => 'setting_top_main_visual_image',
+				'priority'=> 10000,
+			)
+		)
+	);
 
 	// recent articles
 	$wp_customize->add_section('section_top_recently_article',array(

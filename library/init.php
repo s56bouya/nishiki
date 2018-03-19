@@ -27,8 +27,8 @@ function nishiki_custom_theme_support() {
 
 	// Custom Header
 	add_theme_support( 'custom-header', array(
-			'width'             => 1900,
-			'height'            => 480,
+			'width'             => 1280,
+			'height'            => 720,
 			'flex-height'       => true,
 			'video'             => true,
 		)
@@ -104,8 +104,12 @@ function nishiki_has_header_video() {
 
 add_filter( 'header_video_settings', 'nishiki_header_video_settings');
 function nishiki_header_video_settings( $settings ) {
+	$settings['width'] = 1280;
+	$settings['height'] = 720;
 	$settings['minWidth'] = 640;
 	$settings['minHeight'] = 360;
+	$settings['l10n']['pause'] = '<i class="icomoon icon-pause2"></i>';
+	$settings['l10n']['play'] = '<i class="icomoon icon-play3"></i>';
 	return $settings;
 }
 

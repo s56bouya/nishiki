@@ -54,7 +54,7 @@ if( has_post_thumbnail() ){
 			<?php wp_link_pages('before=<div class="pagination">&after=</div>&link_before=<span>&link_after=</span>'); ?>
 		</div>
 	  <?php do_action( 'nishiki_after_singular_content' ); ?>
-		<footer>
+			<footer>
 				<?php if( is_single() ){ ?>
 
 				<div class="author-info">

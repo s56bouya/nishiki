@@ -2,48 +2,51 @@
 $nishiki_main_visual_class = '';
 $image_large = '';
 $image = '';
+
 if ( nishiki_has_header_video() ) {
 	$nishiki_main_visual_class .= ' main-video';
-} elseif ( has_header_image() ) {
-	$nishiki_main_visual_class .= ' main-has-header-image';
-	if ( is_random_header_image() ) {
-		$nishiki_main_visual_class .= ' main-random-header-image';
-	} else {
-		$nishiki_main_visual_class .= ' main-custom-header-image';
+	if( has_header_image() ){
+	  $nishiki_main_visual_class .= ' has-header-image';
+		$image_large = ' data-src="' . esc_url( get_header_image() ) . '"';
+	} elseif( get_theme_mod( 'setting_top_main_visual_image' ) ){
+	  $nishiki_main_visual_class .= ' has-main-visual';
+	  $image = esc_url( get_theme_mod('setting_top_main_visual_image') );
+	  $image_large = ' data-src="' . $image . '"';
 	}
-} elseif( get_theme_mod( 'setting_top_main_visual_image' ) ) {
-	$nishiki_main_visual_class .= ' main-header-image';
-	$image = esc_url( get_theme_mod('setting_top_main_visual_image') );
-	$image_large = ' data-src="' . $image . '"';
 } else {
-	$nishiki_main_visual_class = ' main-default-header-image';
-	$image_large = ' data-src="' . esc_url( get_template_directory_uri() ) . '/images/carp.jpg' . '"';
+	if( has_header_image() ){
+		$nishiki_main_visual_class .= ' has-header-image';
+		$image_large = ' data-src="' . esc_url( get_header_image() ) . '"';
+	} elseif( get_theme_mod( 'setting_top_main_visual_image' ) ){
+		$nishiki_main_visual_class .= ' has-main-visual';
+		$image = esc_url( get_theme_mod('setting_top_main_visual_image') );
+		$image_large = ' data-src="' . $image . '"';
+	} else {
+	  $nishiki_main_visual_class = ' main-default-header-image';
+	  $image_large = ' data-src="' . esc_url( get_template_directory_uri() ) . '/images/carp.jpg' . '"';
+	}
 }
 
 echo '<section id="main-visual" class="main-visual' . esc_attr( $nishiki_main_visual_class ) . '"' . $image_large .'>';
-if( has_header_image() or nishiki_has_header_video() or is_random_header_image() ){
-	//		var_dump(get_header_video_settings());
-	echo '<div class="custom-header">';
-	if( ! nishiki_has_header_video() && get_theme_mod( 'setting_top_main_visual_image_placeholder_display' ) ){
-	  $custom_header_image_id = get_custom_header()->attachment_id;
-	  if( $custom_header_image_id ){
-		  $custom_header_image_data = wp_get_attachment_image_src( $custom_header_image_id, 'nishiki-thumbnail' );
-		  if( $custom_header_image_data[3] === true ){
-			  $custom_header_image_thumbnail = esc_url( $custom_header_image_data[0] );
-			  echo '<img class="img-placeholder" src="' . $custom_header_image_thumbnail . '" alt="">';
-		  }
-	  }
-  }
-	the_custom_header_markup();
-	echo '</div>';
-} elseif( $image ) {
-	$image_id       = attachment_url_to_postid( $image );
-	$image_data     = wp_get_attachment_image_src( $image_id, 'nishiki-thumbnail' );
-	if( $image_data[3] === true && get_theme_mod( 'setting_top_main_visual_image_placeholder_display' ) ){
-	  $image_thumbnail = esc_url( $image_data[0] );
-	  echo '<img class="img-placeholder" src="' . $image_thumbnail . '" alt="">';
+echo '<div class="custom-header">';
+if( get_theme_mod( 'setting_top_main_visual_image_placeholder_display' ) ){
+	if( has_header_image() ){
+		$image_id = get_custom_header()->attachment_id;
+	} elseif( get_theme_mod( 'setting_top_main_visual_image' ) ){
+		$image_id = attachment_url_to_postid( get_theme_mod( 'setting_top_main_visual_image' ) );
+	}
+	if( !empty( $image_id ) ){
+		$image_data = wp_get_attachment_image_src( $image_id, 'nishiki-thumbnail' );
+		if( $image_data[3] === true ){
+			$custom_header_image_thumbnail = esc_url( $image_data[0] );
+			echo '<img class="img-placeholder" src="' . $custom_header_image_thumbnail . '" alt="">';
+		}
 	}
 }
+if( has_custom_header() ){
+	the_custom_header_markup();
+}
+echo '</div>';
 
 echo '<div class="main-visual-content container">';
 if( get_bloginfo( 'description' ) || get_header_textcolor() ){
@@ -74,5 +77,4 @@ if( get_theme_mod( 'setting_top_main_visual_main_button_text', __( 'Get started!
 	}
 }
 echo '</div>';
-
 echo '</section>';
