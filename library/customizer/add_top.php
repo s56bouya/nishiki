@@ -257,7 +257,7 @@ function nishiki_init_customizer_top( $wp_customize ) {
 			'ctrl_top_main_visual_image',
 			array(
 				'label'      => __( 'Upload an Image', 'nishiki' ),
-				'description' => '!!! Important: In the future, this setting will be abolished with several version upgrades. Please use Header Image instead.（※重要：今後、数回のバージョンアップでこの設定項目は廃止されます。廃止される前に「ヘッダー画像」に設定を変更してください。）',
+				'description' => '!!! Important: In the future, this setting will be abolished with several version upgrades. Please use Header Image instead.',
 				'section'    => 'section_top_main_visual',
 				'settings'   => 'setting_top_main_visual_image',
 				'priority'=> 10000,
