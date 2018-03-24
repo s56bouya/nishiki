@@ -3,52 +3,70 @@
  */
 jQuery(function() {
     var e = jQuery("#search-button");
-    var i = jQuery("#search-overlay").find(".close");
-    var s = jQuery("#menu-button");
+    var s = jQuery("#search-overlay").find(".close");
+    var i = jQuery("#menu-button");
     var a = jQuery("#menu-overlay").find(".close");
     var n = 0;
     if (jQuery("#wpadminbar").length > 0) {
         n = document.getElementById("wpadminbar").offsetHeight;
     }
-    var t = "window";
+    var r = "window";
     if (jQuery("#masthead").hasClass("fixed")) {
-        t = "#page";
+        r = "#page";
     }
     e.click(function() {
         jQuery("#search-overlay").addClass("display");
+        jQuery("#search-overlay").addClass("panel-open");
         var e = jQuery(window).scrollTop() - n;
-        jQuery(t).addClass("nav-open").css({
+        jQuery(r).addClass("nav-open").css({
             top: -e + "px"
         });
     });
-    i.click(function() {
+    s.click(function() {
         jQuery("#search-overlay").removeClass("display");
+        jQuery("#search-overlay").removeClass("panel-open");
+        jQuery("#search-overlay").addClass("panel-close");
         jQuery(".site-info a").removeClass("overlay");
         if (jQuery("#masthead").hasClass("fixed")) {
-            var e = jQuery(t).css("top").replace("px", "") - n;
+            var e = jQuery(r).css("top").replace("px", "") - n;
         }
-        jQuery(t).removeClass("nav-open").css({
+        jQuery(r).removeClass("nav-open").css({
             top: 0
         });
         jQuery(window).scrollTop(-e);
+        clearTimeout(u);
+        u = setTimeout(function() {
+            setTimeout(function() {
+                jQuery("#search-overlay").removeClass("panel-close");
+            }, 200);
+        }, d / 3);
     });
-    s.click(function(e) {
+    i.click(function(e) {
         jQuery("#menu-overlay").addClass("display");
-        var i = jQuery(window).scrollTop() - n;
-        jQuery(t).addClass("nav-open").css({
-            top: -i + "px"
+        jQuery("#menu-overlay").addClass("panel-open");
+        var s = jQuery(window).scrollTop() - n;
+        jQuery(r).addClass("nav-open").css({
+            top: -s + "px"
         });
     });
     a.click(function(e) {
         jQuery("#menu-overlay").removeClass("display");
+        jQuery("#menu-overlay").removeClass("panel-open");
+        jQuery("#menu-overlay").addClass("panel-close");
         jQuery(".site_info a").removeClass("overlay");
         if (jQuery("#masthead").hasClass("fixed")) {
-            var i = jQuery(t).css("top").replace("px", "") - n;
+            var s = jQuery(r).css("top").replace("px", "") - n;
         }
-        jQuery(t).removeClass("nav-open").css({
+        jQuery(r).removeClass("nav-open").css({
             top: 0
         });
-        jQuery(window).scrollTop(-i);
+        jQuery(window).scrollTop(-s);
+        clearTimeout(u);
+        u = setTimeout(function() {
+            setTimeout(function() {
+                jQuery("#menu-overlay").removeClass("panel-close");
+            }, 200);
+        }, d / 3);
     });
     jQuery("#menu-overlay .menu-item-has-children").each(function() {
         jQuery(this).prepend('<i class="icomoon icon-arrow-down"></i>');
@@ -57,39 +75,39 @@ jQuery(function() {
         jQuery(this).siblings("ul").slideToggle(300);
         jQuery(this).parent().toggleClass("active");
     });
-    var r = jQuery("#menu-collapse");
-    var l = jQuery("#menu-collapse-button");
-    var o = r.find(".close");
-    var d = 768;
-    var c = 1e3;
+    var l = jQuery("#menu-collapse");
+    var t = jQuery("#menu-collapse-button");
+    var o = l.find(".close");
+    var c = 768;
+    var d = 1e3;
     var u = null;
-    l.click(function(e) {
-        r.addClass("panel-open");
-        var i = jQuery(window).scrollTop() - n;
-        jQuery(t).addClass("nav-open").css({
-            top: -i + "px"
+    t.click(function(e) {
+        l.addClass("panel-open");
+        var s = jQuery(window).scrollTop() - n;
+        jQuery(r).addClass("nav-open").css({
+            top: -s + "px"
         });
     });
-    r.find(".menu-item-has-children").each(function() {
+    l.find(".menu-item-has-children").each(function() {
         jQuery(this).children("a").append('<span><i class="icomoon icon-arrow-down"></i></span>');
     });
-    r.find("ul span").click(function(e) {
+    l.find("ul span").click(function(e) {
         e.preventDefault();
-        var i = jQuery(this).parent().parent();
-        var s = i.parent().parent();
-        if (s.is("#menu-collapse") && s.hasClass("mobile") === false) {
-            if (i.hasClass("nav-selected")) {
-                i.removeClass("nav-selected");
+        var s = jQuery(this).parent().parent();
+        var i = s.parent().parent();
+        if (i.is("#menu-collapse") && i.hasClass("mobile") === false) {
+            if (s.hasClass("nav-selected")) {
+                s.removeClass("nav-selected");
             } else {
-                s.find("li").removeClass("nav-selected");
-                i.siblings().find("ul").hide();
-                i.siblings().removeClass("active");
-                i.siblings().find("li").removeClass("active");
-                i.addClass("nav-selected");
+                i.find("li").removeClass("nav-selected");
+                s.siblings().find("ul").hide();
+                s.siblings().removeClass("active");
+                s.siblings().find("li").removeClass("active");
+                s.addClass("nav-selected");
             }
         }
-        i.children("ul").slideToggle(300);
-        i.hasClass("active") ? v(i) : m(i);
+        s.children("ul").slideToggle(300);
+        s.hasClass("active") ? v(s) : m(s);
     });
     function m(e) {
         e.addClass("active");
@@ -98,21 +116,21 @@ jQuery(function() {
         e.removeClass("active");
     }
     o.click(function(e) {
-        r.removeClass("panel-open");
-        r.addClass("panel-close");
+        l.removeClass("panel-open");
+        l.addClass("panel-close");
         if (jQuery("#masthead").hasClass("fixed")) {
-            var i = jQuery(t).css("top").replace("px", "") - n;
+            var s = jQuery(r).css("top").replace("px", "") - n;
         }
-        jQuery(t).removeClass("nav-open").css({
+        jQuery(r).removeClass("nav-open").css({
             top: 0
         });
-        jQuery(window).scrollTop(-i);
+        jQuery(window).scrollTop(-s);
         clearTimeout(u);
         u = setTimeout(function() {
             setTimeout(function() {
-                r.removeClass("panel-close");
+                l.removeClass("panel-close");
             }, 200);
-        }, c / 3);
+        }, d / 3);
     });
     nishiki_registerListener("load", f);
     nishiki_registerListener("resize", f);
@@ -121,20 +139,20 @@ jQuery(function() {
         u = setTimeout(function() {
             setTimeout(function() {
                 var e = document.documentElement.clientWidth;
-                if (e >= d) {
-                    if (r.hasClass("mobile")) {
-                        r.find("li").siblings().find("ul").hide();
-                        r.find("li").siblings().removeClass("active");
-                        r.find("li").siblings().find("li").removeClass("active");
-                        r.removeClass("mobile");
+                if (e >= c) {
+                    if (l.hasClass("mobile")) {
+                        l.find("li").siblings().find("ul").hide();
+                        l.find("li").siblings().removeClass("active");
+                        l.find("li").siblings().find("li").removeClass("active");
+                        l.removeClass("mobile");
                     }
                 } else {
-                    if (r.hasClass("mobile") === false) {
-                        r.addClass("mobile");
+                    if (l.hasClass("mobile") === false) {
+                        l.addClass("mobile");
                     }
                 }
             }, 200);
-        }, c / 5);
+        }, d / 5);
     }
 });
 
@@ -179,11 +197,11 @@ function nishiki_get_scroll_height() {
 /*!
  * Event Listener
  */
-function nishiki_registerListener(e, i) {
+function nishiki_registerListener(e, s) {
     if (window.addEventListener) {
-        window.addEventListener(e, i);
+        window.addEventListener(e, s);
     } else {
-        window.attachEvent("on" + e, i);
+        window.attachEvent("on" + e, s);
     }
 }
 
@@ -204,30 +222,30 @@ function nishiki_lazyLoad() {
         setTimeout(function() {
             var e = document.getElementById("main");
             if (e) {
-                var i = e.getElementsByTagName("section");
-                var s;
-                for (var a = 0; a < i.length; a++) {
-                    if (nishiki_inView(i[a]) && i[a].classList.contains("imgloaded") === false) {
-                        if (i[a].classList.contains("has-header-image") || i[a].classList.contains("main-video")) {
-                            var n = i[a].querySelector(".header-image");
+                var s = e.getElementsByTagName("section");
+                var i;
+                for (var a = 0; a < s.length; a++) {
+                    if (nishiki_inView(s[a]) && s[a].classList.contains("imgloaded") === false) {
+                        if (s[a].classList.contains("has-header-image") || s[a].classList.contains("main-video")) {
+                            var n = s[a].querySelector(".header-image");
                             if (n) {
                                 if (n.hasAttribute("data-src") === true) {
                                     n.src = n.getAttribute("data-src");
                                     n.removeAttribute("data-src");
                                 }
-                                if (i[a].hasAttribute("data-srcset") === true) {
-                                    n.srcset = i[a].getAttribute("data-srcset");
+                                if (s[a].hasAttribute("data-srcset") === true) {
+                                    n.srcset = s[a].getAttribute("data-srcset");
                                     n.removeAttribute("data-srcset");
                                 }
                                 n.offsetTop;
                                 n.classList.add("imgloaded");
                             }
                         } else {
-                            if (i[a].hasAttribute("data-src") === true) {
-                                i[a].classList.add("imgloaded");
-                                var t = new Image();
-                                t.src = i[a].getAttribute("data-src");
-                                t.onload = nishiki_imgloaded(i[a], t);
+                            if (s[a].hasAttribute("data-src") === true) {
+                                s[a].classList.add("imgloaded");
+                                var r = new Image();
+                                r.src = s[a].getAttribute("data-src");
+                                r.onload = nishiki_imgloaded(s[a], r);
                             }
                         }
                     }
@@ -240,16 +258,16 @@ function nishiki_lazyLoad() {
 /*!
  * imgloaded
  */
-function nishiki_imgloaded(e, i) {
-    e.appendChild(i);
-    i.offsetTop;
-    i.classList.add("imgloaded");
+function nishiki_imgloaded(e, s) {
+    e.appendChild(s);
+    s.offsetTop;
+    s.classList.add("imgloaded");
 }
 
 /*!
  * inView
  */
 function nishiki_inView(e) {
-    var i = e.getBoundingClientRect();
-    return i.bottom >= 0 && i.right >= 0 && i.top <= (window.innerHeight || document.documentElement.clientHeight) && i.left <= (window.innerWidth || document.documentElement.clientWidth);
+    var s = e.getBoundingClientRect();
+    return s.bottom >= 0 && s.right >= 0 && s.top <= (window.innerHeight || document.documentElement.clientHeight) && s.left <= (window.innerWidth || document.documentElement.clientWidth);
 }
