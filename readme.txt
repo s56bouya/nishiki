@@ -52,7 +52,7 @@ Created by Keyamoon
 == Changelog ==
 
 = 0.1.36 =
-* Change : Screeenshot image(screenshot.png)
+* Change : Screenshot image(screenshot.png)
 * Change : Several minor changes
 
 = 0.1.35 =
