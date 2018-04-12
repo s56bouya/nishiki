@@ -1,5 +1,5 @@
 /**
- * Generated on 2018/03/24
+ * Generated on 2018/04/11
  * Author: Tetsuya Imamura(s56bouya)
  */
 
@@ -2437,7 +2437,6 @@ body.scrolled #masthead {
   position: relative;
   padding: 10rem 0;
   font-size: 1.7rem;
-  font-weight: bold;
   overflow: hidden;
   background-size: cover;
   background-position: center center;
@@ -2472,6 +2471,9 @@ body.scrolled #masthead {
   z-index: 1;
   line-height: 1.55;
   backface-visibility: hidden;
+  /***********************
+  * Featured Items
+  ************************/
 }
 .front-page-section .container .main-text {
   margin-top: 0;
@@ -2482,14 +2484,52 @@ body.scrolled #masthead {
   border-top: 1px solid;
   margin: 0;
   padding: 1rem 2rem 0;
+  margin-bottom: 1rem;
   line-height: 1.78;
 }
 .front-page-section .container .main-button {
-  margin-bottom: 0;
+  margin-top: 0;
   font-size: 1.2rem;
 }
 .front-page-section .container .main-button a {
   padding: 0.7rem 2rem;
+  display: inline-block;
+  vertical-align: middle;
+}
+.front-page-section .container .featured-items {
+  text-align: center;
+  justify-content: center;
+  width: 100%;
+  display: inline-flex;
+  flex-wrap: wrap;
+}
+.front-page-section .container .featured-items i {
+  font-size: 4.5rem;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+.front-page-section .container .featured-items img {
+  position: relative;
+  z-index: 1;
+  opacity: 1;
+  height: auto;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.front-page-section .container .featured-items .featured-title {
+  font-size: 1.4rem;
+  margin: 0 0 1rem;
+}
+.front-page-section .container .featured-items .featured-text {
+  font-size: 1.1rem;
+  margin: 0 0 1rem;
+}
+.front-page-section .container .featured-items .featured-button {
+  margin: 0;
+  font-size: 1.1rem;
+}
+.front-page-section .container .featured-items .featured-button a {
+  padding: 0.5rem 1.8rem;
   display: inline-block;
   vertical-align: middle;
 }
@@ -4061,6 +4101,37 @@ i.icomoon {
     width: calc( 100% );
     margin-right: 0;
   }
+
+  .featured-items.column-3 .featured-item {
+    flex-basis: calc(50% - 1rem );
+    width: calc(50% - 1rem );
+    margin-right: 2rem;
+  }
+  .featured-items.column-3 .featured-item:nth-child(2n) {
+    margin-right: 0;
+  }
+  .featured-items.column-3 .featured-item:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+  .featured-items.column-2 .featured-item {
+    flex-basis: calc( 50% - 1rem );
+    width: calc( 50% - 1rem );
+    margin-right: 2rem;
+  }
+  .featured-items.column-2 .featured-item:nth-child(2n) {
+    margin-right: 0;
+  }
+  .featured-items.column-2 .featured-item:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+  .featured-items.column-1 .featured-item {
+    flex-basis: calc( 100% );
+    width: calc( 100% );
+    margin-right: 0;
+  }
+  .featured-items.column-1 .featured-item:not(:last-child) {
+    margin-bottom: 3rem;
+  }
 }
 @media only screen and (max-width: 1000px) {
   #masthead .site-info {
@@ -4214,6 +4285,33 @@ i.icomoon {
   .articles.column-3 article:nth-child(3n) {
     margin-right: 0;
   }
+
+  .featured-items.column-1 .featured-item {
+    flex-basis: calc(100%);
+    width: calc(100%);
+  }
+  .featured-items.column-1 .featured-item:nth-child(1n) {
+    margin-right: 0;
+  }
+  .featured-items.column-1 .featured-item:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+  .featured-items.column-2 .featured-item {
+    flex-basis: calc(50% - 1rem);
+    width: calc(50% - 1rem);
+    margin-right: 2rem;
+  }
+  .featured-items.column-2 .featured-item:nth-child(2n) {
+    margin-right: 0;
+  }
+  .featured-items.column-3 .featured-item {
+    flex-basis: calc(33.33333% - 1rem);
+    width: calc(33.33333% - 1rem);
+    margin-right: 1.5rem;
+  }
+  .featured-items.column-3 .featured-item:nth-child(3n) {
+    margin-right: 0;
+  }
 }
 /*********************
 * SmartPhone
@@ -4247,6 +4345,15 @@ i.icomoon {
   .front-page-section .container .main-button {
     font-size: 0.8rem;
   }
+  .front-page-section .container .featured-items .featured-item .featured-title {
+    font-size: 1rem;
+  }
+  .front-page-section .container .featured-items .featured-item .featured-text {
+    font-size: 0.8rem;
+  }
+  .front-page-section .container .featured-items .featured-item .featured-button {
+    font-size: 0.8rem;
+  }
 
   .articles article {
     width: 100%;
@@ -4267,6 +4374,28 @@ i.icomoon {
     flex-basis: calc(100%);
     width: calc(100%);
     padding: 0 0 1rem;
+  }
+
+  .featured-items.column-1 .featured-item {
+    flex-basis: calc(100%);
+    width: calc(100%);
+  }
+  .featured-items.column-1 .featured-item:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+  .featured-items.column-2 .featured-item {
+    flex-basis: calc(100%);
+    width: calc(100%);
+  }
+  .featured-items.column-2 .featured-item:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+  .featured-items.column-3 .featured-item {
+    flex-basis: calc(100%);
+    width: calc(100%);
+  }
+  .featured-items.column-3 .featured-item:not(:last-child) {
+    margin-bottom: 3rem;
   }
 
   /***********************

@@ -15,4 +15,16 @@ if ( ! function_exists('nishiki_read_scripts') ) :
 
 	}
 	add_action( 'wp_enqueue_scripts', 'nishiki_read_scripts' );
+
+	function nishiki_admin_read_scripts() {
+
+		// Add Style
+		if( is_admin() && ! empty( $_GET['page'] ) && ! empty( $_GET['tab'] ) && $_GET['page'] === 'nishiki-about' && $_GET['tab'] === 'iconfont' ){
+			wp_register_style( 'nishiki-main-dashboard-icons', get_template_directory_uri() . '/dashboard-icons.css', array(), null, false );
+			wp_enqueue_style( 'nishiki-main-dashboard-icons' );
+		}
+
+	}
+	add_action( 'admin_enqueue_scripts', 'nishiki_admin_read_scripts' );
+
 endif;

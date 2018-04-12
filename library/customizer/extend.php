@@ -29,6 +29,29 @@ if ( class_exists('WP_Customize_Control') ) {
 			<?php
 		}
 	}
+
+	// Add Content
+	class Nishiki_WP_Customize_Content extends WP_Customize_Control {
+	  public $content = '';
+	  public $start_content = '';
+	  public $end_content = '';
+
+		public function render_content() {
+			if ( isset( $this->start_content ) ) {
+				echo $this->start_content;
+			}
+			if ( isset( $this->label ) ) {
+				echo '<span class="customize-control-title">' . $this->label . '</span>';
+			}
+			if ( isset( $this->content ) ) {
+				echo $this->content;
+			}
+			if ( isset( $this->description ) ) {
+				echo '<span class="description customize-control-description">' . $this->description . '</span>';
+			}
+			if ( isset( $this->end_content ) ) {
+				echo $this->end_content;
+			}
+		}
+	}
 }
-
-

@@ -34,15 +34,17 @@ require_once( get_template_directory() . '/library/customizer/add_archive.php');
 require_once( get_template_directory() . '/library/customizer/css.php');
 
 // Front Page Section
-define('NISHIKI_SECTION_NUM', 4);
+define('NISHIKI_SECTION_NUM', apply_filters('nishiki_section_num', 4));
+
+// Front Page Featured Item
+define('NISHIKI_FEATURED_ITEM_NUM', apply_filters('nishiki_featured_item_num', 3));
 
 // Footer Credit
 define( 'NISHIKI_CREDIT', __( 'Powered by WordPress. <a target="_blank" href="https://wordpress.org/themes/nishiki/">The Nishiki theme</a> is Produced by <a target="_blank" href="https://www.animagate.com/">AnimaGate, Inc.</a>', 'nishiki' ) );
 
 function nishiki_panel_count() {
-
 	$panel_count = 0;
-	$num_sections = 4;
+	$num_sections = NISHIKI_SECTION_NUM;
 
 	// Create a setting and control for each of the sections available in the theme.
 	for ( $i = 1; $i < ( 1 + $num_sections ); $i++ ) {

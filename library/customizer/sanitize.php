@@ -40,6 +40,15 @@ function nishiki_sanitize_choices_columns( $input ) {
 	return '3';
 }
 
+// Item
+function nishiki_sanitize_choices_item( $input ) {
+	$valid = array( 'disabled', 'icon', 'image' );
+	if ( in_array( $input, $valid, true ) ) {
+		return $input;
+	}
+	return 'disabled';
+}
+
 // Fixed Header Color
 function nishiki_sanitize_choices_fixed_header_color( $input ) {
 	$valid = array( 'light', 'dark' );
@@ -57,6 +66,16 @@ function nishiki_sanitize_choices_front_page_section( $input ) {
 	}
 	return 'disabled';
 }
+
+// Featured Items
+function nishiki_sanitize_choices_front_page_featured_items( $input ) {
+	$valid = array( 'disabled', 'enabled' );
+	if ( in_array( $input, $valid, true ) ) {
+		return $input;
+	}
+	return 'disabled';
+}
+
 
 // Text Align
 function nishiki_sanitize_choices_front_page_text_align( $input ) {

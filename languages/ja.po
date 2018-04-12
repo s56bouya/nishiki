@@ -207,11 +207,68 @@ msgstr "カスタム"
 msgid "Image"
 msgstr "画像"
 
+msgid "Item"
+msgstr "アイテム"
+
+msgid "Enabled"
+msgstr "有効"
+
 msgid "Display image placeholder"
 msgstr "プレースホルダーの画像を表示する"
 
 msgid "Adjust image placeholder grayscale(%)"
 msgstr "プレースホルダーの画像のグレースケール(%)"
+
+msgid "Add Item"
+msgstr "アイテムを追加する"
+
+msgid "Display Item"
+msgstr "アイテムを表示"
+
+msgid "Item Columns"
+msgstr "アイテムのカラム"
+
+msgid "Select Item Type"
+msgstr "アイテムのタイプを選択"
+
+msgid "Icon"
+msgstr "アイコン"
+
+msgid "Item Image"
+msgstr "アイテムの画像"
+
+msgid "Item Icon"
+msgstr "アイテムのアイコン"
+
+msgid "Example:menu"
+msgstr "例：menu"
+
+msgid "Item Icon Color"
+msgstr "アイテムのアイコンカラー"
+
+msgid "Item Title"
+msgstr "アイテムのタイトル"
+
+msgid "Item Title Color"
+msgstr "アイテムのタイトルカラー"
+
+msgid "Item Text"
+msgstr "アイテムの説明"
+
+msgid "Item Text Color"
+msgstr "アイテムの説明カラー"
+
+msgid "Item Button Text"
+msgstr "アイテムのボタンテキスト"
+
+msgid "Item Button Link"
+msgstr "アイテムのボタンリンク先"
+
+msgid "Item Button Text Color"
+msgstr "アイテムのボタンテキストカラー"
+
+msgid "Item Button Link Color"
+msgstr "アイテムのボタンリンクカラー"
 
 # ---------------------------------
 # Top
@@ -513,6 +570,71 @@ msgstr "検索文字を入力"
 #: searchform.php:8
 msgid "Search"
 msgstr "検索"
+
+#: library/about.php
+msgid "Welcome to Nishiki - Version %1s"
+msgstr "Nishiki バージョン %1s へようこそ"
+
+msgid "Start Customize"
+msgstr "カスタマイズを始める"
+
+msgid "About Theme"
+msgstr "テーマについて"
+
+msgid "Nishiki Plugin"
+msgstr "Nishiki専用プラグイン"
+
+msgid "Use Icon"
+msgstr "使用できるアイコンフォント"
+
+msgid "Theme Optimize(Free)"
+msgstr "テーマ最適化（無料）"
+
+msgid "Add Script(Free)"
+msgstr "スクリプト追加（無料）"
+
+msgid "User Profile(Free)"
+msgstr "ユーザー設定（無料）"
+
+msgid "Share Button"
+msgstr "シェアボタン"
+
+msgid "Social Account"
+msgstr "ソーシャルアカウント"
+
+msgid "Analytics"
+msgstr "アクセス解析"
+
+msgid "Schema.org,OGP[Open Graph Protocol]"
+msgstr "Schema.org（構造化データ）,OGP（Open Graph Protocol）"
+
+msgid ""
+"Nishiki is a fully responsive theme. Elegance,Refined,Multifunctional. In "
+"your admin panel, go to Appearance -> Customize. About 80 customization can "
+"be done without writing the code. responsive layout, front page setting, "
+"movie setting, etc. Customization often required for web production / "
+"website operation can be set."
+msgstr ""
+"Nishikiは優雅・上品・多機能な完全なレスポンシブテーマです。管理画面から「外"
+"観」 「カスタマイズ」を開くと、レイアウト設定、フロントページ設定、動画設定な"
+"ど、約80箇所のカスタマイズをコードを書かずに設定できます。ウェブサイト運営や"
+"制作でよく要求されるカスタマイズが可能です。"
+
+msgid ""
+"Nishiki Growing Beauty adds various functions that are useful for increasing "
+"efficiency of customization and attracting and converting, towards people "
+"who use the official WordPress theme Nishiki to manage websites, and on the "
+"management screen It is an integrated plug-in that can be set and operated "
+"easily. Plug-in body with basic functions such as theme optimization and "
+"script addition can be used for free. In addition, we also have some "
+"filtering functions for advanced WordPress customizers."
+msgstr ""
+"「Nishiki Growing Beauty」は、WordPress公式テーマ「錦（Nishiki）」を利用して"
+"ウェブサイト運営する方に向けて、カスタマイズの効率化や、集客・コンバージョン"
+"に役立つ様々な機能を追加し、管理画面で簡単に設定や操作ができる統合プラグイン"
+"です。「テーマ最適化」「スクリプト追加」などの基本機能が付いたプラグイン本体"
+"は無料で使用できます。また、WordPressカスタマイズ上級者向けのフィルター機能も"
+"一部搭載しています。"
 
 #~ msgid "edited"
 #~ msgstr "編集"

@@ -194,10 +194,67 @@ msgstr ""
 msgid "Image"
 msgstr ""
 
+msgid "Item"
+msgstr ""
+
+msgid "Enabled"
+msgstr ""
+
 msgid "Display image placeholder"
 msgstr ""
 
 msgid "Adjust image placeholder grayscale(%)"
+msgstr ""
+
+msgid "Add Item"
+msgstr ""
+
+msgid "Display Item"
+msgstr ""
+
+msgid "Item Columns"
+msgstr ""
+
+msgid "Select Item Type"
+msgstr ""
+
+msgid "Icon"
+msgstr ""
+
+msgid "Item Image"
+msgstr ""
+
+msgid "Item Icon"
+msgstr ""
+
+msgid "Example:menu"
+msgstr ""
+
+msgid "Item Icon Color"
+msgstr ""
+
+msgid "Item Title"
+msgstr ""
+
+msgid "Item Title Color"
+msgstr ""
+
+msgid "Item Text"
+msgstr ""
+
+msgid "Item Text Color"
+msgstr ""
+
+msgid "Item Button Text"
+msgstr ""
+
+msgid "Item Button Link"
+msgstr ""
+
+msgid "Item Button Text Color"
+msgstr ""
+
+msgid "Item Button Link Color"
 msgstr ""
 
 #: library/customizer/add_front.php:81 library/customizer/add_top.php:114
@@ -469,4 +526,47 @@ msgstr ""
 
 #: searchform.php:8
 msgid "Search"
+msgstr ""
+
+#: library/about.php
+msgid "Welcome to Nishiki - Version %1s"
+msgstr ""
+
+msgid "Start Customize"
+msgstr ""
+
+msgid "About Theme"
+msgstr ""
+
+msgid "Nishiki Plugin"
+msgstr ""
+
+msgid "Use Icon"
+msgstr ""
+
+msgid "Theme Optimize(Free)"
+msgstr ""
+
+msgid "Add Script(Free)"
+msgstr ""
+
+msgid "User Profile(Free)"
+msgstr ""
+
+msgid "Share Button"
+msgstr ""
+
+msgid "Social Account"
+msgstr ""
+
+msgid "Analytics"
+msgstr ""
+
+msgid "Schema.org,OGP[Open Graph Protocol]"
+msgstr ""
+
+msgid "Nishiki is a fully responsive theme. Elegance,Refined,Multifunctional. In your admin panel, go to Appearance -> Customize. About 80 customization can be done without writing the code. responsive layout, front page setting, movie setting, etc. Customization often required for web production / website operation can be set."
+msgstr ""
+
+msgid "Nishiki Growing Beauty adds various functions that are useful for increasing efficiency of customization and attracting and converting, towards people who use the official WordPress theme Nishiki to manage websites, and on the management screen It is an integrated plug-in that can be set and operated easily. Plug-in body with basic functions such as theme optimization and script addition can be used for free. In addition, we also have some filtering functions for advanced WordPress customizers."
 msgstr ""

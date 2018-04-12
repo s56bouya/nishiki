@@ -20,7 +20,7 @@ function nishiki_customizer_css(){
 		";
 
 	// Site Main Text Color
-	$site_main_text_color = esc_html( get_theme_mod( 'setting_site_main_text_color', '#000000' ) );
+	$site_main_text_color = esc_html( get_theme_mod( 'setting_site_main_text_color', '#333333' ) );
 	$output .= "
 		body,.articles a{color:{$site_main_text_color};}
 		.articles header,.articles header a{color:{$site_main_text_color};}
@@ -83,7 +83,7 @@ function nishiki_customizer_css(){
 
 	for( $i = 1; $i <= NISHIKI_SECTION_NUM; ++$i ) {
 		// Text Color
-		$front_page_text_color = esc_html( get_theme_mod( 'setting_front_page_text_color' . $i, '#000000' ) );
+		$front_page_text_color = esc_html( get_theme_mod( 'setting_front_page_text_color' . $i, '#333333' ) );
 		$output .= "#front-page-section{$i}{color:{$front_page_text_color};}";
 
 		// Text Align
@@ -98,7 +98,7 @@ function nishiki_customizer_css(){
 		$output .= "#front-page-section{$i} img.img-placeholder{filter:blur(15px) grayscale({$front_page_image_placeholder_grayscale}%);}";
 
 		// Background Color
-		$front_page_background_color = esc_html( get_theme_mod( 'setting_front_page_background_color' . $i, '#000000' ) );
+		$front_page_background_color = esc_html( get_theme_mod( 'setting_front_page_background_color' . $i, '#333333' ) );
 		$output .= "#front-page-section{$i}::after{background-color:{$front_page_background_color};}";
 
 		// Background Opacity
@@ -111,11 +111,42 @@ function nishiki_customizer_css(){
 		$output .= "#front-page-section{$i} .main-button a{color:{$front_page_button_text_color};}";
 
 		// Button Link Color
-		$front_page_button_link_color = esc_html( get_theme_mod( 'setting_front_page_button_link_color' . $i, '#000000' ) );
+		$front_page_button_link_color = esc_html( get_theme_mod( 'setting_front_page_button_link_color' . $i, '#333333' ) );
 		$output .= "#front-page-section{$i} .main-button a{background-color:{$front_page_button_link_color};}";
 
-		// Button Hover
+		// Button Hover Color
 		$output .= "#front-page-section{$i} .main-button a:hover{background-color:{$front_page_button_text_color};color:{$front_page_button_link_color};}";
+
+		/*****************
+		 * Featured Item
+		 ******************/
+		$j = 1;
+		while ( $j <= NISHIKI_FEATURED_ITEM_NUM ) {
+			// Item Icon Color
+			$front_page_featured_item_icon_color = esc_html( get_theme_mod( 'setting_front_page_featured_item_icon_color' . $i . '_' . $j, '#333333' ) );
+			$output .= "#front-page-section{$i} .featured-items .featured-item{$j} i{color:{$front_page_featured_item_icon_color};}";
+
+			// Item Title Color
+			$front_page_featured_item_title_color = esc_html( get_theme_mod( 'setting_front_page_featured_item_title_color' . $i . '_' . $j, '#333333' ) );
+			$output .= "#front-page-section{$i} .featured-items .featured-item{$j} .featured-title{color:{$front_page_featured_item_title_color};}";
+
+			// Item Text Color
+			$front_page_featured_item_text_color = esc_html( get_theme_mod( 'setting_front_page_featured_item_text_color' . $i . '_' . $j, '#333333' ) );
+			$output .= "#front-page-section{$i} .featured-items .featured-item{$j} .featured-text{color:{$front_page_featured_item_text_color};}";
+
+			// Item Button Text Color
+			$front_page_featured_item_button_text_color = esc_html( get_theme_mod( 'setting_front_page_featured_item_button_text_color' . $i . '_' . $j, '#ffffff' ) );
+			$output .= "#front-page-section{$i} .featured-items .featured-item{$j} .featured-button a{color:{$front_page_featured_item_button_text_color};}";
+
+			// Item Button Link Color
+			$front_page_featured_item_button_link_color = esc_html( get_theme_mod( 'setting_front_page_featured_item_button_link_color' . $i . '_' . $j, '#333333' ) );
+			$output .= "#front-page-section{$i} .featured-items .featured-item{$j} .featured-button a{background-color:{$front_page_featured_item_button_link_color};}";
+
+			// Item Button Hover Color
+			$output .= "#front-page-section{$i} .featured-items .featured-item{$j} .featured-button a:hover{background-color:{$front_page_featured_item_button_text_color};color:{$front_page_featured_item_button_link_color};}";
+
+			$j++;
+		}
 
 	}
 
@@ -128,7 +159,7 @@ function nishiki_customizer_css(){
 	$output .= "#masthead{background:{$header_background_color};}";
 
 	// text color
-	$header_text_color = ( ! get_header_textcolor() ) ? '#000000' : '#' . esc_html( get_theme_mod( 'header_textcolor', '000000' ) );
+	$header_text_color = ( ! get_header_textcolor() ) ? '#000000' : '#' . esc_html( get_theme_mod( 'header_textcolor', '333333' ) );
 
 	$output .= "
 		#masthead .site-info a{color:{$header_text_color};}
@@ -226,7 +257,7 @@ function nishiki_customizer_css(){
 	 ******************/
 
 	// Title Background Color
-	$post_title_background_color = esc_html( get_theme_mod( 'setting_post_title_background_color', '#000000' ) );
+	$post_title_background_color = esc_html( get_theme_mod( 'setting_post_title_background_color', '#333333' ) );
 	$output .= ".single header::after{background-color:{$post_title_background_color};}";
 
 	// Title Background Opacity
@@ -253,7 +284,7 @@ function nishiki_customizer_css(){
 	 ******************/
 
 	// Title Background Color
-	$page_title_background_color = esc_html( get_theme_mod( 'setting_page_title_background_color', '#000000' ) );
+	$page_title_background_color = esc_html( get_theme_mod( 'setting_page_title_background_color', '#333333' ) );
 	$output .= ".page header::after{background-color:{$page_title_background_color};}";
 
 	// Title Background Opacity
@@ -280,7 +311,7 @@ function nishiki_customizer_css(){
 	 ******************/
 
 	// Title Background Color
-	$archive_title_background_color = esc_html( get_theme_mod( 'setting_archive_title_background_color', '#000000' ) );
+	$archive_title_background_color = esc_html( get_theme_mod( 'setting_archive_title_background_color', '#333333' ) );
 	$output .= ".archive header::after,.error404 header::after,.search header::after,.paged header::after{background-color:{$archive_title_background_color};}";
 
 	// Title Background Opacity
@@ -297,7 +328,7 @@ function nishiki_customizer_css(){
 	 ******************/
 
 	// Text Color
-	$footer_text_color = esc_html( get_theme_mod( 'setting_footer_text_color', '#000000' ) );
+	$footer_text_color = esc_html( get_theme_mod( 'setting_footer_text_color', '#333333' ) );
 	$output .= "#footer{color:{$footer_text_color};}";
 
 	// Background Color
@@ -305,7 +336,7 @@ function nishiki_customizer_css(){
 	$output .= "#footer{background:{$footer_background_color};}";
 
 	// Main Button Color
-	$footer_main_button_color = esc_html( get_theme_mod( 'setting_footer_main_button_color', '#000000' ) );
+	$footer_main_button_color = esc_html( get_theme_mod( 'setting_footer_main_button_color', '#333333' ) );
 	$output .= "#footer .btn{color:{$footer_main_button_color};border-color:{$footer_main_button_color};}#footer .btn:hover{color:{$footer_background_color};background:{$footer_main_button_color};}";
 
 	// Link Color

@@ -87,7 +87,7 @@ function nishiki_init_customizer_front( $wp_customize ) {
 
 		// Background Color
 		$wp_customize->add_setting( 'setting_front_page_background_color' . $i, array(
-			'default' => '#000000',
+			'default' => '#333333',
 			'sanitize_callback' => 'sanitize_hex_color',
 		));
 
@@ -188,7 +188,7 @@ function nishiki_init_customizer_front( $wp_customize ) {
 
 		// Text Color
 		$wp_customize->add_setting( 'setting_front_page_text_color' . $i, array(
-			'default' => '#000000',
+			'default' => '#333333',
 			'sanitize_callback' => 'sanitize_hex_color',
 		));
 
@@ -251,7 +251,7 @@ function nishiki_init_customizer_front( $wp_customize ) {
 
 		// Button Link Color
 		$wp_customize->add_setting( 'setting_front_page_button_link_color' . $i, array(
-			'default' => '#000000',
+			'default' => '#333333',
 			'sanitize_callback' => 'sanitize_hex_color',
 		));
 
@@ -280,6 +280,306 @@ function nishiki_init_customizer_front( $wp_customize ) {
 			'section'     =>  'section_front_page',
 			'settings'    =>  'setting_front_page_button_link_target' . $i,
 		));
+
+
+		/*
+		 * Featured Items
+		 */
+		// Add Featured Item
+		$wp_customize->add_setting( 'setting_front_page_featured_items' . $i, array(
+			'default'           =>  'disabled',
+			'sanitize_callback' =>  'nishiki_sanitize_choices_front_page_featured_items',
+		));
+
+		$wp_customize->add_control( 'ctrl_front_page_featured_items' . $i, array(
+			'label'             =>  __( 'Add Item', 'nishiki' ),
+			'section'           =>  'section_front_page',
+			'settings'          =>  'setting_front_page_featured_items' . $i,
+			'type'              =>  'select',
+			'choices'           =>  array(
+				'disabled'         =>  __( 'Disabled', 'nishiki' ),
+				'enabled'        =>  __( 'Enabled', 'nishiki' ),
+			),
+		));
+
+
+		// Item Columns
+		$wp_customize->add_setting('setting_front_page_featured_item_column' . $i, array(
+			'default'           =>  3,
+			'sanitize_callback' =>  'nishiki_sanitize_choices_columns',
+		));
+
+		$wp_customize->add_control('ctrl_front_page_featured_item_column' . $i, array(
+			'label'             =>  __( 'Item Columns', 'nishiki' ),
+			'section'           =>  'section_front_page',
+			'settings'          =>  'setting_front_page_featured_item_column' . $i,
+			'type'              =>  'select',
+			'choices'           =>  array(
+				'1' =>  __( '1 Column', 'nishiki' ),
+				'2' =>  __( '2 Columns', 'nishiki' ),
+				'3' =>  __( '3 Columns', 'nishiki' ),
+			),
+		));
+
+
+		$j = 1;
+		while ( $j <= NISHIKI_FEATURED_ITEM_NUM ) {
+
+			// Wrapper
+			$wp_customize->add_setting( 'setting_front_page_featured_item_header' . $i . '_' . $j, array(
+				'sanitize_callback' => 'nishiki_sanitize_text',
+			));
+
+			$wp_customize->add_control(
+				new Nishiki_WP_Customize_Content(
+					$wp_customize, 'ctrl_front_page_featured_item_header' . $i . '_' . $j,
+					array(
+						'label'         =>  '<span class="item-num item-num' . $j . '">' . __( 'Item', 'nishiki' ) . ' ' . $j . '</span>',
+						'section'       =>  'section_front_page',
+						'settings'      =>  'setting_front_page_featured_item_header' . $i . '_' . $j,
+					)
+				)
+			);
+
+
+			// Display Featured Item
+			$wp_customize->add_setting('setting_front_page_featured_item' . $i . '_' . $j, array(
+				'default'           =>  'disabled',
+				'sanitize_callback' =>  'nishiki_sanitize_choices_front_page_featured_items',
+			));
+
+			$wp_customize->add_control('ctrl_front_page_featured_item' . $i . '_' . $j, array(
+				'label'             =>  __( 'Display Item', 'nishiki' ),
+				'section'           =>  'section_front_page',
+				'settings'          =>  'setting_front_page_featured_item' . $i . '_' . $j,
+				'type'              =>  'select',
+				'choices'           =>  array(
+					'disabled' =>  __( 'Disabled', 'nishiki' ),
+					'enabled' =>  __( 'Enabled', 'nishiki' ),
+				),
+			));
+
+
+			// Select Icon or Image
+			$wp_customize->add_setting('setting_front_page_featured_item_type' . $i . '_' . $j, array(
+				'default'           =>  'icon',
+				'sanitize_callback' =>  'nishiki_sanitize_choices_item',
+			));
+
+			$wp_customize->add_control('ctrl_front_page_featured_item_type' . $i . '_' . $j, array(
+				'label'             =>  __( 'Select Item Type', 'nishiki' ),
+				'section'           =>  'section_front_page',
+				'settings'          =>  'setting_front_page_featured_item_type' . $i . '_' . $j,
+				'type'              =>  'select',
+				'choices'           =>  array(
+					'icon' =>  __( 'Icon', 'nishiki' ),
+					'image' =>  __( 'Image', 'nishiki' ),
+				),
+			));
+
+
+			// Item Icon
+			$wp_customize->add_setting('setting_front_page_featured_item_icon' . $i . '_' . $j, array(
+				'default'           =>  '',
+				'sanitize_callback' =>  'nishiki_sanitize_text',
+			));
+
+			$wp_customize->add_control('ctrl_front_page_featured_item_icon' . $i . '_' . $j, array(
+				'label'             =>  __( 'Item Icon', 'nishiki' ),
+				'description'       =>  __( 'Example:menu', 'nishiki' ) . '(<a href="' . esc_url( admin_url( 'themes.php?page=nishiki-about&tab=iconfont' ) ) . '">' . __( 'Use Icon', 'nishiki' ) . '</a>)',
+				'section'           =>  'section_front_page',
+				'settings'          =>  'setting_front_page_featured_item_icon' . $i . '_' . $j,
+				'type'      =>  'text',
+			));
+
+			// Item Upload Image
+			$wp_customize->add_setting( 'setting_front_page_featured_item_image' . $i . '_' . $j, array(
+				'default' => '',
+				'sanitize_callback' => 'nishiki_sanitize_image',
+			));
+
+			$wp_customize->add_control(
+				new WP_Customize_Image_Control(
+					$wp_customize,
+					'ctrl_front_page_featured_item_image' . $i . '_' . $j,
+					array(
+						'label'       =>  __( 'Item Image', 'nishiki' ),
+						'section'     =>  'section_front_page',
+						'settings'    =>  'setting_front_page_featured_item_image' . $i . '_' . $j,
+					)
+				)
+			);
+
+			// Item Icon Color
+			$wp_customize->add_setting('setting_front_page_featured_item_icon_color' . $i . '_' . $j, array(
+				'default' => '#333333',
+				'sanitize_callback' => 'sanitize_hex_color',
+			));
+
+			$wp_customize->add_control(
+				new WP_Customize_Color_Control(
+					$wp_customize,
+					'ctrl_front_page_featured_item_icon_color' . $i . '_' . $j,
+					array(
+						'label'      => __( 'Item Icon Color', 'nishiki' ),
+						'section'    => 'section_front_page',
+						'settings'   => 'setting_front_page_featured_item_icon_color' . $i . '_' . $j,
+					)
+				)
+			);
+
+
+			// Item Title
+			$wp_customize->add_setting('setting_front_page_featured_item_title' . $i . '_' . $j, array(
+				'default' => '',
+				'sanitize_callback' => 'nishiki_sanitize_text',
+			));
+
+			$wp_customize->add_control('ctrl_front_page_featured_item_title' . $i . '_' . $j, array(
+				'label'     =>  __( 'Item Title', 'nishiki' ),
+				'type'      =>  'text',
+				'section'   =>  'section_front_page',
+				'settings'  =>  'setting_front_page_featured_item_title' . $i . '_' . $j,
+			));
+
+
+			// Item Title Color
+			$wp_customize->add_setting('setting_front_page_featured_item_title_color' . $i . '_' . $j, array(
+				'default' => '#333333',
+				'sanitize_callback' => 'sanitize_hex_color',
+			));
+
+			$wp_customize->add_control(
+				new WP_Customize_Color_Control(
+					$wp_customize,
+					'ctrl_front_page_featured_item_title_color' . $i . '_' . $j,
+					array(
+						'label'      => __( 'Item Title Color', 'nishiki' ),
+						'section'    => 'section_front_page',
+						'settings'   => 'setting_front_page_featured_item_title_color' . $i . '_' . $j,
+					)
+				)
+			);
+
+
+			// Item Text
+			$wp_customize->add_setting('setting_front_page_featured_item_text' . $i . '_' . $j, array(
+				'default' => '',
+				'sanitize_callback' => 'nishiki_sanitize_text',
+			));
+
+			$wp_customize->add_control('ctrl_front_page_featured_item_text' . $i . '_' . $j, array(
+				'label'     =>  __( 'Item Text', 'nishiki' ),
+				'type'      =>  'text',
+				'section'   =>  'section_front_page',
+				'settings'  =>  'setting_front_page_featured_item_text' . $i . '_' . $j,
+			));
+
+
+			// Item Text Color
+			$wp_customize->add_setting('setting_front_page_featured_item_text_color' . $i . '_' . $j, array(
+				'default' => '#333333',
+				'sanitize_callback' => 'sanitize_hex_color',
+			));
+
+			$wp_customize->add_control(
+				new WP_Customize_Color_Control(
+					$wp_customize,
+					'ctrl_front_page_featured_item_text_color' . $i . '_' . $j,
+					array(
+						'label'      => __( 'Item Text Color', 'nishiki' ),
+						'section'    => 'section_front_page',
+						'settings'   => 'setting_front_page_featured_item_text_color' . $i . '_' . $j,
+					)
+				)
+			);
+
+
+			// Item Button Text
+			$wp_customize->add_setting('setting_front_page_featured_item_button_text' . $i . '_' . $j, array(
+				'default' => '',
+				'sanitize_callback' => 'nishiki_sanitize_text',
+			));
+
+			$wp_customize->add_control('ctrl_front_page_featured_item_button_text' . $i . '_' . $j, array(
+				'label'     =>  __( 'Item Button Text', 'nishiki' ),
+				'type'      =>  'text',
+				'section'   =>  'section_front_page',
+				'settings'  =>  'setting_front_page_featured_item_button_text' . $i . '_' . $j,
+			));
+
+
+			// Item Button Link
+			$wp_customize->add_setting('setting_front_page_featured_item_button_link' . $i . '_' . $j, array(
+				'default' => '',
+				'sanitize_callback' => 'nishiki_sanitize_text',
+			));
+
+			$wp_customize->add_control('ctrl_front_page_featured_item_button_link' . $i . '_' . $j, array(
+				'label'     =>  __( 'Item Button Link', 'nishiki' ),
+				'type'      =>  'text',
+				'section'   =>  'section_front_page',
+				'settings'  =>  'setting_front_page_featured_item_button_link' . $i . '_' . $j,
+			));
+
+
+			// Item Button Text Color
+			$wp_customize->add_setting('setting_front_page_featured_item_button_text_color' . $i . '_' . $j, array(
+				'default' => '#ffffff',
+				'sanitize_callback' => 'sanitize_hex_color',
+			));
+
+			$wp_customize->add_control(
+				new WP_Customize_Color_Control(
+					$wp_customize,
+					'ctrl_front_page_featured_item_button_text_color' . $i . '_' . $j,
+					array(
+						'label'      => __( 'Item Button Text Color', 'nishiki' ),
+						'section'    => 'section_front_page',
+						'settings'   => 'setting_front_page_featured_item_button_text_color' . $i . '_' . $j,
+					)
+				)
+			);
+
+
+			// Item Button Link Color
+			$wp_customize->add_setting('setting_front_page_featured_item_button_link_color' . $i . '_' . $j, array(
+				'default' => '#333333',
+				'sanitize_callback' => 'sanitize_hex_color',
+			));
+
+			$wp_customize->add_control(
+				new WP_Customize_Color_Control(
+					$wp_customize,
+					'ctrl_front_page_featured_item_button_link_color' . $i . '_' . $j,
+					array(
+						'label'      => __( 'Item Button Link Color', 'nishiki' ),
+						'section'    => 'section_front_page',
+						'settings'   => 'setting_front_page_featured_item_button_link_color' . $i . '_' . $j,
+					)
+				)
+			);
+
+			// Item Button Link Target
+			$wp_customize->add_setting('setting_front_page_featured_item_button_link_target' . $i . '_' . $j, array(
+				'default' => false,
+				'sanitize_callback' => 'nishiki_sanitize_checkbox',
+			));
+
+			$wp_customize->add_control('ctrl_front_page_featured_item_button_link_target' . $i . '_' . $j, array(
+				'label'       =>  __( 'Open New Window', 'nishiki' ),
+				'type'        =>  'checkbox',
+				'section'     =>  'section_front_page',
+				'settings'    =>  'setting_front_page_featured_item_button_link_target' . $i . '_' . $j,
+			));
+
+
+
+			$j++;
+
+		}
+
+
 	}
 
 }
