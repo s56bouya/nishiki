@@ -636,6 +636,21 @@ msgstr ""
 "は無料で使用できます。また、WordPressカスタマイズ上級者向けのフィルター機能も"
 "一部搭載しています。"
 
+msgid "Please rating Nishiki"
+msgstr "テーマを評価してください"
+
+msgid ""
+"Nishiki is a freshly made Japanese theme. If you like this theme, please "
+"rating Nishiki theme directory. Your evaluation will be encouraging my "
+"future development and management."
+msgstr ""
+"Nishikiはできたばかりの日本製のテーマです。このテーマが気に入ったら、ぜひとも"
+"テーマディレクトリで高評価をいただけますと嬉しいです。今後の開発や運営の励み"
+"にさせていただきます。"
+
+msgid "Rating Nishiki theme directory"
+msgstr "テーマを評価する"
+
 #~ msgid "edited"
 #~ msgstr "編集"
 

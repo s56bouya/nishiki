@@ -55,46 +55,54 @@ if( has_post_thumbnail() ){
 		</div>
 	  <?php do_action( 'nishiki_after_singular_content' ); ?>
 			<footer>
-				<?php if( is_single() ){ ?>
-
-				<div class="author-info">
-					<?php
-					if( get_theme_mod( 'setting_footer_author_text', __( 'Author', 'nishiki' ) ) ){
-						echo '<span>' . esc_html( get_theme_mod( 'setting_footer_author_text', __( 'Author', 'nishiki' ) ) ) . '</span>';
-					}
-					?>
-					<div class="author_image"><?php echo get_avatar( get_the_author_meta( 'ID' ), 90, array( 'extra_attr' => 'data') ); ?></div>
-					<p class="display-name">
-					<?php
-					$author_display_name = 	get_the_author_meta('display_name');
-					if( get_theme_mod( 'setting_footer_author_name_archive_link', true ) ){
-						echo '<a href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( $author_display_name ) . '</a>';
-					} else {
-						echo esc_html( $author_display_name );
-					}
-					?>
-					</p>
-					<?php do_action( 'nishiki_before_single_author_description' ); ?>
-					<p class="description"><?php the_author_meta( 'description' ); ?></p>
-					<?php do_action( 'nishiki_after_single_author_description' ); ?>
-				</div>
+		  <?php if( is_single() && get_theme_mod( 'setting_post_author_display', true ) ){ ?>
+						<div class="author-info">
 				<?php
-				}
-				// If comments are open or we have at least one comment, load up the comment template.
-				if ( comments_open() || get_comments_number() ) {
-					comments_template();
-				}
-
-				if( is_single() ) {
-					if ( get_theme_mod( 'setting_post_display_prev_next_link', true ) ) {
-						the_post_navigation( array(
-								'prev_text' => '<i class="icomoon icon-arrow-left"></i><span>' . "%title" . '</span>',
-								'next_text' => '<span>' . "%title" . '</span>' . '<i class="icomoon icon-arrow-right"></i>'
-							)
-						);
-					}
+				if ( get_theme_mod( 'setting_post_author_text',
+					__( 'Author', 'nishiki' ) )
+				) {
+					echo '<span>'
+					     . esc_html( get_theme_mod( 'setting_post_author_text',
+							__( 'Author', 'nishiki' ) ) ) . '</span>';
 				}
 				?>
+							<div class="author_image"><?php echo get_avatar( get_the_author_meta( 'ID' ),
+					  90, array( 'extra_attr' => 'data' ) ); ?></div>
+							<p class="display-name">
+				  <?php
+				  $author_display_name = get_the_author_meta( 'display_name' );
+				  if ( get_theme_mod( 'setting_post_author_name_archive_link',
+					  true )
+				  ) {
+					  echo '<a href="'
+					       . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) )
+					       . '">' . esc_html( $author_display_name ) . '</a>';
+				  } else {
+					  echo esc_html( $author_display_name );
+				  }
+				  ?>
+							</p>
+				<?php do_action( 'nishiki_before_single_author_description' ); ?>
+							<p class="description"><?php the_author_meta( 'description' ); ?></p>
+				<?php do_action( 'nishiki_after_single_author_description' ); ?>
+						</div>
+			  <?php
+		  }
+		  // If comments are open or we have at least one comment, load up the comment template.
+		  if ( comments_open() || get_comments_number() ) {
+			  comments_template();
+		  }
+
+		  if( is_single() ) {
+			  if ( get_theme_mod( 'setting_post_display_prev_next_link', true ) ) {
+				  the_post_navigation( array(
+						  'prev_text' => '<i class="icomoon icon-arrow-left"></i><span>' . "%title" . '</span>',
+						  'next_text' => '<span>' . "%title" . '</span>' . '<i class="icomoon icon-arrow-right"></i>'
+					  )
+				  );
+			  }
+		  }
+		  ?>
 			</footer>
 		<?php edit_post_link( __('Edit This Page', 'nishiki'), '<p id="edit-link">', '</p>'); ?>
 	</article>

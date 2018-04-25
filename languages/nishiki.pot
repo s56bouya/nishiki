@@ -570,3 +570,12 @@ msgstr ""
 
 msgid "Nishiki Growing Beauty adds various functions that are useful for increasing efficiency of customization and attracting and converting, towards people who use the official WordPress theme Nishiki to manage websites, and on the management screen It is an integrated plug-in that can be set and operated easily. Plug-in body with basic functions such as theme optimization and script addition can be used for free. In addition, we also have some filtering functions for advanced WordPress customizers."
 msgstr ""
+
+msgid "Please rating Nishiki"
+msgstr ""
+
+msgid "Nishiki is a freshly made Japanese theme. If you like this theme, please rating Nishiki theme directory. Your evaluation will be encouraging my future development and management."
+msgstr ""
+
+msgid "Rating Nishiki theme directory"
+msgstr ""

@@ -117,6 +117,9 @@ if ( ! class_exists( 'Nishiki_About_Page' ) ) {
 	   */
 	  public function welcome() {
 	  	?>
+			<h3><?php esc_html_e('Please rating Nishiki', 'nishiki'); ?></h3>
+			<p><?php esc_html_e('Nishiki is a freshly made Japanese theme. If you like this theme, please rating Nishiki theme directory. Your evaluation will be encouraging my future development and management.', 'nishiki'); ?></p>
+			<a target="_blank" href="https://wordpress.org/support/theme/nishiki/reviews/?filter=5" class="button button-primary"><?php esc_html_e('Rating Nishiki theme directory', 'nishiki'); ?></a>
 			<h3><a target="_blank" href="https://support.animagate.com/product/wp-nishiki/">Nishiki Theme Page</a></h3>
 			<div class="theme_info_right">
 				<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/screenshot.png" alt="Theme Screenshot" />

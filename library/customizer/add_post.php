@@ -226,32 +226,46 @@ function nishiki_init_customizer_post( $wp_customize ) {
 		'priority'    =>  1100,
 	));
 
-	// Author Text
-	$wp_customize->add_setting('setting_footer_author_text',array(
-		'default' => __( 'Author', 'nishiki' ),
-		'sanitize_callback' => 'nishiki_sanitize_text',
-	));
-
-	$wp_customize->add_control('ctrl_footer_author_text',array(
-		'label'       =>  __( 'Author Text Label', 'nishiki' ),
-		'type'        =>  'text',
-		'section'     =>  'section_post',
-		'settings'    =>  'setting_footer_author_text',
-		'priority'    =>  1110,
-	));
-
-	// Author Name Link
-	$wp_customize->add_setting('setting_footer_author_name_archive_link',array(
+	// Display Author
+	$wp_customize->add_setting('setting_post_author_display',array(
 		'default' => true,
 		'sanitize_callback' => 'nishiki_sanitize_text',
 	));
 
-	$wp_customize->add_control('ctrl_footer_author_name_archive_link',array(
+	$wp_customize->add_control('ctrl_post_author_display',array(
+		'label'       =>  __( 'Display Author', 'nishiki' ),
+		'type'        =>  'checkbox',
+		'section'     =>  'section_post',
+		'settings'    =>  'setting_post_author_display',
+		'priority'    =>  1110,
+	));
+
+	// Author Text
+	$wp_customize->add_setting('setting_post_author_text',array(
+		'default' => __( 'Author', 'nishiki' ),
+		'sanitize_callback' => 'nishiki_sanitize_text',
+	));
+
+	$wp_customize->add_control('ctrl_post_author_text',array(
+		'label'       =>  __( 'Author Text Label', 'nishiki' ),
+		'type'        =>  'text',
+		'section'     =>  'section_post',
+		'settings'    =>  'setting_post_author_text',
+		'priority'    =>  1120,
+	));
+
+	// Author Name Link
+	$wp_customize->add_setting('setting_post_author_name_archive_link',array(
+		'default' => true,
+		'sanitize_callback' => 'nishiki_sanitize_text',
+	));
+
+	$wp_customize->add_control('ctrl_post_author_name_archive_link',array(
 		'label'       =>  __( 'Author Name Archive Link', 'nishiki' ),
 		'type'        =>  'checkbox',
 		'section'     =>  'section_post',
-		'settings'    =>  'setting_footer_author_name_archive_link',
-		'priority'    =>  1120,
+		'settings'    =>  'setting_post_author_name_archive_link',
+		'priority'    =>  1130,
 	));
 
 }
