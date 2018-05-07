@@ -108,8 +108,10 @@ if( has_post_thumbnail() ){
 	</article>
 
 	<?php
-	if( ( is_single() && get_theme_mod( 'setting_post_column', 'none' ) !== 'none' ) or ( is_page() && get_theme_mod( 'setting_page_column', 'none' ) !== 'none' ) ){
-		get_sidebar();
+	if( ! is_page_template( 'templates/sidebar-none.php' ) ){
+	  if( ( is_single() && get_theme_mod( 'setting_post_column', 'none' ) !== 'none' ) or ( is_page() && get_theme_mod( 'setting_page_column', 'none' ) !== 'none' ) or is_page_template( 'templates/sidebar-left.php' ) or is_page_template( 'templates/sidebar-right.php' ) or is_page_template( 'templates/sidebar-bottom.php' ) ){
+		  get_sidebar();
+	  }
 	}
 	$column_array = array( get_theme_mod( 'setting_post_column', 'none' ), get_theme_mod( 'setting_page_column', 'none' ) );
 	?>

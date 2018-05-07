@@ -261,7 +261,7 @@ function nishiki_customizer_css(){
 	$output .= ".single header::after{background-color:{$post_title_background_color};}";
 
 	// Title Background Opacity
-	$post_title_background_opacity = absint( get_theme_mod( 'setting_post_title_background_opacity', '100' ) );
+	$post_title_background_opacity = absint( get_theme_mod( 'setting_post_title_background_opacity', '90' ) );
 	$post_header_opacity = $post_title_background_opacity / 100;
 	$output .= ".single header::after{opacity:{$post_header_opacity};}";
 
@@ -288,7 +288,7 @@ function nishiki_customizer_css(){
 	$output .= ".page header::after{background-color:{$page_title_background_color};}";
 
 	// Title Background Opacity
-	$page_title_background_opacity = absint( get_theme_mod( 'setting_page_title_background_opacity', '100' ) );
+	$page_title_background_opacity = absint( get_theme_mod( 'setting_page_title_background_opacity', '90' ) );
 	$page_header_opacity = $page_title_background_opacity / 100;
 	$output .= ".page header::after{opacity:{$page_header_opacity};}";
 
@@ -299,12 +299,25 @@ function nishiki_customizer_css(){
 	// Sidebar Width
 	$page_sidebar_width = absint( get_theme_mod( 'setting_page_sidebar_width','300' ) );
 	$page_column = esc_html( get_theme_mod( 'setting_page_column', 'none' ) );
-	if( $page_column !== 'none' ){
-		$page_sidebar_margin = $page_sidebar_width + absint( get_theme_mod( 'setting_page_sidebar_margin', '20' ) );
-		$output .= ".page #main .column { padding-{$page_column}: {$page_sidebar_margin}px;}";
-		$output .= "@media only screen and (max-width:1000px) {.page #main .column { padding:0;}}";
-		$output .= ".page aside { width:{$page_sidebar_width}px;margin-{$page_column}:-{$page_sidebar_margin}px;}";
+	$page_sidebar_margin = $page_sidebar_width + absint( get_theme_mod( 'setting_page_sidebar_margin', '20' ) );
+	if ( ! is_page_template( 'templates/sidebar-none.php' ) ) {
+		if( is_page_template( 'templates/sidebar-right.php' ) ){
+			$output .= ".page-template-sidebar-right #main .column { padding-right: {$page_sidebar_margin}px;}";
+			$output .= "@media only screen and (max-width:1000px) {.page-template-sidebar-right #main .column { padding:0;}}";
+			$output .= ".page-template-sidebar-right aside { width:{$page_sidebar_width}px; margin-right:-{$page_sidebar_margin}px;}";
+		} elseif( is_page_template( 'templates/sidebar-left.php' ) ) {
+			$output .= ".page-template-sidebar-left #main .column { padding-left: {$page_sidebar_margin}px;}";
+			$output .= "@media only screen and (max-width:1000px) {.page-template-sidebar-left #main .column { padding:0;}}";
+			$output .= ".page-template-sidebar-left aside { width:{$page_sidebar_width}px; margin-left:-{$page_sidebar_margin}px;}";
+		} elseif( is_page_template( 'templates/sidebar-bottom.php' ) ) {
+			$output .= ".page-template-sidebar-bottom aside {width:100%;}";
+		} elseif( $page_column !== 'none' ){
+			$output .= ".page #main .column { padding-{$page_column}: {$page_sidebar_margin}px;}";
+			$output .= "@media only screen and (max-width:1000px) {.page #main .column { padding:0;}}";
+			$output .= ".page aside { width:{$page_sidebar_width}px;margin-{$page_column}:-{$page_sidebar_margin}px;}";
+		}
 	}
+
 
 	/*****************
 	 * Archive
@@ -315,7 +328,7 @@ function nishiki_customizer_css(){
 	$output .= ".archive header::after,.error404 header::after,.search header::after,.paged header::after{background-color:{$archive_title_background_color};}";
 
 	// Title Background Opacity
-	$archive_title_background_opacity = absint( get_theme_mod( 'setting_archive_title_background_opacity', '100' ) );
+	$archive_title_background_opacity = absint( get_theme_mod( 'setting_archive_title_background_opacity', '90' ) );
 	$archive_header_opacity = $archive_title_background_opacity / 100;
 	$output .= ".archive header::after,.error404 header::after,.search header::after,.paged header::after{opacity:{$archive_header_opacity};}";
 
