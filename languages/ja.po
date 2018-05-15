@@ -493,6 +493,19 @@ msgstr "最新の投稿"
 msgid "Sticky Badge Background Color"
 msgstr "固定記事 バッジ背景カラー"
 
+msgid ""
+"Please check Appearance -> Customize -> Site Identity [Display Site Title "
+"and Tagline]"
+msgstr ""
+"外観 -> カスタマイズ -> サイト基本情報 -> [サイトのタイトルとキャッチフレーズ"
+"を表示]にチェックを入れると表示"
+
+msgid ""
+"When setting a logo, the logo takes precedence over the site title text."
+msgstr ""
+"ロゴの設定をしている場合は、サイトのタイトルテキストよりもロゴを優先して表示"
+"します。"
+
 #: library/customizer/init.php:37
 msgid "Powered by WordPress. The Nishiki theme is Produced by AnimaGate, Inc."
 msgstr "Powered by WordPress. The Nishiki theme is Produced by AnimaGate, Inc."

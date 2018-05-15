@@ -127,6 +127,7 @@ function nishiki_init_customizer_top( $wp_customize ) {
 	$ctrl_blogdescription = $wp_customize->get_control('blogdescription');
 	if ( $ctrl_blogdescription ) {
 		$ctrl_blogdescription->section = 'section_top_main_visual';
+		$ctrl_blogdescription->description = __( 'Please check Appearance -> Customize -> Site Identity [Display Site Title and Tagline]', 'nishiki' );
 		$ctrl_blogdescription->priority = 1070;
 	}
 

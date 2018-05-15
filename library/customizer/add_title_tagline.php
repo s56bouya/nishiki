@@ -21,6 +21,12 @@ function nishiki_init_customizer_title_tagline( $wp_customize ) {
 //		)
 //	);
 
+	// Display Site Title and Tagline
+	$ctrl_display_header_text = $wp_customize->get_control('display_header_text');
+	if ( $ctrl_display_header_text ) {
+		$ctrl_display_header_text->description = __( 'When setting a logo, the logo takes precedence over the site title text.', 'nishiki' );
+	}
+
 	// Site Main Text Color
 	$wp_customize->add_setting('setting_site_main_text_color',array(
 		'default' => '#000000',

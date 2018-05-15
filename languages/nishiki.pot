@@ -462,6 +462,12 @@ msgstr ""
 msgid "Sticky Badge Background Color"
 msgstr ""
 
+msgid "Please check Appearance -> Customize -> Site Identity [Display Site Title and Tagline]"
+msgstr ""
+
+msgid "When setting a logo, the logo takes precedence over the site title text."
+msgstr ""
+
 #: library/customizer/init.php:37
 msgid "Powered by WordPress. The Nishiki theme is Produced by AnimaGate, Inc."
 msgstr ""

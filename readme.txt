@@ -53,6 +53,7 @@ Created by Keyamoon
 
 = 0.1.40 =
 * Remove : Customizer setting_site_display_title(use get_header_textcolor instead of setting_site_display_title)
+* Change : Display Site Title and Tagline rule.
 
 = 0.1.39 =
 * Add : Page template file(Left Sidebar,Right Sidebar,Bottom Sidebar,No Sidebar)
