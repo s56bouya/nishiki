@@ -49,7 +49,7 @@ if( has_custom_header() ){
 echo '</div>';
 
 echo '<div class="main-visual-content container">';
-if( get_bloginfo( 'description' ) || get_header_textcolor() ){
+if( get_bloginfo( 'description' ) && get_header_textcolor() !== 'blank' ){
 	echo '<p class="description">' . esc_html( get_bloginfo( 'description' ) ) . '</p>';
 }
 if( get_theme_mod( 'setting_top_main_visual_sub_text' ) == true ){

@@ -1,7 +1,7 @@
 === Nishiki ===
 Requires at least: WordPress 4.5
 Tested up to: WordPress 4.9.5
-Version: 0.1.39
+Version: 0.1.40
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: one-column, two-columns, right-sidebar, left-sidebar, flexible-header, accessibility-ready, custom-colors, custom-header, custom-menu, custom-logo, featured-images, footer-widgets, post-formats, sticky-post, theme-options, threaded-comments, translation-ready, blog, entertainment, editor-style
@@ -50,6 +50,9 @@ URL: https://icomoon.io/#icons-icomoon
 Created by Keyamoon
 
 == Changelog ==
+
+= 0.1.40 =
+* Remove : Customizer setting_site_display_title(use get_header_textcolor instead of setting_site_display_title)
 
 = 0.1.39 =
 * Add : Page template file(Left Sidebar,Right Sidebar,Bottom Sidebar,No Sidebar)

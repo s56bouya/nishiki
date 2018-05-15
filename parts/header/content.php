@@ -4,26 +4,25 @@
 <div id="masthead" class="<?php echo esc_attr( $fixed ); ?>">
 	<div class="flex container">
 		<?php
-		if( get_header_textcolor() !== 'blank' ){
-			$custom_logo_id = get_theme_mod( 'custom_logo' );
-			$logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
-			$site_title = get_theme_mod( 'setting_site_display_title', true );
-			if( has_custom_logo() && $site_title ){
+		$site_info_class = '';
+		if( get_header_textcolor() !== 'blank' || has_custom_logo() ) {
+			if ( has_custom_logo() && get_header_textcolor() !== 'blank' ) {
 				$site_info_class = ' display-logo-text';
-			} elseif( $site_title ) {
-		 		$site_info_class = ' display-title';
-			} elseif( has_custom_logo() ) {
-			  $site_info_class = ' display-logo';
+			} elseif ( get_header_textcolor() !== 'blank' ) {
+				$site_info_class = ' display-title';
+			} elseif ( has_custom_logo() ) {
+		  	$site_info_class = ' display-logo';
 			}
 		?>
 		<div class="site-info<?php echo esc_attr( $site_info_class );?>">
 			<a href="<?php echo esc_url( home_url('/') ); ?>">
 				<?php
-
 				if ( has_custom_logo() ) {
+					$custom_logo_id = get_theme_mod( 'custom_logo' );
+					$logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
 					echo '<img src="'. esc_url( $logo[0] ) .'" width="' . absint( $logo[1] ) . '" height="' . absint( $logo[2] ) . '" alt="' . esc_attr( get_bloginfo('name') ) . '">';
 				}
-				if ( $site_title ) {
+				if ( get_header_textcolor() !== 'blank' ) {
 					echo '<span class="site-title">' . esc_html( get_bloginfo('name') ) . '</span>';
 				}
 				?>
