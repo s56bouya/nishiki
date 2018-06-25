@@ -39,7 +39,7 @@ if( has_post_thumbnail() ){
 				$comment_count = wp_count_comments( get_the_ID() );
 				$comment_num = $comment_count->approved;
 				if( $comment_num !== 0 ){
-					echo '<span class="comment"><a href="./#comments"><i class="icomoon icon-bubble"></i>' . absint( $comment_num ) . '</a></span>';
+					echo '<span class="comment"><a href="#comments"><i class="icomoon icon-bubble"></i>' . absint( $comment_num ) . '</a></span>';
 				}
 			}
 		}

@@ -6,19 +6,31 @@ jQuery(function() {
     var s = jQuery("#search-overlay").find(".close");
     var i = jQuery("#menu-button");
     var a = jQuery("#menu-overlay").find(".close");
+    var r = 0;
     var n = 0;
+    var t = "window";
     if (jQuery("#wpadminbar").length > 0) {
-        n = document.getElementById("wpadminbar").offsetHeight;
+        r = document.getElementById("wpadminbar").offsetHeight;
     }
-    var r = "window";
     if (jQuery("#masthead").hasClass("fixed")) {
-        r = "#page";
+        t = "#page";
+        n = document.getElementById("masthead").offsetHeight;
     }
+    var l = n + r;
+    jQuery("a[href^=#]").click(function() {
+        var e = jQuery(this).attr("href");
+        var s = jQuery(e == "#" || e == "" ? "html" : e);
+        var i = s.offset().top - l;
+        jQuery("html, body").animate({
+            scrollTop: i
+        }, 500, "swing");
+        return false;
+    });
     e.click(function() {
         jQuery("#search-overlay").addClass("display");
         jQuery("#search-overlay").addClass("panel-open");
-        var e = jQuery(window).scrollTop() - n;
-        jQuery(r).addClass("nav-open").css({
+        var e = jQuery(window).scrollTop() - r;
+        jQuery(t).addClass("nav-open").css({
             top: -e + "px"
         });
     });
@@ -28,24 +40,24 @@ jQuery(function() {
         jQuery("#search-overlay").addClass("panel-close");
         jQuery(".site-info a").removeClass("overlay");
         if (jQuery("#masthead").hasClass("fixed")) {
-            var e = jQuery(r).css("top").replace("px", "") - n;
+            var e = jQuery(t).css("top").replace("px", "") - r;
         }
-        jQuery(r).removeClass("nav-open").css({
+        jQuery(t).removeClass("nav-open").css({
             top: 0
         });
         jQuery(window).scrollTop(-e);
-        clearTimeout(u);
-        u = setTimeout(function() {
+        clearTimeout(v);
+        v = setTimeout(function() {
             setTimeout(function() {
                 jQuery("#search-overlay").removeClass("panel-close");
             }, 200);
-        }, d / 3);
+        }, m / 3);
     });
     i.click(function(e) {
         jQuery("#menu-overlay").addClass("display");
         jQuery("#menu-overlay").addClass("panel-open");
-        var s = jQuery(window).scrollTop() - n;
-        jQuery(r).addClass("nav-open").css({
+        var s = jQuery(window).scrollTop() - r;
+        jQuery(t).addClass("nav-open").css({
             top: -s + "px"
         });
     });
@@ -55,18 +67,18 @@ jQuery(function() {
         jQuery("#menu-overlay").addClass("panel-close");
         jQuery(".site_info a").removeClass("overlay");
         if (jQuery("#masthead").hasClass("fixed")) {
-            var s = jQuery(r).css("top").replace("px", "") - n;
+            var s = jQuery(t).css("top").replace("px", "") - r;
         }
-        jQuery(r).removeClass("nav-open").css({
+        jQuery(t).removeClass("nav-open").css({
             top: 0
         });
         jQuery(window).scrollTop(-s);
-        clearTimeout(u);
-        u = setTimeout(function() {
+        clearTimeout(v);
+        v = setTimeout(function() {
             setTimeout(function() {
                 jQuery("#menu-overlay").removeClass("panel-close");
             }, 200);
-        }, d / 3);
+        }, m / 3);
     });
     jQuery("#menu-overlay .menu-item-has-children").each(function() {
         jQuery(this).prepend('<i class="icomoon icon-arrow-down"></i>');
@@ -75,23 +87,23 @@ jQuery(function() {
         jQuery(this).siblings("ul").slideToggle(300);
         jQuery(this).parent().toggleClass("active");
     });
-    var l = jQuery("#menu-collapse");
-    var t = jQuery("#menu-collapse-button");
-    var o = l.find(".close");
-    var c = 768;
-    var d = 1e3;
-    var u = null;
-    t.click(function(e) {
-        l.addClass("panel-open");
-        var s = jQuery(window).scrollTop() - n;
-        jQuery(r).addClass("nav-open").css({
+    var o = jQuery("#menu-collapse");
+    var c = jQuery("#menu-collapse-button");
+    var d = o.find(".close");
+    var u = 768;
+    var m = 1e3;
+    var v = null;
+    c.click(function(e) {
+        o.addClass("panel-open");
+        var s = jQuery(window).scrollTop() - r;
+        jQuery(t).addClass("nav-open").css({
             top: -s + "px"
         });
     });
-    l.find(".menu-item-has-children").each(function() {
+    o.find(".menu-item-has-children").each(function() {
         jQuery(this).children("a").append('<span><i class="icomoon icon-arrow-down"></i></span>');
     });
-    l.find("ul span").click(function(e) {
+    o.find("ul span").click(function(e) {
         e.preventDefault();
         var s = jQuery(this).parent().parent();
         var i = s.parent().parent();
@@ -107,52 +119,52 @@ jQuery(function() {
             }
         }
         s.children("ul").slideToggle(300);
-        s.hasClass("active") ? v(s) : m(s);
+        s.hasClass("active") ? h(s) : f(s);
     });
-    function m(e) {
+    function f(e) {
         e.addClass("active");
     }
-    function v(e) {
+    function h(e) {
         e.removeClass("active");
     }
-    o.click(function(e) {
-        l.removeClass("panel-open");
-        l.addClass("panel-close");
+    d.click(function(e) {
+        o.removeClass("panel-open");
+        o.addClass("panel-close");
         if (jQuery("#masthead").hasClass("fixed")) {
-            var s = jQuery(r).css("top").replace("px", "") - n;
+            var s = jQuery(t).css("top").replace("px", "") - r;
         }
-        jQuery(r).removeClass("nav-open").css({
+        jQuery(t).removeClass("nav-open").css({
             top: 0
         });
         jQuery(window).scrollTop(-s);
-        clearTimeout(u);
-        u = setTimeout(function() {
+        clearTimeout(v);
+        v = setTimeout(function() {
             setTimeout(function() {
-                l.removeClass("panel-close");
+                o.removeClass("panel-close");
             }, 200);
-        }, d / 3);
+        }, m / 3);
     });
-    nishiki_registerListener("load", f);
-    nishiki_registerListener("resize", f);
-    function f() {
-        clearTimeout(u);
-        u = setTimeout(function() {
+    nishiki_registerListener("load", y);
+    nishiki_registerListener("resize", y);
+    function y() {
+        clearTimeout(v);
+        v = setTimeout(function() {
             setTimeout(function() {
                 var e = document.documentElement.clientWidth;
-                if (e >= c) {
-                    if (l.hasClass("mobile")) {
-                        l.find("li").siblings().find("ul").hide();
-                        l.find("li").siblings().removeClass("active");
-                        l.find("li").siblings().find("li").removeClass("active");
-                        l.removeClass("mobile");
+                if (e >= u) {
+                    if (o.hasClass("mobile")) {
+                        o.find("li").siblings().find("ul").hide();
+                        o.find("li").siblings().removeClass("active");
+                        o.find("li").siblings().find("li").removeClass("active");
+                        o.removeClass("mobile");
                     }
                 } else {
-                    if (l.hasClass("mobile") === false) {
-                        l.addClass("mobile");
+                    if (o.hasClass("mobile") === false) {
+                        o.addClass("mobile");
                     }
                 }
             }, 200);
-        }, d / 5);
+        }, m / 5);
     }
 });
 
@@ -227,25 +239,25 @@ function nishiki_lazyLoad() {
                 for (var a = 0; a < s.length; a++) {
                     if (nishiki_inView(s[a]) && s[a].classList.contains("imgloaded") === false) {
                         if (s[a].classList.contains("has-header-image") || s[a].classList.contains("main-video")) {
-                            var n = s[a].querySelector(".header-image");
-                            if (n) {
-                                if (n.hasAttribute("data-src") === true) {
-                                    n.src = n.getAttribute("data-src");
-                                    n.removeAttribute("data-src");
+                            var r = s[a].querySelector(".header-image");
+                            if (r) {
+                                if (r.hasAttribute("data-src") === true) {
+                                    r.src = r.getAttribute("data-src");
+                                    r.removeAttribute("data-src");
                                 }
                                 if (s[a].hasAttribute("data-srcset") === true) {
-                                    n.srcset = s[a].getAttribute("data-srcset");
-                                    n.removeAttribute("data-srcset");
+                                    r.srcset = s[a].getAttribute("data-srcset");
+                                    r.removeAttribute("data-srcset");
                                 }
-                                n.offsetTop;
-                                n.classList.add("imgloaded");
+                                r.offsetTop;
+                                r.classList.add("imgloaded");
                             }
                         } else {
                             if (s[a].hasAttribute("data-src") === true) {
                                 s[a].classList.add("imgloaded");
-                                var r = new Image();
-                                r.src = s[a].getAttribute("data-src");
-                                r.onload = nishiki_imgloaded(s[a], r);
+                                var n = new Image();
+                                n.src = s[a].getAttribute("data-src");
+                                n.onload = nishiki_imgloaded(s[a], n);
                             }
                         }
                     }
