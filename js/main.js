@@ -17,7 +17,7 @@ jQuery(function() {
         n = document.getElementById("masthead").offsetHeight;
     }
     var l = n + r;
-    jQuery("a[href^=#]").click(function() {
+    jQuery('a[href^="#"]').click(function() {
         var e = jQuery(this).attr("href");
         var s = jQuery(e == "#" || e == "" ? "html" : e);
         var i = s.offset().top - l;
