@@ -1,5 +1,5 @@
 /**
- * Generated on 2018/05/15
+ * Generated on 2018/07/14
  * Author: Tetsuya Imamura(s56bouya)
  */
 
@@ -2989,21 +2989,22 @@ body.scrolled #masthead {
 /***********************
 * Aside
 ************************/
-aside {
+aside.sidebar {
   font-size: 0.9rem;
+  line-height: 1.76;
 }
-aside section {
+aside.sidebar section {
   margin-bottom: 1.5rem;
 }
-aside ul, aside ol {
+aside.sidebar ul, aside.sidebar ol {
   padding: 0;
   list-style-type: none;
 }
-aside ul li, aside ol li {
+aside.sidebar ul li, aside.sidebar ol li {
   border-width: 0 0 1px 0;
   border-style: dotted;
 }
-aside ul li a, aside ol li a {
+aside.sidebar ul li a, aside.sidebar ol li a {
   display: block;
   padding: 0.5rem 0;
 }
