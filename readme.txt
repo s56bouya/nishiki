@@ -1,7 +1,7 @@
 === Nishiki ===
 Requires at least: WordPress 4.5
 Tested up to: WordPress 4.9.7
-Version: 1.0.4
+Version: 1.0.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: one-column, two-columns, right-sidebar, left-sidebar, flexible-header, accessibility-ready, custom-colors, custom-header, custom-menu, custom-logo, featured-images, footer-widgets, post-formats, sticky-post, theme-options, threaded-comments, translation-ready, blog, entertainment, editor-style
@@ -51,8 +51,11 @@ Created by Keyamoon
 
 == Changelog ==
 
+= 1.0.5 =
+* Add : Global nav do_action(nishiki_before_site_nav,nishiki_before_site_nav_inner,nishiki_after_site_nav,nishiki_after_site_nav_inner)
+
 = 1.0.4 =
-* Add : YouTube embedded CSS(embed-youtube) when active jetpack plugin.
+* Add : YouTube embedded CSS(embed-youtube) when active jetpack plugin
 
 = 1.0.3 =
 * Change : Several minor changes
@@ -103,7 +106,7 @@ Created by Keyamoon
 * Change : Several minor changes
 
 = 0.1.32 =
-* Add : do_action single post author description(nishiki_before_single_author_description,nishiki_after_single_author_description)
+* Add : Single post author description do_action(nishiki_before_single_author_description,nishiki_after_single_author_description)
 * Add : Customizer single post author name link
 * Change : Several minor changes
 
