@@ -47,6 +47,13 @@ function nishiki_custom_theme_support() {
 	// Feed Links
 	add_theme_support('automatic-feed-links');
 
+	/*****************
+	 * Gutenberg
+	 *****************/
+
+	// Align Wide
+	add_theme_support( 'align-wide' );
+
 }
 add_action( 'after_setup_theme', 'nishiki_custom_theme_support' );
 
@@ -58,6 +65,14 @@ function nishiki_editor_style() {
 	add_editor_style();
 }
 add_action( 'admin_init', 'nishiki_editor_style' );
+
+/*****************
+ * Enqueue block editor style
+ *****************/
+function nishiki_block_editor_styles() {
+	wp_enqueue_style( 'nishiki-block-editor-styles', get_theme_file_uri( '/editor-gutenberg-style.css' ), false, '1.0', 'all' );
+}
+add_action( 'enqueue_block_editor_assets', 'nishiki_block_editor_styles' );
 
 /*****************
  * Add Pingback
