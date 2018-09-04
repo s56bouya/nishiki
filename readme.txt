@@ -51,6 +51,9 @@ Created by Keyamoon
 
 == Changelog ==
 
+= 1.0.7 =
+* Add : header do_action(nishiki_before_singular_header,nishiki_after_singular_header,nishiki_before_archive_header,nishiki_after_archive_header,nishiki_before_search_header,nishiki_after_search_header,nishiki_before_404_header,nishiki_after_404_header)
+
 = 1.0.6 =
 * Fixed : Global nav & search overlay open and close script
 * Add : Gutenberg editor style(beta)

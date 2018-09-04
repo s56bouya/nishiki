@@ -1,6 +1,7 @@
 <?php get_header(); ?>
 		<main id="main" class="site-main" role="main">
 			<?php if ( have_posts() ) : ?>
+				<?php do_action( 'nishiki_before_search_header' ); ?>
 				<header>
 					<div class="page-header container">
 					  <?php do_action( 'nishiki_before_search_title' ); ?>
@@ -8,6 +9,7 @@
 					  <?php do_action( 'nishiki_after_search_title' ); ?>
 						<div class="taxonomy-description"><?php esc_html_e( 'Search results for', 'nishiki' ); ?>:<?php echo get_search_query(); ?></span></div>
 				</header>
+				<?php do_action( 'nishiki_after_search_header' ); ?>
 			<?php endif; ?>
 
 			<div class="container">

@@ -1,6 +1,7 @@
 <?php get_header(); ?>
 		<main id="main" class="site-main" role="main">
 			<?php if ( have_posts() ) : ?>
+				<?php do_action( 'nishiki_before_archive_header' ); ?>
 				<header>
 					<div class="page-header container">
 					  <?php do_action( 'nishiki_before_archive_title' ); ?>
@@ -14,6 +15,7 @@
 						<?php the_archive_description( '<div class="taxonomy-description">', '</div>' ); ?>
 					</div>
 				</header>
+				<?php do_action( 'nishiki_after_archive_header' ); ?>
 			<?php endif; ?>
 
 			<div class="container">

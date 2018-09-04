@@ -7,6 +7,7 @@ if( has_post_thumbnail() ){
   	}
 }
 ?>
+<?php do_action( 'nishiki_before_singular_header' ); ?>
 <header<?php echo wp_kses_post( $nishiki_header_class ); ?> class="<?php echo esc_attr( get_post_type() ); ?>">
 	<div class="page-header container">
 	  <?php do_action( 'nishiki_before_singular_title' ); ?>
@@ -46,6 +47,7 @@ if( has_post_thumbnail() ){
 		?>
 	</div>
 </header>
+<?php do_action( 'nishiki_after_singular_header' ); ?>
 <div class="container column">
 	<article>
 	  <?php do_action( 'nishiki_before_singular_content' ); ?>
