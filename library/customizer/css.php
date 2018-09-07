@@ -340,6 +340,14 @@ function nishiki_customizer_css(){
 	 * Footer
 	 ******************/
 
+	// Widget Text Color
+	$footer_widget_text_color = esc_html( get_theme_mod( 'setting_footer_widget_text_color', '#333333' ) );
+	$output .= ".footer-widget{color:{$footer_widget_text_color};}";
+
+	// Widget Link Color
+	$footer_widget_link_color = esc_html( get_theme_mod( 'setting_footer_widget_link_color', '#0a88cc' ) );
+	$output .= ".footer-widget a{color:{$footer_widget_link_color};}";
+
 	// Text Color
 	$footer_text_color = esc_html( get_theme_mod( 'setting_footer_text_color', '#333333' ) );
 	$output .= "#footer{color:{$footer_text_color};}";

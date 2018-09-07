@@ -131,6 +131,15 @@ msgstr "抜粋の文字数"
 msgid "Footer"
 msgstr "フッター"
 
+msgid "Widget Columns"
+msgstr "ウィジェットのカラム"
+
+msgid "Widget Text Color"
+msgstr "ウィジェットのテキストカラー"
+
+msgid "Widget Link Color"
+msgstr "ウィジェットのリンクカラー"
+
 # -------------------------------------------------------
 # Customizer
 # -------------------------------------------------------

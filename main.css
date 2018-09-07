@@ -1,5 +1,5 @@
 /**
- * Generated on 2018/09/04
+ * Generated on 2018/09/07
  * Author: Tetsuya Imamura(s56bouya)
  */
 
@@ -2558,7 +2558,6 @@ body.scrolled #masthead {
   line-height: 1.76;
 }
 #footer .wrap {
-  text-align: center;
   padding: 0;
 }
 #footer .wrap .footer-content {
@@ -2567,13 +2566,17 @@ body.scrolled #masthead {
   justify-content: center;
 }
 #footer .wrap .footer-content .footer-inner {
-  width: 100%;
   padding: 1.5rem 0;
 }
-#footer .wrap .footer-content .footer-inner h3 {
+#footer .wrap .footer-content .footer-inner .main-text {
+  text-align: center;
   padding: 0 1rem;
 }
-#footer .wrap .footer-content .footer-inner .button {
+#footer .wrap .footer-content .footer-inner .main-button {
+  text-align: center;
+  margin: 0;
+}
+#footer .wrap .footer-content .footer-inner .main-button .button {
   display: inline-block;
 }
 #footer .wrap .footer-nav {
@@ -2597,10 +2600,19 @@ body.scrolled #masthead {
   margin: 0 auto;
   padding: 0.7rem 0;
   width: 95%;
+  text-align: center;
 }
 #footer .wrap .copyright .copymark {
   vertical-align: middle;
   margin-right: 0.1rem;
+}
+
+/*********************
+* Footer Widget
+***********************/
+.footer-widget {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 /***********************
@@ -3787,6 +3799,25 @@ select {
 /*********************
 * Widget Area
 ***********************/
+.widget {
+  font-size: 0.9rem;
+  line-height: 1.76;
+}
+.widget section {
+  margin-bottom: 1.5rem;
+}
+.widget ul, .widget ol {
+  padding: 0;
+  list-style-type: none;
+}
+.widget ul li, .widget ol li {
+  border-width: 0 0 1px 0;
+  border-style: dotted;
+}
+.widget ul li a, .widget ol li a {
+  display: block;
+  padding: 0.5rem 0;
+}
 .widget .search-box {
   margin: 1.5rem 0;
 }
@@ -3818,7 +3849,7 @@ select {
   font-size: 1rem;
   display: inline-block;
   margin-bottom: 0.5rem;
-  padding: 0.3rem 0.7rem;
+  padding: 0 0.5rem;
   border-width: 1px;
   border-style: solid;
 }
@@ -4155,6 +4186,28 @@ i.icomoon {
   .featured-items.column-1 .featured-item:not(:last-child) {
     margin-bottom: 3rem;
   }
+
+  .footer-widget.column-3 section {
+    flex-basis: calc(50% - 1rem );
+    width: calc(50% - 1rem );
+    margin-right: 2rem;
+  }
+  .footer-widget.column-3 section:nth-child(2n) {
+    margin-right: 0;
+  }
+  .footer-widget.column-2 section {
+    flex-basis: calc( 50% - 1rem );
+    width: calc( 50% - 1rem );
+    margin-right: 2rem;
+  }
+  .footer-widget.column-2 section:nth-child(2n) {
+    margin-right: 0;
+  }
+  .footer-widget.column-1 section {
+    flex-basis: calc( 100% );
+    width: calc( 100% );
+    margin-right: 0;
+  }
 }
 @media only screen and (max-width: 1000px) {
   #masthead .site-info {
@@ -4335,6 +4388,30 @@ i.icomoon {
   .featured-items.column-3 .featured-item:nth-child(3n) {
     margin-right: 0;
   }
+
+  .footer-widget.column-1 section {
+    flex-basis: calc(100%);
+    width: calc(100%);
+  }
+  .footer-widget.column-1 section:nth-child(1n) {
+    margin-right: 0;
+  }
+  .footer-widget.column-2 section {
+    flex-basis: calc(50% - 1rem);
+    width: calc(50% - 1rem);
+    margin-right: 2rem;
+  }
+  .footer-widget.column-2 section:nth-child(2n) {
+    margin-right: 0;
+  }
+  .footer-widget.column-3 section {
+    flex-basis: calc(33.33333% - 1rem);
+    width: calc(33.33333% - 1rem);
+    margin-right: 1.5rem;
+  }
+  .footer-widget.column-3 section:nth-child(3n) {
+    margin-right: 0;
+  }
 }
 /*********************
 * SmartPhone
@@ -4418,6 +4495,17 @@ i.icomoon {
   }
   .featured-items.column-3 .featured-item:not(:last-child) {
     margin-bottom: 3rem;
+  }
+
+  .footer-widget.column-2 section {
+    flex-basis: calc(100%);
+    width: calc(100%);
+    padding: 0 0 1rem;
+  }
+  .footer-widget.column-3 section {
+    flex-basis: calc(100%);
+    width: calc(100%);
+    padding: 0 0 1rem;
   }
 
   /***********************

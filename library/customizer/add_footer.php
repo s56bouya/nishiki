@@ -7,6 +7,65 @@ function nishiki_init_customizer_footer( $wp_customize ) {
 		'priority'  =>  80,
 	));
 
+	// Widget Columns
+	$wp_customize->add_setting('setting_footer_widget_columns',array(
+		'default'           =>  3,
+		'sanitize_callback' =>  'nishiki_sanitize_choices_columns',
+	));
+
+	$wp_customize->add_control('ctrl_footer_widget_columns',array(
+		'label'             =>  __( 'Widget Columns', 'nishiki' ),
+		'section'           =>  'section_footer',
+		'settings'          =>  'setting_footer_widget_columns',
+		'priority'          =>  1010,
+		'type'              =>  'select',
+		'choices'           =>  array(
+			'1' =>  __( '1 Column', 'nishiki' ),
+			'2' =>  __( '2 Columns', 'nishiki' ),
+			'3' =>  __( '3 Columns', 'nishiki' ),
+		),
+	));
+
+	// Widget Text color
+	$wp_customize->add_setting('setting_footer_widget_text_color',array(
+		'default' => '#333333',
+		'sanitize_callback' => 'sanitize_hex_color',
+	));
+
+	$wp_customize->add_control(
+		new WP_Customize_Color_Control(
+			$wp_customize,
+			'ctrl_footer_widget_text_color',
+			array(
+				'label'         => __( 'Widget Text Color', 'nishiki' ),
+				'section'       => 'section_footer',
+				'settings'      => 'setting_footer_widget_text_color',
+				'priority'      => 1020,
+			)
+		)
+	);
+
+	// Widget Link color
+	$wp_customize->add_setting('setting_footer_widget_link_color',array(
+		'default' => '#0a88cc',
+		'sanitize_callback' => 'sanitize_hex_color',
+	));
+
+	$wp_customize->add_control(
+		new WP_Customize_Color_Control(
+			$wp_customize,
+			'ctrl_footer_widget_link_color',
+			array(
+				'label'         => __( 'Widget Link Color', 'nishiki' ),
+				'section'       => 'section_footer',
+				'transport'     => 'postMessage',
+				'settings'      => 'setting_footer_widget_link_color',
+				'priority'      => 1030,
+			)
+		)
+	);
+
+
 	// Main Text
 	$wp_customize->add_setting('setting_footer_main_text',array(
 		'default' => __( 'Main Text', 'nishiki' ),
@@ -18,7 +77,7 @@ function nishiki_init_customizer_footer( $wp_customize ) {
 		'type'      =>  'text',
 		'section'   =>  'section_footer',
 		'settings'  =>  'setting_footer_main_text',
-		'priority'  =>  1001,
+		'priority'  =>  1040,
 	));
 
 	// Text color
@@ -35,7 +94,7 @@ function nishiki_init_customizer_footer( $wp_customize ) {
 				'label'         => __( 'Text Color', 'nishiki' ),
 				'section'       => 'section_footer',
 				'settings'      => 'setting_footer_text_color',
-				'priority'      => 1002,
+				'priority'      => 1050,
 			)
 		)
 	);
@@ -56,7 +115,7 @@ function nishiki_init_customizer_footer( $wp_customize ) {
 				'section'       => 'section_footer',
 				'transport'     => 'postMessage',
 				'settings'      => 'setting_footer_link_color',
-				'priority'      => 1003,
+				'priority'      => 1060,
 			)
 		)
 	);
@@ -73,7 +132,7 @@ function nishiki_init_customizer_footer( $wp_customize ) {
 		'type'      =>  'text',
 		'section'   =>  'section_footer',
 		'settings'  =>  'setting_footer_main_button_text',
-		'priority'  =>  2001,
+		'priority'  =>  2010,
 	));
 
 	// Main Button Link
@@ -87,7 +146,7 @@ function nishiki_init_customizer_footer( $wp_customize ) {
 		'type'      =>  'text',
 		'section'   =>  'section_footer',
 		'settings'  =>  'setting_footer_main_button_link',
-		'priority'  =>  2002,
+		'priority'  =>  2020,
 	));
 
 	// Main Button Link Target
@@ -101,7 +160,7 @@ function nishiki_init_customizer_footer( $wp_customize ) {
 		'type'        =>  'checkbox',
 		'section'     =>  'section_footer',
 		'settings'    =>  'setting_footer_main_button_link_target',
-		'priority'    =>  2003,
+		'priority'    =>  2030,
 	));
 
 	// Main Button Color
@@ -118,7 +177,7 @@ function nishiki_init_customizer_footer( $wp_customize ) {
 				'label'       =>  __( 'Button Color', 'nishiki' ),
 				'section'     =>  'section_footer',
 				'settings'    =>  'setting_footer_main_button_color',
-				'priority'    =>  2003,
+				'priority'    =>  2040,
 			)
 		)
 	);
@@ -134,7 +193,7 @@ function nishiki_init_customizer_footer( $wp_customize ) {
 		'type'      =>  'textarea',
 		'section'   =>  'section_footer',
 		'settings'  =>  'setting_footer_copyright',
-		'priority'  =>  3001,
+		'priority'  =>  3010,
 	));
 
 	// background color
@@ -152,8 +211,9 @@ function nishiki_init_customizer_footer( $wp_customize ) {
 				'section'   =>  'section_footer',
 				'transport' =>  'postMessage',
 				'settings'  =>  'setting_footer_background_color',
-				'priority'  =>  3002,
+				'priority'  =>  3020,
 			)
 		)
 	);
+
 }

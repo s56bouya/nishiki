@@ -241,14 +241,26 @@ function nishiki_change_archive_title($title){
 add_action( 'widgets_init', 'nishiki_custom_widgets_init' );
 function nishiki_custom_widgets_init() {
 
+	// Sidebar
 	register_sidebar( array(
 		'name'          => __( 'Sidebar', 'nishiki' ),
 		'id'            => 'sidebar_main',
-		'before_widget' => '<section class="widget">',
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2>',
 		'after_title'   => '</h2>',
 	) );
+
+	// Footer
+	register_sidebar( array(
+		'name'          => __( 'Footer', 'nishiki' ),
+		'id'            => 'footer_widget',
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2>',
+		'after_title'   => '</h2>',
+	) );
+
 }
 
 /*****************

@@ -124,6 +124,15 @@ msgstr ""
 msgid "Footer"
 msgstr ""
 
+msgid "Widget Columns"
+msgstr ""
+
+msgid "Widget Text Color"
+msgstr ""
+
+msgid "Widget Link Color"
+msgstr ""
+
 #: library/customizer/add_footer.php:10 library/customizer/add_footer.php:15
 #: library/customizer/add_front.php:111 library/customizer/add_front.php:116
 #: library/customizer/add_top.php:262 parts/footer/content.php:4
