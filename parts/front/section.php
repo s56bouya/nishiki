@@ -92,3 +92,9 @@ for( $i = 1; $i <= $section_count; ++$i ){
 		do_action( 'nishiki_after_front_page_section' . $i . '_content' );
 	}
 }
+
+if ( is_active_sidebar( 'front_widget' ) ) { ?>
+	<div id="front-widget" class="front-widget">
+	  <?php dynamic_sidebar( 'front_widget' ); ?>
+	</div>
+<?php }

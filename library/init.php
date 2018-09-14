@@ -241,6 +241,16 @@ function nishiki_change_archive_title($title){
 add_action( 'widgets_init', 'nishiki_custom_widgets_init' );
 function nishiki_custom_widgets_init() {
 
+	// Front
+	register_sidebar( array(
+		'name'          => __( 'Front Page(Beta)', 'nishiki' ),
+		'id'            => 'front_widget',
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2>',
+		'after_title'   => '</h2>',
+	) );
+
 	// Sidebar
 	register_sidebar( array(
 		'name'          => __( 'Sidebar', 'nishiki' ),

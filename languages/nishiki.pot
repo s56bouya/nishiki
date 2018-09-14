@@ -456,6 +456,12 @@ msgstr ""
 msgid "Upload an Image"
 msgstr ""
 
+msgid "Select an Image"
+msgstr ""
+
+msgid "Clear an Image"
+msgstr ""
+
 #: library/customizer/add_top.php:147 parts/front/main_visual.php:22
 #: parts/front/main_visual.php:23
 msgid "Get started!"
