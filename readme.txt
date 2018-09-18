@@ -54,6 +54,7 @@ Created by Keyamoon
 = 1.0.9 =
 * Add : Widget area(front widget) beta version
 * Add : Translate(front widget)
+* Add : CSS style about Gutenberg
 
 = 1.0.8 =
 * Add : Customizer(footer widget)
