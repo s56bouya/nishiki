@@ -2495,14 +2495,20 @@ body.scrolled #masthead {
   margin-bottom: 1rem;
   line-height: 1.78;
 }
-.front-page-section .container .main-button {
-  margin-top: 0;
+.front-page-section .container .main-button, .front-page-section .container .featured-item-button {
   font-size: 1.2rem;
 }
-.front-page-section .container .main-button a {
+.front-page-section .container .main-button a, .front-page-section .container .featured-item-button a {
   padding: 0.7rem 2rem;
   display: inline-block;
   vertical-align: middle;
+}
+.front-page-section .container .main-button {
+  margin-top: 0;
+}
+.front-page-section .container .featured-item-button {
+  margin-top: 3.5rem;
+  margin-bottom: 0;
 }
 .front-page-section .container .featured-items {
   text-align: center;

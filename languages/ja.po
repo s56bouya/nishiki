@@ -279,6 +279,21 @@ msgstr "アイテムのボタンテキストカラー"
 msgid "Item Button Link Color"
 msgstr "アイテムのボタンリンクカラー"
 
+msgid "Button Text(Item bottom)"
+msgstr "ボタン テキストカラー（アイテムの下）"
+
+msgid "Button Link(Item bottom)"
+msgstr "ボタン リンクカラー（アイテムの下）"
+
+msgid "Button Text Color(Item bottom)"
+msgstr "ボタン テキストカラー（アイテムの下）"
+
+msgid "Button Link Color(Item bottom)"
+msgstr "ボタン リンクカラー（アイテムの下）"
+
+msgid "Open New Window(Item bottom)"
+msgstr "新しいウィンドウで開く（アイテムの下）"
+
 # ---------------------------------
 # Top
 # ---------------------------------
@@ -558,6 +573,12 @@ msgstr "次のページ"
 msgid "Read More"
 msgstr "続きを読む"
 
+msgid "Default eye-catching image"
+msgstr "デフォルトのアイキャッチ画像"
+
+msgid "Display when eye-catching image is not set. Recommended image size 16:9"
+msgstr "アイキャッチ画像が設定されていない場合に表示します。推奨画像比率 16:9"
+
 # ---------------------------------
 # Main Visual
 # ---------------------------------
@@ -678,6 +699,12 @@ msgstr ""
 
 msgid "Rating Nishiki theme directory"
 msgstr "テーマを評価する"
+
+#~ msgid "Section Title"
+#~ msgstr "セクションのタイトル（表示されません）"
+
+#~ msgid "Title"
+#~ msgstr "タイトル"
 
 #~ msgid "edited"
 #~ msgstr "編集"

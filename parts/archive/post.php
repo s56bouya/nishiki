@@ -1,7 +1,7 @@
 <article <?php post_class(); ?>>
 	<a href="<?php the_permalink(); ?>">
 		<?php
-		if( has_post_thumbnail( get_the_ID() ) ) {
+		if( has_post_thumbnail( get_the_ID() ) || get_theme_mod( 'setting_archive_default_image', '' ) ) {
 			$noimage = '';
 		} else {
 			$noimage = ' noimage';
@@ -9,7 +9,21 @@
 		?>
 		<div class="post-image<?php echo esc_attr( $noimage ); ?>">
 			<?php if( $noimage == '' ){ ?>
-				<figure><?php the_post_thumbnail( 'thumbnail' ); ?></figure>
+				<figure>
+					<?php if( has_post_thumbnail( get_the_ID() ) ){
+			  		the_post_thumbnail( 'thumbnail' );
+					} else {
+						if( get_theme_mod( 'setting_archive_default_image', '' ) ){
+							$image = get_theme_mod( 'setting_archive_default_image' );
+							$image_id       = attachment_url_to_postid( $image );
+							$image_data     = wp_get_attachment_image_src( $image_id, 'thumbnail' );
+							if( $image_data[3] === true ){
+								$image_thumbnail = $image_data[0];
+								echo '<img src="' . esc_url( $image_thumbnail ) . '" alt="">';
+							}
+						}
+				  } ?>
+				</figure>
 			<?php } else { ?>
 				<i class="icomoon icon-image"></i>
 			<?php } ?>

@@ -205,5 +205,25 @@ function nishiki_init_customizer_archive( $wp_customize ) {
 		)
 	);
 
+	// Default Thumbnail Image
+	$wp_customize->add_setting('setting_archive_default_image',array(
+		'default' => '',
+		'sanitize_callback' => 'nishiki_sanitize_image',
+	));
+
+	$wp_customize->add_control(
+		new WP_Customize_Image_Control(
+			$wp_customize,
+			'ctrl_archive_default_image',
+			array(
+				'label'      => __( 'Default eye-catching image', 'nishiki' ),
+				'description' => __( 'Display when eye-catching image is not set. Recommended image size 16:9', 'nishiki' ),
+				'section'    => 'section_archive',
+				'settings'   => 'setting_archive_default_image',
+				'priority'=> 1080,
+			)
+		)
+	);
+
 }
 

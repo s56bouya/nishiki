@@ -266,6 +266,21 @@ msgstr ""
 msgid "Item Button Link Color"
 msgstr ""
 
+msgid "Button Text(Item bottom)"
+msgstr ""
+
+msgid "Button Link(Item bottom)"
+msgstr ""
+
+msgid "Button Text Color(Item bottom)"
+msgstr ""
+
+msgid "Button Link Color(Item bottom)"
+msgstr ""
+
+msgid "Open New Window(Item bottom)"
+msgstr ""
+
 #: library/customizer/add_front.php:81 library/customizer/add_top.php:114
 msgid "Background Opacity(%)"
 msgstr ""
@@ -515,6 +530,12 @@ msgstr ""
 
 #: parts/archive/post.php:14
 msgid "Read More"
+msgstr ""
+
+msgid "Default eye-catching image"
+msgstr ""
+
+msgid "Display when eye-catching image is not set. Recommended image size 16:9"
 msgstr ""
 
 #: parts/front/main_visual.php:14
