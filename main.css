@@ -1,5 +1,5 @@
 /**
- * Generated on 2018/09/18
+ * Generated on 2018/09/25
  * Author: Tetsuya Imamura(s56bouya)
  */
 
@@ -2495,20 +2495,16 @@ body.scrolled #masthead {
   margin-bottom: 1rem;
   line-height: 1.78;
 }
-.front-page-section .container .main-button, .front-page-section .container .featured-item-button {
+.front-page-section .container .main-button {
   font-size: 1.2rem;
 }
-.front-page-section .container .main-button a, .front-page-section .container .featured-item-button a {
+.front-page-section .container .main-button a {
   padding: 0.7rem 2rem;
   display: inline-block;
   vertical-align: middle;
 }
 .front-page-section .container .main-button {
   margin-top: 0;
-}
-.front-page-section .container .featured-item-button {
-  margin-top: 3.5rem;
-  margin-bottom: 0;
 }
 .front-page-section .container .featured-items {
   text-align: center;
@@ -2561,7 +2557,7 @@ body.scrolled #masthead {
 ***********************/
 #footer {
   font-size: 0.9rem;
-  line-height: 1.76;
+  line-height: 1.86;
 }
 #footer .wrap {
   padding: 0;
@@ -2761,9 +2757,10 @@ body.scrolled #masthead {
 }
 .single .entry-content,
 .page .entry-content {
-  line-height: 1.86;
+  line-height: 2;
   word-wrap: break-word;
   position: relative;
+  font-size: 1rem;
 }
 .single .entry-content table,
 .page .entry-content table {
@@ -2780,9 +2777,8 @@ body.scrolled #masthead {
 .page .entry-content table th,
 .page .entry-content table td {
   padding: 1rem;
-  font-size: 1rem;
   text-align: left;
-  line-height: 1.86;
+  line-height: 2;
   border-width: 1px;
   border-style: solid;
 }
@@ -2817,28 +2813,28 @@ body.scrolled #masthead {
   border-top-width: 1px;
   border-bottom-style: solid;
   border-bottom-width: 1px;
-  margin: 3.5rem 0 1rem;
+  margin: 3.5rem 0 1.5rem;
   padding: 1.5rem 0 1.4rem;
 }
 .single .entry-content h3,
 .page .entry-content h3 {
   font-size: 1.4rem;
-  margin: 2rem 0 1rem;
+  margin: 2.5rem 0 1.5rem;
 }
 .single .entry-content h4,
 .page .entry-content h4 {
   font-size: 1.2rem;
-  margin: 1.5rem 0 1rem;
+  margin: 2.5rem 0 1.5rem;
 }
 .single .entry-content h5,
 .page .entry-content h5 {
   font-size: 1.15rem;
-  margin: 1.5rem 0 1rem;
+  margin: 2.5rem 0 1.5rem;
 }
 .single .entry-content h6,
 .page .entry-content h6 {
   font-size: 1.1rem;
-  margin: 1.3rem 0;
+  margin: 1.5rem 0;
 }
 .single .entry-content iframe,
 .page .entry-content iframe {
@@ -2846,8 +2842,7 @@ body.scrolled #masthead {
 }
 .single .entry-content p,
 .page .entry-content p {
-  font-size: 1.05rem;
-  margin: 1rem 0;
+  margin: 1.5rem 0;
 }
 .single .entry-content .button,
 .page .entry-content .button {
@@ -2856,8 +2851,7 @@ body.scrolled #masthead {
 .single .entry-content ul li, .single .entry-content ol li,
 .page .entry-content ul li,
 .page .entry-content ol li {
-  font-size: 1.05rem;
-  line-height: 1.86;
+  line-height: 2;
 }
 .single .entry-content ul,
 .page .entry-content ul {
@@ -2897,7 +2891,7 @@ body.scrolled #masthead {
 }
 .single .entry-content blockquote,
 .page .entry-content blockquote {
-  margin: 0;
+  margin: 2.5rem 0;
   padding: 1rem 2rem;
   position: relative;
   width: 100%;
@@ -2909,8 +2903,8 @@ body.scrolled #masthead {
   font-family: 'icomoon';
   content: "\e977";
   display: inline-block;
-  font-size: 2rem;
-  line-height: 2rem;
+  font-size: 1.7rem;
+  line-height: 1.7rem;
   text-transform: none;
   letter-spacing: normal;
   word-wrap: normal;
@@ -3005,7 +2999,7 @@ body.scrolled #masthead {
   margin: 3rem auto 2rem;
   padding: 1.5rem 1rem;
   font-size: 0.9rem;
-  line-height: 1.76;
+  line-height: 1.86;
 }
 .author-info a {
   text-decoration: none;
@@ -3027,7 +3021,7 @@ body.scrolled #masthead {
 ************************/
 aside.sidebar {
   font-size: 0.9rem;
-  line-height: 1.76;
+  line-height: 1.86;
 }
 aside.sidebar section {
   margin-bottom: 1.5rem;
@@ -3206,7 +3200,7 @@ aside.sidebar ul li a, aside.sidebar ol li a {
 .post-navigation {
   font-size: 1.1rem;
   margin-bottom: 1.5rem;
-  line-height: 1.76;
+  line-height: 1.86;
 }
 .post-navigation .nav-links {
   display: flex;
@@ -3715,7 +3709,7 @@ select {
 ****************************************/
 .comments-area {
   margin-bottom: 3rem;
-  line-height: 1.76;
+  line-height: 1.86;
   /*
   * Comment Respond
   */
@@ -3821,7 +3815,7 @@ select {
 ***********************/
 .widget {
   font-size: 0.9rem;
-  line-height: 1.76;
+  line-height: 1.86;
 }
 .widget section {
   margin-bottom: 1.5rem;
@@ -4255,12 +4249,13 @@ i.icomoon {
   }
   .single .entry-content,
   .page .entry-content {
-    line-height: 1.76;
+    line-height: 1.86;
+    font-size: 0.9rem;
   }
   .single .entry-content h2,
   .page .entry-content h2 {
     font-size: 1.35rem;
-    margin: 2rem 0 1rem;
+    margin: 2.5rem 0 1.5rem;
     padding: 0.7rem 0;
   }
   .single .entry-content h3,
@@ -4279,15 +4274,10 @@ i.icomoon {
   .page .entry-content h6 {
     font-size: 1rem;
   }
-  .single .entry-content p,
-  .page .entry-content p {
-    font-size: 1rem;
-  }
   .single .entry-content ul li, .single .entry-content ol li,
   .page .entry-content ul li,
   .page .entry-content ol li {
-    font-size: 1rem;
-    line-height: 1.76;
+    line-height: 1.86;
   }
   .single .entry-content table,
   .page .entry-content table {
@@ -4296,6 +4286,7 @@ i.icomoon {
     border: none;
     display: inline-block;
     position: relative;
+    line-height: 1.86;
   }
   .single .entry-content table td,
   .page .entry-content table td {
