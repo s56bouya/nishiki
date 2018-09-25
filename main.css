@@ -2760,7 +2760,7 @@ body.scrolled #masthead {
   line-height: 2;
   word-wrap: break-word;
   position: relative;
-  font-size: 1rem;
+  font-size: 1.05rem;
 }
 .single .entry-content table,
 .page .entry-content table {
@@ -2885,6 +2885,7 @@ body.scrolled #masthead {
 .page .entry-content pre {
   border-width: 1px;
   border-style: dotted;
+  margin: 1.5rem 0;
   padding: 1rem 2rem;
   white-space: pre-wrap;
   word-wrap: break-word;
@@ -4299,7 +4300,7 @@ i.icomoon {
   }
   .single .entry-content table::-webkit-scrollbar,
   .page .entry-content table::-webkit-scrollbar {
-    height: 1.2rem;
+    height: 1.1rem;
   }
 
   .archive .site-main > header .page-header h1,
