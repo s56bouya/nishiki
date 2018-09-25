@@ -2033,7 +2033,7 @@ body#tinymce.wp-editor {
   line-height: 2;
   word-wrap: break-word;
   position: relative;
-  font-size: 1rem;
+  font-size: 1.05rem;
   max-width: 1200px;
   margin: 1rem;
 }
@@ -2245,7 +2245,7 @@ body#tinymce.wp-editor a {
 @media only screen and (max-width: 1000px) {
   body#tinymce.wp-editor {
     line-height: 1.86;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
   }
   body#tinymce.wp-editor h2 {
     font-size: 1.4rem;
