@@ -34,7 +34,9 @@ if( has_post_thumbnail() ){
 				echo '<span class="cat"><i class="icomoon icon-folder-open"></i>' . wp_kses_post( $output ) . '</span>';
 			}
 			if( get_theme_mod( 'setting_post_display_tag', true ) && get_the_tags() ){
-				echo '<span class="tag">' . the_tags( '<i class="icomoon icon-price-tag"></i>','/' ) . '</span>';
+				echo '<span class="tag">';
+				the_tags( '<i class="icomoon icon-price-tag"></i>','/' );
+				echo '</span>';
 			}
 			if( get_theme_mod( 'setting_post_display_comment', true ) ){
 				$comment_count = wp_count_comments( get_the_ID() );

@@ -1,13 +1,15 @@
 /**
- * Generated on 2018/09/25
+ * Generated on 2018/09/26
  * Author: Tetsuya Imamura(s56bouya)
  */
 
 /***********************
 * Responsive Breakpoints
 * 1001px +          PC
-* 1000px - 681px    Tablet
-* 680px -           SmartPhone
+* 769px +           PC & Tablet
+* 769px - 1000px    Tablet
+* 0px - 1000px      SmartPhone & Tablet
+* 0px - 768px       SmartPhone
 ************************/
 @font-face {
   font-family: 'icomoon';
@@ -2161,7 +2163,7 @@ body.scrolled #masthead {
 
 .container {
   margin: 0 auto;
-  width: 95%;
+  width: 90%;
 }
 
 /***********************
@@ -2601,7 +2603,6 @@ body.scrolled #masthead {
 #footer .wrap .copyright {
   margin: 0 auto;
   padding: 0.7rem 0;
-  width: 95%;
   text-align: center;
 }
 #footer .wrap .copyright .copymark {
@@ -2731,10 +2732,13 @@ body.scrolled #masthead {
   font-size: 1.8rem;
   margin: 0 auto 1rem;
 }
+.single #main > header .date,
+.page #main > header .date {
+  font-size: 0.9rem;
+}
 .single #main > header .date time,
 .page #main > header .date time {
   display: inline-block;
-  font-size: 0.9rem;
   margin-bottom: 0.3rem;
 }
 .single #main > header .cat, .single #main > header .tag,
@@ -3736,8 +3740,11 @@ select {
   box-sizing: border-box;
   padding: 1rem;
 }
-.comments-area .comments-title i {
-  font-size: 1.8rem;
+.comments-area .comments-title::before {
+  font-family: 'icomoon';
+  content: '\e96b';
+  display: inline-block;
+  margin-right: 0.3rem;
 }
 .comments-area .comment-reply-title {
   margin-bottom: 0.5rem;
@@ -3766,17 +3773,15 @@ select {
   overflow: hidden;
   border-width: 0 0 1px 0;
   border-style: dotted;
-  padding: 0 0.5rem 1.5rem;
+  padding: 0 0.5rem 1rem;
 }
 .comments-area .comment-list li .comment-body p {
   margin-top: 0;
 }
 .comments-area .comment-list li .comment-meta {
   font-size: 0.75rem;
-  position: absolute;
-  right: 0.5rem;
-  bottom: 0.5rem;
   letter-spacing: 0.05rem;
+  text-align: right;
 }
 .comments-area .comment-list li .comment-meta .comment-reply-link {
   margin-top: 0.7rem;
@@ -3804,7 +3809,6 @@ select {
   content: '\e96b';
   display: inline-block;
   margin-right: 0.3rem;
-  font-size: 1.4rem;
 }
 .comments-area #respond .comment-form-comment label, .comments-area #respond .comment-form-author label, .comments-area #respond .comment-form-email label, .comments-area #respond .comment-form-url label {
   display: block;
@@ -4027,118 +4031,129 @@ i.icomoon {
 }
 
 /*********************
-* Panel
-0px - 768px
+* PC
+1000px +
 ***********************/
-@media (max-width: 768px) {
-  #masthead {
-    padding: 0.2rem 0;
+@media only screen and (min-width: 1000px) {
+  .articles.column-1 article {
+    flex-basis: calc(100%);
+    width: calc(100%);
   }
-  #masthead .site-info {
-    width: 100%;
+  .articles.column-1 article:nth-child(1n) {
+    margin-right: 0;
   }
-  #masthead .site-info a {
-    height: 50px;
+  .articles.column-2 article {
+    flex-basis: calc(50% - 1rem);
+    width: calc(50% - 1rem);
+    margin-right: 2rem;
   }
-  #masthead .global-nav {
-    flex-basis: 100px;
-    /*********************
-    * Header Menu Collapse
-    ***********************/
+  .articles.column-2 article:nth-child(2n) {
+    margin-right: 0;
   }
-  #masthead .global-nav .icon {
-    padding: 0.6rem;
-    margin: 0 0 0 0.5rem;
+  .articles.column-3 article {
+    flex-basis: calc(33.33333% - 1rem);
+    width: calc(33.33333% - 1rem);
+    margin-right: 1.5rem;
   }
-  #masthead .global-nav #menu-collapse-button {
-    display: block;
+  .articles.column-3 article:nth-child(3n) {
+    margin-right: 0;
   }
-  #masthead .global-nav #menu-collapse {
-    position: absolute;
-    transform: translateX(-100%);
-    visibility: hidden;
+
+  .featured-items.column-1 .featured-item {
+    flex-basis: calc(100%);
+    width: calc(100%);
   }
-  #masthead .global-nav #menu-collapse.panel {
-    visibility: hidden;
-    position: fixed;
-    transform: translateX(-100%);
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transition: transform 0.5s;
-    zoom: 1;
-    backface-visibility: hidden;
-    background: rgba(0, 0, 0, 0.75);
-    z-index: 3;
-    text-align: center;
-    overflow: auto;
-    padding-top: 7.5rem;
+  .featured-items.column-1 .featured-item:nth-child(1n) {
+    margin-right: 0;
   }
-  #masthead .global-nav #menu-collapse.panel ul {
-    max-width: 500px;
-    list-style-type: none;
-    margin: 0 auto;
-    padding: 0;
-    font-size: 1.3rem;
-    position: relative;
+  .featured-items.column-1 .featured-item:not(:last-child) {
+    margin-bottom: 3rem;
   }
-  #masthead .global-nav #menu-collapse.panel ul li {
-    width: 100%;
+  .featured-items.column-2 .featured-item {
+    flex-basis: calc(50% - 1rem);
+    width: calc(50% - 1rem);
+    margin-right: 2rem;
   }
-  #masthead .global-nav #menu-collapse.panel ul li span {
-    color: #fff;
-    position: absolute;
-    right: 1rem;
-    margin-left: 0;
-    cursor: pointer;
-    border: 1px solid #fff;
-    transform-style: preserve-3d;
-    backface-visibility: hidden;
+  .featured-items.column-2 .featured-item:nth-child(2n) {
+    margin-right: 0;
   }
-  #masthead .global-nav #menu-collapse.panel ul li span i {
-    color: #fff;
-    font-size: 1rem;
-    margin: 0;
-    display: block;
-    width: 1rem;
-    padding: 0.3rem;
+  .featured-items.column-3 .featured-item {
+    flex-basis: calc(33.33333% - 1rem);
+    width: calc(33.33333% - 1rem);
+    margin-right: 1.5rem;
   }
-  #masthead .global-nav #menu-collapse.panel ul li a {
-    color: #fff;
-    padding: 0.5rem 0.7rem;
+  .featured-items.column-3 .featured-item:nth-child(3n) {
+    margin-right: 0;
   }
-  #masthead .global-nav #menu-collapse.panel > ul > li > a {
-    text-align: left;
+
+  .footer-widget.column-1 section {
+    flex-basis: calc(100%);
+    width: calc(100%);
   }
-  #masthead .global-nav #menu-collapse.panel ul li > ul > a {
-    position: relative;
+  .footer-widget.column-1 section:nth-child(1n) {
+    margin-right: 0;
   }
-  #masthead .global-nav #menu-collapse.panel ul li > ul li a {
-    font-size: 1.1rem;
-    padding-left: 1.5rem;
+  .footer-widget.column-2 section {
+    flex-basis: calc(50% - 1rem);
+    width: calc(50% - 1rem);
+    margin-right: 2rem;
   }
-  #masthead .global-nav #menu-collapse.panel ul li > ul li > ul li a {
-    padding-left: 2rem;
+  .footer-widget.column-2 section:nth-child(2n) {
+    margin-right: 0;
   }
-  #masthead .global-nav #menu-collapse.panel-close {
-    transform: translateX(-100%);
-    visibility: visible;
+  .footer-widget.column-3 section {
+    flex-basis: calc(33.33333% - 1rem);
+    width: calc(33.33333% - 1rem);
+    margin-right: 1.5rem;
   }
-  #masthead .global-nav #menu-collapse.panel-open {
-    transform: translateX(0%);
-    visibility: visible;
-  }
-  #masthead .global-nav #menu-collapse .close {
-    display: block;
-    text-align: center;
+  .footer-widget.column-3 section:nth-child(3n) {
+    margin-right: 0;
   }
 }
 /*********************
-* Tablet
-681px - 1000px
+* PC & Tablet
+769px +
 ***********************/
-@media only screen and (min-width: 681px) and (max-width: 1000px) {
+@media only screen and (min-width: 769px) {
+  #masthead #menu-collapse ul {
+    letter-spacing: -.4em;
+    font-size: 0.9rem;
+  }
+  #masthead #menu-collapse ul li {
+    letter-spacing: normal;
+  }
+  #masthead #menu-collapse ul li a {
+    padding: 0.5rem 0.7rem;
+  }
+  #masthead #menu-collapse ul li i {
+    display: inline-block;
+    font-size: 0.8rem;
+    width: 0.8rem;
+    height: 0.7rem;
+    margin: 0 0 0 0.5rem;
+  }
+  #masthead #menu-collapse > ul > li > a {
+    height: 100px;
+    line-height: 100px;
+    padding: 0 0.7rem;
+  }
+  #masthead #menu-collapse > ul > li > ul {
+    transition: background-color 300ms ease;
+  }
+
+  body.scrolled #masthead #nav > ul > li > ul {
+    background-image: none;
+  }
+}
+/*********************
+* SmartPhone
+0px - 768px
+***********************/
+/*********************
+* Tablet
+769px - 1000px
+***********************/
+@media only screen and (min-width: 769px) and (max-width: 1000px) {
   .main-visual .main-visual-content .description {
     font-size: 1.4rem;
   }
@@ -4224,6 +4239,10 @@ i.icomoon {
     margin-right: 0;
   }
 }
+/*********************
+* SmartPhone & Tablet
+0px - 1000px
+***********************/
 @media only screen and (max-width: 1000px) {
   #masthead .site-info {
     font-size: 0.9rem;
@@ -4236,6 +4255,13 @@ i.icomoon {
   .page #main > header .page-header h1 {
     font-size: 1.4rem;
   }
+  .single #main > header .page-header .date, .single #main > header .page-header .cat, .single #main > header .page-header .tag, .single #main > header .page-header .comment,
+  .page #main > header .page-header .date,
+  .page #main > header .page-header .cat,
+  .page #main > header .page-header .tag,
+  .page #main > header .page-header .comment {
+    font-size: 0.8rem;
+  }
   .single #main .column article, .single #main .column aside,
   .page #main .column article,
   .page #main .column aside {
@@ -4243,15 +4269,9 @@ i.icomoon {
     float: none;
     margin: 0;
   }
-
   .single article header h1,
   .page article header h1 {
     font-size: 1.4rem;
-  }
-  .single .entry-content,
-  .page .entry-content {
-    line-height: 1.86;
-    font-size: 0.95rem;
   }
   .single .entry-content h2,
   .page .entry-content h2 {
@@ -4309,9 +4329,19 @@ i.icomoon {
   .error404 .site-main > header .page-header h1 {
     font-size: 1.4rem;
   }
+
+  .comments-area .comments-title {
+    font-size: 1.2rem;
+  }
+  .comments-area .comment-list {
+    font-size: 0.95rem;
+  }
+  .comments-area .comment-respond .comment-reply-title {
+    font-size: 1.1rem;
+  }
 }
 /*********************
-* PC
+* PC & Tablet
 769px +
 ***********************/
 @media only screen and (min-width: 769px) {
@@ -4426,12 +4456,230 @@ i.icomoon {
   }
 }
 /*********************
-* SmartPhone
-0px - 680px
+* SmartPhone & Tablet
+0px - 1000px
 ***********************/
-@media only screen and (min-width: 0px) and (max-width: 680px) {
+@media only screen and (max-width: 1000px) {
+  #masthead .site-info {
+    font-size: 0.9rem;
+  }
+  #masthead .site-info a img {
+    height: 40px;
+  }
+
+  .single #main > header .page-header h1,
+  .page #main > header .page-header h1 {
+    font-size: 1.4rem;
+  }
+  .single #main > header .page-header .date, .single #main > header .page-header .cat, .single #main > header .page-header .tag, .single #main > header .page-header .comment,
+  .page #main > header .page-header .date,
+  .page #main > header .page-header .cat,
+  .page #main > header .page-header .tag,
+  .page #main > header .page-header .comment {
+    font-size: 0.8rem;
+  }
+  .single #main .column article, .single #main .column aside,
+  .page #main .column article,
+  .page #main .column aside {
+    width: 100%;
+    float: none;
+    margin: 0;
+  }
+  .single article header h1,
+  .page article header h1 {
+    font-size: 1.4rem;
+  }
+  .single .entry-content h2,
+  .page .entry-content h2 {
+    font-size: 1.35rem;
+    margin: 2.5rem 0 1.5rem;
+    padding: 0.7rem 0;
+  }
+  .single .entry-content h3,
+  .page .entry-content h3 {
+    font-size: 1.25rem;
+  }
+  .single .entry-content h4,
+  .page .entry-content h4 {
+    font-size: 1.15rem;
+  }
+  .single .entry-content h5,
+  .page .entry-content h5 {
+    font-size: 1.1rem;
+  }
+  .single .entry-content h6,
+  .page .entry-content h6 {
+    font-size: 1rem;
+  }
+  .single .entry-content ul li, .single .entry-content ol li,
+  .page .entry-content ul li,
+  .page .entry-content ol li {
+    line-height: 1.86;
+  }
+  .single .entry-content table,
+  .page .entry-content table {
+    overflow-x: auto;
+    white-space: nowrap;
+    border: none;
+    display: inline-block;
+    position: relative;
+    line-height: 1.86;
+  }
+  .single .entry-content table td,
+  .page .entry-content table td {
+    font-size: 0.8rem;
+  }
+  .single .entry-content table td ul li, .single .entry-content table td ol li,
+  .page .entry-content table td ul li,
+  .page .entry-content table td ol li {
+    font-size: 0.8rem;
+  }
+  .single .entry-content table::-webkit-scrollbar,
+  .page .entry-content table::-webkit-scrollbar {
+    height: 1.1rem;
+  }
+
+  .archive .site-main > header .page-header h1,
+  .search .site-main > header .page-header h1,
+  .paged .site-main > header .page-header h1,
+  .error404 .site-main > header .page-header h1 {
+    font-size: 1.4rem;
+  }
+
+  .comments-area .comments-title {
+    font-size: 1.2rem;
+  }
+  .comments-area .comment-list {
+    font-size: 0.95rem;
+  }
+  .comments-area .comment-respond .comment-reply-title {
+    font-size: 1.1rem;
+  }
+}
+/*********************
+* SmartPhone
+0px - 768px
+***********************/
+@media only screen and (min-width: 0px) and (max-width: 768px) {
+  #masthead {
+    padding: 0.2rem 0;
+  }
+  #masthead .site-info {
+    width: 100%;
+  }
+  #masthead .site-info a {
+    height: 50px;
+  }
   #masthead .site-info a img {
     max-height: 40px;
+  }
+  #masthead button i {
+    font-size: 1rem;
+  }
+  #masthead .global-nav {
+    flex-basis: 100px;
+    /*********************
+    * Header Menu Collapse
+    ***********************/
+  }
+  #masthead .global-nav .icon {
+    padding: 0.6rem;
+    margin: 0 0 0 0.5rem;
+  }
+  #masthead .global-nav #menu-collapse-button {
+    display: block;
+  }
+  #masthead .global-nav #menu-collapse {
+    position: absolute;
+    transform: translateX(-100%);
+    visibility: hidden;
+  }
+  #masthead .global-nav #menu-collapse.panel {
+    visibility: hidden;
+    position: fixed;
+    transform: translateX(-100%);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s;
+    zoom: 1;
+    backface-visibility: hidden;
+    background: rgba(0, 0, 0, 0.75);
+    z-index: 3;
+    text-align: center;
+    overflow: auto;
+    padding-top: 7.5rem;
+  }
+  #masthead .global-nav #menu-collapse.panel ul {
+    max-width: 500px;
+    list-style-type: none;
+    margin: 0 auto;
+    padding: 0;
+    font-size: 1.3rem;
+    position: relative;
+  }
+  #masthead .global-nav #menu-collapse.panel ul li {
+    width: 100%;
+  }
+  #masthead .global-nav #menu-collapse.panel ul li span {
+    color: #fff;
+    position: absolute;
+    right: 1rem;
+    margin-left: 0;
+    cursor: pointer;
+    border: 1px solid #fff;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+  }
+  #masthead .global-nav #menu-collapse.panel ul li span i {
+    color: #fff;
+    font-size: 1rem;
+    margin: 0;
+    display: block;
+    width: 1rem;
+    padding: 0.3rem;
+  }
+  #masthead .global-nav #menu-collapse.panel ul li a {
+    color: #fff;
+    padding: 0.5rem 0.7rem;
+  }
+  #masthead .global-nav #menu-collapse.panel > ul > li > a {
+    text-align: left;
+  }
+  #masthead .global-nav #menu-collapse.panel ul li > ul > a {
+    position: relative;
+  }
+  #masthead .global-nav #menu-collapse.panel ul li > ul li a {
+    font-size: 1.1rem;
+    padding-left: 1.5rem;
+  }
+  #masthead .global-nav #menu-collapse.panel ul li > ul li > ul li a {
+    padding-left: 2rem;
+  }
+  #masthead .global-nav #menu-collapse.panel-close {
+    transform: translateX(-100%);
+    visibility: visible;
+  }
+  #masthead .global-nav #menu-collapse.panel-open {
+    transform: translateX(0%);
+    visibility: visible;
+  }
+  #masthead .global-nav #menu-collapse .close {
+    display: block;
+    text-align: center;
+  }
+
+  .archive .site-main > header .page-header, .search .site-main > header .page-header, .paged .site-main > header .page-header, .error404 .site-main > header .page-header {
+    padding: 5rem 0 4rem;
+  }
+
+  .single #main > header .page-header, .page #main > header .page-header {
+    padding: 5rem 0 4rem;
+  }
+  .single .entry-content, .page .entry-content {
+    line-height: 1.86;
+    font-size: 0.95rem;
   }
 
   .main-visual .main-visual-content .description {
