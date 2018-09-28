@@ -275,7 +275,7 @@ function nishiki_customizer_css(){
 	if( $post_column !== 'none' ){
 		$post_sidebar_margin = $post_sidebar_width + absint( get_theme_mod( 'setting_post_sidebar_margin', '20' ) );
 		$output .= ".single #main .column { padding-{$post_column}: {$post_sidebar_margin}px;}";
-		$output .= "@media only screen and (max-width:1000px) {.single #main .column { padding:0;}}";
+		$output .= "@media only screen and (max-width:768px) {.single #main .column { padding:0;}}";
 		$output .= ".single aside { width:{$post_sidebar_width}px; margin-{$post_column}:-{$post_sidebar_margin}px;}";
 	}
 
@@ -303,17 +303,17 @@ function nishiki_customizer_css(){
 	if ( ! is_page_template( 'templates/sidebar-none.php' ) ) {
 		if( is_page_template( 'templates/sidebar-right.php' ) ){
 			$output .= ".page-template-sidebar-right #main .column { padding-right: {$page_sidebar_margin}px;}";
-			$output .= "@media only screen and (max-width:1000px) {.page-template-sidebar-right #main .column { padding:0;}}";
+			$output .= "@media only screen and (max-width:768px) {.page-template-sidebar-right #main .column { padding:0;}}";
 			$output .= ".page-template-sidebar-right aside { width:{$page_sidebar_width}px; margin-right:-{$page_sidebar_margin}px;}";
 		} elseif( is_page_template( 'templates/sidebar-left.php' ) ) {
 			$output .= ".page-template-sidebar-left #main .column { padding-left: {$page_sidebar_margin}px;}";
-			$output .= "@media only screen and (max-width:1000px) {.page-template-sidebar-left #main .column { padding:0;}}";
+			$output .= "@media only screen and (max-width:768px) {.page-template-sidebar-left #main .column { padding:0;}}";
 			$output .= ".page-template-sidebar-left aside { width:{$page_sidebar_width}px; margin-left:-{$page_sidebar_margin}px;}";
 		} elseif( is_page_template( 'templates/sidebar-bottom.php' ) ) {
 			$output .= ".page-template-sidebar-bottom aside {width:100%;}";
 		} elseif( $page_column !== 'none' ){
 			$output .= ".page #main .column { padding-{$page_column}: {$page_sidebar_margin}px;}";
-			$output .= "@media only screen and (max-width:1000px) {.page #main .column { padding:0;}}";
+			$output .= "@media only screen and (max-width:768px) {.page #main .column { padding:0;}}";
 			$output .= ".page aside { width:{$page_sidebar_width}px;margin-{$page_column}:-{$page_sidebar_margin}px;}";
 		}
 	}
