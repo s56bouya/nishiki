@@ -3207,7 +3207,7 @@ aside.sidebar ul li a, aside.sidebar ol li a {
 * Post Navigation
 ************************/
 .post-navigation {
-  font-size: 1.1rem;
+  font-size: 1rem;
   margin-bottom: 1.5rem;
   line-height: 1.86;
 }
@@ -4135,10 +4135,10 @@ i.icomoon {
   .featured-items.column-3 .featured-item {
     flex-basis: calc(50% - 1rem );
     width: calc(50% - 1rem );
-    margin-right: 2rem;
-  }
-  .featured-items.column-3 .featured-item:nth-child(2n) {
     margin-right: 0;
+  }
+  .featured-items.column-3 .featured-item:nth-child(1) {
+    margin-right: 2rem;
   }
   .featured-items.column-3 .featured-item:not(:last-child) {
     margin-bottom: 3rem;
@@ -4146,10 +4146,10 @@ i.icomoon {
   .featured-items.column-2 .featured-item {
     flex-basis: calc( 50% - 1rem );
     width: calc( 50% - 1rem );
-    margin-right: 2rem;
-  }
-  .featured-items.column-2 .featured-item:nth-child(2n) {
     margin-right: 0;
+  }
+  .featured-items.column-2 .featured-item:nth-child(1) {
+    margin-right: 2rem;
   }
   .featured-items.column-2 .featured-item:not(:last-child) {
     margin-bottom: 3rem;
@@ -4336,6 +4336,26 @@ i.icomoon {
     background-image: none;
   }
 
+  .front-page-section .container .main-text {
+    font-size: 1.1rem;
+  }
+  .front-page-section .container .sub-text {
+    font-size: 0.8rem;
+    padding-top: 0.4rem;
+  }
+  .front-page-section .container .main-button {
+    font-size: 0.8rem;
+  }
+  .front-page-section .container .featured-items .featured-item .featured-title {
+    font-size: 1rem;
+  }
+  .front-page-section .container .featured-items .featured-item .featured-text {
+    font-size: 0.8rem;
+  }
+  .front-page-section .container .featured-items .featured-item .featured-button {
+    font-size: 0.8rem;
+  }
+
   .single #main > header .page-header,
   .page #main > header .page-header {
     padding: 5rem 0 4rem;
@@ -4477,26 +4497,6 @@ i.icomoon {
     font-size: 0.8rem;
   }
 
-  .front-page-section .container .main-text {
-    font-size: 1.1rem;
-  }
-  .front-page-section .container .sub-text {
-    font-size: 0.8rem;
-    padding-top: 0.4rem;
-  }
-  .front-page-section .container .main-button {
-    font-size: 0.8rem;
-  }
-  .front-page-section .container .featured-items .featured-item .featured-title {
-    font-size: 1rem;
-  }
-  .front-page-section .container .featured-items .featured-item .featured-text {
-    font-size: 0.8rem;
-  }
-  .front-page-section .container .featured-items .featured-item .featured-button {
-    font-size: 0.8rem;
-  }
-
   .articles article {
     width: 100%;
     border-bottom: 1px dotted #777;
@@ -4511,18 +4511,24 @@ i.icomoon {
     flex-basis: calc(100%);
     width: calc(100%);
     padding: 0 0 1rem;
+  }
+  .articles.column-2 article:nth-child(n) {
     margin-right: 0;
   }
   .articles.column-3 article {
     flex-basis: calc(100%);
     width: calc(100%);
     padding: 0 0 1rem;
+  }
+  .articles.column-3 article:nth-child(n) {
     margin-right: 0;
   }
 
   .featured-items.column-1 .featured-item {
     flex-basis: calc(100%);
     width: calc(100%);
+  }
+  .featured-items.column-1 .featured-item:nth-child(n) {
     margin-right: 0;
   }
   .featured-items.column-1 .featured-item:not(:last-child) {
@@ -4531,6 +4537,8 @@ i.icomoon {
   .featured-items.column-2 .featured-item {
     flex-basis: calc(100%);
     width: calc(100%);
+  }
+  .featured-items.column-2 .featured-item:nth-child(n) {
     margin-right: 0;
   }
   .featured-items.column-2 .featured-item:not(:last-child) {
@@ -4539,6 +4547,8 @@ i.icomoon {
   .featured-items.column-3 .featured-item {
     flex-basis: calc(100%);
     width: calc(100%);
+  }
+  .featured-items.column-3 .featured-item:nth-child(n) {
     margin-right: 0;
   }
   .featured-items.column-3 .featured-item:not(:last-child) {
@@ -4549,18 +4559,25 @@ i.icomoon {
     flex-basis: calc(100%);
     width: calc(100%);
     padding: 0 0 1rem;
+  }
+  .footer-widget.column-2 section:nth-child(n) {
     margin-right: 0;
   }
   .footer-widget.column-3 section {
     flex-basis: calc(100%);
     width: calc(100%);
     padding: 0 0 1rem;
+  }
+  .footer-widget.column-3 section:nth-child(n) {
     margin-right: 0;
   }
 
   /***********************
   * Post Navigation
   ************************/
+  .post-navigation {
+    font-size: 0.85rem;
+  }
   .post-navigation .nav-links {
     display: block;
   }
