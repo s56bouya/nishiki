@@ -1,15 +1,15 @@
 /**
- * Generated on 2018/09/26
+ * Generated on 2018/09/28
  * Author: Tetsuya Imamura(s56bouya)
  */
 
 /***********************
 * Responsive Breakpoints
 * 1001px +          PC
-* 769px +           PC & Tablet
-* 769px - 1000px    Tablet
-* 0px - 1000px      SmartPhone & Tablet
-* 0px - 768px       SmartPhone
+* 769px - 1000px    Tablet - PC
+* 0px - 768px       Tablet
+* 481px - 768px     SmartPhone - Tablet
+* 0px - 480px       SmartPhone
 ************************/
 @font-face {
   font-family: 'icomoon';
@@ -2234,8 +2234,11 @@ body.scrolled #masthead {
   list-style-type: none;
   padding: 0;
   margin: 0;
+  letter-spacing: -0.4em;
+  font-size: 0.9rem;
 }
 #masthead #menu-collapse ul li {
+  letter-spacing: normal;
   display: inline-block;
   text-align: center;
   position: relative;
@@ -2246,9 +2249,15 @@ body.scrolled #masthead {
   box-sizing: border-box;
   text-align: left;
   transition: background-color 300ms ease;
+  padding: 0.5rem 0.7rem;
 }
 #masthead #menu-collapse ul li i {
   transition: transform 150ms ease-in-out;
+  display: inline-block;
+  font-size: 0.8rem;
+  width: 0.8rem;
+  height: 0.7rem;
+  margin: 0 0 0 0.5rem;
 }
 #masthead #menu-collapse ul li > ul {
   margin: 0;
@@ -2272,6 +2281,14 @@ body.scrolled #masthead {
   display: none;
   position: relative;
   top: 0;
+}
+#masthead #menu-collapse > ul > li > a {
+  height: 100px;
+  line-height: 100px;
+  padding: 0 0.7rem;
+}
+#masthead #menu-collapse > ul > li > ul {
+  transition: background-color 300ms ease;
 }
 #masthead #menu-collapse li.active > a i {
   transform: rotateZ(180deg);
@@ -2931,20 +2948,6 @@ body.scrolled #masthead {
 .single .entry-content ul.wp-block-gallery li,
 .page .entry-content ul.wp-block-gallery li {
   margin: 0.5rem;
-}
-.single .entry-content .wp-block-embed,
-.page .entry-content .wp-block-embed {
-  position: relative;
-  padding-bottom: 56.25%;
-  margin: 1rem 0;
-}
-.single .entry-content .wp-block-embed iframe,
-.page .entry-content .wp-block-embed iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
 }
 .single #edit-link,
 .page #edit-link {
@@ -4034,7 +4037,7 @@ i.icomoon {
 * PC
 1000px +
 ***********************/
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1001px) {
   .articles.column-1 article {
     flex-basis: calc(100%);
     width: calc(100%);
@@ -4111,46 +4114,7 @@ i.icomoon {
   }
 }
 /*********************
-* PC & Tablet
-769px +
-***********************/
-@media only screen and (min-width: 769px) {
-  #masthead #menu-collapse ul {
-    letter-spacing: -.4em;
-    font-size: 0.9rem;
-  }
-  #masthead #menu-collapse ul li {
-    letter-spacing: normal;
-  }
-  #masthead #menu-collapse ul li a {
-    padding: 0.5rem 0.7rem;
-  }
-  #masthead #menu-collapse ul li i {
-    display: inline-block;
-    font-size: 0.8rem;
-    width: 0.8rem;
-    height: 0.7rem;
-    margin: 0 0 0 0.5rem;
-  }
-  #masthead #menu-collapse > ul > li > a {
-    height: 100px;
-    line-height: 100px;
-    padding: 0 0.7rem;
-  }
-  #masthead #menu-collapse > ul > li > ul {
-    transition: background-color 300ms ease;
-  }
-
-  body.scrolled #masthead #nav > ul > li > ul {
-    background-image: none;
-  }
-}
-/*********************
-* SmartPhone
-0px - 768px
-***********************/
-/*********************
-* Tablet
+* Tablet - PC
 769px - 1000px
 ***********************/
 @media only screen and (min-width: 769px) and (max-width: 1000px) {
@@ -4240,338 +4204,23 @@ i.icomoon {
   }
 }
 /*********************
-* SmartPhone & Tablet
-0px - 1000px
-***********************/
-@media only screen and (max-width: 1000px) {
-  #masthead .site-info {
-    font-size: 0.9rem;
-  }
-  #masthead .site-info a img {
-    height: 40px;
-  }
-
-  .single #main > header .page-header h1,
-  .page #main > header .page-header h1 {
-    font-size: 1.4rem;
-  }
-  .single #main > header .page-header .date, .single #main > header .page-header .cat, .single #main > header .page-header .tag, .single #main > header .page-header .comment,
-  .page #main > header .page-header .date,
-  .page #main > header .page-header .cat,
-  .page #main > header .page-header .tag,
-  .page #main > header .page-header .comment {
-    font-size: 0.8rem;
-  }
-  .single #main .column article, .single #main .column aside,
-  .page #main .column article,
-  .page #main .column aside {
-    width: 100%;
-    float: none;
-    margin: 0;
-  }
-  .single article header h1,
-  .page article header h1 {
-    font-size: 1.4rem;
-  }
-  .single .entry-content h2,
-  .page .entry-content h2 {
-    font-size: 1.35rem;
-    margin: 2.5rem 0 1.5rem;
-    padding: 0.7rem 0;
-  }
-  .single .entry-content h3,
-  .page .entry-content h3 {
-    font-size: 1.25rem;
-  }
-  .single .entry-content h4,
-  .page .entry-content h4 {
-    font-size: 1.15rem;
-  }
-  .single .entry-content h5,
-  .page .entry-content h5 {
-    font-size: 1.1rem;
-  }
-  .single .entry-content h6,
-  .page .entry-content h6 {
-    font-size: 1rem;
-  }
-  .single .entry-content ul li, .single .entry-content ol li,
-  .page .entry-content ul li,
-  .page .entry-content ol li {
-    line-height: 1.86;
-  }
-  .single .entry-content table,
-  .page .entry-content table {
-    overflow-x: auto;
-    white-space: nowrap;
-    border: none;
-    display: inline-block;
-    position: relative;
-    line-height: 1.86;
-  }
-  .single .entry-content table td,
-  .page .entry-content table td {
-    font-size: 0.8rem;
-  }
-  .single .entry-content table td ul li, .single .entry-content table td ol li,
-  .page .entry-content table td ul li,
-  .page .entry-content table td ol li {
-    font-size: 0.8rem;
-  }
-  .single .entry-content table::-webkit-scrollbar,
-  .page .entry-content table::-webkit-scrollbar {
-    height: 1.1rem;
-  }
-
-  .archive .site-main > header .page-header h1,
-  .search .site-main > header .page-header h1,
-  .paged .site-main > header .page-header h1,
-  .error404 .site-main > header .page-header h1 {
-    font-size: 1.4rem;
-  }
-
-  .comments-area .comments-title {
-    font-size: 1.2rem;
-  }
-  .comments-area .comment-list {
-    font-size: 0.95rem;
-  }
-  .comments-area .comment-respond .comment-reply-title {
-    font-size: 1.1rem;
-  }
-}
-/*********************
-* PC & Tablet
-769px +
-***********************/
-@media only screen and (min-width: 769px) {
-  #masthead #menu-collapse ul {
-    letter-spacing: -.4em;
-    font-size: 0.9rem;
-  }
-  #masthead #menu-collapse ul li {
-    letter-spacing: normal;
-  }
-  #masthead #menu-collapse ul li a {
-    padding: 0.5rem 0.7rem;
-  }
-  #masthead #menu-collapse ul li i {
-    display: inline-block;
-    font-size: 0.8rem;
-    width: 0.8rem;
-    height: 0.7rem;
-    margin: 0 0 0 0.5rem;
-  }
-  #masthead #menu-collapse > ul > li > a {
-    height: 100px;
-    line-height: 100px;
-    padding: 0 0.7rem;
-  }
-  #masthead #menu-collapse > ul > li > ul {
-    transition: background-color 300ms ease;
-  }
-
-  body.scrolled #masthead #nav > ul > li > ul {
-    background-image: none;
-  }
-}
-/*********************
-* PC
-1000px +
-***********************/
-@media only screen and (min-width: 1000px) {
-  .articles.column-1 article {
-    flex-basis: calc(100%);
-    width: calc(100%);
-  }
-  .articles.column-1 article:nth-child(1n) {
-    margin-right: 0;
-  }
-  .articles.column-2 article {
-    flex-basis: calc(50% - 1rem);
-    width: calc(50% - 1rem);
-    margin-right: 2rem;
-  }
-  .articles.column-2 article:nth-child(2n) {
-    margin-right: 0;
-  }
-  .articles.column-3 article {
-    flex-basis: calc(33.33333% - 1rem);
-    width: calc(33.33333% - 1rem);
-    margin-right: 1.5rem;
-  }
-  .articles.column-3 article:nth-child(3n) {
-    margin-right: 0;
-  }
-
-  .featured-items.column-1 .featured-item {
-    flex-basis: calc(100%);
-    width: calc(100%);
-  }
-  .featured-items.column-1 .featured-item:nth-child(1n) {
-    margin-right: 0;
-  }
-  .featured-items.column-1 .featured-item:not(:last-child) {
-    margin-bottom: 3rem;
-  }
-  .featured-items.column-2 .featured-item {
-    flex-basis: calc(50% - 1rem);
-    width: calc(50% - 1rem);
-    margin-right: 2rem;
-  }
-  .featured-items.column-2 .featured-item:nth-child(2n) {
-    margin-right: 0;
-  }
-  .featured-items.column-3 .featured-item {
-    flex-basis: calc(33.33333% - 1rem);
-    width: calc(33.33333% - 1rem);
-    margin-right: 1.5rem;
-  }
-  .featured-items.column-3 .featured-item:nth-child(3n) {
-    margin-right: 0;
-  }
-
-  .footer-widget.column-1 section {
-    flex-basis: calc(100%);
-    width: calc(100%);
-  }
-  .footer-widget.column-1 section:nth-child(1n) {
-    margin-right: 0;
-  }
-  .footer-widget.column-2 section {
-    flex-basis: calc(50% - 1rem);
-    width: calc(50% - 1rem);
-    margin-right: 2rem;
-  }
-  .footer-widget.column-2 section:nth-child(2n) {
-    margin-right: 0;
-  }
-  .footer-widget.column-3 section {
-    flex-basis: calc(33.33333% - 1rem);
-    width: calc(33.33333% - 1rem);
-    margin-right: 1.5rem;
-  }
-  .footer-widget.column-3 section:nth-child(3n) {
-    margin-right: 0;
-  }
-}
-/*********************
-* SmartPhone & Tablet
-0px - 1000px
-***********************/
-@media only screen and (max-width: 1000px) {
-  #masthead .site-info {
-    font-size: 0.9rem;
-  }
-  #masthead .site-info a img {
-    height: 40px;
-  }
-
-  .single #main > header .page-header h1,
-  .page #main > header .page-header h1 {
-    font-size: 1.4rem;
-  }
-  .single #main > header .page-header .date, .single #main > header .page-header .cat, .single #main > header .page-header .tag, .single #main > header .page-header .comment,
-  .page #main > header .page-header .date,
-  .page #main > header .page-header .cat,
-  .page #main > header .page-header .tag,
-  .page #main > header .page-header .comment {
-    font-size: 0.8rem;
-  }
-  .single #main .column article, .single #main .column aside,
-  .page #main .column article,
-  .page #main .column aside {
-    width: 100%;
-    float: none;
-    margin: 0;
-  }
-  .single article header h1,
-  .page article header h1 {
-    font-size: 1.4rem;
-  }
-  .single .entry-content h2,
-  .page .entry-content h2 {
-    font-size: 1.35rem;
-    margin: 2.5rem 0 1.5rem;
-    padding: 0.7rem 0;
-  }
-  .single .entry-content h3,
-  .page .entry-content h3 {
-    font-size: 1.25rem;
-  }
-  .single .entry-content h4,
-  .page .entry-content h4 {
-    font-size: 1.15rem;
-  }
-  .single .entry-content h5,
-  .page .entry-content h5 {
-    font-size: 1.1rem;
-  }
-  .single .entry-content h6,
-  .page .entry-content h6 {
-    font-size: 1rem;
-  }
-  .single .entry-content ul li, .single .entry-content ol li,
-  .page .entry-content ul li,
-  .page .entry-content ol li {
-    line-height: 1.86;
-  }
-  .single .entry-content table,
-  .page .entry-content table {
-    overflow-x: auto;
-    white-space: nowrap;
-    border: none;
-    display: inline-block;
-    position: relative;
-    line-height: 1.86;
-  }
-  .single .entry-content table td,
-  .page .entry-content table td {
-    font-size: 0.8rem;
-  }
-  .single .entry-content table td ul li, .single .entry-content table td ol li,
-  .page .entry-content table td ul li,
-  .page .entry-content table td ol li {
-    font-size: 0.8rem;
-  }
-  .single .entry-content table::-webkit-scrollbar,
-  .page .entry-content table::-webkit-scrollbar {
-    height: 1.1rem;
-  }
-
-  .archive .site-main > header .page-header h1,
-  .search .site-main > header .page-header h1,
-  .paged .site-main > header .page-header h1,
-  .error404 .site-main > header .page-header h1 {
-    font-size: 1.4rem;
-  }
-
-  .comments-area .comments-title {
-    font-size: 1.2rem;
-  }
-  .comments-area .comment-list {
-    font-size: 0.95rem;
-  }
-  .comments-area .comment-respond .comment-reply-title {
-    font-size: 1.1rem;
-  }
-}
-/*********************
-* SmartPhone
+* Tablet
 0px - 768px
 ***********************/
-@media only screen and (min-width: 0px) and (max-width: 768px) {
+@media only screen and (max-width: 768px) {
   #masthead {
     padding: 0.2rem 0;
   }
   #masthead .site-info {
     width: 100%;
+    font-size: 0.9rem;
   }
   #masthead .site-info a {
     height: 50px;
   }
   #masthead .site-info a img {
     max-height: 40px;
+    height: 40px;
   }
   #masthead button i {
     font-size: 1rem;
@@ -4639,6 +4288,7 @@ i.icomoon {
     display: block;
     width: 1rem;
     padding: 0.3rem;
+    height: auto;
   }
   #masthead .global-nav #menu-collapse.panel ul li a {
     color: #fff;
@@ -4657,6 +4307,10 @@ i.icomoon {
   #masthead .global-nav #menu-collapse.panel ul li > ul li > ul li a {
     padding-left: 2rem;
   }
+  #masthead .global-nav #menu-collapse.panel > ul > li > a {
+    height: auto;
+    line-height: normal;
+  }
   #masthead .global-nav #menu-collapse.panel-close {
     transform: translateX(-100%);
     visibility: visible;
@@ -4670,15 +4324,136 @@ i.icomoon {
     text-align: center;
   }
 
-  .archive .site-main > header .page-header, .search .site-main > header .page-header, .paged .site-main > header .page-header, .error404 .site-main > header .page-header {
-    padding: 5rem 0 4rem;
+  body.scrolled #masthead #nav > ul > li > ul {
+    background-image: none;
   }
 
-  .single #main > header .page-header, .page #main > header .page-header {
+  .single #main > header .page-header,
+  .page #main > header .page-header {
     padding: 5rem 0 4rem;
   }
+  .single #main > header .page-header h1,
+  .page #main > header .page-header h1 {
+    font-size: 1.4rem;
+  }
+  .single #main > header .page-header .date, .single #main > header .page-header .cat, .single #main > header .page-header .tag, .single #main > header .page-header .comment,
+  .page #main > header .page-header .date,
+  .page #main > header .page-header .cat,
+  .page #main > header .page-header .tag,
+  .page #main > header .page-header .comment {
+    font-size: 0.8rem;
+  }
+  .single #main .column article, .single #main .column aside,
+  .page #main .column article,
+  .page #main .column aside {
+    width: 100%;
+    float: none;
+    margin: 0;
+  }
+  .single article header h1,
+  .page article header h1 {
+    font-size: 1.4rem;
+  }
+  .single .entry-content h2,
+  .page .entry-content h2 {
+    font-size: 1.35rem;
+    margin: 2.5rem 0 1.5rem;
+    padding: 0.7rem 0;
+  }
+  .single .entry-content h3,
+  .page .entry-content h3 {
+    font-size: 1.25rem;
+  }
+  .single .entry-content h4,
+  .page .entry-content h4 {
+    font-size: 1.15rem;
+  }
+  .single .entry-content h5,
+  .page .entry-content h5 {
+    font-size: 1.1rem;
+  }
+  .single .entry-content h6,
+  .page .entry-content h6 {
+    font-size: 1rem;
+  }
+  .single .entry-content ul li, .single .entry-content ol li,
+  .page .entry-content ul li,
+  .page .entry-content ol li {
+    line-height: 1.86;
+  }
+  .single .entry-content table,
+  .page .entry-content table {
+    overflow-x: auto;
+    white-space: nowrap;
+    border: none;
+    display: inline-block;
+    position: relative;
+    line-height: 1.86;
+  }
+  .single .entry-content table td,
+  .page .entry-content table td {
+    font-size: 0.8rem;
+  }
+  .single .entry-content table td ul li, .single .entry-content table td ol li,
+  .page .entry-content table td ul li,
+  .page .entry-content table td ol li {
+    font-size: 0.8rem;
+  }
+  .single .entry-content table::-webkit-scrollbar,
+  .page .entry-content table::-webkit-scrollbar {
+    height: 1.1rem;
+  }
+
+  .archive .site-main > header .page-header,
+  .search .site-main > header .page-header,
+  .paged .site-main > header .page-header,
+  .error404 .site-main > header .page-header {
+    padding: 5rem 0 4rem;
+  }
+  .archive .site-main > header .page-header h1,
+  .search .site-main > header .page-header h1,
+  .paged .site-main > header .page-header h1,
+  .error404 .site-main > header .page-header h1 {
+    font-size: 1.4rem;
+  }
+
+  .comments-area .comments-title {
+    font-size: 1.2rem;
+  }
+  .comments-area .comment-list {
+    font-size: 0.95rem;
+  }
+  .comments-area .comment-respond .comment-reply-title {
+    font-size: 1.1rem;
+  }
+}
+/*********************
+* SmartPhone - Tablet
+481px - 768px
+***********************/
+/*********************
+* SmartPhone
+0px - 480px
+***********************/
+@media only screen and (max-width: 480px) {
   .single .entry-content, .page .entry-content {
     line-height: 1.86;
+    font-size: 0.95rem;
+  }
+  .single .entry-content h2, .page .entry-content h2 {
+    font-size: 1.25rem;
+    padding: 0.5rem 0;
+  }
+  .single .entry-content h3, .page .entry-content h3 {
+    font-size: 1.15rem;
+  }
+  .single .entry-content h4, .page .entry-content h4 {
+    font-size: 1.1rem;
+  }
+  .single .entry-content h5, .page .entry-content h5 {
+    font-size: 1rem;
+  }
+  .single .entry-content h6, .page .entry-content h6 {
     font-size: 0.95rem;
   }
 
