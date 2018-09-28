@@ -2950,6 +2950,17 @@ body.scrolled #masthead {
 .page .entry-content ul.wp-block-gallery li {
   margin: 0.5rem;
 }
+.single .entry-content .wp-block-embed,
+.page .entry-content .wp-block-embed {
+  margin: 1.5rem 0;
+}
+.single .entry-content .wp-block-embed .wp-block-embed__wrapper .embed-video,
+.page .entry-content .wp-block-embed .wp-block-embed__wrapper .embed-video {
+  position: static;
+  padding-bottom: 0;
+  padding-top: 0;
+  margin: 0;
+}
 .single #edit-link,
 .page #edit-link {
   position: fixed;
