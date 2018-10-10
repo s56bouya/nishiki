@@ -1,8 +1,17 @@
 /**
- * Generated on 2018/09/04
+ * Generated on 2018/10/10
  * Author: Tetsuya Imamura(s56bouya)
  */
 
+/***********************
+* Responsive Breakpoints
+* 1001px +          PC
+* 0px - 1000px      SmartPhone - Tablet - PC
+* 769px - 1000px    Tablet - PC
+* 0px - 768px       Tablet
+* 481px - 768px     SmartPhone - Tablet
+* 0px - 480px       SmartPhone
+************************/
 @font-face {
   font-family: 'icomoon';
   src: url("fonts/icomoon/icomoon.eot?qrgenr");
@@ -2025,9 +2034,10 @@ body, button, input, select, textarea {
 }
 
 body.gutenberg-editor-page .edit-post-visual-editor {
-  line-height: 1.86;
+  line-height: 2;
   word-wrap: break-word;
   position: relative;
+  font-size: 1.05rem;
   /* Main column width */
   /* Width of "wide" blocks */
   /* Width of "full-wide" blocks */
@@ -2045,9 +2055,8 @@ body.gutenberg-editor-page .edit-post-visual-editor table {
 }
 body.gutenberg-editor-page .edit-post-visual-editor table th, body.gutenberg-editor-page .edit-post-visual-editor table td {
   padding: 1rem;
-  font-size: 1rem;
   text-align: left;
-  line-height: 1.86;
+  line-height: 2;
   border-width: 1px;
   border-style: solid;
 }
@@ -2073,38 +2082,36 @@ body.gutenberg-editor-page .edit-post-visual-editor h2 {
   border-top-width: 1px;
   border-bottom-style: solid;
   border-bottom-width: 1px;
-  margin: 3.5rem 0 1rem;
+  margin: 3.5rem 0 1.5rem;
   padding: 1.5rem 0 1.4rem;
 }
 body.gutenberg-editor-page .edit-post-visual-editor h3 {
   font-size: 1.4rem;
-  margin: 2rem 0 1rem;
+  margin: 2.5rem 0 1.5rem;
 }
 body.gutenberg-editor-page .edit-post-visual-editor h4 {
   font-size: 1.2rem;
-  margin: 1.5rem 0 1rem;
+  margin: 2.5rem 0 1.5rem;
 }
 body.gutenberg-editor-page .edit-post-visual-editor h5 {
   font-size: 1.15rem;
-  margin: 1.5rem 0 1rem;
+  margin: 2.5rem 0 1.5rem;
 }
 body.gutenberg-editor-page .edit-post-visual-editor h6 {
   font-size: 1.1rem;
-  margin: 1.3rem 0;
+  margin: 1.5rem 0;
 }
 body.gutenberg-editor-page .edit-post-visual-editor iframe {
   max-width: 100%;
 }
 body.gutenberg-editor-page .edit-post-visual-editor p {
-  font-size: 1.05rem;
-  margin: 1rem 0;
+  margin: 1.5rem 0;
 }
 body.gutenberg-editor-page .edit-post-visual-editor .button {
   font-size: 0.85rem;
 }
 body.gutenberg-editor-page .edit-post-visual-editor ul li, body.gutenberg-editor-page .edit-post-visual-editor ol li {
-  font-size: 1.05rem;
-  line-height: 1.86;
+  line-height: 2;
 }
 body.gutenberg-editor-page .edit-post-visual-editor ul {
   margin: 1.5rem 0;
@@ -2127,15 +2134,16 @@ body.gutenberg-editor-page .edit-post-visual-editor ol li {
 body.gutenberg-editor-page .edit-post-visual-editor ol li:last-child {
   margin-bottom: 0;
 }
-body.gutenberg-editor-page .edit-post-visual-editor pre {
+body.gutenberg-editor-page .edit-post-visual-editor pre:not(.CodeMirror-line) {
   border-width: 1px;
   border-style: dotted;
+  margin: 1.5rem 0;
   padding: 1rem 2rem;
   white-space: pre-wrap;
   word-wrap: break-word;
 }
 body.gutenberg-editor-page .edit-post-visual-editor blockquote {
-  margin: 0;
+  margin: 2.5rem 0;
   padding: 1rem 2rem;
   position: relative;
   width: 100%;
@@ -2146,8 +2154,8 @@ body.gutenberg-editor-page .edit-post-visual-editor blockquote::before, body.gut
   font-family: 'icomoon';
   content: "\e977";
   display: inline-block;
-  font-size: 2rem;
-  line-height: 2rem;
+  font-size: 1.7rem;
+  line-height: 1.7rem;
   text-transform: none;
   letter-spacing: normal;
   word-wrap: normal;
@@ -2168,6 +2176,24 @@ body.gutenberg-editor-page .edit-post-visual-editor blockquote::after {
 body.gutenberg-editor-page .edit-post-visual-editor ul.wp-block-gallery li {
   margin: 0.5rem;
 }
+body.gutenberg-editor-page .edit-post-visual-editor .wp-block-embed {
+  margin: 1.5rem 0;
+}
+body.gutenberg-editor-page .edit-post-visual-editor .wp-block-embed .wp-block-embed__wrapper .embed-video {
+  position: static;
+  padding-bottom: 0;
+  padding-top: 0;
+  margin: 0;
+}
+body.gutenberg-editor-page .edit-post-visual-editor .wp-block-quote {
+  border-left: none;
+  margin: 2.5rem 0;
+  padding: 1rem 2rem;
+  position: relative;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
 body.gutenberg-editor-page .edit-post-visual-editor .editor-post-title__block,
 body.gutenberg-editor-page .edit-post-visual-editor .editor-default-block-appender {
   max-width: 800px;
@@ -2184,7 +2210,8 @@ body.gutenberg-editor-page .edit-post-visual-editor a {
 
 @media only screen and (max-width: 1000px) {
   body.gutenberg-editor-page .edit-post-visual-editor {
-    line-height: 1.76;
+    line-height: 1.86;
+    font-size: 0.95rem;
   }
   body.gutenberg-editor-page .edit-post-visual-editor h2 {
     font-size: 1.4rem;
@@ -2203,12 +2230,6 @@ body.gutenberg-editor-page .edit-post-visual-editor a {
   body.gutenberg-editor-page .edit-post-visual-editor h6 {
     font-size: 1rem;
   }
-  body.gutenberg-editor-page .edit-post-visual-editor p {
-    font-size: 1rem;
-  }
-  body.gutenberg-editor-page .edit-post-visual-editor ul li, body.gutenberg-editor-page .edit-post-visual-editor ol li {
-    font-size: 1rem;
-  }
   body.gutenberg-editor-page .edit-post-visual-editor table {
     overflow-x: auto;
     white-space: nowrap;
@@ -2223,6 +2244,6 @@ body.gutenberg-editor-page .edit-post-visual-editor a {
     font-size: 0.8rem;
   }
   body.gutenberg-editor-page .edit-post-visual-editor table::-webkit-scrollbar {
-    height: 1.2rem;
+    height: 1rem;
   }
 }
