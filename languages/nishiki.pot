@@ -621,3 +621,6 @@ msgstr ""
 
 msgid "Rating Nishiki theme directory"
 msgstr ""
+
+msgid "Full Width"
+msgstr ""

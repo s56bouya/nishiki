@@ -700,6 +700,9 @@ msgstr ""
 msgid "Rating Nishiki theme directory"
 msgstr "テーマを評価する"
 
+msgid "Full Width"
+msgstr "全幅"
+
 #~ msgid "Section Title"
 #~ msgstr "セクションのタイトル（表示されません）"
 

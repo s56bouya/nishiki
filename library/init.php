@@ -297,3 +297,22 @@ function nishiki_add_oembed_class( $code ){
 
 	return $code;
 }
+
+/**
+ * Hides the custom post template for pages on WordPress 4.6 and older
+ *
+ * @param array $post_templates Array of page templates. Keys are filenames, values are translated names.
+ * @return array Filtered array of page templates.
+ */
+add_filter( 'theme_page_templates', 'nishiki_makewp_exclude_page_templates' );
+function nishiki_makewp_exclude_page_templates( $post_templates ) {
+	if ( version_compare( $GLOBALS['wp_version'], '4.7', '<' ) ) {
+		unset( $post_templates['templates/sidebar-left.php'] );
+		unset( $post_templates['templates/sidebar-bottom.php'] );
+		unset( $post_templates['templates/sidebar-right.php'] );
+		unset( $post_templates['templates/sidebar-none.php'] );
+		unset( $post_templates['templates/content-full-width.php'] );
+	}
+
+	return $post_templates;
+}

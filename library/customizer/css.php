@@ -272,11 +272,24 @@ function nishiki_customizer_css(){
 	// Sidebar Width
 	$post_sidebar_width = absint( get_theme_mod( 'setting_post_sidebar_width', '300' ) );
 	$post_column = esc_html( get_theme_mod( 'setting_post_column', 'none' ) );
-	if( $post_column !== 'none' ){
-		$post_sidebar_margin = $post_sidebar_width + absint( get_theme_mod( 'setting_post_sidebar_margin', '20' ) );
-		$output .= ".single #main .column { padding-{$post_column}: {$post_sidebar_margin}px;}";
-		$output .= "@media only screen and (max-width:768px) {.single #main .column { padding:0;}}";
-		$output .= ".single aside { width:{$post_sidebar_width}px; margin-{$post_column}:-{$post_sidebar_margin}px;}";
+	$post_sidebar_margin = $post_sidebar_width + absint( get_theme_mod( 'setting_post_sidebar_margin', '20' ) );
+
+	if ( ! is_page_template( 'templates/sidebar-none.php' ) ){
+		if( is_page_template( 'templates/sidebar-right.php' ) ){
+			$output .= ".post-template-sidebar-right #main .column { padding-right: {$post_sidebar_margin}px;}";
+			$output .= "@media only screen and (max-width:768px) {.post-template-sidebar-right #main .column { padding:0;}}";
+			$output .= ".post-template-sidebar-right aside { width:{$post_sidebar_width}px; margin-right:-{$post_sidebar_margin}px;}";
+		} elseif( is_page_template( 'templates/sidebar-left.php' ) ) {
+			$output .= ".post-template-sidebar-left #main .column { padding-left: {$post_sidebar_margin}px;}";
+			$output .= "@media only screen and (max-width:768px) {.post-template-sidebar-left #main .column { padding:0;}}";
+			$output .= ".post-template-sidebar-left aside { width:{$post_sidebar_width}px; margin-left:-{$post_sidebar_margin}px;}";
+		} elseif( is_page_template( 'templates/sidebar-bottom.php' ) ) {
+			$output .= ".post-template-sidebar-bottom aside {width:100%;}";
+		} elseif( $post_column !== 'none' ){
+			$output .= ".single #main .column { padding-{$post_column}: {$post_sidebar_margin}px;}";
+			$output .= "@media only screen and (max-width:768px) {.single #main .column { padding:0;}}";
+			$output .= ".single aside { width:{$post_sidebar_width}px; margin-{$post_column}:-{$post_sidebar_margin}px;}";
+		}
 	}
 
 	/*****************

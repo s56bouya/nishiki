@@ -1,6 +1,7 @@
 <?php
 /**
  * Template Name: Bottom Sidebar
+ * Template Post Type: post, page
  *
  * @package Nishiki
  */

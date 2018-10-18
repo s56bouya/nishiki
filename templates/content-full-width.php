@@ -1,17 +1,17 @@
 <?php
 /**
- * Template Name: Left Sidebar
+ * Template Name: Full Width
  * Template Post Type: post, page
  *
  * @package Nishiki
  */
 
 get_template_part( 'parts/header/meta' );
-get_template_part( 'parts/header/content-sidebar-left' ); ?>
+get_template_part( 'parts/header/content-sidebar-none' ); ?>
 		<main id="main" role="main" <?php post_class(); ?>>
 			<?php
 			while ( have_posts() ) : the_post();
-				get_template_part( 'parts/singular/content', get_post_format() );
+				get_template_part( 'parts/singular/content-full-width', get_post_format() );
 			endwhile;
 			?>
 		</main>
