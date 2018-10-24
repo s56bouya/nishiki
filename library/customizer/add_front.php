@@ -9,7 +9,20 @@ function nishiki_init_customizer_front( $wp_customize ) {
 		'active_callback' => 'nishiki_is_static_front_page',
 	));
 
-	// Text
+	// Home Content Display
+	$wp_customize->add_setting('setting_front_page_home_content_display', array(
+		'default' => false,
+		'sanitize_callback' => 'nishiki_sanitize_checkbox',
+	));
+
+	$wp_customize->add_control('ctrl_front_page_home_content_display', array(
+		'label'       =>  __( 'Display home content', 'nishiki' ),
+		'type'        =>  'checkbox',
+		'section'     =>  'section_front_page',
+		'settings'    =>  'setting_front_page_home_content_display',
+	));
+
+	// Section
 	for ( $i = 1; $i < ( 1 + NISHIKI_SECTION_NUM ); ++$i ) {
 
 		// Add Section

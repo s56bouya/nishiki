@@ -2,9 +2,14 @@
 get_header();
 ?>
 	<main id="main" class="site-main front-page" role="main">
-		<?php
-		get_template_part( 'parts/front/main_visual' );
-		get_template_part( 'parts/front/section' );
-		?>
+	  <?php get_template_part('parts/front/main_visual'); ?>
+		<?php if( get_theme_mod( 'setting_front_page_home_content_display', false ) === true ){ ?>
+		<div class="container-full-width">
+			<div class="entry-content">
+		  	<?php the_content(); ?>
+			</div>
+		</div>
+		<?php } ?>
+	  <?php get_template_part('parts/front/section'); ?>
 	</main>
 <?php get_footer();
