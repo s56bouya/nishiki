@@ -4,11 +4,20 @@ get_header();
 	<main id="main" class="site-main front-page" role="main">
 	  <?php get_template_part('parts/front/main_visual'); ?>
 		<?php if( get_theme_mod( 'setting_front_page_home_content_display', false ) === true ){ ?>
-		<div class="container-full-width">
-			<div class="entry-content">
-		  	<?php the_content(); ?>
-			</div>
-		</div>
+		<?php
+		if ( have_posts() ) :
+			while ( have_posts() ) :
+				the_post();
+				?>
+							<div class="container-full-width">
+								<div class="entry-content">
+					<?php the_content(); ?>
+								</div>
+							</div>
+				<?php
+			endwhile;
+		endif;
+		?>
 		<?php } ?>
 	  <?php get_template_part('parts/front/section'); ?>
 	</main>
