@@ -49,10 +49,10 @@ if ( ! class_exists( 'Nishiki_About_Page' ) ) {
 		  $theme_data = wp_get_theme('nishiki');
 		  ?>
 				<div class="wrap about-wrap theme_info_wrapper">
-					<h1><?php printf(esc_html__('Welcome to Nishiki - Version %1s', 'nishiki'), $theme_data->Version ); ?></h1>
+					<h1><?php printf(esc_html__('Welcome to Nishiki - Version %1s', 'nishiki'), esc_html( $theme_data->Version ) ); ?></h1>
 					<div class="about-text"><?php esc_html_e( 'Nishiki is a fully responsive theme. Elegance,Refined,Multifunctional. In your admin panel, go to Appearance -> Customize. About 80 customization can be done without writing the code. responsive layout, front page setting, movie setting, etc. Customization often required for web production / website operation can be set.', 'nishiki' ); ?></div>
 					<p>
-						<a href="<?php echo admin_url('customize.php'); ?>" class="button button-primary"><?php esc_html_e('Start Customize', 'nishiki'); ?></a>
+						<a href="<?php echo esc_url( admin_url('customize.php') ); ?>" class="button button-primary"><?php esc_html_e('Start Customize', 'nishiki'); ?></a>
 					</p>
 					<?php $this->create_tab(); ?>
 					<?php $this->create_tab_content(); ?>
@@ -83,7 +83,7 @@ if ( ! class_exists( 'Nishiki_About_Page' ) ) {
 							  'tab' => $key,
 						  ), $admin_url
 					  )
-				  ) . '" class="nav-tab' . $active . '">' . $val . '</a>';
+				  ) . '" class="nav-tab' . esc_attr( $active ) . '">' . esc_html( $val ) . '</a>';
 		  }
 
 		  echo '</div>';

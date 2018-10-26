@@ -1,5 +1,5 @@
 /**
- * Generated on 2018/10/10
+ * Generated on 2018/10/26
  * Author: Tetsuya Imamura(s56bouya)
  */
 
@@ -2076,63 +2076,14 @@ body.gutenberg-editor-page .edit-post-visual-editor img {
 body.gutenberg-editor-page .edit-post-visual-editor img.wp-more-tag {
   height: 1rem;
 }
-body.gutenberg-editor-page .edit-post-visual-editor h2 {
-  font-size: 1.7rem;
-  border-top-style: solid;
-  border-top-width: 1px;
-  border-bottom-style: solid;
-  border-bottom-width: 1px;
-  margin: 3.5rem 0 1.5rem;
-  padding: 1.5rem 0 1.4rem;
-}
-body.gutenberg-editor-page .edit-post-visual-editor h3 {
-  font-size: 1.4rem;
-  margin: 2.5rem 0 1.5rem;
-}
-body.gutenberg-editor-page .edit-post-visual-editor h4 {
-  font-size: 1.2rem;
-  margin: 2.5rem 0 1.5rem;
-}
-body.gutenberg-editor-page .edit-post-visual-editor h5 {
-  font-size: 1.15rem;
-  margin: 2.5rem 0 1.5rem;
-}
-body.gutenberg-editor-page .edit-post-visual-editor h6 {
-  font-size: 1.1rem;
-  margin: 1.5rem 0;
-}
 body.gutenberg-editor-page .edit-post-visual-editor iframe {
   max-width: 100%;
-}
-body.gutenberg-editor-page .edit-post-visual-editor p {
-  margin: 1.5rem 0;
 }
 body.gutenberg-editor-page .edit-post-visual-editor .button {
   font-size: 0.85rem;
 }
 body.gutenberg-editor-page .edit-post-visual-editor ul li, body.gutenberg-editor-page .edit-post-visual-editor ol li {
   line-height: 2;
-}
-body.gutenberg-editor-page .edit-post-visual-editor ul {
-  margin: 1.5rem 0;
-}
-body.gutenberg-editor-page .edit-post-visual-editor ul li {
-  margin-bottom: 0.5rem;
-}
-body.gutenberg-editor-page .edit-post-visual-editor ul li:first-child {
-  margin-top: 0;
-}
-body.gutenberg-editor-page .edit-post-visual-editor ul li:last-child {
-  margin-bottom: 0;
-}
-body.gutenberg-editor-page .edit-post-visual-editor ol {
-  margin: 1rem 0 1rem 0;
-}
-body.gutenberg-editor-page .edit-post-visual-editor ol li {
-  margin-bottom: 0.8rem;
-}
-body.gutenberg-editor-page .edit-post-visual-editor ol li:last-child {
-  margin-bottom: 0;
 }
 body.gutenberg-editor-page .edit-post-visual-editor pre:not(.CodeMirror-line) {
   border-width: 1px;
@@ -2172,6 +2123,26 @@ body.gutenberg-editor-page .edit-post-visual-editor blockquote::before {
 body.gutenberg-editor-page .edit-post-visual-editor blockquote::after {
   bottom: 0;
   right: 0;
+}
+body.gutenberg-editor-page .edit-post-visual-editor h2 {
+  font-size: 1.7rem;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  padding: 1.5rem 0 1.4rem;
+}
+body.gutenberg-editor-page .edit-post-visual-editor h3 {
+  font-size: 1.4rem;
+}
+body.gutenberg-editor-page .edit-post-visual-editor h4 {
+  font-size: 1.2rem;
+}
+body.gutenberg-editor-page .edit-post-visual-editor h5 {
+  font-size: 1.15rem;
+}
+body.gutenberg-editor-page .edit-post-visual-editor h6 {
+  font-size: 1.1rem;
 }
 body.gutenberg-editor-page .edit-post-visual-editor ul.wp-block-gallery li {
   margin: 0.5rem;
@@ -2215,7 +2186,6 @@ body.gutenberg-editor-page .edit-post-visual-editor a {
   }
   body.gutenberg-editor-page .edit-post-visual-editor h2 {
     font-size: 1.4rem;
-    margin: 2rem 0 1rem;
     padding: 0.7rem 0;
   }
   body.gutenberg-editor-page .edit-post-visual-editor h3 {

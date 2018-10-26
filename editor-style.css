@@ -1,8 +1,17 @@
 /**
- * Generated on 2018/09/25
+ * Generated on 2018/10/26
  * Author: Tetsuya Imamura(s56bouya)
  */
 
+/***********************
+* Responsive Breakpoints
+* 1001px +          PC
+* 0px - 1000px      SmartPhone - Tablet - PC
+* 769px - 1000px    Tablet - PC
+* 0px - 768px       Tablet
+* 481px - 768px     SmartPhone - Tablet
+* 0px - 480px       SmartPhone
+************************/
 @font-face {
   font-family: 'icomoon';
   src: url("fonts/icomoon/icomoon.eot?qrgenr");
@@ -2107,6 +2116,48 @@ body#tinymce.wp-editor input:active, body#tinymce.wp-editor input:focus, body#ti
 body#tinymce.wp-editor input, body#tinymce.wp-editor textarea {
   font-size: 1rem;
 }
+body#tinymce.wp-editor h2 {
+  margin: 3.5rem 0 1.5rem;
+}
+body#tinymce.wp-editor h3 {
+  margin: 2.5rem 0 1.5rem;
+}
+body#tinymce.wp-editor h4 {
+  margin: 2.5rem 0 1.5rem;
+}
+body#tinymce.wp-editor h5 {
+  margin: 2.5rem 0 1.5rem;
+}
+body#tinymce.wp-editor h6 {
+  margin: 1.5rem 0;
+}
+body#tinymce.wp-editor p {
+  margin: 1.5rem 0;
+}
+body#tinymce.wp-editor ul {
+  margin: 1.5rem 0;
+}
+body#tinymce.wp-editor ul li {
+  margin-bottom: 0.5rem;
+}
+body#tinymce.wp-editor ul li:first-child {
+  margin-top: 0;
+}
+body#tinymce.wp-editor ul li:last-child {
+  margin-bottom: 0;
+}
+body#tinymce.wp-editor ol {
+  margin: 1rem 0 1rem 0;
+}
+body#tinymce.wp-editor ol li {
+  margin-bottom: 0.8rem;
+}
+body#tinymce.wp-editor ol li:last-child {
+  margin-bottom: 0;
+}
+body#tinymce.wp-editor blockquote {
+  margin: 2.5rem 0;
+}
 body#tinymce.wp-editor table {
   max-width: 100%;
   text-align: left;
@@ -2141,36 +2192,8 @@ body#tinymce.wp-editor img {
 body#tinymce.wp-editor img.wp-more-tag {
   height: 1rem;
 }
-body#tinymce.wp-editor h2 {
-  font-size: 1.7rem;
-  border-top-style: solid;
-  border-top-width: 1px;
-  border-bottom-style: solid;
-  border-bottom-width: 1px;
-  margin: 3.5rem 0 1.5rem;
-  padding: 1.5rem 0 1.4rem;
-}
-body#tinymce.wp-editor h3 {
-  font-size: 1.4rem;
-  margin: 2.5rem 0 1.5rem;
-}
-body#tinymce.wp-editor h4 {
-  font-size: 1.2rem;
-  margin: 2.5rem 0 1.5rem;
-}
-body#tinymce.wp-editor h5 {
-  font-size: 1.15rem;
-  margin: 2.5rem 0 1.5rem;
-}
-body#tinymce.wp-editor h6 {
-  font-size: 1.1rem;
-  margin: 1.5rem 0;
-}
 body#tinymce.wp-editor iframe {
   max-width: 100%;
-}
-body#tinymce.wp-editor p {
-  margin: 1.5rem 0;
 }
 body#tinymce.wp-editor .button {
   font-size: 0.85rem;
@@ -2178,28 +2201,7 @@ body#tinymce.wp-editor .button {
 body#tinymce.wp-editor ul li, body#tinymce.wp-editor ol li {
   line-height: 2;
 }
-body#tinymce.wp-editor ul {
-  margin: 1.5rem 0;
-}
-body#tinymce.wp-editor ul li {
-  margin-bottom: 0.5rem;
-}
-body#tinymce.wp-editor ul li:first-child {
-  margin-top: 0;
-}
-body#tinymce.wp-editor ul li:last-child {
-  margin-bottom: 0;
-}
-body#tinymce.wp-editor ol {
-  margin: 1rem 0 1rem 0;
-}
-body#tinymce.wp-editor ol li {
-  margin-bottom: 0.8rem;
-}
-body#tinymce.wp-editor ol li:last-child {
-  margin-bottom: 0;
-}
-body#tinymce.wp-editor pre {
+body#tinymce.wp-editor pre:not(.CodeMirror-line) {
   border-width: 1px;
   border-style: dotted;
   margin: 1.5rem 0;
@@ -2238,6 +2240,26 @@ body#tinymce.wp-editor blockquote::after {
   bottom: 0;
   right: 0;
 }
+body#tinymce.wp-editor h2 {
+  font-size: 1.7rem;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  padding: 1.5rem 0 1.4rem;
+}
+body#tinymce.wp-editor h3 {
+  font-size: 1.4rem;
+}
+body#tinymce.wp-editor h4 {
+  font-size: 1.2rem;
+}
+body#tinymce.wp-editor h5 {
+  font-size: 1.15rem;
+}
+body#tinymce.wp-editor h6 {
+  font-size: 1.1rem;
+}
 body#tinymce.wp-editor a {
   color: #0a88cc;
 }
@@ -2249,7 +2271,6 @@ body#tinymce.wp-editor a {
   }
   body#tinymce.wp-editor h2 {
     font-size: 1.4rem;
-    margin: 2rem 0 1rem;
     padding: 0.7rem 0;
   }
   body#tinymce.wp-editor h3 {
@@ -2279,5 +2300,8 @@ body#tinymce.wp-editor a {
   }
   body#tinymce.wp-editor table::-webkit-scrollbar {
     height: 1rem;
+  }
+  body#tinymce.wp-editor h2 {
+    margin: 2rem 0 1rem;
   }
 }

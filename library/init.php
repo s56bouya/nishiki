@@ -80,7 +80,7 @@ add_action( 'enqueue_block_editor_assets', 'nishiki_block_editor_styles' );
 
 function nishiki_pingback_header() {
 	if ( is_singular() && pings_open() ) {
-		printf( '<link rel="pingback" href="%s">' . "\n", get_bloginfo( 'pingback_url' ) );
+		printf( '<link rel="pingback" href="%s">' . "\n", esc_url( get_bloginfo( 'pingback_url' ) ) );
 	}
 }
 add_action( 'wp_head', 'nishiki_pingback_header' );

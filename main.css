@@ -1,5 +1,5 @@
 /**
- * Generated on 2018/10/10
+ * Generated on 2018/10/26
  * Author: Tetsuya Imamura(s56bouya)
  */
 
@@ -2828,43 +2828,9 @@ body.scrolled #masthead {
 .page .entry-content img.wp-more-tag {
   height: 1rem;
 }
-.single .entry-content h2,
-.page .entry-content h2 {
-  font-size: 1.7rem;
-  border-top-style: solid;
-  border-top-width: 1px;
-  border-bottom-style: solid;
-  border-bottom-width: 1px;
-  margin: 3.5rem 0 1.5rem;
-  padding: 1.5rem 0 1.4rem;
-}
-.single .entry-content h3,
-.page .entry-content h3 {
-  font-size: 1.4rem;
-  margin: 2.5rem 0 1.5rem;
-}
-.single .entry-content h4,
-.page .entry-content h4 {
-  font-size: 1.2rem;
-  margin: 2.5rem 0 1.5rem;
-}
-.single .entry-content h5,
-.page .entry-content h5 {
-  font-size: 1.15rem;
-  margin: 2.5rem 0 1.5rem;
-}
-.single .entry-content h6,
-.page .entry-content h6 {
-  font-size: 1.1rem;
-  margin: 1.5rem 0;
-}
 .single .entry-content iframe,
 .page .entry-content iframe {
   max-width: 100%;
-}
-.single .entry-content p,
-.page .entry-content p {
-  margin: 1.5rem 0;
 }
 .single .entry-content .button,
 .page .entry-content .button {
@@ -2874,34 +2840,6 @@ body.scrolled #masthead {
 .page .entry-content ul li,
 .page .entry-content ol li {
   line-height: 2;
-}
-.single .entry-content ul,
-.page .entry-content ul {
-  margin: 1.5rem 0;
-}
-.single .entry-content ul li,
-.page .entry-content ul li {
-  margin-bottom: 0.5rem;
-}
-.single .entry-content ul li:first-child,
-.page .entry-content ul li:first-child {
-  margin-top: 0;
-}
-.single .entry-content ul li:last-child,
-.page .entry-content ul li:last-child {
-  margin-bottom: 0;
-}
-.single .entry-content ol,
-.page .entry-content ol {
-  margin: 1rem 0 1rem 0;
-}
-.single .entry-content ol li,
-.page .entry-content ol li {
-  margin-bottom: 0.8rem;
-}
-.single .entry-content ol li:last-child,
-.page .entry-content ol li:last-child {
-  margin-bottom: 0;
 }
 .single .entry-content pre:not(.CodeMirror-line),
 .page .entry-content pre:not(.CodeMirror-line) {
@@ -2945,6 +2883,87 @@ body.scrolled #masthead {
 .page .entry-content blockquote::after {
   bottom: 0;
   right: 0;
+}
+.single .entry-content h2,
+.page .entry-content h2 {
+  font-size: 1.7rem;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  padding: 1.5rem 0 1.4rem;
+}
+.single .entry-content h3,
+.page .entry-content h3 {
+  font-size: 1.4rem;
+}
+.single .entry-content h4,
+.page .entry-content h4 {
+  font-size: 1.2rem;
+}
+.single .entry-content h5,
+.page .entry-content h5 {
+  font-size: 1.15rem;
+}
+.single .entry-content h6,
+.page .entry-content h6 {
+  font-size: 1.1rem;
+}
+.single .entry-content h2,
+.page .entry-content h2 {
+  margin: 3.5rem 0 1.5rem;
+}
+.single .entry-content h3,
+.page .entry-content h3 {
+  margin: 2.5rem 0 1.5rem;
+}
+.single .entry-content h4,
+.page .entry-content h4 {
+  margin: 2.5rem 0 1.5rem;
+}
+.single .entry-content h5,
+.page .entry-content h5 {
+  margin: 2.5rem 0 1.5rem;
+}
+.single .entry-content h6,
+.page .entry-content h6 {
+  margin: 1.5rem 0;
+}
+.single .entry-content p,
+.page .entry-content p {
+  margin: 1.5rem 0;
+}
+.single .entry-content ul,
+.page .entry-content ul {
+  margin: 1.5rem 0;
+}
+.single .entry-content ul li,
+.page .entry-content ul li {
+  margin-bottom: 0.5rem;
+}
+.single .entry-content ul li:first-child,
+.page .entry-content ul li:first-child {
+  margin-top: 0;
+}
+.single .entry-content ul li:last-child,
+.page .entry-content ul li:last-child {
+  margin-bottom: 0;
+}
+.single .entry-content ol,
+.page .entry-content ol {
+  margin: 1rem 0 1rem 0;
+}
+.single .entry-content ol li,
+.page .entry-content ol li {
+  margin-bottom: 0.8rem;
+}
+.single .entry-content ol li:last-child,
+.page .entry-content ol li:last-child {
+  margin-bottom: 0;
+}
+.single .entry-content blockquote,
+.page .entry-content blockquote {
+  margin: 2.5rem 0;
 }
 .single .entry-content ul.wp-block-gallery li,
 .page .entry-content ul.wp-block-gallery li {
@@ -3065,7 +3084,7 @@ aside.sidebar ul li, aside.sidebar ol li {
   border-style: dotted;
 }
 aside.sidebar ul li a, aside.sidebar ol li a {
-  display: block;
+  display: inline-block;
   padding: 0.5rem 0;
 }
 
