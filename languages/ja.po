@@ -164,6 +164,9 @@ msgstr "テキストカラー"
 msgid "Link Color"
 msgstr "リンクカラー"
 
+msgid "Link Hover Color"
+msgstr "リンクホバーカラー"
+
 #: library/customizer/add_footer.php:66 library/customizer/add_footer.php:71
 #: library/customizer/add_front.php:174 library/customizer/add_front.php:179
 #: library/customizer/add_top.php:152 parts/footer/content.php:7

@@ -151,6 +151,9 @@ msgstr ""
 msgid "Link Color"
 msgstr ""
 
+msgid "Link Hover Color"
+msgstr ""
+
 #: library/customizer/add_footer.php:66 library/customizer/add_footer.php:71
 #: library/customizer/add_front.php:174 library/customizer/add_front.php:179
 #: library/customizer/add_top.php:152 parts/footer/content.php:7

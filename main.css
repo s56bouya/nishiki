@@ -1,5 +1,5 @@
 /**
- * Generated on 2018/10/26
+ * Generated on 2018/10/29
  * Author: Tetsuya Imamura(s56bouya)
  */
 
@@ -3878,7 +3878,7 @@ select {
   border-style: dotted;
 }
 .widget ul li a, .widget ol li a {
-  display: block;
+  display: inline-block;
   padding: 0.5rem 0;
 }
 .widget #recentcomments li {
