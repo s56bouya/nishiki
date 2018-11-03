@@ -25,7 +25,7 @@
 	<?php } ?>
 	<?php if ( has_nav_menu( 'global' ) ) { ?>
 		<?php if( get_theme_mod( 'setting_header_menu_collapse', false ) ) { ?>
-			<?php do_action( 'nishiki_before_site_nav_inner_menu_collaple_button' ); ?>
+			<?php do_action( 'nishiki_before_site_nav_inner_menu_collapse_button' ); ?>
 				<button id="menu-collapse-button" class="icon" aria-controls="top-menu">
 					<i class="icomoon icon-menu2"></i>
 				</button>

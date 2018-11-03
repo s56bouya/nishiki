@@ -1,7 +1,7 @@
 === Nishiki ===
 Requires at least: WordPress 4.5
 Tested up to: WordPress 4.9.8
-Version: 1.0.23
+Version: 1.0.24
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: one-column, two-columns, right-sidebar, left-sidebar, flexible-header, accessibility-ready, custom-colors, custom-header, custom-menu, custom-logo, featured-images, footer-widgets, post-formats, sticky-post, theme-options, threaded-comments, translation-ready, blog, entertainment, portfolio, editor-style, footer-widgets, full-width-template
@@ -51,8 +51,11 @@ Created by Keyamoon
 
 == Changelog ==
 
+= 1.0.24 =
+* Fixed : typo
+
 = 1.0.23 =
-* Add : Global nav do_action(nishiki_before_site_nav_inner_search_button, nishiki_after_site_nav_inner_search_button, nishiki_before_site_nav_inner_menu_collaple_button, nishiki_after_site_nav_inner_menu_collapse_button, nishiki_before_site_nav_inner_menu_button, nishiki_after_site_nav_inner_menu_button)
+* Add : Global nav do_action(nishiki_before_site_nav_inner_search_button, nishiki_after_site_nav_inner_search_button, nishiki_before_site_nav_inner_menu_collapse_button, nishiki_after_site_nav_inner_menu_collapse_button, nishiki_before_site_nav_inner_menu_button, nishiki_after_site_nav_inner_menu_button)
 * Change : Read global nav in global-nav.php
 
 = 1.0.22 =
