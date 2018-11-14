@@ -3,8 +3,8 @@
  */
 jQuery(function() {
     var e = jQuery("#search-button");
-    var s = jQuery("#search-overlay").find(".close");
-    var i = jQuery("#menu-button");
+    var i = jQuery("#search-overlay").find(".close");
+    var s = jQuery("#menu-button");
     var a = jQuery("#menu-overlay").find(".close");
     var n = 0;
     var t = 0;
@@ -25,10 +25,10 @@ jQuery("#masthead").hasClass("fixed")) {
     jQuery('a[href^="#"]').not(".noscroll").click(function() {
         if (!jQuery(this).parents("#menu-collapse").length) {
             var e = jQuery(this).attr("href");
-            var s = jQuery(e == "#" || e == "" ? "html" : e);
-            var i = s.offset().top - l;
+            var i = jQuery(e == "#" || e == "" ? "html" : e);
+            var s = i.offset().top - l;
             jQuery("html, body").animate({
-                scrollTop: i
+                scrollTop: s
             }, 500, "swing");
             return false;
         }
@@ -42,7 +42,7 @@ jQuery("#masthead").hasClass("fixed")) {
             top: -e + "px"
         });
     });
-    s.click(function() {
+    i.click(function() {
         jQuery("#search-overlay").removeClass("panel-open").addClass("panel-close");
         jQuery(".site-info a").removeClass("overlay");
         if (jQuery("#masthead").hasClass("fixed")) {
@@ -59,25 +59,25 @@ jQuery("#masthead").hasClass("fixed")) {
             }, 200);
         }, m / 3);
     });
-    i.click(function(e) {
+    s.click(function(e) {
         jQuery("#menu-overlay").addClass("panel-open");
 
 
-        var s = jQuery(window).scrollTop() - n;
+        var i = jQuery(window).scrollTop() - n;
         jQuery(r).addClass("nav-open").css({
-            top: -s + "px"
+            top: -i + "px"
         });
     });
     a.click(function(e) {
         jQuery("#menu-overlay").removeClass("panel-open").addClass("panel-close");
         jQuery(".site_info a").removeClass("overlay");
         if (jQuery("#masthead").hasClass("fixed")) {
-            var s = jQuery(r).css("top").replace("px", "") - n;
+            var i = jQuery(r).css("top").replace("px", "") - n;
         }
         jQuery(r).removeClass("nav-open").css({
             top: 0
         });
-        jQuery(window).scrollTop(-s);
+        jQuery(window).scrollTop(-i);
         clearTimeout(v);
         v = setTimeout(function() {
             setTimeout(function() {
@@ -107,9 +107,9 @@ jQuery("#masthead").hasClass("fixed")) {
     c.click(function(e) {
         o.addClass("panel-open");
 
-        var s = jQuery(window).scrollTop() - n;
+        var i = jQuery(window).scrollTop() - n;
         jQuery(r).addClass("nav-open").css({
-            top: -s + "px"
+            top: -i + "px"
         });
     });
     o.find(".menu-item-has-children").each(function() {
@@ -119,29 +119,29 @@ jQuery("#masthead").hasClass("fixed")) {
 
     o.find("ul span").click(function(e) {
         e.preventDefault();
-        var s = jQuery(this).parent().parent();
-        var i = s.parent().parent();
+        var i = jQuery(this).parent().parent();
+        var s = i.parent().parent();
         if (
 
 
-i.is("#menu-collapse") && i.hasClass("mobile") === false) {
-            if (s.hasClass("nav-selected")) {
+s.is("#menu-collapse") && s.hasClass("mobile") === false) {
+            if (i.hasClass("nav-selected")) {
 
-                s.removeClass("nav-selected");
+                i.removeClass("nav-selected");
             } else {
 
-                i.find("li").removeClass("nav-selected");
-                s.siblings().find("ul").hide();
-                s.siblings().removeClass("active");
-                s.siblings().find("li").removeClass("active");
-                s.addClass("nav-selected");
+                s.find("li").removeClass("nav-selected");
+                i.siblings().find("ul").hide();
+                i.siblings().removeClass("active");
+                i.siblings().find("li").removeClass("active");
+                i.addClass("nav-selected");
             }
         }
 
 
-        s.children("ul").slideToggle(300);
+        i.children("ul").slideToggle(300);
 
-        s.hasClass("active") ? h(s) : f(s);
+        i.hasClass("active") ? h(i) : f(i);
     });
 
 
@@ -157,12 +157,12 @@ i.is("#menu-collapse") && i.hasClass("mobile") === false) {
         o.removeClass("panel-open");
         o.addClass("panel-close");
         if (jQuery("#masthead").hasClass("fixed")) {
-            var s = jQuery(r).css("top").replace("px", "") - n;
+            var i = jQuery(r).css("top").replace("px", "") - n;
         }
         jQuery(r).removeClass("nav-open").css({
             top: 0
         });
-        jQuery(window).scrollTop(-s);
+        jQuery(window).scrollTop(-i);
         clearTimeout(v);
         v = setTimeout(function() {
             setTimeout(function() {
@@ -243,11 +243,11 @@ function nishiki_fixed_header_scrolled() {
 
 /*!
  * Event Listener
- */ function nishiki_registerListener(e, s) {
+ */ function nishiki_registerListener(e, i) {
     if (window.addEventListener) {
-        window.addEventListener(e, s);
+        window.addEventListener(e, i);
     } else {
-        window.attachEvent("on" + e, s);
+        window.attachEvent("on" + e, i);
     }
 }
 
@@ -363,23 +363,24 @@ nishiki_registerListener("scroll", nishiki_lazyLoad);
             var e = document.getElementById("main");
             if (
 e) {
-                var s = e.getElementsByTagName("section");
-                var i;
+                var i = e.getElementsByTagName("section");
+                var s;
                 for (
-var a = 0; a < s.length; a++) {
-                    if (nishiki_inView(s[a]) && s[a].classList.contains("imgloaded") === false) {
+var a = 0; a < i.length; a++) {
+                    if (nishiki_inView(i[a]) && i[a].classList.contains("imgloaded") === false) {
                         if (
-s[a].classList.contains("has-header-image") || s[a].classList.contains("main-video")) {
 
-                            var n = s[a].querySelector(".header-image");
+i[a].classList.contains("has-header-image") || i[a].classList.contains("main-video")) {
+
+                            var n = i[a].querySelector(".header-image");
                             if (n) {
                                 if (n.hasAttribute("data-src") === true) {
                                     n.src = n.getAttribute("data-src");
                                     n.removeAttribute("data-src");
                                 }
                                 if (
-s[a].hasAttribute("data-srcset") === true) {
-                                    n.srcset = s[a].getAttribute("data-srcset");
+i[a].hasAttribute("data-srcset") === true) {
+                                    n.srcset = i[a].getAttribute("data-srcset");
                                     n.removeAttribute("data-srcset");
                                 }
                                 n.offsetTop;
@@ -387,12 +388,12 @@ s[a].hasAttribute("data-srcset") === true) {
                             }
                         } else {
                             if (
-s[a].hasAttribute("data-src") === true) {
-                                s[a].classList.add("imgloaded");
+i[a].hasAttribute("data-src") === true) {
+
 
                                 var t = new Image();
-                                t.src = s[a].getAttribute("data-src");
-                                t.onload = nishiki_imgloaded(s[a], t);
+                                t.src = i[a].getAttribute("data-src");
+                                t.onload = nishiki_imgloaded(i[a], t);
                             }
                         }
                     }
@@ -408,21 +409,21 @@ s[a].hasAttribute("data-src") === true) {
 /*!
  * imgloaded
 
- */ function nishiki_imgloaded(e, s) {
-    e.appendChild(s);
-    s.offsetTop;
-    s.classList.add("imgloaded");
+ */ function nishiki_imgloaded(e, i) {
+    e.appendChild(i);
+    i.offsetTop;
+    i.classList.add("imgloaded");
 }
 
 /*!
  * inView
 
  */ function nishiki_inView(e) {
-    var s = e.getBoundingClientRect();
+    var i = e.getBoundingClientRect();
 
 
 
 
-    return s.bottom >= 0 && s.right >= 0 && s.top <= (window.innerHeight || document.documentElement.clientHeight
-) && s.left <= (window.innerWidth || document.documentElement.clientWidth);
+    return i.bottom >= 0 && i.right >= 0 && i.top <= (window.innerHeight || document.documentElement.clientHeight
+) && i.left <= (window.innerWidth || document.documentElement.clientWidth);
 }

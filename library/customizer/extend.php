@@ -41,7 +41,7 @@ if ( class_exists('WP_Customize_Control') ) {
 				echo esc_html( $this->start_content );
 			}
 			if ( isset( $this->label ) ) {
-				echo '<span class="customize-control-title">' . esc_html( $this->label ) . '</span>';
+				echo '<span class="customize-control-title">' . wp_kses_post( $this->label ) . '</span>';
 			}
 			if ( isset( $this->content ) ) {
 				echo wp_kses_post( $this->content );
