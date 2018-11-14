@@ -2489,31 +2489,6 @@ body.scrolled #masthead {
   object-fit: cover;
   transition: opacity 600ms linear;
   transform: translateX(-50%) translateY(-50%);
-  /*
-  &.imgloaded{
-  	opacity: 1;
-  	top: 50%;
-  	left: 50%;
-  	width: auto;
-  	height: auto;
-  	min-height: 100%;
-  	min-width: 100%;
-  	transform: translateX(-50%) translateY(-50%);
-  }
-  */
-  /*
-  &.imgloaded{
-  	top: 50%;
-  	left: 50%;
-  	width: auto;
-  	height: auto;
-  	min-height: 100%;
-  	min-width: 100%;
-  	opacity: 1;
-  	transition: opacity 1s ease;
-  	transform: translateX(-50%) translateY(-50%);
-  }
-  */
 }
 .front-page-section img.imgloaded {
   opacity: 1;
