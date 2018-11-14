@@ -2489,6 +2489,11 @@ body.scrolled #masthead {
 .front-page-section img {
   display: block;
   position: absolute;
+}
+.front-page-section img.imgloaded {
+  opacity: 1;
+}
+.front-page-section img.header-image {
   top: 50%;
   left: 50%;
   width: auto;
@@ -2500,9 +2505,6 @@ body.scrolled #masthead {
   transition: opacity 1s ease;
   transform: translateX(-50%) translateY(-50%);
   z-index: -1;
-}
-.front-page-section img.imgloaded {
-  opacity: 1;
 }
 .front-page-section img.img-placeholder {
   top: 0;
