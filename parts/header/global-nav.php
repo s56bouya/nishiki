@@ -9,7 +9,7 @@
 			  'container_class' => '',
 			  'container' => '',
 			  'menu_id' => '',
-			  'items_wrap' => '<ul>%3$s</ul>',
+			  'items_wrap' => '<ul style="list-style-type:none;">%3$s</ul>',
 		  );
 		  wp_nav_menu($nav_args);
 		  ?>

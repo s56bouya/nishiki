@@ -1,7 +1,7 @@
 === Nishiki ===
 Requires at least: WordPress 4.5
 Tested up to: WordPress 4.9.8
-Version: 1.0.24
+Version: 1.0.25
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: one-column, two-columns, right-sidebar, left-sidebar, flexible-header, accessibility-ready, custom-colors, custom-header, custom-menu, custom-logo, featured-images, footer-widgets, post-formats, sticky-post, theme-options, threaded-comments, translation-ready, blog, entertainment, portfolio, editor-style, footer-widgets, full-width-template
@@ -26,7 +26,7 @@ About 80 customization can be done without writing the code.
 
 == Copyright ==
 
-Nishiki WordPress Theme, Copyright 2017 AnimaGate, Inc.
+Nishiki WordPress Theme, Copyright 2018 AnimaGate, Inc.
 Nishiki is distributed under the terms of the GNU GPL
 
 This program is free software: you can redistribute it and/or modify
@@ -50,6 +50,9 @@ URL: https://icomoon.io/#icons-icomoon
 Created by Keyamoon
 
 == Changelog ==
+
+= 1.0.25 =
+* Fixed : Global nav background color(IE11, Edge)
 
 = 1.0.24 =
 * Fixed : typo
