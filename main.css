@@ -1,5 +1,5 @@
 /**
- * Generated on 2018/11/18
+ * Generated on 2018/11/19
  * Author: Tetsuya Imamura(s56bouya)
  */
 
@@ -3017,6 +3017,18 @@ body.scrolled #masthead {
 .page #edit-link a:hover {
   color: #fff;
   background: #000;
+}
+
+/***********************
+* Post for Page
+************************/
+.blog #main > header {
+  position: relative;
+  background-size: cover;
+  background-position: center center;
+  -webkit-transform: translatez(0);
+  -webkit-transform: translate3d(0, 0, 0);
+  animation: fadeIn 200ms linear 0s alternate;
 }
 
 /***********************
