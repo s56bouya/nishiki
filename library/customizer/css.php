@@ -338,16 +338,16 @@ function nishiki_customizer_css(){
 
 	// Title Background Color
 	$archive_title_background_color = esc_html( get_theme_mod( 'setting_archive_title_background_color', '#333333' ) );
-	$output .= ".archive header::after,.error404 header::after,.search header::after,.paged header::after{background-color:{$archive_title_background_color};}";
+	$output .= ".archive header::after,.error404 header::after,.search header::after,.paged header::after,.blog header::after{background-color:{$archive_title_background_color};}";
 
 	// Title Background Opacity
 	$archive_title_background_opacity = absint( get_theme_mod( 'setting_archive_title_background_opacity', '90' ) );
 	$archive_header_opacity = $archive_title_background_opacity / 100;
-	$output .= ".archive header::after,.error404 header::after,.search header::after,.paged header::after{opacity:{$archive_header_opacity};}";
+	$output .= ".archive header::after,.error404 header::after,.search header::after,.paged header::after,.blog header::after{opacity:{$archive_header_opacity};}";
 
 	// Title Text Color
 	$archive_title_text_color = esc_html( get_theme_mod( 'setting_archive_title_text_color', '#ffffff' ) );
-	$output .= ".archive .page-header,.error404 .page-header,.search .page-header,.paged .page-header{color:{$archive_title_text_color};}";
+	$output .= ".archive .page-header,.error404 .page-header,.search .page-header,.paged .page-header,.blog .page-header{color:{$archive_title_text_color};}";
 
 	/*****************
 	 * Footer

@@ -1,5 +1,5 @@
 /**
- * Generated on 2018/11/15
+ * Generated on 2018/11/18
  * Author: Tetsuya Imamura(s56bouya)
  */
 
@@ -2638,12 +2638,14 @@ body.scrolled #masthead {
 .archive .site-main > header,
 .search .site-main > header,
 .paged .site-main > header,
+.blog .site-main > header,
 .error404 .site-main > header {
   position: relative;
 }
 .archive .site-main > header::after,
 .search .site-main > header::after,
 .paged .site-main > header::after,
+.blog .site-main > header::after,
 .error404 .site-main > header::after {
   position: absolute;
   top: 0;
@@ -2655,6 +2657,7 @@ body.scrolled #masthead {
 .archive .site-main > header .page-header,
 .search .site-main > header .page-header,
 .paged .site-main > header .page-header,
+.blog .site-main > header .page-header,
 .error404 .site-main > header .page-header {
   text-align: center;
   padding: 8.5rem 0 7.5rem;
@@ -2666,6 +2669,7 @@ body.scrolled #masthead {
 .archive .site-main > header .page-header h1,
 .search .site-main > header .page-header h1,
 .paged .site-main > header .page-header h1,
+.blog .site-main > header .page-header h1,
 .error404 .site-main > header .page-header h1 {
   font-size: 1.8rem;
   margin: 0 auto 1rem;
@@ -3249,7 +3253,7 @@ aside.sidebar ul li a, aside.sidebar ol li a {
 }
 .post-navigation .nav-links {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
 }
 .post-navigation .nav-links a {
   display: flex;
@@ -4471,12 +4475,14 @@ i.icomoon {
   .archive .site-main > header .page-header,
   .search .site-main > header .page-header,
   .paged .site-main > header .page-header,
+  .blog .site-main > header .page-header,
   .error404 .site-main > header .page-header {
     padding: 5rem 0 4rem;
   }
   .archive .site-main > header .page-header h1,
   .search .site-main > header .page-header h1,
   .paged .site-main > header .page-header h1,
+  .blog .site-main > header .page-header h1,
   .error404 .site-main > header .page-header h1 {
     font-size: 1.4rem;
   }
