@@ -349,6 +349,16 @@ function nishiki_customizer_css(){
 	$archive_title_text_color = esc_html( get_theme_mod( 'setting_archive_title_text_color', '#ffffff' ) );
 	$output .= ".archive .page-header,.error404 .page-header,.search .page-header,.paged .page-header,.blog .page-header{color:{$archive_title_text_color};}";
 
+	// Sidebar Width
+	$archive_sidebar_width = absint( get_theme_mod( 'setting_archive_sidebar_width','300' ) );
+	$archive_column = esc_html( get_theme_mod( 'setting_archive_column', 'none' ) );
+	$archive_sidebar_margin = $archive_sidebar_width + absint( get_theme_mod( 'setting_archive_sidebar_margin', '20' ) );
+	if( $archive_column !== 'none' ){
+		$output .= ".archive #main .column, .blog #main .column{ padding-{$archive_column}: {$archive_sidebar_margin}px;}";
+		$output .= "@media only screen and (max-width:768px) {.archive #main .container.column, .blog #main .container.column {padding:3rem 0;}}";
+		$output .= ".archive aside, .blog aside { width:{$archive_sidebar_width}px;margin-{$archive_column}:-{$archive_sidebar_margin}px;}";
+	}
+
 	/*****************
 	 * Footer
 	 ******************/

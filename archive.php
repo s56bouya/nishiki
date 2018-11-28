@@ -18,10 +18,15 @@
 				<?php do_action( 'nishiki_after_archive_header' ); ?>
 			<?php endif; ?>
 
-			<div class="container">
+			<div class="container column">
 				<?php do_action( 'nishiki_before_archive_content' ); ?>
 				<?php get_template_part( 'parts/archive/content' ); ?>
 				<?php do_action( 'nishiki_after_archive_content' ); ?>
+				<?php
+				if( get_theme_mod( 'setting_archive_column', 'none' ) !== 'none' ){
+					get_sidebar();
+				}
+				?>
 			</div>
 		</main>
 <?php

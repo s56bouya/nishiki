@@ -50,8 +50,10 @@
 <?php
 if( is_single() && get_theme_mod( 'setting_post_column', 'none' ) !== 'none' ){
 	$column = ' sidebar-' . get_theme_mod( 'setting_post_column', 'none' );
-} else if( is_page() && get_theme_mod( 'setting_page_column' , 'none' ) !== 'none' ){
+} elseif( is_page() && ! is_front_page() && get_theme_mod( 'setting_page_column' , 'none' ) !== 'none' ){
 	$column = ' sidebar-' . get_theme_mod( 'setting_page_column' , 'none' );
+} elseif( ( is_archive() or ! nishiki_is_static_front_page() ) && get_theme_mod( 'setting_archive_column' , 'none' ) !== 'none' ){
+	$column = ' sidebar-' . get_theme_mod( 'setting_archive_column' , 'none' );
 } else {
 	$column = '';
 }

@@ -1,5 +1,5 @@
 /**
- * Generated on 2018/11/19
+ * Generated on 2018/11/28
  * Author: Tetsuya Imamura(s56bouya)
  */
 
@@ -2166,6 +2166,17 @@ body.scrolled #masthead {
   margin: 0 auto;
   width: 90%;
 }
+.container.column {
+  margin: 3rem auto;
+  zoom: 1;
+}
+.container.column::before, .container.column::after {
+  content: "";
+  display: table;
+}
+.container.column::after {
+  clear: both;
+}
 
 /***********************
 * Header
@@ -2453,6 +2464,13 @@ body.scrolled #masthead {
 }
 
 /***********************
+* Home
+************************/
+.home .container .archives {
+  /*padding:3rem 0;*/
+}
+
+/***********************
 * Front Page
 ************************/
 .front-page-section {
@@ -2674,12 +2692,48 @@ body.scrolled #masthead {
   font-size: 1.8rem;
   margin: 0 auto 1rem;
 }
+.archive .sidebar-left .archives,
+.search .sidebar-left .archives,
+.paged .sidebar-left .archives,
+.blog .sidebar-left .archives,
+.error404 .sidebar-left .archives {
+  float: right;
+}
+.archive .sidebar-left aside,
+.search .sidebar-left aside,
+.paged .sidebar-left aside,
+.blog .sidebar-left aside,
+.error404 .sidebar-left aside {
+  float: left;
+}
+.archive .sidebar-right .archives,
+.search .sidebar-right .archives,
+.paged .sidebar-right .archives,
+.blog .sidebar-right .archives,
+.error404 .sidebar-right .archives {
+  float: left;
+}
+.archive .sidebar-right aside,
+.search .sidebar-right aside,
+.paged .sidebar-right aside,
+.blog .sidebar-right aside,
+.error404 .sidebar-right aside {
+  float: right;
+}
+.archive .sidebar-bottom aside,
+.search .sidebar-bottom aside,
+.paged .sidebar-bottom aside,
+.blog .sidebar-bottom aside,
+.error404 .sidebar-bottom aside {
+  width: 100%;
+}
 
 /***********************
 * Archives
 ************************/
 .archives {
-  padding: 3rem 0;
+  width: 100%;
+  padding-bottom: 3rem;
 }
 .archives .title {
   text-align: center;
@@ -4484,6 +4538,19 @@ i.icomoon {
     height: 1.1rem;
   }
 
+  .archive #main .column .archives, .archive #main .column aside,
+  .search #main .column .archives,
+  .search #main .column aside,
+  .paged #main .column .archives,
+  .paged #main .column aside,
+  .blog #main .column .archives,
+  .blog #main .column aside,
+  .error404 #main .column .archives,
+  .error404 #main .column aside {
+    width: 100%;
+    float: none;
+    margin: 0;
+  }
   .archive .site-main > header .page-header,
   .search .site-main > header .page-header,
   .paged .site-main > header .page-header,

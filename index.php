@@ -26,8 +26,13 @@ get_header();
 	  if( get_theme_mod( 'setting_top_recently_article_display', true ) ){
 		  if( have_posts() ){
 			  ?>
-						<div class="container">
+						<div class="container column">
 				<?php get_template_part( 'parts/archive/content' ); ?>
+				<?php
+						if( ( is_archive() or ! nishiki_is_static_front_page() ) && get_theme_mod( 'setting_archive_column' , 'none' ) !== 'none' ){
+							get_sidebar();
+						}
+				?>
 						</div>
 		  <?php } } ?>
 	</main>
