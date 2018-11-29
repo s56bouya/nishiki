@@ -447,7 +447,7 @@ msgid "Sub Color"
 msgstr ""
 
 #: library/customizer/add_title_tagline.php:143
-msgid "Site Conents Width(Default 1200px)"
+msgid "Site Contents Width(Default 1200px)"
 msgstr ""
 
 #: library/customizer/add_title_tagline.php:166
@@ -629,4 +629,13 @@ msgid "Full Width"
 msgstr ""
 
 msgid "Display home content"
+msgstr ""
+
+msgid "Header Contents Width(Default 1200px)"
+msgstr ""
+
+msgid "Footer Contents Width(Default 1200px)"
+msgstr ""
+
+msgid "Archive Contents Width(Default 1200px)"
 msgstr ""

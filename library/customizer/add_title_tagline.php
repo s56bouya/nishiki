@@ -1,25 +1,6 @@
 <?php
 add_action( "customize_register", "nishiki_init_customizer_title_tagline" );
 function nishiki_init_customizer_title_tagline( $wp_customize ) {
-//	// Display Site Title
-//	$wp_customize->add_setting('setting_site_display_title', array(
-//		'default' => true,
-//		'sanitize_callback' => 'nishiki_sanitize_checkbox',
-//	));
-//
-//	$wp_customize->add_control(
-//		new WP_Customize_Control(
-//			$wp_customize,
-//			'ctrl_site_display_title',
-//			array(
-//				'label'       =>  __( 'Display Site Title', 'nishiki' ),
-//				'section'     =>  'title_tagline',
-//				'type'        =>  'checkbox',
-//				'settings'    =>  'setting_site_display_title',
-//				'priority'    =>  10,
-//			)
-//		)
-//	);
 
 	// Display Site Title and Tagline
 	$ctrl_display_header_text = $wp_customize->get_control('display_header_text');
@@ -135,7 +116,7 @@ function nishiki_init_customizer_title_tagline( $wp_customize ) {
 			$wp_customize,
 			'ctrl_site_contents_width',
 			array(
-				'label'	=>  __( 'Site Conents Width(Default 1200px)', 'nishiki' ),
+				'label'	=>  __( 'Site Contents Width(Default 1200px)', 'nishiki' ),
 				'min' => 500,
 				'max' => 9000,
 				'step' => 1,

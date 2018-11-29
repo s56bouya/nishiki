@@ -7,45 +7,27 @@ function nishiki_init_customizer_archive( $wp_customize ) {
 		'priority'  =>  60,
 	));
 
-	// Article Columns
-	$wp_customize->add_setting('setting_archive_article_columns',array(
-		'default'           =>  3,
-		'sanitize_callback' =>  'nishiki_sanitize_choices_columns',
-	));
+	// Archive Contents Width
+	$wp_customize->add_setting( 'setting_archive_contents_width' , array(
+		'default'     => 1200,
+		'sanitize_callback' => 'nishiki_sanitize_number_range',
+	) );
 
-	$wp_customize->add_control('ctrl_archive_article_columns',array(
-		'label'             =>  __( 'Article Columns', 'nishiki' ),
-		'section'           =>  'section_archive',
-		'settings'          =>  'setting_archive_article_columns',
-		'priority'          =>  1000,
-		'type'              =>  'select',
-		'choices'           =>  array(
-			'1' =>  __( '1 Column', 'nishiki' ),
-			'2' =>  __( '2 Columns', 'nishiki' ),
-			'3' =>  __( '3 Columns', 'nishiki' ),
-		),
-	));
-
-
-	// Column
-	$wp_customize->add_setting('setting_archive_column',array(
-		'default'           =>  'none',
-		'sanitize_callback' =>  'nishiki_sanitize_choices',
-	));
-
-	$wp_customize->add_control('ctrl_archive_column',array(
-		'label'             =>  __( 'Sidebar', 'nishiki' ),
-		'section'           =>  'section_archive',
-		'settings'          =>  'setting_archive_column',
-		'priority'          =>  1000,
-		'type'              =>  'select',
-		'choices'           =>  array(
-			'left'  =>  __( 'Left Sidebar', 'nishiki' ),
-			'right' =>  __( 'Right Sidebar', 'nishiki' ),
-			'bottom' =>  __( 'Bottom Sidebar', 'nishiki' ),
-			'none'  =>  __( 'No Sidebar', 'nishiki' ),
-		),
-	));
+	$wp_customize->add_control(
+		new Nishiki_WP_Customize_Range(
+			$wp_customize,
+			'ctrl_archive_contents_width',
+			array(
+				'label'	=>  __( 'Archive Contents Width(Default 1200px)', 'nishiki' ),
+				'min' => 500,
+				'max' => 9000,
+				'step' => 1,
+				'section' => 'section_archive',
+				'settings'   => 'setting_archive_contents_width',
+				'priority'  =>  1000,
+			)
+		)
+	);
 
 	// Sidebar Width
 	$wp_customize->add_setting( 'setting_archive_sidebar_width' , array(
@@ -64,7 +46,7 @@ function nishiki_init_customizer_archive( $wp_customize ) {
 				'step' => 10,
 				'section' => 'section_archive',
 				'settings'   => 'setting_archive_sidebar_width',
-				'priority'          =>  1010,
+				'priority'          =>  1000,
 			)
 		)
 	);
@@ -87,18 +69,51 @@ function nishiki_init_customizer_archive( $wp_customize ) {
 				'step' => 1,
 				'section' => 'section_archive',
 				'settings'   => 'setting_archive_sidebar_margin',
-				'priority'          =>  1020,
+				'priority'          =>  1000,
 			)
 		)
 	);
 
 
+	// Article Columns
+	$wp_customize->add_setting('setting_archive_article_columns',array(
+		'default'           =>  3,
+		'sanitize_callback' =>  'nishiki_sanitize_choices_columns',
+	));
+
+	$wp_customize->add_control('ctrl_archive_article_columns',array(
+		'label'             =>  __( 'Article Columns', 'nishiki' ),
+		'section'           =>  'section_archive',
+		'settings'          =>  'setting_archive_article_columns',
+		'type'              =>  'select',
+		'choices'           =>  array(
+			'1' =>  __( '1 Column', 'nishiki' ),
+			'2' =>  __( '2 Columns', 'nishiki' ),
+			'3' =>  __( '3 Columns', 'nishiki' ),
+		),
+		'priority'          =>  1000,
+	));
 
 
+	// Column
+	$wp_customize->add_setting('setting_archive_column',array(
+		'default'           =>  'none',
+		'sanitize_callback' =>  'nishiki_sanitize_choices',
+	));
 
-
-
-
+	$wp_customize->add_control('ctrl_archive_column',array(
+		'label'             =>  __( 'Sidebar', 'nishiki' ),
+		'section'           =>  'section_archive',
+		'settings'          =>  'setting_archive_column',
+		'type'              =>  'select',
+		'choices'           =>  array(
+			'left'  =>  __( 'Left Sidebar', 'nishiki' ),
+			'right' =>  __( 'Right Sidebar', 'nishiki' ),
+			'bottom' =>  __( 'Bottom Sidebar', 'nishiki' ),
+			'none'  =>  __( 'No Sidebar', 'nishiki' ),
+		),
+		'priority'          =>  1000,
+	));
 
 
 	// Display Author
@@ -116,7 +131,7 @@ function nishiki_init_customizer_archive( $wp_customize ) {
 				'section'     =>  'section_archive',
 				'type'        =>  'checkbox',
 				'settings'    =>  'setting_archive_display_author',
-				'priority'    =>  10,
+				'priority'    =>  2000,
 			)
 		)
 	);
@@ -136,7 +151,7 @@ function nishiki_init_customizer_archive( $wp_customize ) {
 				'section'     =>  'section_archive',
 				'type'        =>  'checkbox',
 				'settings'    =>  'setting_archive_display_date',
-				'priority'    =>  10,
+				'priority'    =>  2000,
 			)
 		)
 	);
@@ -156,7 +171,7 @@ function nishiki_init_customizer_archive( $wp_customize ) {
 				'section'     =>  'section_archive',
 				'type'        =>  'checkbox',
 				'settings'    =>  'setting_archive_display_archive',
-				'priority'    =>  10,
+				'priority'    =>  2000,
 			)
 		)
 	);
@@ -176,10 +191,11 @@ function nishiki_init_customizer_archive( $wp_customize ) {
 				'section'     =>  'section_archive',
 				'type'        =>  'checkbox',
 				'settings'    =>  'setting_archive_display_comment',
-				'priority'    =>  20,
+				'priority'    =>  2000,
 			)
 		)
 	);
+
 
 	// Title Background Color
 	$wp_customize->add_setting('setting_archive_title_background_color',array(
@@ -195,7 +211,7 @@ function nishiki_init_customizer_archive( $wp_customize ) {
 				'label'       => __( 'Title Background Color', 'nishiki' ),
 				'section'     => 'section_archive',
 				'settings'    => 'setting_archive_title_background_color',
-				'priority'    => 1030,
+				'priority'    => 3000,
 			)
 		)
 	);
@@ -217,7 +233,7 @@ function nishiki_init_customizer_archive( $wp_customize ) {
 				'step' => 1,
 				'section' => 'section_archive',
 				'settings'   => 'setting_archive_title_background_opacity',
-				'priority'          =>  1040,
+				'priority'          =>  3000,
 			)
 		)
 	);
@@ -237,7 +253,7 @@ function nishiki_init_customizer_archive( $wp_customize ) {
 				'section'     => 'section_archive',
 				'transport'   => 'postMessage',
 				'settings'    => 'setting_archive_title_text_color',
-				'priority'    => 1050,
+				'priority'    => 3000,
 			)
 		)
 	);
@@ -253,7 +269,7 @@ function nishiki_init_customizer_archive( $wp_customize ) {
 		'type'      =>  'text',
 		'section'   =>  'section_archive',
 		'settings'  =>  'setting_archive_excerpt_text',
-		'priority'  =>  1060,
+		'priority'  =>  3000,
 	));
 
 
@@ -274,7 +290,7 @@ function nishiki_init_customizer_archive( $wp_customize ) {
 				'step'      => 1,
 				'section'   => 'section_archive',
 				'settings'  => 'setting_archive_excerpt_text_num',
-				'priority'  =>  1070,
+				'priority'  =>  3000,
 			)
 		)
 	);
@@ -294,7 +310,7 @@ function nishiki_init_customizer_archive( $wp_customize ) {
 				'description' => __( 'Display when eye-catching image is not set. Recommended image size 16:9', 'nishiki' ),
 				'section'    => 'section_archive',
 				'settings'   => 'setting_archive_default_image',
-				'priority'=> 1080,
+				'priority'=> 3000,
 			)
 		)
 	);

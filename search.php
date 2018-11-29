@@ -12,7 +12,7 @@
 				<?php do_action( 'nishiki_after_search_header' ); ?>
 			<?php endif; ?>
 
-			<div class="container">
+			<div class="container column">
 				<?php do_action( 'nishiki_before_search_content' ); ?>
 				<?php get_template_part( 'parts/archive/content' ); ?>
 				<?php do_action( 'nishiki_after_search_content' ); ?>

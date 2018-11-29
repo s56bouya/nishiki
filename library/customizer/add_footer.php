@@ -7,6 +7,28 @@ function nishiki_init_customizer_footer( $wp_customize ) {
 		'priority'  =>  80,
 	));
 
+	// Footer Contents Width
+	$wp_customize->add_setting( 'setting_footer_contents_width' , array(
+		'default'     => 1200,
+		'sanitize_callback' => 'nishiki_sanitize_number_range',
+	) );
+
+	$wp_customize->add_control(
+		new Nishiki_WP_Customize_Range(
+			$wp_customize,
+			'ctrl_footer_contents_width',
+			array(
+				'label'	=>  __( 'Footer Contents Width(Default 1200px)', 'nishiki' ),
+				'min' => 500,
+				'max' => 9000,
+				'step' => 1,
+				'section' => 'section_footer',
+				'settings'   => 'setting_footer_contents_width',
+				'priority'  =>  1000,
+			)
+		)
+	);
+
 	// Widget Columns
 	$wp_customize->add_setting('setting_footer_widget_columns',array(
 		'default'           =>  3,

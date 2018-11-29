@@ -10,7 +10,7 @@
 			</div>
 		</header>
 		<?php do_action( 'nishiki_after_404_header' ); ?>
-		<div class="container">
+		<div class="container column">
 			<?php do_action( 'nishiki_before_404_content' ); ?>
 			<p><?php esc_html_e( 'It looks like nothing was found at the location. Maybe try a search?', 'nishiki' ); ?></p>
 			<?php get_search_form(); ?>

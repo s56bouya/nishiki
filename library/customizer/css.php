@@ -154,6 +154,12 @@ function nishiki_customizer_css(){
 	 * Header
 	 ******************/
 
+	// Header Contents Width
+	$header_contents_width = absint( get_theme_mod( 'setting_header_contents_width', '1200' ) );
+	$output .= "
+		#masthead .container{max-width:{$header_contents_width}px;}
+		";
+
 	// background color
 	$header_background_color = esc_html( get_theme_mod( 'setting_header_background_color', '#ffffff' ) );
 	$output .= "#masthead{background:{$header_background_color};}";
@@ -336,6 +342,12 @@ function nishiki_customizer_css(){
 	 * Archive
 	 ******************/
 
+	// Archive Contents Width
+	$archive_contents_width = absint( get_theme_mod( 'setting_archive_contents_width', '1200' ) );
+	$output .= "
+		.archive #main .container.column, .search #main .container.column, .paged #main .container.column, .blog #main .container.column, .error404 #main .container.column{max-width:{$archive_contents_width}px;}
+		";
+
 	// Title Background Color
 	$archive_title_background_color = esc_html( get_theme_mod( 'setting_archive_title_background_color', '#333333' ) );
 	$output .= ".archive header::after,.error404 header::after,.search header::after,.paged header::after,.blog header::after{background-color:{$archive_title_background_color};}";
@@ -355,13 +367,19 @@ function nishiki_customizer_css(){
 	$archive_sidebar_margin = $archive_sidebar_width + absint( get_theme_mod( 'setting_archive_sidebar_margin', '20' ) );
 	if( $archive_column !== 'none' ){
 		$output .= ".archive #main .column, .blog #main .column{ padding-{$archive_column}: {$archive_sidebar_margin}px;}";
-		$output .= "@media only screen and (max-width:768px) {.archive #main .container.column, .blog #main .container.column {padding:3rem 0;}}";
+		$output .= "@media only screen and (max-width:768px) {.archive #main .container.column, .blog #main .container.column {padding:0;}}";
 		$output .= ".archive aside, .blog aside { width:{$archive_sidebar_width}px;margin-{$archive_column}:-{$archive_sidebar_margin}px;}";
 	}
 
 	/*****************
 	 * Footer
 	 ******************/
+
+	// Footer Contents Width
+	$footer_contents_width = absint( get_theme_mod( 'setting_footer_contents_width', '1200' ) );
+	$output .= "
+		#footer .footer-content .container{max-width:{$footer_contents_width}px;}
+		";
 
 	// Widget Text Color
 	$footer_widget_text_color = esc_html( get_theme_mod( 'setting_footer_widget_text_color', '#333333' ) );

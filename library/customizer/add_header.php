@@ -7,6 +7,28 @@ function nishiki_init_customizer_header( $wp_customize ) {
 		'priority' => 70,
 	));
 
+	// Header Contents Width
+	$wp_customize->add_setting( 'setting_header_contents_width' , array(
+		'default'     => 1200,
+		'sanitize_callback' => 'nishiki_sanitize_number_range',
+	) );
+
+	$wp_customize->add_control(
+		new Nishiki_WP_Customize_Range(
+			$wp_customize,
+			'ctrl_header_contents_width',
+			array(
+				'label'	=>  __( 'Header Contents Width(Default 1200px)', 'nishiki' ),
+				'min' => 500,
+				'max' => 9000,
+				'step' => 1,
+				'section' => 'section_header',
+				'settings'   => 'setting_header_contents_width',
+				'priority'  =>  1000,
+			)
+		)
+	);
+
 	// Background Color
 	$wp_customize->add_setting('setting_header_background_color',array(
 		'default' => '#ffffff',
