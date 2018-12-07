@@ -718,6 +718,21 @@ msgstr "フッター コンテンツ幅(デフォルト:1200px)"
 msgid "Archive Contents Width(Default 1200px)"
 msgstr "アーカイブページ コンテンツ幅(デフォルト:1200px)"
 
+msgid "Related Posts"
+msgstr "関連記事"
+
+msgid "Display Related Posts"
+msgstr "関連記事を表示"
+
+msgid "Related Posts Text Label"
+msgstr "関連記事のテキストラベル"
+
+msgid "Related Posts Columns"
+msgstr "関連記事のカラム"
+
+msgid "Related Posts Number"
+msgstr "関連記事数"
+
 #~ msgid "Section Title"
 #~ msgstr "セクションのタイトル（表示されません）"
 
@@ -750,9 +765,6 @@ msgstr "アーカイブページ コンテンツ幅(デフォルト:1200px)"
 
 #~ msgid "Search for"
 #~ msgstr "探す"
-
-#~ msgid "Recently Posts"
-#~ msgstr "最新の投稿"
 
 #~ msgid "Comment Background Color"
 #~ msgstr "コメント 背景カラー"

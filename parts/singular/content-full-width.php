@@ -51,7 +51,7 @@ if( has_post_thumbnail() ){
 </header>
 <?php do_action( 'nishiki_after_singular_header' ); ?>
 <div class="container-full-width">
-	<article>
+	<article class="entry">
 	  <?php do_action( 'nishiki_before_singular_content' ); ?>
 		<div class="entry-content">
 			<?php the_content(); ?>

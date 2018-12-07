@@ -1,5 +1,5 @@
 /**
- * Generated on 2018/11/28
+ * Generated on 2018/12/06
  * Author: Tetsuya Imamura(s56bouya)
  */
 
@@ -2699,11 +2699,11 @@ body.scrolled #masthead {
 .error404 .sidebar-left .archives {
   float: right;
 }
-.archive .sidebar-left aside,
-.search .sidebar-left aside,
-.paged .sidebar-left aside,
-.blog .sidebar-left aside,
-.error404 .sidebar-left aside {
+.archive .sidebar-left aside.sidebar,
+.search .sidebar-left aside.sidebar,
+.paged .sidebar-left aside.sidebar,
+.blog .sidebar-left aside.sidebar,
+.error404 .sidebar-left aside.sidebar {
   float: left;
 }
 .archive .sidebar-right .archives,
@@ -2713,18 +2713,18 @@ body.scrolled #masthead {
 .error404 .sidebar-right .archives {
   float: left;
 }
-.archive .sidebar-right aside,
-.search .sidebar-right aside,
-.paged .sidebar-right aside,
-.blog .sidebar-right aside,
-.error404 .sidebar-right aside {
+.archive .sidebar-right aside.sidebar,
+.search .sidebar-right aside.sidebar,
+.paged .sidebar-right aside.sidebar,
+.blog .sidebar-right aside.sidebar,
+.error404 .sidebar-right aside.sidebar {
   float: right;
 }
-.archive .sidebar-bottom aside,
-.search .sidebar-bottom aside,
-.paged .sidebar-bottom aside,
-.blog .sidebar-bottom aside,
-.error404 .sidebar-bottom aside {
+.archive .sidebar-bottom aside.sidebar,
+.search .sidebar-bottom aside.sidebar,
+.paged .sidebar-bottom aside.sidebar,
+.blog .sidebar-bottom aside.sidebar,
+.error404 .sidebar-bottom aside.sidebar {
   width: 100%;
 }
 
@@ -2754,28 +2754,28 @@ body.scrolled #masthead {
 /***********************
 * Singular( Post & Page )
 ************************/
-.single article,
-.page article {
+.single article.entry,
+.page article.entry {
   width: 100%;
 }
-.single .sidebar-left article,
-.page .sidebar-left article {
+.single .sidebar-left article.entry,
+.page .sidebar-left article.entry {
   float: right;
 }
-.single .sidebar-left aside,
-.page .sidebar-left aside {
+.single .sidebar-left aside.sidebar,
+.page .sidebar-left aside.sidebar {
   float: left;
 }
-.single .sidebar-right article,
-.page .sidebar-right article {
+.single .sidebar-right article.entry,
+.page .sidebar-right article.entry {
   float: left;
 }
-.single .sidebar-right aside,
-.page .sidebar-right aside {
+.single .sidebar-right aside.sidebar,
+.page .sidebar-right aside.sidebar {
   float: right;
 }
-.single .sidebar-bottom aside,
-.page .sidebar-bottom aside {
+.single .sidebar-bottom aside.sidebar,
+.page .sidebar-bottom aside.sidebar {
   width: 100%;
 }
 .single #main > header,
@@ -3129,6 +3129,14 @@ body.scrolled #masthead {
 }
 .author-info .description {
   text-align: left;
+}
+
+/***********************
+* Related Posts
+************************/
+.related-posts .title {
+  padding-bottom: 2rem;
+  font-size: 1.4rem;
 }
 
 /***********************
@@ -4477,16 +4485,16 @@ i.icomoon {
   .page #main > header .page-header .comment {
     font-size: 0.8rem;
   }
-  .single #main .column article, .single #main .column aside,
-  .page #main .column article,
-  .page #main .column aside {
+  .single #main .column article.entry, .single #main .column aside.sidebar,
+  .page #main .column article.entry,
+  .page #main .column aside.sidebar {
     width: 100%;
     float: none;
     margin: 0;
   }
-  .single article header h1,
-  .page article header h1 {
-    font-size: 1.4rem;
+  .single article.entry header h1,
+  .page article.entry header h1 {
+    /*						font-size:1.4rem;*/
   }
   .single .entry-content h2,
   .page .entry-content h2 {

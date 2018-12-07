@@ -639,3 +639,18 @@ msgstr ""
 
 msgid "Archive Contents Width(Default 1200px)"
 msgstr ""
+
+msgid "Related Posts"
+msgstr ""
+
+msgid "Display Related Posts"
+msgstr ""
+
+msgid "Related Posts Text Label"
+msgstr ""
+
+msgid "Related Posts Columns"
+msgstr ""
+
+msgid "Related Posts Number"
+msgstr ""

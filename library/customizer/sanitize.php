@@ -86,7 +86,14 @@ function nishiki_sanitize_choices_front_page_text_align( $input ) {
 	return 'center';
 }
 
-// number
+// Number
+function nishiki_sanitize_number( $number, $setting ) {
+	$number = absint( $number );
+
+	return ( $number ? $number : $setting->default );
+}
+
+// Number range
 function nishiki_sanitize_number_range( $number, $setting ) {
 	$number = absint( $number );
 	$atts = ( isset( $setting->manager->get_control( $setting->id )->input_attrs ) ? $setting->manager->get_control( $setting->id )->input_attrs : array() );

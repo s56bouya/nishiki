@@ -268,4 +268,64 @@ function nishiki_init_customizer_post( $wp_customize ) {
 		'priority'    =>  1130,
 	));
 
+	// Related Posts Display
+	$wp_customize->add_setting('setting_post_related_posts_display',array(
+		'default' => false,
+		'sanitize_callback' => 'nishiki_sanitize_text',
+	));
+
+	$wp_customize->add_control('ctrl_post_related_posts_display',array(
+		'label'       =>  __( 'Display Related Posts', 'nishiki' ),
+		'type'        =>  'checkbox',
+		'section'     =>  'section_post',
+		'settings'    =>  'setting_post_related_posts_display',
+		'priority'    =>  2000,
+	));
+
+	// Related Posts Text
+	$wp_customize->add_setting('setting_post_related_posts_text',array(
+		'default' => __( 'Related Posts', 'nishiki' ),
+		'sanitize_callback' => 'nishiki_sanitize_text',
+	));
+
+	$wp_customize->add_control('ctrl_post_related_posts_text',array(
+		'label'       =>  __( 'Related Posts Text Label', 'nishiki' ),
+		'type'        =>  'text',
+		'section'     =>  'section_post',
+		'settings'    =>  'setting_post_related_posts_text',
+		'priority'    =>  2100,
+	));
+
+	// Related Posts Columns
+	$wp_customize->add_setting('setting_post_related_posts_columns',array(
+		'default'           =>  3,
+		'sanitize_callback' =>  'nishiki_sanitize_choices_columns',
+	));
+
+	$wp_customize->add_control('ctrl_post_related_posts_columns',array(
+		'label'             =>  __( 'Related Posts Columns', 'nishiki' ),
+		'section'           =>  'section_post',
+		'settings'          =>  'setting_post_related_posts_columns',
+		'type'              =>  'select',
+		'choices'           =>  array(
+			'1' =>  __( '1 Column', 'nishiki' ),
+			'2' =>  __( '2 Columns', 'nishiki' ),
+			'3' =>  __( '3 Columns', 'nishiki' ),
+		),
+		'priority'          =>  2200,
+	));
+
+	// Related Posts Number
+	$wp_customize->add_setting( 'setting_post_related_posts_number', array(
+		'sanitize_callback' => 'nishiki_sanitize_number',
+		'default' => 3,
+	));
+
+	$wp_customize->add_control( 'ctrl_post_related_posts_number', array(
+		'label'             => __( 'Related Posts Number', 'nishiki' ),
+		'section'           => 'section_post',
+		'settings'          => 'setting_post_related_posts_number',
+		'type'              => 'number',
+		'priority'          =>  2300,
+	));
 }

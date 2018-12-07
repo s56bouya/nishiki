@@ -51,7 +51,7 @@ if( has_post_thumbnail() ){
 </header>
 <?php do_action( 'nishiki_after_singular_header' ); ?>
 <div class="container column">
-	<article>
+	<article class="entry">
 	  <?php do_action( 'nishiki_before_singular_content' ); ?>
 		<div class="entry-content">
 			<?php the_content(); ?>
@@ -60,7 +60,7 @@ if( has_post_thumbnail() ){
 	  <?php do_action( 'nishiki_after_singular_content' ); ?>
 			<footer>
 		  <?php if( is_single() && get_theme_mod( 'setting_post_author_display', true ) ){ ?>
-						<div class="author-info">
+						<section class="author-info">
 				<?php
 				if ( get_theme_mod( 'setting_post_author_text',
 					__( 'Author', 'nishiki' ) )
@@ -89,9 +89,13 @@ if( has_post_thumbnail() ){
 				<?php do_action( 'nishiki_before_single_author_description' ); ?>
 							<p class="description"><?php the_author_meta( 'description' ); ?></p>
 				<?php do_action( 'nishiki_after_single_author_description' ); ?>
-						</div>
+						</section>
 			  <?php
 		  }
+		  if( is_single() ){
+		  	do_action( 'nishiki_after_related_posts' );
+		  }
+
 		  // If comments are open or we have at least one comment, load up the comment template.
 		  if ( comments_open() || get_comments_number() ) {
 			  comments_template();
