@@ -51,6 +51,12 @@ function nishiki_custom_theme_support() {
 	 * Gutenberg
 	 *****************/
 
+	// Editor Style
+	//add_theme_support( 'wp-block-styles' );
+
+	// Responsive embedded content
+	add_theme_support( 'responsive-embeds' );
+
 	// Align Wide
 	add_theme_support( 'align-wide' );
 

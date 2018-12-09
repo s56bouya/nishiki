@@ -1,5 +1,5 @@
 /**
- * Generated on 2018/10/26
+ * Generated on 2018/12/09
  * Author: Tetsuya Imamura(s56bouya)
  */
 
@@ -2033,7 +2033,7 @@ body, button, input, select, textarea {
   font-family: "Roboto", "Droid Sans", "Meiryo", "Hiragino Kaku Gothic Pro", "MS PMincho", "sans-serif";
 }
 
-body.gutenberg-editor-page .edit-post-visual-editor {
+body.block-editor-page .edit-post-visual-editor {
   line-height: 2;
   word-wrap: break-word;
   position: relative;
@@ -2042,7 +2042,7 @@ body.gutenberg-editor-page .edit-post-visual-editor {
   /* Width of "wide" blocks */
   /* Width of "full-wide" blocks */
 }
-body.gutenberg-editor-page .edit-post-visual-editor table {
+body.block-editor-page .edit-post-visual-editor table {
   max-width: 100%;
   text-align: left;
   border-collapse: collapse;
@@ -2053,39 +2053,39 @@ body.gutenberg-editor-page .edit-post-visual-editor table {
   overflow-x: auto;
   border: none;
 }
-body.gutenberg-editor-page .edit-post-visual-editor table th, body.gutenberg-editor-page .edit-post-visual-editor table td {
+body.block-editor-page .edit-post-visual-editor table th, body.block-editor-page .edit-post-visual-editor table td {
   padding: 1rem;
   text-align: left;
   line-height: 2;
   border-width: 1px;
   border-style: solid;
 }
-body.gutenberg-editor-page .edit-post-visual-editor table th ul, body.gutenberg-editor-page .edit-post-visual-editor table th ol, body.gutenberg-editor-page .edit-post-visual-editor table td ul, body.gutenberg-editor-page .edit-post-visual-editor table td ol {
+body.block-editor-page .edit-post-visual-editor table th ul, body.block-editor-page .edit-post-visual-editor table th ol, body.block-editor-page .edit-post-visual-editor table td ul, body.block-editor-page .edit-post-visual-editor table td ol {
   margin: 0;
 }
-body.gutenberg-editor-page .edit-post-visual-editor a {
+body.block-editor-page .edit-post-visual-editor a {
   text-decoration: underline;
 }
-body.gutenberg-editor-page .edit-post-visual-editor a:hover {
+body.block-editor-page .edit-post-visual-editor a:hover {
   text-decoration: none;
 }
-body.gutenberg-editor-page .edit-post-visual-editor img {
+body.block-editor-page .edit-post-visual-editor img {
   max-width: 100%;
   height: auto;
 }
-body.gutenberg-editor-page .edit-post-visual-editor img.wp-more-tag {
+body.block-editor-page .edit-post-visual-editor img.wp-more-tag {
   height: 1rem;
 }
-body.gutenberg-editor-page .edit-post-visual-editor iframe {
+body.block-editor-page .edit-post-visual-editor iframe {
   max-width: 100%;
 }
-body.gutenberg-editor-page .edit-post-visual-editor .button {
+body.block-editor-page .edit-post-visual-editor .button {
   font-size: 0.85rem;
 }
-body.gutenberg-editor-page .edit-post-visual-editor ul li, body.gutenberg-editor-page .edit-post-visual-editor ol li {
+body.block-editor-page .edit-post-visual-editor ul li, body.block-editor-page .edit-post-visual-editor ol li {
   line-height: 2;
 }
-body.gutenberg-editor-page .edit-post-visual-editor pre:not(.CodeMirror-line) {
+body.block-editor-page .edit-post-visual-editor pre:not(.CodeMirror-line) {
   border-width: 1px;
   border-style: dotted;
   margin: 1.5rem 0;
@@ -2093,7 +2093,7 @@ body.gutenberg-editor-page .edit-post-visual-editor pre:not(.CodeMirror-line) {
   white-space: pre-wrap;
   word-wrap: break-word;
 }
-body.gutenberg-editor-page .edit-post-visual-editor blockquote {
+body.block-editor-page .edit-post-visual-editor blockquote {
   margin: 2.5rem 0;
   padding: 1rem 2rem;
   position: relative;
@@ -2101,7 +2101,7 @@ body.gutenberg-editor-page .edit-post-visual-editor blockquote {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-body.gutenberg-editor-page .edit-post-visual-editor blockquote::before, body.gutenberg-editor-page .edit-post-visual-editor blockquote::after {
+body.block-editor-page .edit-post-visual-editor blockquote::before, body.block-editor-page .edit-post-visual-editor blockquote::after {
   font-family: 'icomoon';
   content: "\e977";
   display: inline-block;
@@ -2114,17 +2114,17 @@ body.gutenberg-editor-page .edit-post-visual-editor blockquote::before, body.gut
   direction: ltr;
   position: absolute;
 }
-body.gutenberg-editor-page .edit-post-visual-editor blockquote::before {
+body.block-editor-page .edit-post-visual-editor blockquote::before {
   top: 0;
   left: 0;
   -webkit-transform: rotateX(180deg);
   transform: rotateX(180deg);
 }
-body.gutenberg-editor-page .edit-post-visual-editor blockquote::after {
+body.block-editor-page .edit-post-visual-editor blockquote::after {
   bottom: 0;
   right: 0;
 }
-body.gutenberg-editor-page .edit-post-visual-editor h2 {
+body.block-editor-page .edit-post-visual-editor h2 {
   font-size: 1.7rem;
   border-top-style: solid;
   border-top-width: 1px;
@@ -2132,31 +2132,31 @@ body.gutenberg-editor-page .edit-post-visual-editor h2 {
   border-bottom-width: 1px;
   padding: 1.5rem 0 1.4rem;
 }
-body.gutenberg-editor-page .edit-post-visual-editor h3 {
+body.block-editor-page .edit-post-visual-editor h3 {
   font-size: 1.4rem;
 }
-body.gutenberg-editor-page .edit-post-visual-editor h4 {
+body.block-editor-page .edit-post-visual-editor h4 {
   font-size: 1.2rem;
 }
-body.gutenberg-editor-page .edit-post-visual-editor h5 {
+body.block-editor-page .edit-post-visual-editor h5 {
   font-size: 1.15rem;
 }
-body.gutenberg-editor-page .edit-post-visual-editor h6 {
+body.block-editor-page .edit-post-visual-editor h6 {
   font-size: 1.1rem;
 }
-body.gutenberg-editor-page .edit-post-visual-editor ul.wp-block-gallery li {
+body.block-editor-page .edit-post-visual-editor ul.wp-block-gallery li {
   margin: 0.5rem;
 }
-body.gutenberg-editor-page .edit-post-visual-editor .wp-block-embed {
+body.block-editor-page .edit-post-visual-editor .wp-block-embed {
   margin: 1.5rem 0;
 }
-body.gutenberg-editor-page .edit-post-visual-editor .wp-block-embed .wp-block-embed__wrapper .embed-video {
+body.block-editor-page .edit-post-visual-editor .wp-block-embed .wp-block-embed__wrapper .embed-video {
   position: static;
   padding-bottom: 0;
   padding-top: 0;
   margin: 0;
 }
-body.gutenberg-editor-page .edit-post-visual-editor .wp-block-quote {
+body.block-editor-page .edit-post-visual-editor .wp-block-quote {
   border-left: none;
   margin: 2.5rem 0;
   padding: 1rem 2rem;
@@ -2165,17 +2165,17 @@ body.gutenberg-editor-page .edit-post-visual-editor .wp-block-quote {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-body.gutenberg-editor-page .edit-post-visual-editor .editor-post-title__block,
-body.gutenberg-editor-page .edit-post-visual-editor .editor-default-block-appender {
+body.block-editor-page .edit-post-visual-editor .editor-post-title__block,
+body.block-editor-page .edit-post-visual-editor .editor-default-block-appender {
   max-width: 800px;
 }
-body.gutenberg-editor-page .edit-post-visual-editor .editor-block-list__block[data-align="wide"] {
+body.block-editor-page .edit-post-visual-editor .editor-block-list__block[data-align="wide"] {
   max-width: 1200px;
 }
-body.gutenberg-editor-page .edit-post-visual-editor .editor-block-list__block[data-align="full"] {
+body.block-editor-page .edit-post-visual-editor .editor-block-list__block[data-align="full"] {
   max-width: none;
 }
-body.gutenberg-editor-page .edit-post-visual-editor a {
+body.block-editor-page .edit-post-visual-editor a {
   color: #0a88cc;
 }
 
