@@ -296,7 +296,7 @@ function nishiki_custom_tag_cloud( $args ) {
  *****************/
 
 // Embed Youtube & Vimeo Responsive
-add_filter( 'embed_oembed_html', 'nishiki_add_oembed_class' );
+//add_filter( 'embed_oembed_html', 'nishiki_add_oembed_class' );
 function nishiki_add_oembed_class( $code ){
 	if( (stripos( $code, 'youtube' ) !== FALSE || strpos( $code, 'vimeo' ) ) && stripos( $code, 'iframe' ) !== FALSE )
 		$code = '<div class="embed-video">' . $code . '</div>';
