@@ -3051,10 +3051,10 @@ body.scrolled #masthead {
 .single .entry-content .alignwide, .single .entry-content .wp-block-gallery.alignwide,
 .page .entry-content .alignwide,
 .page .entry-content .wp-block-gallery.alignwide {
-  margin-left: calc( -80vw / 2 + 100% / 2 );
-  margin-right: calc( -80vw / 2 + 100% / 2 );
-  max-width: 80vw;
-  width: 80vw;
+  margin-left: calc( -85vw / 2 + 100% / 2 );
+  margin-right: calc( -85vw / 2 + 100% / 2 );
+  max-width: 85vw;
+  width: 85vw;
 }
 .single #edit-link,
 .page #edit-link {
