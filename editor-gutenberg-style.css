@@ -1,5 +1,5 @@
 /**
- * Generated on 2018/12/09
+ * Generated on 2018/12/11
  * Author: Tetsuya Imamura(s56bouya)
  */
 
@@ -2180,40 +2180,40 @@ body.block-editor-page .edit-post-visual-editor a {
 }
 
 @media only screen and (max-width: 1000px) {
-  body.gutenberg-editor-page .edit-post-visual-editor {
+  body.block-editor-page .edit-post-visual-editor {
     line-height: 1.86;
     font-size: 0.95rem;
   }
-  body.gutenberg-editor-page .edit-post-visual-editor h2 {
+  body.block-editor-page .edit-post-visual-editor h2 {
     font-size: 1.4rem;
     padding: 0.7rem 0;
   }
-  body.gutenberg-editor-page .edit-post-visual-editor h3 {
+  body.block-editor-page .edit-post-visual-editor h3 {
     font-size: 1.25rem;
   }
-  body.gutenberg-editor-page .edit-post-visual-editor h4 {
+  body.block-editor-page .edit-post-visual-editor h4 {
     font-size: 1.15rem;
   }
-  body.gutenberg-editor-page .edit-post-visual-editor h5 {
+  body.block-editor-page .edit-post-visual-editor h5 {
     font-size: 1.2rem;
   }
-  body.gutenberg-editor-page .edit-post-visual-editor h6 {
+  body.block-editor-page .edit-post-visual-editor h6 {
     font-size: 1rem;
   }
-  body.gutenberg-editor-page .edit-post-visual-editor table {
+  body.block-editor-page .edit-post-visual-editor table {
     overflow-x: auto;
     white-space: nowrap;
     border: none;
     display: inline-block;
     position: relative;
   }
-  body.gutenberg-editor-page .edit-post-visual-editor table td {
+  body.block-editor-page .edit-post-visual-editor table td {
     font-size: 0.8rem;
   }
-  body.gutenberg-editor-page .edit-post-visual-editor table td ul li, body.gutenberg-editor-page .edit-post-visual-editor table td ol li {
+  body.block-editor-page .edit-post-visual-editor table td ul li, body.block-editor-page .edit-post-visual-editor table td ol li {
     font-size: 0.8rem;
   }
-  body.gutenberg-editor-page .edit-post-visual-editor table::-webkit-scrollbar {
+  body.block-editor-page .edit-post-visual-editor table::-webkit-scrollbar {
     height: 1rem;
   }
 }

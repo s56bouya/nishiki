@@ -648,6 +648,9 @@ msgstr "スクリプト追加（無料）"
 msgid "User Profile(Free)"
 msgstr "ユーザー設定（無料）"
 
+msgid "Breadcrumbs(Free)"
+msgstr "パンくずリスト（無料）"
+
 msgid "Share Button"
 msgstr "シェアボタン"
 
@@ -659,6 +662,9 @@ msgstr "アクセス解析"
 
 msgid "Schema.org,OGP[Open Graph Protocol]"
 msgstr "Schema.org（構造化データ）,OGP（Open Graph Protocol）"
+
+msgid "Content"
+msgstr "コンテンツ作成"
 
 msgid ""
 "Nishiki is a fully responsive theme. Elegance,Refined,Multifunctional. In "
@@ -732,6 +738,16 @@ msgstr "関連記事のカラム"
 
 msgid "Related Posts Number"
 msgstr "関連記事数"
+
+msgid ""
+"Welcome and thanks for choosing %1$s theme. Please visit our <a href=\"%2$s"
+"\">about page</a>."
+msgstr ""
+"%1$s テーマをご利用いただきありがとうございます！まずは <a href=\"%2$s"
+"\">About ページ</a>をご確認ください。"
+
+msgid "Initial setting of theme reference page."
+msgstr "テーマ初期設定 参考ページ"
 
 #~ msgid "Section Title"
 #~ msgstr "セクションのタイトル（表示されません）"

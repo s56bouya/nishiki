@@ -1,5 +1,5 @@
 /**
- * Generated on 2018/12/09
+ * Generated on 2018/12/11
  * Author: Tetsuya Imamura(s56bouya)
  */
 
@@ -2987,41 +2987,37 @@ body.scrolled #masthead {
 .page .entry-content p {
   margin: 1.5rem 0;
 }
-.single .entry-content ul,
-.page .entry-content ul {
+.single .entry-content > ul:not(.wp-block-gallery),
+.page .entry-content > ul:not(.wp-block-gallery) {
   margin: 1.5rem 0;
 }
-.single .entry-content ul li,
-.page .entry-content ul li {
+.single .entry-content > ul:not(.wp-block-gallery) li,
+.page .entry-content > ul:not(.wp-block-gallery) li {
   margin-bottom: 0.5rem;
 }
-.single .entry-content ul li:first-child,
-.page .entry-content ul li:first-child {
+.single .entry-content > ul:not(.wp-block-gallery) li:first-child,
+.page .entry-content > ul:not(.wp-block-gallery) li:first-child {
   margin-top: 0;
 }
-.single .entry-content ul li:last-child,
-.page .entry-content ul li:last-child {
+.single .entry-content > ul:not(.wp-block-gallery) li:last-child,
+.page .entry-content > ul:not(.wp-block-gallery) li:last-child {
   margin-bottom: 0;
 }
-.single .entry-content ol,
-.page .entry-content ol {
+.single .entry-content > ol:not(.wp-block-gallery),
+.page .entry-content > ol:not(.wp-block-gallery) {
   margin: 1rem 0 1rem 0;
 }
-.single .entry-content ol li,
-.page .entry-content ol li {
+.single .entry-content > ol:not(.wp-block-gallery) li,
+.page .entry-content > ol:not(.wp-block-gallery) li {
   margin-bottom: 0.8rem;
 }
-.single .entry-content ol li:last-child,
-.page .entry-content ol li:last-child {
+.single .entry-content > ol:not(.wp-block-gallery) li:last-child,
+.page .entry-content > ol:not(.wp-block-gallery) li:last-child {
   margin-bottom: 0;
 }
 .single .entry-content blockquote,
 .page .entry-content blockquote {
   margin: 2.5rem 0;
-}
-.single .entry-content ul.wp-block-gallery li,
-.page .entry-content ul.wp-block-gallery li {
-  margin: 0.5rem;
 }
 .single .entry-content .wp-block-embed,
 .page .entry-content .wp-block-embed {
@@ -3043,6 +3039,22 @@ body.scrolled #masthead {
   width: 100%;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+}
+.single .entry-content .alignfull, .single .entry-content .wp-block-gallery.alignfull,
+.page .entry-content .alignfull,
+.page .entry-content .wp-block-gallery.alignfull {
+  margin-left: calc( -100vw / 2 + 100% / 2 );
+  margin-right: calc( -100vw / 2 + 100% / 2 );
+  max-width: 100vw;
+  width: 100vw;
+}
+.single .entry-content .alignwide, .single .entry-content .wp-block-gallery.alignwide,
+.page .entry-content .alignwide,
+.page .entry-content .wp-block-gallery.alignwide {
+  margin-left: calc( -80vw / 2 + 100% / 2 );
+  margin-right: calc( -80vw / 2 + 100% / 2 );
+  max-width: 80vw;
+  width: 80vw;
 }
 .single #edit-link,
 .page #edit-link {

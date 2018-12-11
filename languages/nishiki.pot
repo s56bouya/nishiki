@@ -598,6 +598,9 @@ msgstr ""
 msgid "User Profile(Free)"
 msgstr ""
 
+msgid "Breadcrumbs(Free)"
+msgstr ""
+
 msgid "Share Button"
 msgstr ""
 
@@ -608,6 +611,9 @@ msgid "Analytics"
 msgstr ""
 
 msgid "Schema.org,OGP[Open Graph Protocol]"
+msgstr ""
+
+msgid "Content"
 msgstr ""
 
 msgid "Nishiki is a fully responsive theme. Elegance,Refined,Multifunctional. In your admin panel, go to Appearance -> Customize. About 80 customization can be done without writing the code. responsive layout, front page setting, movie setting, etc. Customization often required for web production / website operation can be set."
@@ -653,4 +659,12 @@ msgid "Related Posts Columns"
 msgstr ""
 
 msgid "Related Posts Number"
+msgstr ""
+
+msgid ""
+"Welcome and thanks for choosing %1$s theme. "
+"Please visit our <a href=\"%2$s\">about page</a>."
+msgstr ""
+
+msgid "Initial setting of theme reference page."
 msgstr ""

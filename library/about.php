@@ -13,7 +13,24 @@ if ( ! class_exists( 'Nishiki_About_Page' ) ) {
 		 */
 	  public function __construct() {
 			add_action( 'admin_menu', array( $this, 'nishiki_about_page' ) );
+	    add_action( 'after_switch_theme', array( $this, 'nishiki_switch_theme' ) );
 		}
+
+	  /**
+	   * Active Theme Notice
+	   */
+	  function nishiki_about_page_notice() {
+	    $theme_data = wp_get_theme('nishiki');
+			$message = sprintf( wp_kses( __( 'Welcome and thanks for choosing %1$s theme. Please visit our <a href="%2$s">about page</a>.', 'nishiki' ), array( 'a' => array( 'href' => array() ) ) ), esc_attr( $theme_data->Name ), esc_url( admin_url( 'themes.php?page=nishiki-about' ) ) );
+			printf( '<div class="updated notice notice-success notice-alt is-dismissible"><p>%s</p></div>', $message );
+	  }
+
+	  /**
+	   * Switch Theme
+	   */
+	  function nishiki_switch_theme() {
+	    add_action( 'admin_notices', array( $this, 'nishiki_about_page_notice' ) );
+    }
 
 		/**
 		 * Add Theme Page
@@ -53,6 +70,9 @@ if ( ! class_exists( 'Nishiki_About_Page' ) ) {
 					<div class="about-text"><?php esc_html_e( 'Nishiki is a fully responsive theme. Elegance,Refined,Multifunctional. In your admin panel, go to Appearance -> Customize. About 80 customization can be done without writing the code. responsive layout, front page setting, movie setting, etc. Customization often required for web production / website operation can be set.', 'nishiki' ); ?></div>
 					<p>
 						<a href="<?php echo esc_url( admin_url('customize.php') ); ?>" class="button button-primary"><?php esc_html_e('Start Customize', 'nishiki'); ?></a>
+					</p>
+					<p>
+						<a target="_blank" href="https://support.animagate.com/replace-nishiki-theme-check-setting/" class="button button-primary"><?php esc_html_e('Initial setting of theme reference page.', 'nishiki'); ?></a>
 					</p>
 					<?php $this->create_tab(); ?>
 					<?php $this->create_tab_content(); ?>
@@ -138,10 +158,12 @@ if ( ! class_exists( 'Nishiki_About_Page' ) ) {
 					<li><a target="_blank" href="https://support.animagate.com/manual/wp-nishiki-gb-optimize/"><?php esc_html_e( 'Theme Optimize(Free)', 'nishiki' ); ?></a></li>
 					<li><a target="_blank" href="https://support.animagate.com/manual/wp-nishiki-gb-script/"><?php esc_html_e( 'Add Script(Free)', 'nishiki' ); ?></a></li>
 					<li><a target="_blank" href="https://support.animagate.com/manual/wp-nishiki-gb-user-profile/"><?php esc_html_e( 'User Profile(Free)', 'nishiki' ); ?></a></li>
+					<li><a target="_blank" href="https://support.animagate.com/manual/nishiki-gb-breadcrumbs/"><?php esc_html_e( 'Breadcrumbs(Free)', 'nishiki' ); ?></a></li>
 					<li><a target="_blank" href="https://support.animagate.com/product/nishiki-gb-share/"><?php esc_html_e( 'Share Button', 'nishiki' ); ?></a></li>
 					<li><a target="_blank" href="https://support.animagate.com/product/nishiki-gb-social/"><?php esc_html_e( 'Social Account', 'nishiki' ); ?></a></li>
 					<li><a target="_blank" href="https://support.animagate.com/product/nishiki-gb-analytics/"><?php esc_html_e( 'Analytics', 'nishiki' ); ?></a></li>
 					<li><a target="_blank" href="https://support.animagate.com/product/nishiki-gb-meta/"><?php esc_html_e( 'Schema.org,OGP[Open Graph Protocol]', 'nishiki' ); ?></a></li>
+					<li><a target="_blank" href="https://support.animagate.com/product/nishiki-gb-content/"><?php esc_html_e( 'Content', 'nishiki' ); ?></a></li>
 				</ul>
 <?php
 	  }
