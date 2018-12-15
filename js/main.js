@@ -22,7 +22,7 @@ jQuery("#masthead").hasClass("fixed")) {
     var o = n + r;
 
 
-    jQuery('a[href^="#"]').not(".noscroll").click(function() {
+    jQuery('a[href^="#"]').not(".noscroll,.woocommerce-tabs .stars a,.woocommerce-tabs .wc-tabs a").click(function() {
         if (!jQuery(this).parents("#menu-collapse").length) {
             var e = jQuery(this).attr("href");
             var t = jQuery(e == "#" || e == "" ? "html" : e);
