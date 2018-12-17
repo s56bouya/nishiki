@@ -1,5 +1,5 @@
 /**
- * Generated on 2018/12/11
+ * Generated on 2018/12/17
  * Author: Tetsuya Imamura(s56bouya)
  */
 
@@ -2144,9 +2144,6 @@ body.block-editor-page .edit-post-visual-editor h5 {
 body.block-editor-page .edit-post-visual-editor h6 {
   font-size: 1.1rem;
 }
-body.block-editor-page .edit-post-visual-editor ul.wp-block-gallery li {
-  margin: 0.5rem;
-}
 body.block-editor-page .edit-post-visual-editor .wp-block-embed {
   margin: 1.5rem 0;
 }
@@ -2164,6 +2161,18 @@ body.block-editor-page .edit-post-visual-editor .wp-block-quote {
   width: 100%;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+}
+body.block-editor-page .edit-post-visual-editor .alignfull, body.block-editor-page .edit-post-visual-editor .wp-block-gallery.alignfull {
+  margin-left: calc( -100vw / 2 + 100% / 2 );
+  margin-right: calc( -100vw / 2 + 100% / 2 );
+  max-width: 100vw;
+  width: 100vw;
+}
+body.block-editor-page .edit-post-visual-editor .alignwide, body.block-editor-page .edit-post-visual-editor .wp-block-gallery.alignwide {
+  margin-left: calc( -85vw / 2 + 100% / 2 );
+  margin-right: calc( -85vw / 2 + 100% / 2 );
+  max-width: 85vw;
+  width: 85vw;
 }
 body.block-editor-page .edit-post-visual-editor .editor-post-title__block,
 body.block-editor-page .edit-post-visual-editor .editor-default-block-appender {

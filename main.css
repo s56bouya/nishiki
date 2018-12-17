@@ -1,5 +1,5 @@
 /**
- * Generated on 2018/12/12
+ * Generated on 2018/12/17
  * Author: Tetsuya Imamura(s56bouya)
  */
 
@@ -2178,6 +2178,19 @@ body.scrolled #masthead {
   clear: both;
 }
 
+.content:not(.sidebar-left):not(.sidebar-right) .alignwide {
+  margin-left: calc( -85vw / 2 + 100% / 2 );
+  margin-right: calc( -85vw / 2 + 100% / 2 );
+  max-width: 85vw;
+  width: 85vw;
+}
+.content:not(.sidebar-left):not(.sidebar-right) .alignfull {
+  margin-left: calc( -100vw / 2 + 100% / 2 );
+  margin-right: calc( -100vw / 2 + 100% / 2 );
+  max-width: 100vw;
+  width: 100vw;
+}
+
 /***********************
 * Header
 ************************/
@@ -3039,22 +3052,6 @@ body.scrolled #masthead {
   width: 100%;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-}
-.single .entry-content .alignfull, .single .entry-content .wp-block-gallery.alignfull,
-.page .entry-content .alignfull,
-.page .entry-content .wp-block-gallery.alignfull {
-  margin-left: calc( -100vw / 2 + 100% / 2 );
-  margin-right: calc( -100vw / 2 + 100% / 2 );
-  max-width: 100vw;
-  width: 100vw;
-}
-.single .entry-content .alignwide, .single .entry-content .wp-block-gallery.alignwide,
-.page .entry-content .alignwide,
-.page .entry-content .wp-block-gallery.alignwide {
-  margin-left: calc( -85vw / 2 + 100% / 2 );
-  margin-right: calc( -85vw / 2 + 100% / 2 );
-  max-width: 85vw;
-  width: 85vw;
 }
 .single #edit-link,
 .page #edit-link {
@@ -4546,11 +4543,14 @@ i.icomoon {
     position: relative;
     line-height: 1.86;
   }
-  .single .entry-content table td,
+  .single .entry-content table th, .single .entry-content table td,
+  .page .entry-content table th,
   .page .entry-content table td {
     font-size: 0.8rem;
   }
-  .single .entry-content table td ul li, .single .entry-content table td ol li,
+  .single .entry-content table th ul li, .single .entry-content table th ol li, .single .entry-content table td ul li, .single .entry-content table td ol li,
+  .page .entry-content table th ul li,
+  .page .entry-content table th ol li,
   .page .entry-content table td ul li,
   .page .entry-content table td ol li {
     font-size: 0.8rem;
@@ -4596,6 +4596,23 @@ i.icomoon {
   }
   .comments-area .comment-respond .comment-reply-title {
     font-size: 1.1rem;
+  }
+
+  /**
+   Gutenberg alignwide and alignfull
+   */
+  .alignfull, .wp-block-gallery.alignfull {
+    margin-left: calc( -100vw / 2 + 100% / 2 );
+    margin-right: calc( -100vw / 2 + 100% / 2 );
+    max-width: 100vw;
+    width: 100vw;
+  }
+
+  .alignwide, .wp-block-gallery.alignwide {
+    margin-left: calc( -85vw / 2 + 100% / 2 );
+    margin-right: calc( -85vw / 2 + 100% / 2 );
+    max-width: 85vw;
+    width: 85vw;
   }
 }
 /*********************
