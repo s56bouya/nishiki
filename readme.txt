@@ -1,7 +1,7 @@
 === Nishiki ===
 Requires at least: WordPress 4.5
 Tested up to: WordPress 5.0
-Version: 2.0.0
+Version: 2.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: one-column, two-columns, right-sidebar, left-sidebar, flexible-header, accessibility-ready, custom-colors, custom-header, custom-menu, custom-logo, featured-images, footer-widgets, post-formats, sticky-post, theme-options, threaded-comments, translation-ready, blog, entertainment, portfolio, editor-style, footer-widgets, full-width-template
@@ -16,6 +16,7 @@ Nishiki is a fully responsive theme. Elegance,Refined,Multifunctional.
 
 In your admin panel, go to Appearance -> Customize.
 About 80 customization can be done without writing the code.
+Gutenberg Block Editor Style Support.
 
 == Installation ==
 
@@ -50,6 +51,10 @@ URL: https://icomoon.io/#icons-icomoon
 Created by Keyamoon
 
 == Changelog ==
+
+= 2.0.1 =
+* Add : Readme text(Gutenberg Block Editor Support)
+* Change : Several minor changes
 
 = 2.0.0 =
 * Change : Don't smooth scroll at WooCommerce image zoomup

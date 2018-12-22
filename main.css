@@ -1,5 +1,5 @@
 /**
- * Generated on 2018/12/17
+ * Generated on 2018/12/22
  * Author: Tetsuya Imamura(s56bouya)
  */
 
@@ -3816,17 +3816,19 @@ input[type="url"],
 input[type="tel"],
 input[type="date"],
 textarea {
-  box-shadow: inset 0 1px 3px #ddd;
   padding: 0.7rem;
-  border: 1px solid #ddd;
+  border: 1px solid #bbb;
   box-sizing: border-box;
   width: 100%;
+}
+
+input[type="submit"], button[type="submit"], fieldset {
+  border: 1px solid #bbb;
 }
 
 input[type="text"][disabled] {
   background: #eee;
   cursor: not-allowed;
-  box-shadow: none;
 }
 
 select {

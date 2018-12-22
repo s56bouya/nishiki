@@ -24,15 +24,9 @@ function nishiki_customizer_css(){
 	$output .= "
 		body,.articles a{color:{$site_main_text_color};}
 		.articles header,.articles header a{color:{$site_main_text_color};}
-		aside .search-box .input input{border-color:{$site_main_text_color};}
 		.nav_pc a{color:{$site_main_text_color};}
-		aside .search-box .submit button{border-color:{$site_main_text_color};color:{$site_main_text_color};}
-		aside .search-box .submit button:hover{background:{$site_main_text_color};color:{$site_background_color};}
-		.comments-area .submit{border-color:{$site_main_text_color};}
-		.comments-area .submit:hover{background:{$site_main_text_color};color:{$site_background_color};}
-		.comments-area .submit{color:{$site_main_text_color};}
-		input[type=\"submit\"]{border-color:{$site_main_text_color};color:{$site_main_text_color};}
-		input:hover[type=\"submit\"]{background:{$site_main_text_color};color:{$site_background_color};}
+		input[type=\"submit\"],button[type=\"submit\"]{color:{$site_main_text_color};}
+		input:hover[type=\"submit\"],button:hover[type=\"submit\"]{background:{$site_main_text_color};color:{$site_background_color};border-color:{$site_main_text_color}}
 		";
 
 	// Site Sub Text Color
