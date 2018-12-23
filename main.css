@@ -1,5 +1,5 @@
 /**
- * Generated on 2018/12/22
+ * Generated on 2018/12/23
  * Author: Tetsuya Imamura(s56bouya)
  */
 
@@ -2881,6 +2881,11 @@ body.scrolled #masthead {
 .single .entry-content a,
 .page .entry-content a {
   text-decoration: underline;
+}
+.single .entry-content a.btn, .single .entry-content a.button,
+.page .entry-content a.btn,
+.page .entry-content a.button {
+  text-decoration: none;
 }
 .single .entry-content a:hover,
 .page .entry-content a:hover {
