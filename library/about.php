@@ -73,12 +73,13 @@ if ( ! class_exists( 'Nishiki_About_Page' ) ) {
 					<p>
 						<a target="_blank" href="https://support.animagate.com/replace-nishiki-theme-check-setting/" class="button button-primary"><?php esc_html_e('Initial setting of theme reference page.', 'nishiki'); ?></a>
 					</p>
-					<h3>WordPress テーマ Nishiki Pro</h3>
-					<div class="about-text">WordPress 公式テーマ Nishiki のプロフェッショナル版が出ました！</div>
+					<h3><?php esc_html_e( 'WordPress Theme Nishiki Pro', 'nishiki'); ?></h3>
+					<div class="about-text"><?php esc_html_e( 'Nishiki Pro Theme available', 'nishiki'); ?></div>
 					<div class="theme_info_right">
 						<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/wp-nishiki-pro-theme.jpg" alt="Nishiki Pro Theme Screenshot" />
 					</div>
-					<p>WordPress 5.0 から正式に導入された Gutenberg ブロックエディターにいち早く対応し、テーマ専用ブロック「Nishiki Blocks Pro」や「ウェブサイト運営に欠かせない便利な機能」がまとめてテーマ内に搭載されています。</p><p>Nishiki Pro テーマは「『コンテンツ作成』を感覚的に」をコンセプトの１つとして掲げ、コードを書かずにコンテンツ作成・管理ができます（もちろんコードを書いてカスタマイズすることも可能です）。詳しくは、テーマ専用ページをご確認ください。</p>
+					<p><?php esc_html_e( 'WordPress 5.0 Gutenberg block editor support. Custom editor \'Nishiki Blocks Pro\' Built in.', 'nishiki'); ?>
+						</p><p><?php esc_html_e( 'The Nishiki Pro theme features \'Create content\' sensibly \'as one of the concepts, and you can create and manage content without writing any code (you can of course write code and customize it). For details, please check the theme specific page.', 'nishiki'); ?></p>
 					<p><a class="button button-primary" target="_blank" href="https://support.animagate.com/product/wp-nishiki-pro/"><?php esc_html_e( 'Nishiki Pro Theme Page', 'nishiki'); ?></a></p>
 					<?php $this->create_tab(); ?>
 					<?php $this->create_tab_content(); ?>

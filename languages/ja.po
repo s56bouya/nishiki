@@ -755,6 +755,31 @@ msgstr "Nishiki テーマ専用ページ"
 msgid "Nishiki Pro Theme Page"
 msgstr "Nishiki Pro テーマ専用ページ"
 
+msgid "WordPress Theme Nishiki Pro"
+msgstr "WordPress テーマ Nishiki Pro"
+
+msgid "Nishiki Pro Theme available"
+msgstr "WordPress 公式テーマ Nishiki のプロフェッショナル版が出ました！"
+
+msgid ""
+"WordPress 5.0 Gutenberg block editor support. Custom editor 'Nishiki Blocks "
+"Pro' Built in."
+msgstr ""
+"WordPress 5.0 から正式に導入された Gutenberg ブロックエディターにいち早く対応"
+"し、テーマ専用ブロック「Nishiki Blocks Pro」や「ウェブサイト運営に欠かせない"
+"便利な機能」がまとめてテーマ内に搭載されています。"
+
+msgid ""
+"The Nishiki Pro theme features 'Create content' sensibly 'as one of the "
+"concepts, and you can create and manage content without writing any code "
+"(you can of course write code and customize it). For details, please check "
+"the theme specific page."
+msgstr ""
+"Nishiki Pro テーマは「『コンテンツ作成』を感覚的に」をコンセプトの１つとして"
+"掲げ、コードを書かずにコンテンツ作成・管理ができます（もちろんコードを書いて"
+"カスタマイズすることも可能です）。詳しくは、テーマ専用ページをご確認くださ"
+"い。"
+
 #~ msgid "Section Title"
 #~ msgstr "セクションのタイトル（表示されません）"
 

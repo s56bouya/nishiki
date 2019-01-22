@@ -674,3 +674,15 @@ msgstr ""
 
 msgid "Nishiki Pro Theme Page"
 msgstr ""
+
+msgid "WordPress Theme Nishiki Pro"
+msgstr ""
+
+msgid "Nishiki Pro Theme available"
+msgstr ""
+
+msgid "WordPress 5.0 Gutenberg block editor support. Custom editor 'Nishiki Blocks Pro' Built in."
+msgstr ""
+
+msgid "The Nishiki Pro theme features 'Create content' sensibly 'as one of the concepts, and you can create and manage content without writing any code (you can of course write code and customize it). For details, please check the theme specific page."
+msgstr ""
