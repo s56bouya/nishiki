@@ -155,20 +155,6 @@ if ( ! class_exists( 'Nishiki_About_Page' ) ) {
 		}
 
 	  /**
-	   * Welcome Page.
-	   */
-	  public function nishiki_pro() {
-		  ?>
-			<h3>WordPress テーマ Nishiki Pro</h3>
-			<div class="theme_info_right">
-				<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/wp-nishiki-pro-theme.jpg" alt="Nishiki Pro Theme Screenshot" />
-			</div>
-			<p>WordPress 公式テーマ Nishiki のプロフェッショナル版が出ました！ WordPress 5.0 から正式に導入された Gutenberg ブロックエディターにいち早く対応し、テーマ専用ブロック「Nishiki Blocks Pro」や「ウェブサイト運営に欠かせない便利な機能」がまとめてテーマ内に搭載されています。</p><p>Nishiki Pro テーマは「『コンテンツ作成』を感覚的に」をコンセプトの１つとして掲げ、コードを書かずにコンテンツ作成・管理ができます（もちろんコードを書いてカスタマイズすることも可能です）。詳しくは、テーマ専用ページをご確認ください。</p>
-			<a class="button button-primary" target="_blank" href="https://support.animagate.com/product/wp-nishiki-pro/">Nishiki Pro Theme Page</a>
-		  <?php
-	  }
-
-	  /**
 	   * Plugin Page.
 	   */
 	  public function plugin() {
