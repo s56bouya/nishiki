@@ -668,3 +668,9 @@ msgstr ""
 
 msgid "Initial setting of theme reference page."
 msgstr ""
+
+msgid "Nishiki Theme Page"
+msgstr ""
+
+msgid "Nishiki Pro Theme Page"
+msgstr ""

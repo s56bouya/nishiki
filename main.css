@@ -1,5 +1,5 @@
 /**
- * Generated on 2018/12/23
+ * Generated on 2019/01/22
  * Author: Tetsuya Imamura(s56bouya)
  */
 
@@ -14,8 +14,8 @@
 ************************/
 @font-face {
   font-family: 'icomoon';
-  src: url("fonts/icomoon/icomoon.eot?qrgenr");
-  src: url("fonts/icomoon/icomoon.eot?qrgenr#iefix") format("embedded-opentype"), url("fonts/icomoon/icomoon.ttf?qrgenr") format("truetype"), url("fonts/icomoon/icomoon.woff?qrgenr") format("woff"), url("fonts/icomoon/icomoon.svg?qrgenr#icomoon") format("svg");
+  src: url("fonts/icomoon/icomoon.eot?1btmmq");
+  src: url("fonts/icomoon/icomoon.eot?1btmmq#iefix") format("embedded-opentype"), url("fonts/icomoon/icomoon.ttf?1btmmq") format("truetype"), url("fonts/icomoon/icomoon.woff?1btmmq") format("woff"), url("fonts/icomoon/icomoon.svg?1btmmq#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -31,6 +31,42 @@
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-num-nine:before {
+  content: "\eaf3";
+}
+
+.icon-num-eight:before {
+  content: "\eaf4";
+}
+
+.icon-num-seven:before {
+  content: "\eaf5";
+}
+
+.icon-num-six:before {
+  content: "\eaf6";
+}
+
+.icon-num-five:before {
+  content: "\eaf7";
+}
+
+.icon-num-four:before {
+  content: "\eaf8";
+}
+
+.icon-num-three:before {
+  content: "\eaf9";
+}
+
+.icon-num-two:before {
+  content: "\eafa";
+}
+
+.icon-num-one:before {
+  content: "\eafb";
 }
 
 .icon-hatena-bookmark:before {
@@ -2882,9 +2918,10 @@ body.scrolled #masthead {
 .page .entry-content a {
   text-decoration: underline;
 }
-.single .entry-content a.btn, .single .entry-content a.button,
+.single .entry-content a.btn, .single .entry-content a.button, .single .entry-content a[class^="wp-block"],
 .page .entry-content a.btn,
-.page .entry-content a.button {
+.page .entry-content a.button,
+.page .entry-content a[class^="wp-block"] {
   text-decoration: none;
 }
 .single .entry-content a:hover,
@@ -2956,14 +2993,17 @@ body.scrolled #masthead {
   bottom: 0;
   right: 0;
 }
-.single .entry-content h2,
-.page .entry-content h2 {
-  font-size: 1.7rem;
+.single .entry-content > h2,
+.page .entry-content > h2 {
   border-top-style: solid;
   border-top-width: 1px;
   border-bottom-style: solid;
   border-bottom-width: 1px;
   padding: 1.5rem 0 1.4rem;
+}
+.single .entry-content h2,
+.page .entry-content h2 {
+  font-size: 1.7rem;
 }
 .single .entry-content h3,
 .page .entry-content h3 {
@@ -2981,24 +3021,24 @@ body.scrolled #masthead {
 .page .entry-content h6 {
   font-size: 1.1rem;
 }
-.single .entry-content h2,
-.page .entry-content h2 {
+.single .entry-content > h2,
+.page .entry-content > h2 {
   margin: 3.5rem 0 1.5rem;
 }
-.single .entry-content h3,
-.page .entry-content h3 {
+.single .entry-content > h3,
+.page .entry-content > h3 {
   margin: 2.5rem 0 1.5rem;
 }
-.single .entry-content h4,
-.page .entry-content h4 {
+.single .entry-content > h4,
+.page .entry-content > h4 {
   margin: 2.5rem 0 1.5rem;
 }
-.single .entry-content h5,
-.page .entry-content h5 {
+.single .entry-content > h5,
+.page .entry-content > h5 {
   margin: 2.5rem 0 1.5rem;
 }
-.single .entry-content h6,
-.page .entry-content h6 {
+.single .entry-content > h6,
+.page .entry-content > h6 {
   margin: 1.5rem 0;
 }
 .single .entry-content p,
@@ -4514,11 +4554,14 @@ i.icomoon {
   .page article.entry header h1 {
     /*						font-size:1.4rem;*/
   }
+  .single .entry-content > h2,
+  .page .entry-content > h2 {
+    margin: 2.5rem 0 1.5rem;
+    padding: 0.7rem 0;
+  }
   .single .entry-content h2,
   .page .entry-content h2 {
     font-size: 1.35rem;
-    margin: 2.5rem 0 1.5rem;
-    padding: 0.7rem 0;
   }
   .single .entry-content h3,
   .page .entry-content h3 {

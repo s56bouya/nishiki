@@ -1,5 +1,5 @@
 /**
- * Generated on 2018/12/17
+ * Generated on 2019/01/22
  * Author: Tetsuya Imamura(s56bouya)
  */
 
@@ -14,8 +14,8 @@
 ************************/
 @font-face {
   font-family: 'icomoon';
-  src: url("fonts/icomoon/icomoon.eot?qrgenr");
-  src: url("fonts/icomoon/icomoon.eot?qrgenr#iefix") format("embedded-opentype"), url("fonts/icomoon/icomoon.ttf?qrgenr") format("truetype"), url("fonts/icomoon/icomoon.woff?qrgenr") format("woff"), url("fonts/icomoon/icomoon.svg?qrgenr#icomoon") format("svg");
+  src: url("fonts/icomoon/icomoon.eot?1btmmq");
+  src: url("fonts/icomoon/icomoon.eot?1btmmq#iefix") format("embedded-opentype"), url("fonts/icomoon/icomoon.ttf?1btmmq") format("truetype"), url("fonts/icomoon/icomoon.woff?1btmmq") format("woff"), url("fonts/icomoon/icomoon.svg?1btmmq#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -31,6 +31,42 @@
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-num-nine:before {
+  content: "\eaf3";
+}
+
+.icon-num-eight:before {
+  content: "\eaf4";
+}
+
+.icon-num-seven:before {
+  content: "\eaf5";
+}
+
+.icon-num-six:before {
+  content: "\eaf6";
+}
+
+.icon-num-five:before {
+  content: "\eaf7";
+}
+
+.icon-num-four:before {
+  content: "\eaf8";
+}
+
+.icon-num-three:before {
+  content: "\eaf9";
+}
+
+.icon-num-two:before {
+  content: "\eafa";
+}
+
+.icon-num-one:before {
+  content: "\eafb";
 }
 
 .icon-hatena-bookmark:before {
@@ -2033,6 +2069,20 @@ body, button, input, select, textarea {
   font-family: "Roboto", "Droid Sans", "Meiryo", "Hiragino Kaku Gothic Pro", "MS PMincho", "sans-serif";
 }
 
+body.block-editor-page .wp-block {
+  max-width: 768px;
+}
+body.block-editor-page .editor-block-list__layout h2 {
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  padding: 1.5rem 0 1.4rem;
+}
+body.block-editor-page .editor-block-list__layout .editor-block-list__layout h2 {
+  border: none;
+  padding: 1rem 0;
+}
 body.block-editor-page .edit-post-visual-editor {
   line-height: 2;
   word-wrap: break-word;
@@ -2065,6 +2115,9 @@ body.block-editor-page .edit-post-visual-editor table th ul, body.block-editor-p
 }
 body.block-editor-page .edit-post-visual-editor a {
   text-decoration: underline;
+}
+body.block-editor-page .edit-post-visual-editor a.btn, body.block-editor-page .edit-post-visual-editor a.button, body.block-editor-page .edit-post-visual-editor a[class^="wp-block"] {
+  text-decoration: none;
 }
 body.block-editor-page .edit-post-visual-editor a:hover {
   text-decoration: none;
@@ -2124,13 +2177,15 @@ body.block-editor-page .edit-post-visual-editor blockquote::after {
   bottom: 0;
   right: 0;
 }
-body.block-editor-page .edit-post-visual-editor h2 {
-  font-size: 1.7rem;
+body.block-editor-page .edit-post-visual-editor > h2 {
   border-top-style: solid;
   border-top-width: 1px;
   border-bottom-style: solid;
   border-bottom-width: 1px;
   padding: 1.5rem 0 1.4rem;
+}
+body.block-editor-page .edit-post-visual-editor h2 {
+  font-size: 1.7rem;
 }
 body.block-editor-page .edit-post-visual-editor h3 {
   font-size: 1.4rem;

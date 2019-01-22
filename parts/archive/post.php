@@ -7,28 +7,28 @@
 			$noimage = ' noimage';
 		}
 		?>
-		<div class="post-image<?php echo esc_attr( $noimage ); ?>">
-			<?php if( $noimage == '' ){ ?>
-				<figure>
-					<?php if( has_post_thumbnail( get_the_ID() ) ){
-			  		the_post_thumbnail( 'thumbnail' );
-					} else {
-						if( get_theme_mod( 'setting_archive_default_image', '' ) ){
-							$image = get_theme_mod( 'setting_archive_default_image' );
-							$image_id       = attachment_url_to_postid( $image );
-							$image_data     = wp_get_attachment_image_src( $image_id, 'thumbnail' );
-							if( $image_data[3] === true ){
-								$image_thumbnail = $image_data[0];
-								echo '<img src="' . esc_url( $image_thumbnail ) . '" alt="">';
-							}
+			<div class="post-image<?php echo esc_attr( $noimage ); ?>">
+		  <?php if( $noimage == '' ){ ?>
+						<figure>
+				<?php if( has_post_thumbnail( get_the_ID() ) ){
+					the_post_thumbnail( 'thumbnail' );
+				} else {
+					if( get_theme_mod( 'setting_archive_default_image', '' ) ){
+						$image = get_theme_mod( 'setting_archive_default_image' );
+						$image_id       = attachment_url_to_postid( $image );
+						$image_data     = wp_get_attachment_image_src( $image_id, 'thumbnail' );
+						if( $image_data[3] === true ){
+							$image_thumbnail = $image_data[0];
+							echo '<img src="' . esc_url( $image_thumbnail ) . '" alt="">';
 						}
-				  } ?>
-				</figure>
-			<?php } else { ?>
-				<i class="icomoon icon-image"></i>
-			<?php } ?>
-			<div class="readmore"><span><?php esc_html_e( 'Read More', 'nishiki' ); ?><i class="icomoon icon-arrow-right"></i></span></div>
-		</div>
+					}
+				} ?>
+						</figure>
+		  <?php } else { ?>
+						<i class="icomoon icon-image"></i>
+		  <?php } ?>
+				<div class="readmore"><span><?php esc_html_e( 'Read More', 'nishiki' ); ?><i class="icomoon icon-arrow-right"></i></span></div>
+			</div>
 		<header><?php the_title( '<h1>', '</h1>' ); ?></header>
 		<div class="excerpt"><?php echo esc_html( get_the_excerpt() ); ?></div>
 	</a>
@@ -43,7 +43,7 @@
 			$output = '';
 			if( $categories ){
 				foreach ( $categories as $category ) {
-					$output .= '<a href="' . esc_url( get_category_link( $category->term_id ) ) . '">' . $category->cat_name . '</a>' . $separator;
+					$output .= '<a href="' . esc_url( get_category_link( $category->term_id ) ) . '">' . esc_html( $category->cat_name ) . '</a>' . $separator;
 				}
 				$output = trim( $output, $separator );
 			}

@@ -51,9 +51,8 @@ if ( ! class_exists( 'Nishiki_About_Page' ) ) {
 	   */
 	  public function nishiki_tab_array() {
 		  $nishiki_tab_array = array(
-			  'welcome'		=> __( 'About Theme', 'nishiki' ),
-		    'plugin'		=> __( 'Nishiki Plugin', 'nishiki' ),
-		    'iconfont'	=> __( 'Use Icon', 'nishiki' ),
+		  	'welcome'		=> __( 'About Theme', 'nishiki' ),
+				'iconfont'	=> __( 'Use Icon', 'nishiki' ),
 		  );
 
 		  return $nishiki_tab_array;
@@ -74,6 +73,13 @@ if ( ! class_exists( 'Nishiki_About_Page' ) ) {
 					<p>
 						<a target="_blank" href="https://support.animagate.com/replace-nishiki-theme-check-setting/" class="button button-primary"><?php esc_html_e('Initial setting of theme reference page.', 'nishiki'); ?></a>
 					</p>
+					<h3>WordPress テーマ Nishiki Pro</h3>
+					<div class="about-text">WordPress 公式テーマ Nishiki のプロフェッショナル版が出ました！</div>
+					<div class="theme_info_right">
+						<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/wp-nishiki-pro-theme.jpg" alt="Nishiki Pro Theme Screenshot" />
+					</div>
+					<p>WordPress 5.0 から正式に導入された Gutenberg ブロックエディターにいち早く対応し、テーマ専用ブロック「Nishiki Blocks Pro」や「ウェブサイト運営に欠かせない便利な機能」がまとめてテーマ内に搭載されています。</p><p>Nishiki Pro テーマは「『コンテンツ作成』を感覚的に」をコンセプトの１つとして掲げ、コードを書かずにコンテンツ作成・管理ができます（もちろんコードを書いてカスタマイズすることも可能です）。詳しくは、テーマ専用ページをご確認ください。</p>
+					<p><a class="button button-primary" target="_blank" href="https://support.animagate.com/product/wp-nishiki-pro/"><?php esc_html_e( 'Nishiki Pro Theme Page', 'nishiki'); ?></a></p>
 					<?php $this->create_tab(); ?>
 					<?php $this->create_tab_content(); ?>
 				</div>
@@ -140,12 +146,26 @@ if ( ! class_exists( 'Nishiki_About_Page' ) ) {
 			<h3><?php esc_html_e('Please rating Nishiki', 'nishiki'); ?></h3>
 			<p><?php esc_html_e('Nishiki is a freshly made Japanese theme. If you like this theme, please rating Nishiki theme directory. Your evaluation will be encouraging my future development and management.', 'nishiki'); ?></p>
 			<a target="_blank" href="https://wordpress.org/support/theme/nishiki/reviews/?filter=5" class="button button-primary"><?php esc_html_e('Rating Nishiki theme directory', 'nishiki'); ?></a>
-			<h3><a target="_blank" href="https://support.animagate.com/product/wp-nishiki/">Nishiki Theme Page</a></h3>
+			<p><a target="_blank" class="button button-primary" href="https://support.animagate.com/product/wp-nishiki/"><?php esc_html_e( 'Nishiki Theme Page', 'nishiki'); ?></a></p>
 			<div class="theme_info_right">
 				<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/screenshot.png" alt="Theme Screenshot" />
 			</div>
 <?php
 		}
+
+	  /**
+	   * Welcome Page.
+	   */
+	  public function nishiki_pro() {
+		  ?>
+			<h3>WordPress テーマ Nishiki Pro</h3>
+			<div class="theme_info_right">
+				<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/wp-nishiki-pro-theme.jpg" alt="Nishiki Pro Theme Screenshot" />
+			</div>
+			<p>WordPress 公式テーマ Nishiki のプロフェッショナル版が出ました！ WordPress 5.0 から正式に導入された Gutenberg ブロックエディターにいち早く対応し、テーマ専用ブロック「Nishiki Blocks Pro」や「ウェブサイト運営に欠かせない便利な機能」がまとめてテーマ内に搭載されています。</p><p>Nishiki Pro テーマは「『コンテンツ作成』を感覚的に」をコンセプトの１つとして掲げ、コードを書かずにコンテンツ作成・管理ができます（もちろんコードを書いてカスタマイズすることも可能です）。詳しくは、テーマ専用ページをご確認ください。</p>
+			<a class="button button-primary" target="_blank" href="https://support.animagate.com/product/wp-nishiki-pro/">Nishiki Pro Theme Page</a>
+		  <?php
+	  }
 
 	  /**
 	   * Plugin Page.
