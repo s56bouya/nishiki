@@ -1,6 +1,6 @@
 === Nishiki ===
 Requires at least: WordPress 4.5
-Tested up to: WordPress 5.0.3
+Tested up to: WordPress 5.2.0
 Version: 2.0.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -51,6 +51,10 @@ URL: https://icomoon.io/#icons-icomoon
 Created by Keyamoon
 
 == Changelog ==
+
+= 2.0.6 =
+* Change : Several minor changes
+* Add : Support WP 5.2.0
 
 = 2.0.5 =
 * Change : Several minor changes
