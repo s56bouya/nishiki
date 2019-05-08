@@ -1,5 +1,5 @@
 /**
- * Generated on 2019/01/22
+ * Generated on 2019/05/08
  * Author: Tetsuya Imamura(s56bouya)
  */
 
@@ -2194,10 +2194,6 @@ body.scrolled #masthead {
 /***********************
 * Content
 ************************/
-.site-content {
-  overflow: hidden;
-}
-
 .container {
   margin: 0 auto;
   width: 90%;
@@ -2221,10 +2217,19 @@ body.scrolled #masthead {
   width: 85vw;
 }
 .content:not(.sidebar-left):not(.sidebar-right) .alignfull {
-  margin-left: calc( -100vw / 2 + 100% / 2 );
-  margin-right: calc( -100vw / 2 + 100% / 2 );
-  max-width: 100vw;
-  width: 100vw;
+  margin-left: calc(-100vw * .05);
+  margin-right: calc(-100vw * .05);
+}
+@media only screen and (min-width: 769px) {
+  .content:not(.sidebar-left):not(.sidebar-right) .alignfull {
+    margin-left: calc( -100vw / 2 + 100% / 2 );
+    margin-right: calc( -100vw / 2 + 100% / 2 );
+    max-width: 100vw;
+    width: 100vw;
+  }
+}
+.content.sidebar-none, .content.sidebar-bottom {
+  overflow: hidden;
 }
 
 /***********************
@@ -2261,7 +2266,7 @@ body.scrolled #masthead {
   display: inline-flex;
   text-decoration: none;
   align-items: center;
-  height: 100px;
+  height: 70px;
   vertical-align: middle;
 }
 #masthead .site-info a.overlay {
@@ -2272,14 +2277,14 @@ body.scrolled #masthead {
   max-height: 80px;
 }
 #masthead button.icon {
-  padding: 1rem 1rem;
+  padding: 0.8rem;
   border-width: 1px;
   border-style: solid;
   margin: 0 0 0 1.5rem;
 }
 #masthead button i {
   display: block;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
 }
 #masthead nav {
   text-align: right;
@@ -2344,8 +2349,8 @@ body.scrolled #masthead {
   top: 0;
 }
 #masthead #menu-collapse > ul > li > a {
-  height: 100px;
-  line-height: 100px;
+  height: 70px;
+  line-height: 70px;
   padding: 0 0.7rem;
 }
 #masthead #menu-collapse > ul > li > ul {
@@ -2476,7 +2481,7 @@ body.scrolled #masthead {
   border-top: 1px solid;
   display: inline-block;
   margin: 0;
-  padding: 1rem 2rem 0;
+  padding: 1rem 1rem 0;
 }
 .main-visual .main-visual-content .main-button {
   margin-bottom: 0;
@@ -2517,6 +2522,9 @@ body.scrolled #masthead {
 ************************/
 .home .container .archives {
   /*padding:3rem 0;*/
+}
+.home .site-content {
+  overflow: hidden;
 }
 
 /***********************
@@ -3077,9 +3085,19 @@ body.scrolled #masthead {
 .page .entry-content blockquote {
   margin: 2.5rem 0;
 }
+.single .entry-content .wp-block-image,
+.page .entry-content .wp-block-image {
+  max-width: inherit;
+}
+.single .entry-content .wp-block-cover, .single .entry-content .wp-block-cover-image,
+.page .entry-content .wp-block-cover,
+.page .entry-content .wp-block-cover-image {
+  width: auto;
+}
 .single .entry-content .wp-block-embed,
 .page .entry-content .wp-block-embed {
-  margin: 1.5rem 0;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 .single .entry-content .wp-block-embed .wp-block-embed__wrapper .embed-video,
 .page .entry-content .wp-block-embed .wp-block-embed__wrapper .embed-video {
@@ -3096,6 +3114,10 @@ body.scrolled #masthead {
   position: relative;
   width: 100%;
   -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.single .entry-content figcaption,
+.page .entry-content figcaption {
   box-sizing: border-box;
 }
 .single #edit-link,
@@ -3197,8 +3219,17 @@ body.scrolled #masthead {
 * Aside
 ************************/
 aside.sidebar {
+  /*clearfix*/
+  zoom: 1;
   font-size: 0.9rem;
   line-height: 1.86;
+}
+aside.sidebar:before, aside.sidebar:after {
+  content: "";
+  display: table;
+}
+aside.sidebar:after {
+  clear: both;
 }
 aside.sidebar section {
   margin-bottom: 1.5rem;
@@ -3940,7 +3971,7 @@ select {
 .comments-area .comment-list li .bypostauthor {
   position: relative;
 }
-.comments-area .comment-list li img {
+.comments-area .comment-list li img.avatar {
   float: left;
   margin-right: 1rem;
 }
@@ -4211,7 +4242,7 @@ i.icomoon {
 
 /*********************
 * PC+
-1000px +
+1001px +
 ***********************/
 @media only screen and (min-width: 1001px) {
   .articles.column-1 article {
@@ -4383,6 +4414,41 @@ i.icomoon {
 * Tablet - PC
 769px - 1000px
 ***********************/
+/*********************
+* Tablet+
+769px+
+***********************/
+@media only screen and (min-width: 769px) {
+  /***********************
+  * Aside
+  ************************/
+  .sidebar-left aside.sidebar-sticky {
+    clear: left;
+  }
+
+  .sidebar-right aside.sidebar-sticky {
+    clear: right;
+  }
+
+  aside.sidebar-sticky {
+    position: sticky;
+  }
+  aside.sidebar-sticky.sticky-fixed.is-sticky {
+    margin-top: 0;
+    margin-bottom: 0;
+    position: fixed;
+    backface-visibility: hidden;
+  }
+  aside.sidebar-sticky.sticky-fixed.is-sticky:not([style*="margin-top"]) {
+    margin-top: 0 !important;
+  }
+  aside.sidebar-sticky.sticky-fixed.is-sticky:not([style*="margin-bottom"]) {
+    margin-bottom: 0 !important;
+  }
+  aside.sidebar-sticky.sticky-fixed.is-absolute {
+    position: absolute;
+  }
+}
 /*********************
 * Tablet
 0px - 768px
@@ -4648,16 +4714,42 @@ i.icomoon {
     font-size: 1.1rem;
   }
 
+  .content.sidebar-left, .content.sidebar-right {
+    overflow: hidden;
+  }
+  .content.sidebar-left .alignfull, .content.sidebar-right .alignfull {
+    margin-left: calc(-100vw * .05);
+    margin-right: calc(-100vw * .05);
+  }
+}
+@media only screen and (max-width: 768px) and (min-width: 769px) {
+  .content.sidebar-left .alignfull, .content.sidebar-right .alignfull {
+    margin-left: calc( -100vw / 2 + 100% / 2 );
+    margin-right: calc( -100vw / 2 + 100% / 2 );
+    max-width: 100vw;
+    width: 100vw;
+  }
+}
+
+@media only screen and (max-width: 768px) {
   /**
    Gutenberg alignwide and alignfull
    */
+  .alignfull, .wp-block-gallery.alignfull {
+    margin-left: calc(-100vw * .05);
+    margin-right: calc(-100vw * .05);
+  }
+}
+@media only screen and (max-width: 768px) and (min-width: 769px) {
   .alignfull, .wp-block-gallery.alignfull {
     margin-left: calc( -100vw / 2 + 100% / 2 );
     margin-right: calc( -100vw / 2 + 100% / 2 );
     max-width: 100vw;
     width: 100vw;
   }
+}
 
+@media only screen and (max-width: 768px) {
   .alignwide, .wp-block-gallery.alignwide {
     margin-left: calc( -85vw / 2 + 100% / 2 );
     margin-right: calc( -85vw / 2 + 100% / 2 );
@@ -4793,5 +4885,13 @@ i.icomoon {
   }
   .post-navigation .nav-links .nav-next {
     text-align: left;
+  }
+}
+/*********************
+* adminbar
+***********************/
+@media screen and (max-width: 600px) {
+  #wpadminbar {
+    position: fixed !important;
   }
 }

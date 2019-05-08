@@ -145,6 +145,26 @@ function nishiki_init_customizer_top( $wp_customize ) {
 		'priority'  => 1080,
 	));
 
+	// Sub Text align
+	$wp_customize->add_setting( 'setting_top_main_visual_sub_text_align', array(
+		'default'           =>  'center',
+		'sanitize_callback' =>  'nishiki_sanitize_choices_text_align',
+	));
+
+	$wp_customize->add_control( 'ctrl_top_main_visual_sub_text_align', array(
+		'label'             =>  __( 'Sub Text Align', 'nishiki' ),
+		'section'           =>  'section_top_main_visual',
+		'settings'          =>  'setting_top_main_visual_sub_text_align',
+		'type'              =>  'select',
+		'choices'           =>  array(
+			'left'         =>  __( 'Left', 'nishiki' ),
+			'center'        =>  __( 'Center', 'nishiki' ),
+			'right'        =>  __( 'Right', 'nishiki' ),
+		),
+		'priority'    =>  1090,
+	));
+
+
 	// Text Color
 	$wp_customize->add_setting('setting_top_main_visual_text_color',array(
 		'default' => '#ffffff',
@@ -160,7 +180,7 @@ function nishiki_init_customizer_top( $wp_customize ) {
 				'section'     =>  'section_top_main_visual',
 				'transport'   =>  'postMessage',
 				'settings'    =>  'setting_top_main_visual_text_color',
-				'priority'    =>  1090,
+				'priority'    =>  1100,
 			)
 		)
 	);

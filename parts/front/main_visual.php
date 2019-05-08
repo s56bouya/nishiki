@@ -53,7 +53,8 @@ if( get_bloginfo( 'description' ) && get_header_textcolor() !== 'blank' ){
 	echo '<p class="description">' . esc_html( get_bloginfo( 'description' ) ) . '</p>';
 }
 if( get_theme_mod( 'setting_top_main_visual_sub_text' ) == true ){
-	echo '<p class="sub-text">' . esc_html( get_theme_mod( 'setting_top_main_visual_sub_text', __( 'Beautiful WordPress Theme the Nishiki.', 'nishiki' ) ) ) . '</p>';
+	$sub_text_align = get_theme_mod( 'setting_top_main_visual_sub_text_align', 'center' );
+	echo '<p class="sub-text ' . $sub_text_align .'">' . esc_html( get_theme_mod( 'setting_top_main_visual_sub_text', __( 'Beautiful WordPress Theme the Nishiki.', 'nishiki' ) ) ) . '</p>';
 }
 if( get_theme_mod( 'setting_top_main_visual_main_button_text', __( 'Get started!', 'nishiki' ) ) ){
 	if( get_theme_mod( 'setting_top_main_visual_main_button_link', false ) === false ){

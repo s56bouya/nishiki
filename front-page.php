@@ -9,7 +9,7 @@ get_header();
 			while ( have_posts() ) :
 				the_post();
 				?>
-							<div class="container-full-width">
+							<div class="container">
 								<div class="entry-content">
 					<?php the_content(); ?>
 								</div>

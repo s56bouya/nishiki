@@ -78,7 +78,7 @@ function nishiki_sanitize_choices_front_page_featured_items( $input ) {
 
 
 // Text Align
-function nishiki_sanitize_choices_front_page_text_align( $input ) {
+function nishiki_sanitize_choices_text_align( $input ) {
 	$valid = array( 'left', 'center', 'right' );
 	if ( in_array( $input, $valid, true ) ) {
 		return $input;
