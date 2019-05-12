@@ -2739,7 +2739,6 @@ body.scrolled #masthead {
   overflow: hidden;
   position: relative;
   z-index: 1;
-  line-height: 1.4;
 }
 .archive .site-main > header .page-header h1,
 .search .site-main > header .page-header h1,
