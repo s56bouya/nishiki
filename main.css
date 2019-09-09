@@ -1,5 +1,5 @@
 /**
- * Generated on 2019/05/12
+ * Generated on 2019/09/09
  * Author: Tetsuya Imamura(s56bouya)
  */
 
@@ -4080,6 +4080,12 @@ select {
   padding: 0 0.5rem;
   border-width: 1px;
   border-style: solid;
+}
+.widget.widget_categories ul li .children {
+  padding-left: 0.7rem;
+}
+.widget.widget_categories ul li .children li {
+  border: none;
 }
 
 /*********************
