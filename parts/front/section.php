@@ -1,4 +1,5 @@
 <?php
+do_action( 'nishiki_before_front_page_section_content' );
 $section_count = NISHIKI_SECTION_NUM;
 $featured_item_count = NISHIKI_FEATURED_ITEM_NUM;
 for( $i = 1; $i <= $section_count; ++$i ){
@@ -92,7 +93,7 @@ for( $i = 1; $i <= $section_count; ++$i ){
 		do_action( 'nishiki_after_front_page_section' . $i . '_content' );
 	}
 }
-
+do_action( 'nishiki_after_front_page_section_content' );
 if ( is_active_sidebar( 'front_widget' ) ) { ?>
 	<div id="front-widget" class="front-widget">
 	  <?php dynamic_sidebar( 'front_widget' ); ?>

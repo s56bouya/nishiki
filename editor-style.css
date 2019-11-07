@@ -1,5 +1,5 @@
 /**
- * Generated on 2018/10/26
+ * Generated on 2019/10/16
  * Author: Tetsuya Imamura(s56bouya)
  */
 
@@ -14,8 +14,8 @@
 ************************/
 @font-face {
   font-family: 'icomoon';
-  src: url("fonts/icomoon/icomoon.eot?qrgenr");
-  src: url("fonts/icomoon/icomoon.eot?qrgenr#iefix") format("embedded-opentype"), url("fonts/icomoon/icomoon.ttf?qrgenr") format("truetype"), url("fonts/icomoon/icomoon.woff?qrgenr") format("woff"), url("fonts/icomoon/icomoon.svg?qrgenr#icomoon") format("svg");
+  src: url("fonts/icomoon/icomoon.eot?1btmmq");
+  src: url("fonts/icomoon/icomoon.eot?1btmmq#iefix") format("embedded-opentype"), url("fonts/icomoon/icomoon.ttf?1btmmq") format("truetype"), url("fonts/icomoon/icomoon.woff?1btmmq") format("woff"), url("fonts/icomoon/icomoon.svg?1btmmq#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -31,6 +31,42 @@
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-num-nine:before {
+  content: "\eaf3";
+}
+
+.icon-num-eight:before {
+  content: "\eaf4";
+}
+
+.icon-num-seven:before {
+  content: "\eaf5";
+}
+
+.icon-num-six:before {
+  content: "\eaf6";
+}
+
+.icon-num-five:before {
+  content: "\eaf7";
+}
+
+.icon-num-four:before {
+  content: "\eaf8";
+}
+
+.icon-num-three:before {
+  content: "\eaf9";
+}
+
+.icon-num-two:before {
+  content: "\eafa";
+}
+
+.icon-num-one:before {
+  content: "\eafb";
 }
 
 .icon-hatena-bookmark:before {
@@ -2116,43 +2152,43 @@ body#tinymce.wp-editor input:active, body#tinymce.wp-editor input:focus, body#ti
 body#tinymce.wp-editor input, body#tinymce.wp-editor textarea {
   font-size: 1rem;
 }
-body#tinymce.wp-editor h2 {
+body#tinymce.wp-editor > h2 {
   margin: 3.5rem 0 1.5rem;
 }
-body#tinymce.wp-editor h3 {
+body#tinymce.wp-editor > h3 {
   margin: 2.5rem 0 1.5rem;
 }
-body#tinymce.wp-editor h4 {
+body#tinymce.wp-editor > h4 {
   margin: 2.5rem 0 1.5rem;
 }
-body#tinymce.wp-editor h5 {
+body#tinymce.wp-editor > h5 {
   margin: 2.5rem 0 1.5rem;
 }
-body#tinymce.wp-editor h6 {
+body#tinymce.wp-editor > h6 {
   margin: 1.5rem 0;
 }
 body#tinymce.wp-editor p {
   margin: 1.5rem 0;
 }
-body#tinymce.wp-editor ul {
+body#tinymce.wp-editor > ul:not(.wp-block-gallery) {
   margin: 1.5rem 0;
 }
-body#tinymce.wp-editor ul li {
+body#tinymce.wp-editor > ul:not(.wp-block-gallery) li {
   margin-bottom: 0.5rem;
 }
-body#tinymce.wp-editor ul li:first-child {
+body#tinymce.wp-editor > ul:not(.wp-block-gallery) li:first-child {
   margin-top: 0;
 }
-body#tinymce.wp-editor ul li:last-child {
+body#tinymce.wp-editor > ul:not(.wp-block-gallery) li:last-child {
   margin-bottom: 0;
 }
-body#tinymce.wp-editor ol {
+body#tinymce.wp-editor > ol:not(.wp-block-gallery) {
   margin: 1rem 0 1rem 0;
 }
-body#tinymce.wp-editor ol li {
+body#tinymce.wp-editor > ol:not(.wp-block-gallery) li {
   margin-bottom: 0.8rem;
 }
-body#tinymce.wp-editor ol li:last-child {
+body#tinymce.wp-editor > ol:not(.wp-block-gallery) li:last-child {
   margin-bottom: 0;
 }
 body#tinymce.wp-editor blockquote {
@@ -2181,6 +2217,9 @@ body#tinymce.wp-editor table th ul, body#tinymce.wp-editor table th ol, body#tin
 }
 body#tinymce.wp-editor a {
   text-decoration: underline;
+}
+body#tinymce.wp-editor a.btn, body#tinymce.wp-editor a.button, body#tinymce.wp-editor a[class^="wp-block"] {
+  text-decoration: none;
 }
 body#tinymce.wp-editor a:hover {
   text-decoration: none;
@@ -2240,13 +2279,15 @@ body#tinymce.wp-editor blockquote::after {
   bottom: 0;
   right: 0;
 }
-body#tinymce.wp-editor h2 {
-  font-size: 1.7rem;
+body#tinymce.wp-editor > h2 {
   border-top-style: solid;
   border-top-width: 1px;
   border-bottom-style: solid;
   border-bottom-width: 1px;
   padding: 1.5rem 0 1.4rem;
+}
+body#tinymce.wp-editor h2 {
+  font-size: 1.7rem;
 }
 body#tinymce.wp-editor h3 {
   font-size: 1.4rem;

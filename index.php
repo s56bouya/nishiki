@@ -23,7 +23,8 @@ get_header();
 				</header>
 		  <?php
 	  }
-	  if( get_theme_mod( 'setting_top_recently_article_display', true ) ){
+    do_action( 'nishiki_before_recentry_article' );
+    if( get_theme_mod( 'setting_top_recently_article_display', true ) ){
 		  if( have_posts() ){
 			  ?>
 						<div class="container column">
@@ -34,6 +35,10 @@ get_header();
 						}
 				?>
 						</div>
-		  <?php } } ?>
+		  <?php
+		  }
+    }
+    do_action( 'nishiki_after_recentry_article' );
+    ?>
 	</main>
 <?php get_footer();
