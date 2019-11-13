@@ -1,7 +1,7 @@
 === Nishiki ===
 Requires at least: WordPress 4.5
-Tested up to: WordPress 5.2.4
-Version: 2.0.9
+Tested up to: WordPress 5.3
+Version: 2.0.10
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: one-column, two-columns, right-sidebar, left-sidebar, flexible-header, accessibility-ready, custom-colors, custom-header, custom-menu, custom-logo, featured-images, footer-widgets, post-formats, sticky-post, theme-options, threaded-comments, translation-ready, blog, entertainment, portfolio, editor-style, block-styles, wide-blocks, footer-widgets, full-width-template
@@ -52,8 +52,11 @@ Created by Keyamoon
 
 == Changelog ==
 
+= 2.0.10 =
+* Add : Support WP 5.3
+
 = 2.0.9 =
-Add : Section and recentry article do_action(nishiki_before_front_page_section_content, nishiki_after_front_page_section_content, nishiki_before_recentry_article, nishiki_after_recentry_article)
+* Add : Section and recentry article do_action(nishiki_before_front_page_section_content, nishiki_after_front_page_section_content, nishiki_before_recentry_article, nishiki_after_recentry_article)
 
 = 2.0.7 =
 * Change : header image size
