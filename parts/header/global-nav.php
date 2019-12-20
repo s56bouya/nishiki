@@ -26,13 +26,13 @@
 	<?php if ( has_nav_menu( 'global' ) ) { ?>
 		<?php if( get_theme_mod( 'setting_header_menu_collapse', false ) ) { ?>
 			<?php do_action( 'nishiki_before_site_nav_inner_menu_collapse_button' ); ?>
-				<button id="menu-collapse-button" class="icon" aria-controls="top-menu">
+				<button id="menu-collapse-button" class="icon" aria-controls="menu-overlay">
 					<i class="icomoon icon-menu2"></i>
 				</button>
 			<?php do_action( 'nishiki_after_site_nav_inner_menu_collapse_button' ); ?>
 		<?php } else { ?>
 			<?php do_action( 'nishiki_before_site_nav_inner_menu_button' ); ?>
-				<button id="menu-button" class="icon" aria-controls="top-menu">
+				<button id="menu-button" class="icon" aria-controls="menu-overlay">
 					<i class="icomoon icon-menu2"></i>
 				</button>
 			<?php do_action( 'nishiki_after_site_nav_inner_menu_button' ); ?>
