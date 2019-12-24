@@ -780,6 +780,9 @@ msgstr ""
 "カスタマイズすることも可能です）。詳しくは、テーマ専用ページをご確認くださ"
 "い。"
 
+msgid "close"
+msgstr "閉じる"
+
 #~ msgid "Section Title"
 #~ msgstr "セクションのタイトル（表示されません）"
 

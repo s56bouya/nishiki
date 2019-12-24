@@ -686,3 +686,6 @@ msgstr ""
 
 msgid "The Nishiki Pro theme features 'Create content' sensibly 'as one of the concepts, and you can create and manage content without writing any code (you can of course write code and customize it). For details, please check the theme specific page."
 msgstr ""
+
+msgid "close"
+msgstr ""
