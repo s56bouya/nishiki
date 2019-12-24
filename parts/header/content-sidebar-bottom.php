@@ -26,7 +26,7 @@
 <div id="search-overlay" class="overlay">
 	<div class="overlay-inner centering">
 		<?php get_search_form(); ?>
-		<button class="close"><i class="icomoon icon-close"></i></button>
+		<button class="close" aria-label="閉じる"><i class="icomoon icon-close"></i></button>
 	</div>
 </div>
 <?php } ?>
@@ -43,7 +43,7 @@
 		);
 		wp_nav_menu($nav_args);
 	?>
-	<button class="close"><i class="icomoon icon-close"></i></button>
+		<button class="close" aria-label="閉じる"><i class="icomoon icon-close"></i></button>
 	</div>
 </div>
 <?php } ?>
