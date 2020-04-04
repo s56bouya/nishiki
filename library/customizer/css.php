@@ -11,6 +11,14 @@ function nishiki_customizer_css(){
 	$site_contents_width = absint( get_theme_mod( 'setting_site_contents_width', '1200' ) );
 	$output .= "
 		.container{max-width:{$site_contents_width}px;}
+		
+		.single .sidebar-none #main > .container > * > * > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide):not(.author-info),
+		.single .sidebar-bottom #main > .container > * > * > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide):not(.author-info),
+		.page .show-on-front-page #main > .container > * > * > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide):not(.author-info),
+		.page .sidebar-none #main > .container > * > * > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide):not(.author-info),
+		.page .sidebar-bottom #main > .container > * > * > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide):not(.author-info){
+			max-width:{$site_contents_width}px;width:90%;margin-left:auto;margin-right:auto;
+		}
 		";
 
 	// Site Background Color

@@ -47,6 +47,9 @@
 	</div>
 </div>
 <?php } ?>
+<?php
+$column = ' sidebar-none';
+?>
 <div id="page" class="site">
-	<div class="content">
+	<div class="content<?php echo esc_attr( $column ); ?>">
 		<div id="content" class="site-content">

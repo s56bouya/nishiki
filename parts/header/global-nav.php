@@ -13,7 +13,7 @@
 		  );
 		  wp_nav_menu($nav_args);
 		  ?>
-				<button id="close-panel-button" class="close"><i class="icomoon icon-close"></i></button>
+				<button id="close-panel-button" class="close" aria-label="<?php esc_html_e( 'close', 'nishiki' ); ?>"><i class="icomoon icon-close"></i></button>
 			</div>
 	<?php } ?>
 	<?php if( get_theme_mod( 'setting_header_search_button', true ) ){ ?>

@@ -109,7 +109,7 @@ msgstr "タイトル 背景カラー"
 #: library/customizer/add_archive.php:140 library/customizer/add_page.php:106
 #: library/customizer/add_post.php:106
 msgid "Title Background Opacity(%)"
-msgstr "タイトル 背景カラー 透明度（%）"
+msgstr "タイトル 背景カラー 不透明度（%）"
 
 #: library/customizer/add_archive.php:162 library/customizer/add_page.php:128
 #: library/customizer/add_post.php:128
@@ -302,7 +302,7 @@ msgstr "新しいウィンドウで開く（アイテムの下）"
 # ---------------------------------
 #: library/customizer/add_front.php:81 library/customizer/add_top.php:114
 msgid "Background Opacity(%)"
-msgstr "背景の透明度"
+msgstr "背景の不透明度"
 
 #: library/customizer/add_front.php:63 library/customizer/add_top.php:95
 msgid "Color above the image"
@@ -310,7 +310,7 @@ msgstr "画像の上に重ねるカラー"
 
 #: library/customizer/add_front.php:81 library/customizer/add_top.php:114
 msgid "Color above the image Opacity(%)"
-msgstr "画像の上に重ねるカラー 透明度(%)"
+msgstr "画像の上に重ねるカラー 不透明度(%)"
 
 #: library/customizer/add_front.php:124 library/customizer/add_front.php:129
 #: library/customizer/add_top.php:57 library/customizer/add_top.php:270
