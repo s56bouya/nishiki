@@ -2937,6 +2937,7 @@ body.scrolled #masthead {
 }
 .single .entry-content iframe,
 .page .entry-content iframe {
+  display: block;
   max-width: 100%;
 }
 .single .entry-content .button,
