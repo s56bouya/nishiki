@@ -1,4 +1,5 @@
 <body <?php body_class(); ?>>
+<?php wp_body_open(); ?>
 <?php $fixed = ( get_theme_mod( 'setting_header_fixed', true ) ) ? 'fixed' : 'nofixed'; ?>
 <?php do_action( 'nishiki_before_site_header' ); ?>
 <div id="masthead" class="<?php echo esc_attr( $fixed ); ?>">
@@ -26,24 +27,25 @@
 <div id="search-overlay" class="overlay">
 	<div class="overlay-inner centering">
 		<?php get_search_form(); ?>
-		<button class="close" aria-label="<?php esc_html_e( 'close', 'nishiki' ); ?>"><i class="icomoon icon-close"></i></button>
+		<button class="close" aria-label="<?php esc_attr_e( 'close', 'nishiki' ); ?>"><i class="icomoon icon-close"></i></button>
 	</div>
 </div>
 <?php } ?>
 <?php if( has_nav_menu( 'global' ) && get_theme_mod( 'setting_header_menu_collapse', false ) === false ){ ?>
 <div id="menu-overlay" class="overlay">
 	<div class="overlay-inner">
-	<?php
-		$nav_args = array(
-			'theme_location' => 'global',
-			'container_class' => '',
-			'container' => '',
-			'menu_id' => '',
-			'items_wrap' => '<ul class="container">%3$s</ul>',
-		);
-		wp_nav_menu($nav_args);
-	?>
-		<button class="close" aria-label="<?php esc_html_e( 'close', 'nishiki' ); ?>"><i class="icomoon icon-close"></i></button>
+	  <?php
+	  wp_nav_menu(
+		  array(
+			  'theme_location' => 'global',
+			  'container_class' => '',
+			  'container' => '',
+			  'menu_id' => '',
+			  'items_wrap' => '<ul class="container">%3$s</ul>',
+		  )
+	  );
+	  ?>
+		<button class="close" aria-label="<?php esc_attr_e( 'close', 'nishiki' ); ?>"><i class="icomoon icon-close"></i></button>
 	</div>
 </div>
 <?php } ?>

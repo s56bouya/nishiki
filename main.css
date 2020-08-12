@@ -1,5 +1,5 @@
 /**
- * Generated on 2020/04/04
+ * Generated on 2020/08/12
  * Author: Tetsuya Imamura(s56bouya)
  */
 
@@ -4880,8 +4880,3 @@ i.icomoon {
 /*********************
 * adminbar
 ***********************/
-@media screen and (max-width: 600px) {
-  #wpadminbar {
-    position: fixed !important;
-  }
-}

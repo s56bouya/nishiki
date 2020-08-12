@@ -4,16 +4,17 @@
 	<?php if( has_nav_menu( 'global' ) && get_theme_mod( 'setting_header_menu_collapse', false ) ){ ?>
 			<div class="menu-collapse panel" id="menu-collapse">
 		  <?php
-		  $nav_args = array(
-			  'theme_location' => 'global',
-			  'container_class' => '',
-			  'container' => '',
-			  'menu_id' => '',
-			  'items_wrap' => '<ul style="list-style-type:none;">%3$s</ul>',
-		  );
-		  wp_nav_menu($nav_args);
+		  wp_nav_menu(
+				array(
+					'theme_location' => 'global',
+					'container_class' => '',
+					'container' => '',
+					'menu_id' => '',
+					'items_wrap' => '<ul style="list-style-type:none;">%3$s</ul>',
+				)
+			);
 		  ?>
-				<button id="close-panel-button" class="close" aria-label="<?php esc_html_e( 'close', 'nishiki' ); ?>"><i class="icomoon icon-close"></i></button>
+				<button id="close-panel-button" class="close" aria-label="<?php esc_attr_e( 'close', 'nishiki' ); ?>"><i class="icomoon icon-close"></i></button>
 			</div>
 	<?php } ?>
 	<?php if( get_theme_mod( 'setting_header_search_button', true ) ){ ?>
