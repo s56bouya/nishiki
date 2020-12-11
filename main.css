@@ -1,5 +1,5 @@
 /**
- * Generated on 2020/08/12
+ * Generated on 2020/11/24
  * Author: Tetsuya Imamura(s56bouya)
  */
 
@@ -3337,10 +3337,12 @@ aside.sidebar ul li a, aside.sidebar ol li a {
   bottom: 0;
   left: 0;
   right: 0;
-  display: grid;
   text-align: center;
+  display: flex;
+  font-size: 2rem;
   align-items: center;
-  font-size: 3rem;
+  justify-content: center;
+  flex-direction: column;
 }
 .articles article .post-image .readmore {
   opacity: 0;
@@ -4090,6 +4092,9 @@ select {
 }
 .widget.widget_categories ul li .children li {
   border: none;
+}
+.widget.widget_archive select {
+  display: block;
 }
 
 /*********************
