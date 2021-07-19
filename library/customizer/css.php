@@ -55,14 +55,14 @@ function nishiki_customizer_css(){
 	// Site Main Color
 	$site_main_color = esc_html( get_theme_mod( 'setting_site_main_color', '#0a88cc' ) );
 	$output .= "
-		.entry-content a,aside a,.comments-area a,.pagination a,.author-info a,.post-navigation a{color:{$site_main_color};}
+		a{color:{$site_main_color};}
 		aside .tagcloud a{border-color:{$site_main_color};}
 		";
 
 	// Site Sub Color
 	$site_sub_color = esc_html( get_theme_mod( 'setting_site_sub_color', '#0044a3' ) );
 	$output .= "
-		.entry-content a:hover,aside a:hover,.comments-area a:hover,.pagination a:hover,.author-info a:hover,.post-navigation a:hover{color:{$site_sub_color};}
+		a:hover{color:{$site_sub_color};}
 		";
 
 	// Site Font Size

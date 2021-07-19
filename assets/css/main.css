@@ -2700,14 +2700,10 @@ body.scrolled #masthead {
 ***********************/
 #footer {
   font-size: 0.9rem;
-  line-height: 1.86;
 }
 
 #footer .wrap {
   padding: 0;
-}
-
-#footer .wrap .footer-content {
 }
 
 #footer .wrap .footer-content .footer-inner {
@@ -2952,7 +2948,7 @@ body.scrolled #masthead {
 
 .single #main > header .date time:first-child,
 .page #main > header .date time:first-child {
-  margin-right: 0.5rem;
+  margin-right: 0.1rem;
 }
 
 .single #main > header .date, .single #main > header .cat, .single #main > header .tag,
@@ -3066,19 +3062,6 @@ body.scrolled #masthead {
   line-height: 2;
 }
 
-.single .entry-content .wp-block-code,
-.single .entry-content .wp-block-preformatted,
-.page .entry-content .wp-block-code,
-.page .entry-content .wp-block-preformatted {
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
-  padding: 1rem 2rem;
-  border-width: 1px;
-  border-style: dotted;
-  white-space: pre-wrap;
-  word-wrap: break-word;
-}
-
 .single .entry-content .wp-block-quote,
 .page .entry-content .wp-block-quote {
   position: relative;
@@ -3117,6 +3100,40 @@ body.scrolled #masthead {
 .page .entry-content .wp-block-quote::after {
   right: 0;
   bottom: 0;
+}
+
+.single .entry-content .wp-block-code,
+.page .entry-content .wp-block-code {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #fff;
+  font-size: 0.8rem;
+  color: #444;
+}
+
+.single .entry-content .wp-block-preformatted,
+.page .entry-content .wp-block-preformatted {
+  border: 1px dotted #aaa;
+  border-radius: 4px;
+  background: #fff;
+  color: #444;
+}
+
+.single .entry-content .wp-block-verse,
+.page .entry-content .wp-block-verse {
+  border: 4px double #ccc;
+  border-radius: 4px;
+  background: #fff;
+  color: #444;
+}
+
+.single .entry-content pre,
+.page .entry-content pre {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  padding: 1rem 2rem;
+  white-space: pre-wrap;
+  word-wrap: break-word;
 }
 
 .single .entry-content > h2,
@@ -4253,9 +4270,12 @@ input[type="text"][disabled] {
 /*********************
 * Widget Area
 ***********************/
+section.widget {
+  margin-bottom: 2rem;
+}
+
 .widget {
   font-size: 0.9rem;
-  line-height: 1.86;
 }
 
 .widget > *:first-child {

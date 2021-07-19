@@ -2146,17 +2146,6 @@ body, button, input, select, textarea {
   line-height: 2;
 }
 
-.editor-styles-wrapper .wp-block-code,
-.editor-styles-wrapper .wp-block-preformatted {
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
-  padding: 1rem 2rem;
-  border-width: 1px;
-  border-style: dotted;
-  white-space: pre-wrap;
-  word-wrap: break-word;
-}
-
 .editor-styles-wrapper .wp-block-quote {
   position: relative;
   box-sizing: border-box;
@@ -2191,6 +2180,36 @@ body, button, input, select, textarea {
   right: 0;
   bottom: 0;
   content: '';
+}
+
+.editor-styles-wrapper .wp-block-code {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #fff;
+  font-size: 0.8rem;
+  color: #444;
+}
+
+.editor-styles-wrapper .wp-block-preformatted {
+  border: 1px dotted #aaa;
+  border-radius: 4px;
+  background: #fff;
+  color: #444;
+}
+
+.editor-styles-wrapper .wp-block-verse {
+  border: 4px double #ccc;
+  border-radius: 4px;
+  background: #fff;
+  color: #444;
+}
+
+.editor-styles-wrapper pre {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  padding: 1rem 2rem;
+  white-space: pre-wrap;
+  word-wrap: break-word;
 }
 
 .editor-styles-wrapper > h2 {
