@@ -454,7 +454,7 @@ if( ! function_exists( 'nishiki_add_body_class_global_nav' ) ) {
 		$header_ovarlay = false;
 
 		// カスタマイザーの設定
-		if( get_theme_mod( 'setting_header_fixed' ) ){
+		if( get_theme_mod( 'setting_header_fixed', true ) ){
 			$header_ovarlay = true;
 		}
 
