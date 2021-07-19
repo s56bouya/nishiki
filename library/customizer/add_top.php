@@ -266,26 +266,6 @@ function nishiki_init_customizer_top( $wp_customize ) {
 		'priority'=> 2004,
 	));
 
-	// image
-	$wp_customize->add_setting('setting_top_main_visual_image',array(
-		'default' => '',
-		'sanitize_callback' => 'nishiki_sanitize_image',
-	));
-
-	$wp_customize->add_control(
-		new WP_Customize_Image_Control(
-			$wp_customize,
-			'ctrl_top_main_visual_image',
-			array(
-				'label'      => __( 'Upload an Image', 'nishiki' ),
-				'description' => '!!! Important: In the future, this setting will be abolished with several version upgrades. Please use Header Image instead.',
-				'section'    => 'section_top_main_visual',
-				'settings'   => 'setting_top_main_visual_image',
-				'priority'=> 10000,
-			)
-		)
-	);
-
 	// recent articles
 	$wp_customize->add_section('section_top_recently_article',array(
 		'title'     =>  __( 'Recent Articles', 'nishiki' ),

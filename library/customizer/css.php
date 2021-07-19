@@ -407,6 +407,36 @@ function nishiki_customizer_css(){
 	$footer_link_color = esc_html( get_theme_mod( 'setting_footer_link_color', '#0a88cc' ) );
 	$output .= "#footer .copyright a{color:{$footer_link_color};}";
 
+	/*****************
+	 * Widget Search Box(legacy)
+	 ******************/
+	$output .= ".footer-widget .wp-block-search .wp-block-search__button{
+		color:{$footer_widget_text_color};
+		border-color:{$footer_widget_text_color};
+		background: transparent;
+		fill:{$footer_widget_text_color};
+	}";
+
+	$output .= ".footer-widget .wp-block-search .wp-block-search__button:hover{
+		background-color:{$footer_widget_text_color};
+	}";
+	$output .= ".footer-widget .wp-block-search .wp-block-search__input,
+	.footer-widget .wp-block-search div,
+	.footer-widget thead,
+	.footer-widget tr{
+		color:{$footer_widget_text_color};
+		border-color:{$footer_widget_text_color};
+	}";
+
+	$output .= ".footer-widget .wp-block-search .wp-block-search__input::placeholder{
+		color:{$footer_widget_text_color}66;
+	}";
+
+	$output .= ".footer-widget .wp-block-search .wp-block-search__button:hover{
+		color:{$footer_background_color};
+		fill:{$footer_background_color};
+	}";
+
 	// Output
 	if( $output == '' ) return false;
 	$str = array( "\t", "\r\n", "\r", "\n" );

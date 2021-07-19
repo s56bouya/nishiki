@@ -1,21 +1,37 @@
 /**
- * Generated on 2020/04/04
+ * Generated on 2018/04/25
  * Author: Tetsuya Imamura(s56bouya)
  */
 
-/***********************
-* Responsive Breakpoints
-* 1001px +          PC
-* 0px - 1000px      SmartPhone - Tablet - PC
-* 769px - 1000px    Tablet - PC
-* 0px - 768px       Tablet
-* 481px - 768px     SmartPhone - Tablet
-* 0px - 480px       SmartPhone
-************************/
+.dashboard-icons {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  color: #444;
+}
+.dashboard-icons li {
+  width: 10%;
+  -webkit-flex-basis: 10%;
+  -ms-flex-preferred-size: 10%;
+  flex-basis: 10%;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.dashboard-icons li i {
+  display: block;
+  font-size: 2rem;
+  margin-bottom: 0.3rem;
+}
+
 @font-face {
   font-family: 'icomoon';
-  src: url("fonts/icomoon/icomoon.eot?1btmmq");
-  src: url("fonts/icomoon/icomoon.eot?1btmmq#iefix") format("embedded-opentype"), url("fonts/icomoon/icomoon.ttf?1btmmq") format("truetype"), url("fonts/icomoon/icomoon.woff?1btmmq") format("woff"), url("fonts/icomoon/icomoon.svg?1btmmq#icomoon") format("svg");
+  src: url("../fonts/icomoon/icomoon.eot?qrgenr");
+  src: url("../fonts/icomoon/icomoon.eot?qrgenr#iefix") format("embedded-opentype"), url("../fonts/icomoon/icomoon.ttf?qrgenr") format("truetype"), url("../fonts/icomoon/icomoon.woff?qrgenr") format("woff"), url("../fonts/icomoon/icomoon.svg?qrgenr#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -31,42 +47,6 @@
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-.icon-num-nine:before {
-  content: "\eaf3";
-}
-
-.icon-num-eight:before {
-  content: "\eaf4";
-}
-
-.icon-num-seven:before {
-  content: "\eaf5";
-}
-
-.icon-num-six:before {
-  content: "\eaf6";
-}
-
-.icon-num-five:before {
-  content: "\eaf7";
-}
-
-.icon-num-four:before {
-  content: "\eaf8";
-}
-
-.icon-num-three:before {
-  content: "\eaf9";
-}
-
-.icon-num-two:before {
-  content: "\eafa";
-}
-
-.icon-num-one:before {
-  content: "\eafb";
 }
 
 .icon-hatena-bookmark:before {
@@ -2063,227 +2043,4 @@
 
 .icon-IcoMoon:before {
   content: "\eaf0";
-}
-
-body, button, input, select, textarea {
-  font-family: "Roboto", "Droid Sans", "Meiryo", "Hiragino Kaku Gothic Pro", "MS PMincho", "sans-serif";
-}
-
-.wp-block {
-  max-width: 768px;
-}
-
-body.block-editor-page .editor-block-list__layout h2 {
-  border-top-style: solid;
-  border-top-width: 1px;
-  border-bottom-style: solid;
-  border-bottom-width: 1px;
-  padding: 1.5rem 0 1.4rem;
-}
-body.block-editor-page .editor-block-list__layout .editor-block-list__layout h2 {
-  border: none;
-  padding: 1rem 0;
-}
-body.block-editor-page .edit-post-visual-editor {
-  line-height: 2;
-  word-wrap: break-word;
-  position: relative;
-  font-size: 1.05rem;
-  /* Main column width */
-  /* Width of "wide" blocks */
-  /* Width of "full-wide" blocks */
-}
-body.block-editor-page .edit-post-visual-editor table {
-  max-width: 100%;
-  text-align: left;
-  border-collapse: collapse;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  display: inline-block;
-  vertical-align: top;
-  overflow-x: auto;
-  border: none;
-}
-body.block-editor-page .edit-post-visual-editor table th, body.block-editor-page .edit-post-visual-editor table td {
-  padding: 1rem;
-  text-align: left;
-  line-height: 2;
-  border-width: 1px;
-  border-style: solid;
-}
-body.block-editor-page .edit-post-visual-editor table th ul, body.block-editor-page .edit-post-visual-editor table th ol, body.block-editor-page .edit-post-visual-editor table td ul, body.block-editor-page .edit-post-visual-editor table td ol {
-  margin: 0;
-}
-body.block-editor-page .edit-post-visual-editor a {
-  text-decoration: underline;
-}
-body.block-editor-page .edit-post-visual-editor a.btn, body.block-editor-page .edit-post-visual-editor a.button, body.block-editor-page .edit-post-visual-editor a[class^="wp-block"] {
-  text-decoration: none;
-}
-body.block-editor-page .edit-post-visual-editor a:hover {
-  text-decoration: none;
-}
-body.block-editor-page .edit-post-visual-editor img {
-  max-width: 100%;
-  height: auto;
-}
-body.block-editor-page .edit-post-visual-editor img.wp-more-tag {
-  height: 1rem;
-}
-body.block-editor-page .edit-post-visual-editor iframe {
-  max-width: 100%;
-}
-body.block-editor-page .edit-post-visual-editor .button {
-  font-size: 0.85rem;
-}
-body.block-editor-page .edit-post-visual-editor ul li, body.block-editor-page .edit-post-visual-editor ol li {
-  line-height: 2;
-}
-body.block-editor-page .edit-post-visual-editor pre:not(.CodeMirror-line) {
-  border-width: 1px;
-  border-style: dotted;
-  margin: 1.5rem 0;
-  padding: 1rem 2rem;
-  white-space: pre-wrap;
-  word-wrap: break-word;
-}
-body.block-editor-page .edit-post-visual-editor blockquote {
-  margin: 2.5rem 0;
-  padding: 1rem 2rem;
-  position: relative;
-  width: 100%;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-body.block-editor-page .edit-post-visual-editor blockquote::before, body.block-editor-page .edit-post-visual-editor blockquote::after {
-  font-family: 'icomoon';
-  content: "\e977";
-  display: inline-block;
-  font-size: 1.7rem;
-  line-height: 1.7rem;
-  text-transform: none;
-  letter-spacing: normal;
-  word-wrap: normal;
-  white-space: nowrap;
-  direction: ltr;
-  position: absolute;
-}
-body.block-editor-page .edit-post-visual-editor blockquote::before {
-  top: 0;
-  left: 0;
-  -webkit-transform: rotateX(180deg);
-  transform: rotateX(180deg);
-}
-body.block-editor-page .edit-post-visual-editor blockquote::after {
-  bottom: 0;
-  right: 0;
-}
-body.block-editor-page .edit-post-visual-editor > h2 {
-  border-top-style: solid;
-  border-top-width: 1px;
-  border-bottom-style: solid;
-  border-bottom-width: 1px;
-  padding: 1.5rem 0 1.4rem;
-}
-body.block-editor-page .edit-post-visual-editor h2 {
-  font-size: 1.7rem;
-}
-body.block-editor-page .edit-post-visual-editor h3 {
-  font-size: 1.4rem;
-}
-body.block-editor-page .edit-post-visual-editor h4 {
-  font-size: 1.2rem;
-}
-body.block-editor-page .edit-post-visual-editor h5 {
-  font-size: 1.15rem;
-}
-body.block-editor-page .edit-post-visual-editor h6 {
-  font-size: 1.1rem;
-}
-body.block-editor-page .edit-post-visual-editor .wp-block-image {
-  max-width: inherit;
-}
-body.block-editor-page .edit-post-visual-editor .wp-block-cover, body.block-editor-page .edit-post-visual-editor .wp-block-cover-image {
-  width: auto;
-}
-body.block-editor-page .edit-post-visual-editor .wp-block-embed {
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
-}
-body.block-editor-page .edit-post-visual-editor .wp-block-embed .wp-block-embed__wrapper .embed-video {
-  position: static;
-  padding-bottom: 0;
-  padding-top: 0;
-  margin: 0;
-}
-body.block-editor-page .edit-post-visual-editor .wp-block-quote {
-  border-left: none;
-  margin: 2.5rem 0;
-  padding: 1rem 2rem;
-  position: relative;
-  width: 100%;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-body.block-editor-page .edit-post-visual-editor figcaption {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-body.block-editor-page .edit-post-visual-editor .alignwide, body.block-editor-page .edit-post-visual-editor .wp-block-gallery.alignwide {
-  margin-left: calc( -85vw / 2 + 100% / 2 );
-  margin-right: calc( -85vw / 2 + 100% / 2 );
-  max-width: 85vw;
-  width: 85vw;
-}
-body.block-editor-page .edit-post-visual-editor .editor-post-title__block,
-body.block-editor-page .edit-post-visual-editor .editor-default-block-appender {
-  max-width: 800px;
-}
-body.block-editor-page .edit-post-visual-editor .editor-block-list__block[data-align="wide"] {
-  max-width: 1200px;
-}
-body.block-editor-page .edit-post-visual-editor .editor-block-list__block[data-align="full"] {
-  max-width: none;
-}
-body.block-editor-page .edit-post-visual-editor a {
-  color: #0a88cc;
-}
-
-@media only screen and (max-width: 1000px) {
-  body.block-editor-page .edit-post-visual-editor {
-    line-height: 1.86;
-    font-size: 0.95rem;
-  }
-  body.block-editor-page .edit-post-visual-editor h2 {
-    font-size: 1.4rem;
-    padding: 0.7rem 0;
-  }
-  body.block-editor-page .edit-post-visual-editor h3 {
-    font-size: 1.25rem;
-  }
-  body.block-editor-page .edit-post-visual-editor h4 {
-    font-size: 1.15rem;
-  }
-  body.block-editor-page .edit-post-visual-editor h5 {
-    font-size: 1.2rem;
-  }
-  body.block-editor-page .edit-post-visual-editor h6 {
-    font-size: 1rem;
-  }
-  body.block-editor-page .edit-post-visual-editor table {
-    overflow-x: auto;
-    white-space: nowrap;
-    border: none;
-    display: inline-block;
-    position: relative;
-  }
-  body.block-editor-page .edit-post-visual-editor table td {
-    font-size: 0.8rem;
-  }
-  body.block-editor-page .edit-post-visual-editor table td ul li, body.block-editor-page .edit-post-visual-editor table td ol li {
-    font-size: 0.8rem;
-  }
-  body.block-editor-page .edit-post-visual-editor table::-webkit-scrollbar {
-    height: 1rem;
-  }
 }

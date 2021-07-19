@@ -76,7 +76,7 @@ add_action( 'admin_init', 'nishiki_editor_style' );
  * Enqueue block editor style
  *****************/
 function nishiki_block_editor_styles() {
-	wp_enqueue_style( 'nishiki-block-editor-styles', get_theme_file_uri( '/editor-gutenberg-style.css' ), false, '1.0', 'all' );
+	wp_enqueue_style( 'nishiki-block-editor-styles', get_theme_file_uri( '/assets/css/editor-gutenberg-style.css' ), false, '1.0', 'all' );
 }
 add_action( 'enqueue_block_editor_assets', 'nishiki_block_editor_styles' );
 
@@ -442,4 +442,28 @@ function nishiki_category_posts( $num, $exclude, $type = '', $text = '', $column
 			}
 		}
 	}
+}
+
+/*****************
+ * Add Body Class(global_nav)
+ *****************/
+
+if( ! function_exists( 'nishiki_add_body_class_global_nav' ) ) {
+	function nishiki_add_body_class_global_nav( $classes ) {
+
+		$header_ovarlay = false;
+
+		// カスタマイザーの設定
+		if( get_theme_mod( 'setting_header_fixed' ) ){
+			$header_ovarlay = true;
+		}
+
+		if( $header_ovarlay ){
+			$classes[] = 'header-overlay';
+		}
+
+		return $classes;
+	}
+
+	add_filter( 'body_class', 'nishiki_add_body_class_global_nav', 100 );
 }
