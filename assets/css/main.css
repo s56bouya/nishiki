@@ -2158,6 +2158,7 @@ body {
   z-index: 0;
   margin: 0;
   padding: 0;
+  line-height: 1.86;
   letter-spacing: 0.07rem;
 }
 
@@ -2931,7 +2932,6 @@ body.scrolled #masthead {
   position: relative;
   z-index: 1;
   overflow: hidden;
-  line-height: 1.4;
 }
 
 .single #main > header .page-header h1,
@@ -2942,13 +2942,24 @@ body.scrolled #masthead {
 
 .single #main > header .date,
 .page #main > header .date {
-  font-size: 0.9rem;
+  margin-bottom: 0.3rem;
 }
 
 .single #main > header .date time,
 .page #main > header .date time {
   display: inline-block;
-  margin-bottom: 0.3rem;
+}
+
+.single #main > header .date time:first-child,
+.page #main > header .date time:first-child {
+  margin-right: 0.5rem;
+}
+
+.single #main > header .date, .single #main > header .cat, .single #main > header .tag,
+.page #main > header .date,
+.page #main > header .cat,
+.page #main > header .tag {
+  font-size: 0.9rem;
 }
 
 .single #main > header .cat, .single #main > header .tag,
@@ -4889,7 +4900,8 @@ i.icomoon {
 ***********************/
 @media only screen and (max-width: 768px) {
   #masthead {
-    padding: 0.2rem 0;
+    display: flex;
+    height: 60px;
   }
   #masthead .site-info {
     width: 100%;
@@ -5021,6 +5033,9 @@ i.icomoon {
   }
   .front-page-section .container .featured-items .featured-item .featured-button {
     font-size: 0.8rem;
+  }
+  body {
+    line-height: 1.76;
   }
   body.header-overlay .page-header {
     padding: calc( 3rem + 56px) 0 3rem;

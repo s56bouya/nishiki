@@ -2072,6 +2072,7 @@ body#tinymce.wp-editor {
   margin: 1rem;
   padding: 0;
   font-size: 1rem;
+  line-height: 1.86;
   line-height: 2;
   letter-spacing: 0.07rem;
   word-wrap: break-word;
