@@ -4095,7 +4095,7 @@ aside.sidebar ul li a, aside.sidebar ol li a {
 input[type="submit"],
 input[type="button"] {
   box-sizing: border-box;
-  padding: 1rem;
+  padding: 0.7rem 2rem;
   border-style: solid;
   border-radius: 0;
   -webkit-appearance: button;
@@ -4170,11 +4170,6 @@ input[type="text"][disabled] {
 .comments-area textarea {
   width: 100%;
   resize: vertical;
-}
-
-.comments-area textarea, .comments-area input {
-  box-sizing: border-box;
-  padding: 1rem;
 }
 
 .comments-area .comments-title::before {
