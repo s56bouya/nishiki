@@ -4287,13 +4287,52 @@ section.widget {
 
 .widget ul,
 .widget ol {
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.widget ul li,
+.widget ol li {
+  padding: 0.5rem 0;
+  border-width: 0 0 1px 0;
+  border-style: dotted;
+}
+
+.widget ul li .children,
+.widget ul li .sub-menu,
+.widget ol li .children,
+.widget ol li .sub-menu {
+  padding-left: 1em;
+}
+
+.widget ul li .children li,
+.widget ul li .sub-menu li,
+.widget ol li .children li,
+.widget ol li .sub-menu li {
+  border-bottom: none;
+}
+
+.widget ul li:last-child,
+.widget ol li:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.widget ul[class*="is-style-"],
+.widget ol[class*="is-style-"] {
   margin: 0;
   padding-left: 1.6rem;
 }
 
-.widget ul ul,
-.widget ol ul {
+.widget ul[class*="is-style-"] li,
+.widget ol[class*="is-style-"] li {
+  border-bottom: none;
+}
+
+.widget ul[class*="is-style-"] ul,
+.widget ol[class*="is-style-"] ul {
   padding-left: 1em;
+  list-style-type: revert;
 }
 
 .widget #recentcomments li {
