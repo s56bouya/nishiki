@@ -4322,6 +4322,7 @@ section.widget {
 .widget ol[class*="is-style-"] {
   margin: 0;
   padding-left: 1.6rem;
+  list-style-type: revert;
 }
 
 .widget ul[class*="is-style-"] li,
