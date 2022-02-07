@@ -9,7 +9,7 @@ function nishiki_init_customizer_footer( $wp_customize ) {
 
 	// Footer Contents Width
 	$wp_customize->add_setting( 'setting_footer_contents_width' , array(
-		'default'     => 1200,
+		'default'     => 1000,
 		'sanitize_callback' => 'nishiki_sanitize_number_range',
 	) );
 
@@ -18,7 +18,7 @@ function nishiki_init_customizer_footer( $wp_customize ) {
 			$wp_customize,
 			'ctrl_footer_contents_width',
 			array(
-				'label'	=>  __( 'Footer Contents Width(Default 1200px)', 'nishiki' ),
+				'label'	=>  __( 'Footer Contents Width(Default 1000px)', 'nishiki' ),
 				'min' => 500,
 				'max' => 9000,
 				'step' => 1,

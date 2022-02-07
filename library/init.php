@@ -1,8 +1,8 @@
 <?php
 
 // Content Width
-if ( ! isset( $content_width ) && get_theme_mod( 'setting_site_contents_width', 1200 ) ) {
-	$content_width = 1200;
+if ( ! isset( $content_width ) && get_theme_mod( 'setting_site_contents_width', 1000 ) ) {
+	$content_width = 1000;
 }
 
 /*****************

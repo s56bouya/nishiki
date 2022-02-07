@@ -8,7 +8,7 @@ function nishiki_customizer_css(){
 	******************/
 
 	// Site Contents Width
-	$site_contents_width = absint( get_theme_mod( 'setting_site_contents_width', '1200' ) );
+	$site_contents_width = absint( get_theme_mod( 'setting_site_contents_width', '1000' ) );
 	$output .= "
 		.container{max-width:{$site_contents_width}px;}
 		
@@ -157,7 +157,7 @@ function nishiki_customizer_css(){
 	 ******************/
 
 	// Header Contents Width
-	$header_contents_width = absint( get_theme_mod( 'setting_header_contents_width', '1200' ) );
+	$header_contents_width = absint( get_theme_mod( 'setting_header_contents_width', '1000' ) );
 	$output .= "
 		#masthead .container{max-width:{$header_contents_width}px;}
 		";
@@ -345,7 +345,7 @@ function nishiki_customizer_css(){
 	 ******************/
 
 	// Archive Contents Width
-	$archive_contents_width = absint( get_theme_mod( 'setting_archive_contents_width', '1200' ) );
+	$archive_contents_width = absint( get_theme_mod( 'setting_archive_contents_width', '1000' ) );
 	$output .= "
 		.archive #main .container.column, .search #main .container.column, .paged #main .container.column, .blog #main .container.column, .error404 #main .container.column{max-width:{$archive_contents_width}px;}
 		";
@@ -378,7 +378,7 @@ function nishiki_customizer_css(){
 	 ******************/
 
 	// Footer Contents Width
-	$footer_contents_width = absint( get_theme_mod( 'setting_footer_contents_width', '1200' ) );
+	$footer_contents_width = absint( get_theme_mod( 'setting_footer_contents_width', '1000' ) );
 	$output .= "
 		#footer .footer-content .container{max-width:{$footer_contents_width}px;}
 		";

@@ -9,7 +9,7 @@ function nishiki_init_customizer_header( $wp_customize ) {
 
 	// Header Contents Width
 	$wp_customize->add_setting( 'setting_header_contents_width' , array(
-		'default'     => 1200,
+		'default'     => 1000,
 		'sanitize_callback' => 'nishiki_sanitize_number_range',
 	) );
 
@@ -18,7 +18,7 @@ function nishiki_init_customizer_header( $wp_customize ) {
 			$wp_customize,
 			'ctrl_header_contents_width',
 			array(
-				'label'	=>  __( 'Header Contents Width(Default 1200px)', 'nishiki' ),
+				'label'	=>  __( 'Header Contents Width(Default 1000px)', 'nishiki' ),
 				'min' => 500,
 				'max' => 9000,
 				'step' => 1,
