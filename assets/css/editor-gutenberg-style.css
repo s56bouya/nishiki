@@ -1,22 +1,12 @@
-/***********************
-* Responsive Breakpoints
-* 1001px +          PC
-* 0px - 1000px      SmartPhone - Tablet - PC
-* 769px - 1000px    Tablet - PC
-* 0px - 768px       Tablet
-* 481px - 768px     SmartPhone - Tablet
-* 0px - 480px       SmartPhone
-************************/
 @font-face {
-  font-family: 'icomoon';
+  font-family: "icomoon";
   font-weight: normal;
   font-style: normal;
   src: url("../fonts/icomoon/icomoon.eot?1btmmq");
   src: url("../fonts/icomoon/icomoon.eot?1btmmq#iefix") format("embedded-opentype"), url("../fonts/icomoon/icomoon.ttf?1btmmq") format("truetype"), url("../fonts/icomoon/icomoon.woff?1btmmq") format("woff"), url("../fonts/icomoon/icomoon.svg?1btmmq#icomoon") format("svg");
 }
-
-[class^="icon-"], [class*=" icon-"] {
-  font-family: 'icomoon' !important;
+[class^=icon-], [class*=" icon-"] {
+  font-family: "icomoon" !important;
   font-weight: normal;
   font-style: normal;
   font-variant: normal;
@@ -2074,7 +2064,6 @@ body, button, input, select, textarea {
   line-height: 2;
   word-wrap: break-word;
 }
-
 .editor-styles-wrapper .editor-block-list__layout h2 {
   padding: 1.5rem 0 1.4rem;
   border-top-width: 1px;
@@ -2082,12 +2071,10 @@ body, button, input, select, textarea {
   border-bottom-width: 1px;
   border-bottom-style: solid;
 }
-
 .editor-styles-wrapper .editor-block-list__layout .editor-block-list__layout h2 {
   padding: 1rem 0;
   border: none;
 }
-
 .editor-styles-wrapper table {
   display: inline-block;
   overflow-x: auto;
@@ -2098,7 +2085,6 @@ body, button, input, select, textarea {
   text-align: left;
   vertical-align: top;
 }
-
 .editor-styles-wrapper table th, .editor-styles-wrapper table td {
   padding: 1rem;
   border-width: 1px;
@@ -2106,46 +2092,36 @@ body, button, input, select, textarea {
   line-height: 2;
   text-align: left;
 }
-
 .editor-styles-wrapper table th ul, .editor-styles-wrapper table th ol, .editor-styles-wrapper table td ul, .editor-styles-wrapper table td ol {
   margin: 0;
 }
-
 .editor-styles-wrapper a {
   color: #0a88cc;
   text-decoration: underline;
 }
-
-.editor-styles-wrapper a.btn, .editor-styles-wrapper a.button, .editor-styles-wrapper a[class^="wp-block"] {
+.editor-styles-wrapper a.btn, .editor-styles-wrapper a.button, .editor-styles-wrapper a[class^=wp-block] {
   text-decoration: none;
 }
-
 .editor-styles-wrapper a:hover {
   text-decoration: none;
 }
-
 .editor-styles-wrapper img {
   max-width: 100%;
   height: auto;
 }
-
 .editor-styles-wrapper img.wp-more-tag {
   height: 1rem;
 }
-
 .editor-styles-wrapper iframe {
   display: block;
   max-width: 100%;
 }
-
 .editor-styles-wrapper .button {
   font-size: 0.85rem;
 }
-
 .editor-styles-wrapper ul li, .editor-styles-wrapper ol li {
   line-height: 2;
 }
-
 .editor-styles-wrapper .wp-block-quote {
   position: relative;
   box-sizing: border-box;
@@ -2155,11 +2131,10 @@ body, button, input, select, textarea {
   padding: 1rem 2rem;
   border-left: none;
 }
-
 .editor-styles-wrapper .wp-block-quote::before, .editor-styles-wrapper .wp-block-quote::after {
   position: absolute;
   display: inline-block;
-  font-family: 'icomoon';
+  font-family: "icomoon";
   font-size: 1.7rem;
   line-height: 1.7rem;
   white-space: nowrap;
@@ -2169,19 +2144,16 @@ body, button, input, select, textarea {
   content: "\e977";
   direction: ltr;
 }
-
 .editor-styles-wrapper .wp-block-quote::before {
   top: 0;
   left: 0;
   transform: rotateX(180deg);
 }
-
 .editor-styles-wrapper .wp-block-quote::after {
   right: 0;
   bottom: 0;
-  content: '';
+  content: "";
 }
-
 .editor-styles-wrapper .wp-block-code {
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -2189,21 +2161,18 @@ body, button, input, select, textarea {
   font-size: 0.8rem;
   color: #444;
 }
-
 .editor-styles-wrapper .wp-block-preformatted {
   border: 1px dotted #aaa;
   border-radius: 4px;
   background: #fff;
   color: #444;
 }
-
 .editor-styles-wrapper .wp-block-verse {
   border: 4px double #ccc;
   border-radius: 4px;
   background: #fff;
   color: #444;
 }
-
 .editor-styles-wrapper pre {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
@@ -2211,7 +2180,6 @@ body, button, input, select, textarea {
   white-space: pre-wrap;
   word-wrap: break-word;
 }
-
 .editor-styles-wrapper > h2 {
   padding: 1.5rem 0 1.4rem;
   border-top-width: 1px;
@@ -2219,68 +2187,54 @@ body, button, input, select, textarea {
   border-bottom-width: 1px;
   border-bottom-style: solid;
 }
-
 .editor-styles-wrapper h2 {
   font-size: 1.7rem;
 }
-
 .editor-styles-wrapper h3 {
   font-size: 1.4rem;
 }
-
 .editor-styles-wrapper h4 {
   font-size: 1.2rem;
 }
-
 .editor-styles-wrapper h5 {
   font-size: 1.15rem;
 }
-
 .editor-styles-wrapper h6 {
   font-size: 1.1rem;
 }
-
 .editor-styles-wrapper .wp-block-image.alignfull {
   max-width: inherit;
 }
-
 .editor-styles-wrapper .wp-block-cover, .editor-styles-wrapper .wp-block-cover-image {
   width: auto;
 }
-
 .editor-styles-wrapper .wp-block-embed {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
 }
-
 .editor-styles-wrapper .wp-block-embed .wp-block-embed__wrapper .embed-video {
   position: static;
   margin: 0;
   padding-top: 0;
   padding-bottom: 0;
 }
-
 .editor-styles-wrapper figcaption {
   box-sizing: border-box;
 }
-
 .editor-styles-wrapper .alignwide, .editor-styles-wrapper .wp-block-gallery.alignwide {
   width: 85vw;
   max-width: 85vw;
-  margin-right: calc( -85vw / 2 + 100% / 2);
-  margin-left: calc( -85vw / 2 + 100% / 2);
+  margin-right: calc(-42.5vw + 50%);
+  margin-left: calc(-42.5vw + 50%);
 }
-
 .editor-styles-wrapper .editor-post-title__block,
 .editor-styles-wrapper .editor-default-block-appender {
   max-width: 800px;
 }
-
-.editor-styles-wrapper .editor-block-list__block[data-align="wide"] {
+.editor-styles-wrapper .editor-block-list__block[data-align=wide] {
   max-width: 1200px;
 }
-
-.editor-styles-wrapper .editor-block-list__block[data-align="full"] {
+.editor-styles-wrapper .editor-block-list__block[data-align=full] {
   max-width: none;
 }
 
