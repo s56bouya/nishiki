@@ -3,17 +3,17 @@
 	<?php do_action( 'nishiki_before_site_nav_inner' ); ?>
 	<?php if( has_nav_menu( 'global' ) && get_theme_mod( 'setting_header_menu_collapse', false ) ){ ?>
 			<div class="menu-collapse panel" id="menu-collapse">
-		  <?php
-		  wp_nav_menu(
+			<?php
+			wp_nav_menu(
 				array(
 					'theme_location' => 'global',
 					'container_class' => '',
 					'container' => '',
 					'menu_id' => '',
-					'items_wrap' => '<ul style="list-style-type:none;">%3$s</ul>',
+					'items_wrap' => '<ul class="menu-items">%3$s</ul>',
 				)
 			);
-		  ?>
+			?>
 				<button id="close-panel-button" class="close" aria-label="<?php esc_attr_e( 'close', 'nishiki' ); ?>"><i class="icomoon icon-close"></i></button>
 			</div>
 	<?php } ?>

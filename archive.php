@@ -4,7 +4,7 @@
 				<?php do_action( 'nishiki_before_archive_header' ); ?>
 				<header>
 					<div class="page-header container">
-					  <?php do_action( 'nishiki_before_archive_title' ); ?>
+						<?php do_action( 'nishiki_before_archive_title' ); ?>
 						<?php if ( is_post_type_archive() ) { ?>
 							<h1><?php post_type_archive_title(); ?></h1>
 						<?php } else {

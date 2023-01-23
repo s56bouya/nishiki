@@ -4,9 +4,9 @@
 				<?php do_action( 'nishiki_before_search_header' ); ?>
 				<header>
 					<div class="page-header container">
-					  <?php do_action( 'nishiki_before_search_title' ); ?>
+						<?php do_action( 'nishiki_before_search_title' ); ?>
 						<?php the_archive_title( '<h1>', '</h1>' ); ?>
-					  <?php do_action( 'nishiki_after_search_title' ); ?>
+						<?php do_action( 'nishiki_after_search_title' ); ?>
 						<div class="taxonomy-description"><?php esc_html_e( 'Search results for', 'nishiki' ); ?>:<?php echo get_search_query(); ?></span></div>
 				</header>
 				<?php do_action( 'nishiki_after_search_header' ); ?>

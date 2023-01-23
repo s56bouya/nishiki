@@ -6,12 +6,12 @@ $image = '';
 if ( nishiki_has_header_video() ) {
 	$nishiki_main_visual_class .= ' main-video';
 	if( has_header_image() ){
-	  $nishiki_main_visual_class .= ' has-header-image';
+		$nishiki_main_visual_class .= ' has-header-image';
 		$image_large = ' data-src="' . esc_url( get_header_image() ) . '"';
 	} elseif( get_theme_mod( 'setting_top_main_visual_image' ) ){
-	  $nishiki_main_visual_class .= ' has-main-visual';
-	  $image = esc_url( get_theme_mod('setting_top_main_visual_image') );
-	  $image_large = ' data-src="' . $image . '"';
+		$nishiki_main_visual_class .= ' has-main-visual';
+		$image = esc_url( get_theme_mod('setting_top_main_visual_image') );
+		$image_large = ' data-src="' . $image . '"';
 	}
 } else {
 	if( has_header_image() ){
@@ -22,8 +22,8 @@ if ( nishiki_has_header_video() ) {
 		$image = esc_url( get_theme_mod('setting_top_main_visual_image') );
 		$image_large = ' data-src="' . $image . '"';
 	} else {
-	  $nishiki_main_visual_class = ' main-default-header-image';
-	  $image_large = ' data-src="' . esc_url( get_template_directory_uri() ) . '/images/carp.jpg' . '"';
+		$nishiki_main_visual_class = ' main-default-header-image';
+		$image_large = ' data-src="' . esc_url( get_template_directory_uri() ) . '/images/carp.jpg' . '"';
 	}
 }
 
@@ -74,7 +74,7 @@ if( get_theme_mod( 'setting_top_main_visual_main_button_text', __( 'Get started!
 			<p class="main-button">
 			<a <?php if ( get_theme_mod( 'setting_top_main_visual_main_button_link_target', false ) == true ) { ?>target="_blank"
 		<?php }
-		echo 'href="' . esc_url( $main_visual_button_link ) . '">' . esc_html( get_theme_mod( 'setting_top_main_visual_main_button_text', __( 'Get started!', 'nishiki' ) ) ) . '</a></p>';
+			echo 'href="' . esc_url( $main_visual_button_link ) . '">' . esc_html( get_theme_mod( 'setting_top_main_visual_main_button_text', __( 'Get started!', 'nishiki' ) ) ) . '</a></p>';
 	}
 }
 echo '</div>';

@@ -1,6 +1,6 @@
 <?php
 
-// Content Width
+// Content Width.
 if ( ! isset( $content_width ) && get_theme_mod( 'setting_site_contents_width', 1000 ) ) {
 	$content_width = 1000;
 }
@@ -98,12 +98,12 @@ add_action( 'wp_head', 'nishiki_pingback_header' );
 // Setting Front Page Check
 add_filter('frontpage_template', 'nishiki_front_page_template');
 function nishiki_front_page_template( $template ) {
-    return is_home() ? '' : $template;
+	return is_home() ? '' : $template;
 }
 
 // Check Front Page
 function nishiki_is_static_front_page() {
-    return ( is_front_page() && ! is_home() );
+	return ( is_front_page() && ! is_home() );
 }
 
 /*****************
@@ -224,7 +224,7 @@ function nishiki_change_archive_title($title){
 	} elseif( is_day() ){
 		$title = get_the_date( _x( 'F j, Y', 'daily archives date format', 'nishiki' ) );
 	} elseif( is_month() ){
-//		$title = get_the_date( _x( 'F j, Y', 'daily archives date format', 'nishiki' ) );
+		//$title = get_the_date( _x( 'F j, Y', 'daily archives date format', 'nishiki' ) );
 		/* translators: %s: get_the_date */
 		$title = sprintf( __( '%1$s %2$d', 'nishiki' ), get_the_date('M'), get_the_date('Y') );
 	} elseif( is_year() ){
@@ -340,57 +340,57 @@ function nishiki_related_posts() {
 	$related_posts_columns = get_theme_mod( 'setting_post_related_posts_columns', 3 );
 	?>
 	<section class="related-posts">
-	  <?php
+	<?php
 		// Related Posts
-	  $tags = wp_get_post_tags( $post_id );
+	$tags = wp_get_post_tags( $post_id );
 
-	  if ( $tags ) {
-		  $tag_ids = array();
-		  foreach( $tags as $tag ) {
-			  $tag_ids[] = $tag->term_id;
-		  }
-		  $args = array(
-			  'tag__in'               => $tag_ids,
-			  'post__not_in'          => $exclude_post_id,
-			  'posts_per_page'        => $related_posts_num,
-			  'ignore_sticky_posts'   => 1
-		  );
+	if ( $tags ) {
+		$tag_ids = array();
+		foreach( $tags as $tag ) {
+			$tag_ids[] = $tag->term_id;
+		}
+		$args = array(
+			'tag__in'               => $tag_ids,
+			'post__not_in'          => $exclude_post_id,
+			'posts_per_page'        => $related_posts_num,
+			'ignore_sticky_posts'   => 1
+		);
 
-		  $related_query = new wp_query( $args );
+		$related_query = new wp_query( $args );
 
-	    $found_posts = $related_query->found_posts;
-	    $request_posts = $related_query->query['posts_per_page'];
+		$found_posts = $related_query->found_posts;
+		$request_posts = $related_query->query['posts_per_page'];
 
-	    if( $related_query->have_posts() ) {
-			  ?>
+		if( $related_query->have_posts() ) {
+			?>
 						<aside class="archives">
 				<?php if ( $related_posts_text !== '' ) { ?>
 									<h1 class="title"><?php echo esc_html( $related_posts_text ); ?></h1>
 				<?php } ?>
 							<div class="articles<?php echo ' column-' . esc_attr( $related_posts_columns ); ?>">
-				  <?php
-				  while ( $related_query->have_posts() ) {
-					  $related_query->the_post();
-			  		$exclude_post_id[] = $related_query->post->ID;
-					  get_template_part( 'parts/archive/post' );
-				  }
-				  wp_reset_postdata();
+				<?php
+				while ( $related_query->have_posts() ) {
+					$related_query->the_post();
+					$exclude_post_id[] = $related_query->post->ID;
+					get_template_part( 'parts/archive/post' );
+				}
+				wp_reset_postdata();
 
-				  if ( $request_posts > $found_posts ) {
-				  	$same_cat_post = $request_posts - $found_posts;
-			  		nishiki_category_posts( $same_cat_post, $exclude_post_id );
-					}
-				  ?>
+				if ( $request_posts > $found_posts ) {
+					$same_cat_post = $request_posts - $found_posts;
+					nishiki_category_posts( $same_cat_post, $exclude_post_id );
+				}
+				?>
 							</div>
 						</aside>
-			  <?php
-		  } else {
-	      nishiki_category_posts( $related_posts_num, $exclude_post_id, 'category', $related_posts_text, $related_posts_columns );
-			}
-	  } else {
-	    nishiki_category_posts( $related_posts_num, $exclude_post_id, 'category', $related_posts_text, $related_posts_columns );
+				<?php
+		} else {
+			nishiki_category_posts( $related_posts_num, $exclude_post_id, 'category', $related_posts_text, $related_posts_columns );
 		}
-	  ?>
+	} else {
+		nishiki_category_posts( $related_posts_num, $exclude_post_id, 'category', $related_posts_text, $related_posts_columns );
+	}
+	?>
 	</section>
 	<?php
 }
@@ -404,12 +404,12 @@ function nishiki_category_posts( $num, $exclude, $type = '', $text = '', $column
 		$category_link = get_category_link( $cat->cat_ID );
 
 		$args = array(
-			'cat'							=> $cat->cat_ID,
-			'posts_per_page'	=> $num,
-			'post__not_in'		=> $exclude,
-			'offset'					=> '0',
-			'orderby'					=> 'date',
-			'order'						=> 'DESC'
+			'cat' => $cat->cat_ID,
+			'posts_per_page' => $num,
+			'post__not_in' => $exclude,
+			'offset' => '0',
+			'orderby' => 'date',
+			'order' => 'DESC'
 		);
 
 		$cat_query = new wp_query( $args );
@@ -421,24 +421,24 @@ function nishiki_category_posts( $num, $exclude, $type = '', $text = '', $column
 			if ( $type === 'category' ) {
 				?>
 				<aside class="archives">
-		  		<?php if ( $text !== '' ) { ?>
+				<?php if ( $text !== '' ) { ?>
 					<h1 class="title"><?php echo esc_html( $text ); ?></h1>
-		  		<?php } ?>
+				<?php } ?>
 					<div class="articles<?php echo ' column-' . esc_attr( $columns ); ?>">
 					<?php
-				}
-				while ( $cat_query->have_posts() ) {
-					$cat_query->the_post();
-					get_template_part( 'parts/archive/post' );
-				}
-				wp_reset_postdata();
+			}
+			while ( $cat_query->have_posts() ) {
+				$cat_query->the_post();
+				get_template_part( 'parts/archive/post' );
+			}
+			wp_reset_postdata();
 
-				if ( $type === 'category' ) {
+			if ( $type === 'category' ) {
 				?>
 
 			</div>
 			</aside>
-		<?php
+				<?php
 			}
 		}
 	}

@@ -480,8 +480,8 @@ msgstr ""
 msgid "Clear an Image"
 msgstr ""
 
-#: library/customizer/add_top.php:147 parts/front/main_visual.php:22
-#: parts/front/main_visual.php:23
+#: library/customizer/add_top.php:147 parts/front/main-visual.php:22
+#: parts/front/main-visual.php:23
 msgid "Get started!"
 msgstr ""
 
@@ -541,11 +541,11 @@ msgstr ""
 msgid "Display when eye-catching image is not set. Recommended image size 16:9"
 msgstr ""
 
-#: parts/front/main_visual.php:14
+#: parts/front/main-visual.php:14
 msgid "Elegance,Refined,Multifunctional"
 msgstr ""
 
-#: parts/front/main_visual.php:19 parts/front/main_visual.php:20
+#: parts/front/main-visual.php:19 parts/front/main-visual.php:20
 msgid "Beautiful WordPress Theme the Nishiki."
 msgstr ""
 

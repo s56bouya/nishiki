@@ -8,7 +8,7 @@
 		}
 		?>
 			<div class="post-image<?php echo esc_attr( $noimage ); ?>">
-		  <?php if( $noimage == '' ){ ?>
+			<?php if( $noimage == '' ){ ?>
 						<figure>
 				<?php if( has_post_thumbnail( get_the_ID() ) ){
 					the_post_thumbnail( 'thumbnail' );
@@ -24,9 +24,9 @@
 					}
 				} ?>
 						</figure>
-		  <?php } else { ?>
+			<?php } else { ?>
 						<i class="icomoon icon-image"></i>
-		  <?php } ?>
+			<?php } ?>
 				<div class="readmore"><span><?php esc_html_e( 'Read More', 'nishiki' ); ?><i class="icomoon icon-arrow-right"></i></span></div>
 			</div>
 		<header><?php the_title( '<h1>', '</h1>' ); ?></header>

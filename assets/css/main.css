@@ -2164,11 +2164,8 @@ body.scrolled #masthead {
   transition: all 300ms ease;
 }
 
-.nav-open {
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
+.overflow-hidden {
+  overflow: hidden;
 }
 
 .cf, #masthead .flex {
@@ -2447,7 +2444,7 @@ body.scrolled #masthead {
 }
 .main-visual.main-video .custom-header .wp-custom-header button i {
   vertical-align: middle;
-  transition: all 0.3s linear;
+  transition: all 300ms linear;
 }
 .main-visual::after {
   position: absolute;
@@ -3259,8 +3256,12 @@ aside.sidebar ul li a, aside.sidebar ol li a {
   margin-bottom: 0.3rem;
 }
 .articles article figure img {
+  width: 100%;
   max-width: 100%;
   height: auto;
+  aspect-ratio: 16/9;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .articles article header {
   margin: 0.7rem 0 0.2rem;
@@ -3314,23 +3315,16 @@ aside.sidebar ul li a, aside.sidebar ol li a {
   position: relative;
 }
 .articles article .post-image.noimage {
-  padding-top: 56.25%;
+  display: flex;
   background: #f3f3f3;
+  aspect-ratio: 16/9;
 }
 .articles article .post-image.noimage i.icon-image {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  display: flex;
-  flex-direction: column;
+  margin: auto;
   font-family: "icomoon";
   font-size: 2rem;
   text-align: center;
   content: "\e90d";
-  align-items: center;
-  justify-content: center;
 }
 .articles article .post-image .readmore {
   position: absolute;
@@ -3345,10 +3339,6 @@ aside.sidebar ul li a, aside.sidebar ol li a {
   transition: all 300ms ease-out;
   align-items: center;
   justify-content: center;
-}
-.articles article .post-image .readmore span {
-  padding: 0.7rem 1.3rem;
-  border: 1px solid #fff;
 }
 .articles article .post-image .readmore i {
   margin-left: 0.2rem;
@@ -3874,10 +3864,14 @@ input[type=button]:focus {
 
 input[type=checkbox] {
   -webkit-appearance: checkbox;
+     -moz-appearance: checkbox;
+          appearance: checkbox;
 }
 
 input[type=radio] {
   -webkit-appearance: radio;
+     -moz-appearance: radio;
+          appearance: radio;
 }
 
 input[type=text],
@@ -4265,15 +4259,19 @@ ol.wp-block-latest-comments {
   z-index: 3;
   top: 0;
   left: 0;
+  display: flex;
   visibility: hidden;
   overflow: auto;
   zoom: 1;
+  flex-direction: column;
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.75);
   text-align: center;
-  transition: transform 0.5s;
+  transition: transform 300ms;
   transform: translateX(-100%);
+  justify-content: center;
+  align-items: center;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
 }
@@ -4357,9 +4355,6 @@ ol.wp-block-latest-comments {
   vertical-align: middle;
 }
 
-#menu-overlay .overlay-inner {
-  padding-top: 7.5rem;
-}
 #menu-overlay.panel-open {
   visibility: visible;
   transform: translateX(0%);
@@ -4726,16 +4721,19 @@ i.icomoon {
     z-index: 3;
     top: 0;
     left: 0;
+    display: flex;
     visibility: hidden;
     overflow: auto;
     zoom: 1;
+    flex-direction: column;
     width: 100%;
     height: 100%;
-    padding-top: 7.5rem;
     background: rgba(0, 0, 0, 0.75);
     text-align: center;
-    transition: transform 0.5s;
+    transition: transform 300ms;
     transform: translateX(-100%);
+    align-items: center;
+    justify-content: center;
     -webkit-backface-visibility: hidden;
             backface-visibility: hidden;
   }
@@ -4797,6 +4795,10 @@ i.icomoon {
 
   #masthead .global-nav #menu-collapse.panel ul li > ul li > ul li a {
     padding-left: 2rem;
+  }
+
+  #masthead .global-nav #menu-collapse.panel.mobile .menu-items {
+    width: 90%;
   }
 
   #masthead .global-nav #menu-collapse.panel-close {

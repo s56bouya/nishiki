@@ -4,15 +4,15 @@ if( has_post_thumbnail() ){
 	if( ( is_single() && get_theme_mod( 'setting_post_eye_catch', false ) == true ) or ( is_page() && get_theme_mod( 'setting_page_eye_catch', false ) == true ) ){
 		if( get_the_post_thumbnail_url( get_the_ID(), 'full' ) )
 			$nishiki_header_class = ' style="background-image:url(' . esc_url( get_the_post_thumbnail_url( get_the_ID(), 'full' ) ) . ');"';
-  	}
+	}
 }
 ?>
 <?php do_action( 'nishiki_before_singular_header' ); ?>
 <header<?php echo wp_kses_post( $nishiki_header_class ); ?> class="<?php echo esc_attr( get_post_type() ); ?>">
 	<div class="page-header container">
-	  <?php do_action( 'nishiki_before_singular_title' ); ?>
+		<?php do_action( 'nishiki_before_singular_title' ); ?>
 		<?php the_title( '<h1>', '</h1>' ); ?>
-	  <?php do_action( 'nishiki_after_singular_title' ); ?>
+		<?php do_action( 'nishiki_after_singular_title' ); ?>
 		<?php if( is_single() && !is_attachment() ){ ?>
 		<div class="date">
 			<time datetime="<?php echo esc_attr( get_the_time('Y-m-d') ); ?>"><?php esc_html_e( 'published', 'nishiki' ); ?>:<?php the_time( get_option( 'date_format' ) ) ?></time>
@@ -20,7 +20,7 @@ if( has_post_thumbnail() ){
 				<time datetime="<?php echo esc_attr( get_the_modified_time('c') ); ?>"><?php esc_html_e( 'updated', 'nishiki' ); ?>:<?php the_modified_date( get_option( 'date_format' ) ); ?></time>
 			<?php } ?>
 		</div>
-		<?php
+			<?php
 			if( get_theme_mod( 'setting_post_display_category', true ) ){
 				$categories = get_the_category();
 				$separator = '/';
@@ -52,74 +52,69 @@ if( has_post_thumbnail() ){
 <?php do_action( 'nishiki_after_singular_header' ); ?>
 <div class="container column">
 	<article class="entry">
-	  <?php do_action( 'nishiki_before_singular_content' ); ?>
+		<?php do_action( 'nishiki_before_singular_content' ); ?>
 		<div class="entry-content">
 			<?php the_content(); ?>
 			<?php wp_link_pages('before=<div class="pagination">&after=</div>&link_before=<span>&link_after=</span>'); ?>
 		</div>
-	  <?php do_action( 'nishiki_after_singular_content' ); ?>
+		<?php do_action( 'nishiki_after_singular_content' ); ?>
 			<footer>
-		  <?php if( is_single() && get_theme_mod( 'setting_post_author_display', true ) ){ ?>
+			<?php if( is_single() && get_theme_mod( 'setting_post_author_display', true ) ){ ?>
 						<section class="author-info">
 				<?php
 				if ( get_theme_mod( 'setting_post_author_text',
 					__( 'Author', 'nishiki' ) )
 				) {
-					echo '<span>'
-					     . esc_html( get_theme_mod( 'setting_post_author_text',
-							__( 'Author', 'nishiki' ) ) ) . '</span>';
+					echo '<span>' . esc_html( get_theme_mod( 'setting_post_author_text', __( 'Author', 'nishiki' ) ) ) . '</span>';
 				}
 				?>
-							<div class="author_image"><?php echo get_avatar( get_the_author_meta( 'ID' ),
-					  90, array( 'extra_attr' => 'data' ) ); ?></div>
-							<p class="display-name">
-				  <?php
-				  $author_display_name = get_the_author_meta( 'display_name' );
-				  if ( get_theme_mod( 'setting_post_author_name_archive_link',
-					  true )
-				  ) {
-					  echo '<a href="'
-					       . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) )
-					       . '">' . esc_html( $author_display_name ) . '</a>';
-				  } else {
-					  echo esc_html( $author_display_name );
-				  }
-				  ?>
-							</p>
+					<div class="author_image"><?php echo get_avatar( get_the_author_meta( 'ID' ), 90, array( 'extra_attr' => 'data' ) ); ?></div>
+					<p class="display-name">
+					<?php
+					$author_display_name = get_the_author_meta( 'display_name' );
+					if ( get_theme_mod( 'setting_post_author_name_archive_link', true ) ) {
+						echo '<a href="'
+							. esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) )
+							. '">' . esc_html( $author_display_name ) . '</a>';
+					} else {
+						echo esc_html( $author_display_name );
+					}
+					?>
+					</p>
 				<?php do_action( 'nishiki_before_single_author_description' ); ?>
 							<p class="description"><?php the_author_meta( 'description' ); ?></p>
 				<?php do_action( 'nishiki_after_single_author_description' ); ?>
 						</section>
-			  <?php
-		  }
-		  if( is_single() ){
-		  	do_action( 'nishiki_after_related_posts' );
-		  }
+				<?php
+			}
+			if( is_single() ){
+				do_action( 'nishiki_after_related_posts' );
+			}
 
-		  // If comments are open or we have at least one comment, load up the comment template.
-		  if ( comments_open() || get_comments_number() ) {
-			  comments_template();
-		  }
+			// If comments are open or we have at least one comment, load up the comment template.
+			if ( comments_open() || get_comments_number() ) {
+				comments_template();
+			}
 
-		  if( is_single() ) {
-			  if ( get_theme_mod( 'setting_post_display_prev_next_link', true ) ) {
-				  the_post_navigation( array(
-						  'prev_text' => '<i class="icomoon icon-arrow-left"></i><span>' . "%title" . '</span>',
-						  'next_text' => '<span>' . "%title" . '</span>' . '<i class="icomoon icon-arrow-right"></i>'
-					  )
-				  );
-			  }
-		  }
-		  ?>
+			if( is_single() ) {
+				if ( get_theme_mod( 'setting_post_display_prev_next_link', true ) ) {
+					the_post_navigation( array(
+							'prev_text' => '<i class="icomoon icon-arrow-left"></i><span>' . "%title" . '</span>',
+							'next_text' => '<span>' . "%title" . '</span>' . '<i class="icomoon icon-arrow-right"></i>'
+						)
+					);
+				}
+			}
+			?>
 			</footer>
 		<?php edit_post_link( __('Edit This Page', 'nishiki'), '<p id="edit-link">', '</p>'); ?>
 	</article>
 
 	<?php
 	if( ! is_page_template( 'templates/sidebar-none.php' ) ){
-	  if( ( is_single() && get_theme_mod( 'setting_post_column', 'none' ) !== 'none' ) or ( is_page() && get_theme_mod( 'setting_page_column', 'none' ) !== 'none' ) or is_page_template( 'templates/sidebar-left.php' ) or is_page_template( 'templates/sidebar-right.php' ) or is_page_template( 'templates/sidebar-bottom.php' ) ){
-		  get_sidebar();
-	  }
+		if( ( is_single() && get_theme_mod( 'setting_post_column', 'none' ) !== 'none' ) or ( is_page() && get_theme_mod( 'setting_page_column', 'none' ) !== 'none' ) or is_page_template( 'templates/sidebar-left.php' ) or is_page_template( 'templates/sidebar-right.php' ) or is_page_template( 'templates/sidebar-bottom.php' ) ){
+			get_sidebar();
+		}
 	}
 	$column_array = array( get_theme_mod( 'setting_post_column', 'none' ), get_theme_mod( 'setting_page_column', 'none' ) );
 	?>

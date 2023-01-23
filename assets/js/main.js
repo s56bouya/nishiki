@@ -1,573 +1,509 @@
-/*!
- * Overlay
- */
-jQuery(function() {
-    var e = jQuery("#search-button");
-    var t = jQuery("#search-overlay").find(".close");
-    var i = jQuery("#menu-button");
-    var s = jQuery("#menu-overlay").find(".close");
-    var r = 0;
-    var n = 0;
-    var a = "window";
-    if (
-jQuery("#wpadminbar").length > 0) {
-        r = document.getElementById("wpadminbar").offsetHeight;
-    }
-    if (
-jQuery("#masthead").hasClass("fixed")) {
-        a = "#page";
-        n = document.getElementById("masthead").offsetHeight;
-    }
-
-    var o = n + r;
-
-
-    jQuery('a[href^="#"]').not(".noscroll,.woocommerce-tabs .stars a,.woocommerce-tabs .wc-tabs a,.reset_variations,.woocommerce-product-gallery__trigger,.shipping-calculator-button").click(function() {
-        if (!jQuery(this).parents("#menu-collapse").length) {
-            var e = jQuery(this).attr("href");
-            var t = jQuery(e == "#" || e == "" ? "html" : e);
-            var i = t.offset().top - o;
-            jQuery("html, body").animate({
-                scrollTop: i
-            }, 500, "swing");
-            return false;
-        }
-    });
-    e.click(function() {
-        jQuery("#search-overlay").addClass("panel-open");
-
-
-        var e = jQuery(window).scrollTop() - r;
-        jQuery(a).addClass("nav-open").css({
-            top: -e + "px"
-        });
-    });
-    t.click(function() {
-        jQuery("#search-overlay").removeClass("panel-open").addClass("panel-close");
-        jQuery(".site-info a").removeClass("overlay");
-        if (jQuery("#masthead").hasClass("fixed")) {
-            var e = jQuery(a).css("top").replace("px", "") - r;
-        }
-        jQuery(a).removeClass("nav-open").css({
-            top: 0
-        });
-        jQuery(window).scrollTop(-e);
-        clearTimeout(m);
-        m = setTimeout(function() {
-            setTimeout(function() {
-                jQuery("#search-overlay").removeClass("panel-close");
-            }, 200);
-        }, f / 3);
-    });
-    i.click(function(e) {
-        jQuery("#menu-overlay").addClass("panel-open");
-
-
-        var t = jQuery(window).scrollTop() - r;
-        jQuery(a).addClass("nav-open").css({
-            top: -t + "px"
-        });
-    });
-    s.click(function(e) {
-        jQuery("#menu-overlay").removeClass("panel-open").addClass("panel-close");
-        jQuery(".site_info a").removeClass("overlay");
-        if (jQuery("#masthead").hasClass("fixed")) {
-            var t = jQuery(a).css("top").replace("px", "") - r;
-        }
-        jQuery(a).removeClass("nav-open").css({
-            top: 0
-        });
-        jQuery(window).scrollTop(-t);
-        clearTimeout(m);
-        m = setTimeout(function() {
-            setTimeout(function() {
-                jQuery("#menu-overlay").removeClass("panel-close");
-            }, 200);
-        }, f / 3);
-    });
-    jQuery("#menu-overlay .menu-item-has-children").each(function() {
-        jQuery(this).prepend('<i class="icomoon icon-arrow-down"></i>');
-    });
-    jQuery("#menu-overlay i").click(function() {
-        jQuery(this).siblings("ul").slideToggle(300);
-        jQuery(this).parent().toggleClass("active");
-    });
-
-
-
-    var l = jQuery("#menu-collapse");
-    var c = jQuery("#menu-collapse-button");
-    var u = l.find(".close");
-    var d = 768;
-
-
-    var f = 1e3;
-    var m = null;
-
-    c.click(function(e) {
-        l.addClass("panel-open");
-
-        var t = jQuery(window).scrollTop() - r;
-        jQuery(a).addClass("nav-open").css({
-            top: -t + "px"
-        });
-    });
-    l.find(".menu-item-has-children").each(function() {
-        jQuery(this).children("a").append('<span><i class="icomoon icon-arrow-down"></i></span>');
-    });
-
-
-    l.find("ul span").click(function(e) {
-        e.preventDefault();
-        var t = jQuery(this).parent().parent();
-        var i = t.parent().parent();
-        if (
-
-
-i.is("#menu-collapse") && i.hasClass("mobile") === false) {
-            if (t.hasClass("nav-selected")) {
-
-                t.removeClass("nav-selected");
-            } else {
-
-                i.find("li").removeClass("nav-selected");
-                t.siblings().find("ul").hide();
-                t.siblings().removeClass("active");
-                t.siblings().find("li").removeClass("active");
-                t.addClass("nav-selected");
-            }
-        }
-
-
-        t.children("ul").slideToggle(300);
-
-        t.hasClass("active") ? v(t) : g(t);
-    });
-
-
-    function g(e) {
-        e.addClass("active");
-    }
-
-    function v(e) {
-        e.removeClass("active");
-    }
-
-    u.click(function(e) {
-        l.removeClass("panel-open");
-        l.addClass("panel-close");
-        if (jQuery("#masthead").hasClass("fixed")) {
-            var t = jQuery(a).css("top").replace("px", "") - r;
-        }
-        jQuery(a).removeClass("nav-open").css({
-            top: 0
-        });
-        jQuery(window).scrollTop(-t);
-        clearTimeout(m);
-        m = setTimeout(function() {
-            setTimeout(function() {
-                l.removeClass("panel-close");
-            }, 200);
-        }, f / 3);
-    });
-
-
-
-    nishiki_registerListener("load", p);
-    nishiki_registerListener("resize", p);
-    function p() {
-
-        clearTimeout(m);
-        m = setTimeout(function() {
-            setTimeout(function() {
-                var e = document.documentElement.clientWidth;
-                if (
-e >= d) {
-                    if (
-l.hasClass("mobile")) {
-                        l.find("li").siblings().find("ul").hide();
-                        l.find("li").siblings().removeClass("active");
-                        l.find("li").siblings().find("li").removeClass("active");
-                        l.removeClass("mobile");
-                    }
-                } else {
-                    if (
-l.hasClass("mobile") === false) {
-                        l.addClass("mobile");
-                    }
-                }
-            }, 200);
-        }, f / 5);
-    }
-});
-
-/*!
- * Fixed Header
-
-
-
-
- */ var resize_speed = 1e3;
-
-var resize_timer = null;
-
-var scroll_height = 100;
-
-try {
-    window.addEventListener("scroll", nishiki_fixed_header_scrolled, false);
-} catch (e) {
-    window.attachEvent("onscroll", nishiki_fixed_header_scrolled);
-}
-
-function nishiki_fixed_header_scrolled() {
-    if (jQuery("#masthead").hasClass("fixed") && jQuery("#page").hasClass("nav-open") === false) {
-        clearTimeout(resize_timer);
-        resize_timer = setTimeout(function() {
-            setTimeout(function() {
-                nishiki_get_scroll_height();
-            }, 200);
-        }, resize_speed / 3);
-    }
-}
-
-/*!
- * Scrolled
- */ function nishiki_get_scroll_height() {
-    var e = jQuery(window).scrollTop();
-    if (e > scroll_height) {
-        jQuery("body").addClass("scrolled");
-    } else {
-        jQuery("body").removeClass("scrolled");
-    }
-}
-
-/*!
- * Event Listener
- */ function nishiki_registerListener(e, t) {
-    if (window.addEventListener) {
-        window.addEventListener(e, t);
-    } else {
-        window.attachEvent("on" + e, t);
-    }
-}
-
-var speed = 1e3;
-
-var timer = null;
-
-nishiki_registerListener("load", nishiki_lazyLoad);
-
-nishiki_registerListener("scroll", nishiki_lazyLoad);
-
-/*!
- * Lazyload
- */ function nishiki_lazyLoad() {
-    clearTimeout(timer);
-    timer = setTimeout(function() {
-        setTimeout(function() {
-            var e = document.getElementById("main");
-            if (
-e) {
-                var t = e.getElementsByTagName("section");
-                var i;
-                for (
-var s = 0; s < t.length; s++) {
-                    if (nishiki_inView(t[s]) && t[s].classList.contains("imgloaded") === false) {
-                        if (
-
-t[s].classList.contains("has-header-image") || t[s].classList.contains("main-video")) {
-
-                            var r = t[s].querySelector(".header-image");
-                            if (r) {
-                                if (r.hasAttribute("data-src") === true) {
-                                    r.src = r.getAttribute("data-src");
-                                    r.removeAttribute("data-src");
-                                }
-                                if (
-t[s].hasAttribute("data-srcset") === true) {
-                                    r.srcset = t[s].getAttribute("data-srcset");
-                                    r.removeAttribute("data-srcset");
-                                }
-                                r.offsetTop;
-                                objectFitImages(r);
-                                r.classList.add("imgloaded");
-                            }
-                        } else {
-                            if (
-t[s].hasAttribute("data-src") === true) {
-                                t[s].classList.add("imgloaded");
-
-                                var n = new Image();
-                                n.src = t[s].getAttribute("data-src");
-                                n.onload = nishiki_imgloaded(t[s], n);
-                            }
-                        }
-                    }
-                }
-            }
-        },
-
-
- 100);
-    }, speed / 3);
-}
-
-/*!
- * imgloaded
-
- */ function nishiki_imgloaded(e, t) {
-    e.appendChild(t);
-    t.offsetTop;
-    objectFitImages(t);
-    t.classList.add("imgloaded");
-}
-
-/*!
- * inView
-
- */ function nishiki_inView(e) {
-    var t = e.getBoundingClientRect();
-
-
-
-
-    return t.bottom >= 0 && t.right >= 0 && t.top <= (window.innerHeight || document.documentElement.clientHeight
-) && t.left <= (window.innerWidth || document.documentElement.clientWidth);
-}
-
-/*!
- * object-fit-images 3.2.4
-
-
- */ var objectFitImages = function() {
-    "use strict";
-
-    var r = "bfred-it:object-fit-images";
-    var n = /(object-fit|object-position)\s*:\s*([-.\w\s%]+)/g;
-    var e = typeof Image === "undefined" ? {
-        style: {
-            "object-position": 1
-        }
-    } : new Image();
-    var s = "object-fit" in e.style;
-    var a = "object-position" in e.style;
-    var o = "background-size" in e.style;
-    var i = typeof e.currentSrc === "string";
-    var l = e.getAttribute;
-    var c = e.setAttribute;
-    var u = false;
-    function d(e, t) {
-        return "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='" + e + "' height='" + t + "'%3E%3C/svg%3E";
-    }
-    function f(e) {
-        if (e.srcset && !i && window.picturefill) {
-            var t = window.picturefill._;
-            if (!e[t.ns] || !e[t.ns].evaled) {
-                t.fillImg(e, {
-                    reselect: true
-                });
-            }
-            if (!e[t.ns].curSrc) {
-                e[t.ns].supported = false;
-                t.fillImg(e, {
-                    reselect: true
-                });
-            }
-            e.currentSrc = e[t.ns].curSrc || e.src;
-        }
-    }
-
-    function m(e) {
-        var t = getComputedStyle(e).fontFamily;
-        var i;
-        var s = {};
-        while ((i = n.exec(t)) !== null) {
-            s[i[1]] = i[2];
-        }
-        return s;
-    }
-
-    function g(e, t, i) {
-
-        var s = d(t || 1, i || 0);
-        if (
-
-l.call(e, "src") !== s) {
-            c.call(e, "src", s);
-        }
-    }
-
-    function v(e, t) {
-        if (
-
-e.naturalWidth) {
-            t(e);
-        } else {
-            setTimeout(v, 100, e, t);
-        }
-    }
-
-    function p(t) {
-        var e = m(t);
-        var i = t[r];
-        e["object-fit"] = e["object-fit"] || "fill";
-        if (
-
-!i.img) {
-            if (
-e["object-fit"] === "fill") {
-                return;
-            }
-            if (
-
-
-
-
-!i.skipTest && s && !e["object-position"]) {
-
-                return;
-            }
-        }
-        if (
-
-!i.img) {
-            i.img = new Image(t.width, t.height);
-            i.img.srcset = l.call(t, "data-ofi-srcset") || t.srcset;
-            i.img.src = l.call(t, "data-ofi-src") || t.src;
-
-
-
-            c.call(t, "data-ofi-src", t.src);
-            if (t.srcset) {
-                c.call(t, "data-ofi-srcset", t.srcset);
-            }
-
-            g(t, t.naturalWidth || t.width, t.naturalHeight || t.height);
-            if (
-
-t.srcset) {
-                t.srcset = "";
-            }
-            try {
-                h(t);
-            } catch (e) {
-                if (window.console) {
-                    console.warn("https://bit.ly/ofi-old-browser");
-                }
-            }
-        }
-
-        f(i.img);
-
-        t.style.backgroundImage = 'url("' + (i.img.currentSrc || i.img.src).replace(/"/g, '\\"') + '")';
-        t.style.backgroundPosition = e["object-position"] || "center";
-        t.style.backgroundRepeat = "no-repeat";
-        t.style.backgroundOrigin = "content-box";
-        if (
-/scale-down/.test(e["object-fit"])) {
-            v(i.img, function() {
-                if (i.img.naturalWidth > t.width || i.img.naturalHeight > t.height) {
-                    t.style.backgroundSize = "contain";
-                } else {
-                    t.style.backgroundSize = "auto";
-                }
-            });
-        } else {
-            t.style.backgroundSize = e["object-fit"].replace("none", "auto").replace("fill", "100% 100%");
-        }
-
-        v(i.img, function(e) {
-            g(t, e.naturalWidth, e.naturalHeight);
-        });
-    }
-
-    function h(s) {
-        var t = {
-            get: function e(t) {
-                return s[r].img[t ? t : "src"];
-            },
-            set: function e(t, i) {
-                s[r].img[i ? i : "src"] = t;
-                c.call(s, "data-ofi-" + i, t);
-                p(s);
-                return t;
-            }
-        };
-        Object.defineProperty(s, "src", t);
-        Object.defineProperty(s, "currentSrc", {
-            get: function() {
-                return t.get("currentSrc");
-            }
-        });
-        Object.defineProperty(s, "srcset", {
-            get: function() {
-                return t.get("srcset");
-            },
-            set: function(e) {
-                return t.set(e, "srcset");
-            }
-        });
-    }
-    function t() {
-        function i(e, t) {
-            return e[r] && e[r].img && (t === "src" || t === "srcset") ? e[r].img : e;
-        }
-        if (!a) {
-            HTMLImageElement.prototype.getAttribute = function(e) {
-                return l.call(i(this, e), e);
-            };
-            HTMLImageElement.prototype.setAttribute = function(e, t) {
-                return c.call(i(this, e), e, String(t));
-            };
-        }
-    }
-    function y(e, t) {
-        var i = !u && !e;
-        t = t || {};
-        e = e || "img";
-        if (a && !t.skipTest || !o) {
-            return false;
-        }
-        if (e === "img") {
-            e = document.getElementsByTagName("img");
-        } else if (typeof e === "string") {
-            e = document.querySelectorAll(e);
-        } else if (!("length" in e)) {
-            e = [ e ];
-        }
-        for (
-
-var s = 0; s < e.length; s++) {
-            e[s][r] = e[s][r] || {
-                skipTest: t.skipTest
-            };
-            p(e[s]);
-        }
-        if (
-i) {
-            document.body.addEventListener("load", function(e) {
-                if (e.target.tagName === "IMG") {
-                    y(e.target, {
-                        skipTest: t.skipTest
-                    });
-                }
-            }, true);
-            u = true;
-            e = "img";
-        }
-        if (
-
-t.watchMQ) {
-            window.addEventListener("resize", y.bind(null, e, {
-                skipTest: t.skipTest
-            }));
-        }
-    }
-
-    y.supportsObjectFit = s;
-    y.supportsObjectPosition = a;
-
-    t();
-
-    return y;
-}();
+(function () {
+	'use strict';
+
+	jQuery(function () {
+	  var searchButton = jQuery('#search-button');
+	  var searchClose = jQuery('#search-overlay').find('.close');
+	  var menuButton = jQuery('#menu-button');
+	  var menuClose = jQuery('#menu-overlay').find('.close');
+	  var adminY = 0;
+	  var headerHeight = 0;
+	  var scroll = 'window';
+
+	  if (jQuery('#wpadminbar').length > 0) {
+	    adminY = document.getElementById('wpadminbar').offsetHeight;
+	  }
+
+	  if (jQuery('#masthead').hasClass('fixed')) {
+	    scroll = '#page';
+	    headerHeight = document.getElementById('masthead').offsetHeight;
+	  }
+
+	  var headerOffset = headerHeight + adminY;
+	  jQuery('a[href^="#"]').not('.noscroll,.woocommerce-tabs .stars a,.woocommerce-tabs .wc-tabs a,.reset_variations,.woocommerce-product-gallery__trigger,.shipping-calculator-button').click(function () {
+	    var href = jQuery(this).attr('href');
+	    var target = jQuery(href === '#' || href === '' ? 'html' : href);
+	    var position = target.offset().top - headerOffset;
+	    jQuery('html, body').animate({
+	      scrollTop: position
+	    }, speed / 3, 'swing');
+	    return false;
+	  });
+	  searchButton.click(function () {
+	    jQuery('#search-overlay').addClass('panel-open');
+	    jQuery('body').addClass('overflow-hidden');
+	  });
+	  searchClose.click(function () {
+	    jQuery('#search-overlay').removeClass('panel-open').addClass('panel-close');
+	    jQuery('.site-info a').removeClass('overlay');
+	    jQuery('body').removeClass('overflow-hidden');
+
+	    if (jQuery('#masthead').hasClass('fixed')) {
+	      jQuery(scroll).css('top').replace('px', '') - adminY;
+	    }
+
+	    clearTimeout(timer);
+	    timer = setTimeout(function () {
+	      setTimeout(function () {
+	        jQuery('#search-overlay').removeClass('panel-close');
+	      }, 200);
+	    }, speed / 3);
+	  });
+	  menuButton.click(function (event) {
+	    jQuery('#menu-overlay').addClass('panel-open');
+	    jQuery('body').addClass('overflow-hidden');
+	  });
+	  menuClose.click(function (event) {
+	    jQuery('#menu-overlay').removeClass('panel-open').addClass('panel-close');
+	    jQuery('.site_info a').removeClass('overlay');
+	    jQuery('body').removeClass('overflow-hidden');
+	    clearTimeout(timer);
+	    timer = setTimeout(function () {
+	      setTimeout(function () {
+	        jQuery('#menu-overlay').removeClass('panel-close');
+	      }, 200);
+	    }, speed / 3);
+	  });
+	  jQuery('#menu-overlay .menu-item-has-children').each(function () {
+	    jQuery(this).prepend('<i class="icomoon icon-arrow-down"></i>');
+	  });
+	  jQuery('#menu-overlay i').click(function () {
+	    jQuery(this).siblings('ul').slideToggle(300);
+	    jQuery(this).parent().toggleClass('active');
+	  });
+	  var menuCollapse = jQuery('#menu-collapse');
+	  var menuCollapseButton = jQuery('#menu-collapse-button');
+	  var menuCollapseClose = menuCollapse.find('.close');
+	  var mobileSize = 768;
+	  var speed = 1000;
+	  var timer = null;
+	  menuCollapseButton.click(function (event) {
+	    menuCollapse.addClass('panel-open');
+	    jQuery('body').addClass('overflow-hidden');
+	  });
+	  menuCollapse.find('.menu-item-has-children').each(function () {
+	    jQuery(this).children('a').append('<span><i class="icomoon icon-arrow-down"></i></span>');
+	  });
+	  menuCollapse.find('ul span').click(function (event) {
+	    event.preventDefault();
+	    var el = jQuery(this).parent().parent();
+	    var parent = el.parent().parent();
+
+	    if (parent.is('#menu-collapse') && parent.hasClass('mobile') === false) {
+	      if (el.hasClass('nav-selected')) {
+	        el.removeClass('nav-selected');
+	      } else {
+	        parent.find('li').removeClass('nav-selected');
+	        el.siblings().find('ul').hide();
+	        el.siblings().removeClass('active');
+	        el.siblings().find('li').removeClass('active');
+	        el.addClass('nav-selected');
+	      }
+	    }
+
+	    el.children('ul').slideToggle(300);
+	    el.hasClass('active') ? hideSubMenu(el) : showSubMenu(el);
+	  });
+
+	  function showSubMenu(el) {
+	    el.addClass('active');
+	  }
+
+	  function hideSubMenu(el) {
+	    el.removeClass('active');
+	  }
+
+	  menuCollapseClose.click(function (event) {
+	    menuCollapse.removeClass('panel-open');
+	    menuCollapse.addClass('panel-close');
+	    jQuery('body').removeClass('overflow-hidden');
+	    clearTimeout(timer);
+	    timer = setTimeout(function () {
+	      setTimeout(function () {
+	        menuCollapse.removeClass('panel-close');
+	      }, 200);
+	    }, speed / 3);
+	  });
+	  nishikiRegisterListener('load', nishikiResize);
+	  nishikiRegisterListener('resize', nishikiResize);
+
+	  function nishikiResize() {
+	    clearTimeout(timer);
+	    timer = setTimeout(function () {
+	      setTimeout(function () {
+	        var resizeX = document.documentElement.clientWidth;
+
+	        if (resizeX >= mobileSize) {
+	          if (menuCollapse.hasClass('mobile')) {
+	            menuCollapse.find('li').siblings().find('ul').hide();
+	            menuCollapse.find('li').siblings().removeClass('active');
+	            menuCollapse.find('li').siblings().find('li').removeClass('active');
+	            menuCollapse.removeClass('mobile');
+	          }
+	        } else {
+	          if (menuCollapse.hasClass('mobile') === false) {
+	            menuCollapse.addClass('mobile');
+	          }
+	        }
+	      }, 200);
+	    }, speed / 5);
+	  }
+	});
+	var resizeSpeed = 1000;
+	var resizeTimer = null;
+	var scrollHeight = 100;
+
+	try {
+	  window.addEventListener('scroll', nishikiFixedHeaderScrolled, false);
+	} catch (e) {
+	  window.attachEvent('onscroll', nishikiFixedHeaderScrolled);
+	}
+
+	function nishikiFixedHeaderScrolled() {
+	  if (jQuery('#masthead').hasClass('fixed') && jQuery('#page').hasClass('nav-open') === false) {
+	    clearTimeout(resizeTimer);
+	    resizeTimer = setTimeout(function () {
+	      setTimeout(function () {
+	        nishikiGetScrollHeight();
+	      }, 200);
+	    }, resizeSpeed / 3);
+	  }
+	}
+
+	function nishikiGetScrollHeight() {
+	  var scrolled = jQuery(window).scrollTop();
+
+	  if (scrolled > scrollHeight) {
+	    jQuery('body').addClass('scrolled');
+	  } else {
+	    jQuery('body').removeClass('scrolled');
+	  }
+	}
+
+	function nishikiRegisterListener(event, func) {
+	  if (window.addEventListener) {
+	    window.addEventListener(event, func);
+	  } else {
+	    window.attachEvent('on' + event, func);
+	  }
+	}
+
+	var speed = 1000;
+	var timer = null;
+	nishikiRegisterListener('load', nishikiLazyLoad);
+	nishikiRegisterListener('scroll', nishikiLazyLoad);
+
+	function nishikiLazyLoad() {
+	  clearTimeout(timer);
+	  timer = setTimeout(function () {
+	    setTimeout(function () {
+	      var getcontent = document.getElementById('main');
+
+	      if (getcontent) {
+	        var lazy = getcontent.getElementsByTagName('section');
+
+	        for (var i = 0; i < lazy.length; i++) {
+	          if (nishikiInview(lazy[i]) && lazy[i].classList.contains('imgloaded') === false) {
+	            if (lazy[i].classList.contains('has-header-image') || lazy[i].classList.contains('main-video')) {
+	              var mainImg = lazy[i].querySelector('.header-image');
+
+	              if (mainImg) {
+	                if (mainImg.hasAttribute('data-src') === true) {
+	                  mainImg.src = mainImg.getAttribute('data-src');
+	                  mainImg.removeAttribute('data-src');
+	                }
+
+	                if (lazy[i].hasAttribute('data-srcset') === true) {
+	                  mainImg.srcset = lazy[i].getAttribute('data-srcset');
+	                  mainImg.removeAttribute('data-srcset');
+	                }
+
+	                mainImg.offsetTop;
+	                objectFitImages(mainImg);
+	                mainImg.classList.add('imgloaded');
+	              }
+	            } else if (lazy[i].hasAttribute('data-src') === true) {
+	              lazy[i].classList.add('imgloaded');
+	              var imglarge = new Image();
+	              imglarge.src = lazy[i].getAttribute('data-src');
+	              imglarge.onload = nishikiImgloaded(lazy[i], imglarge);
+	            }
+	          }
+	        }
+	      }
+	    }, 100);
+	  }, speed / 3);
+	}
+
+	function nishikiImgloaded(parent, img) {
+	  parent.appendChild(img);
+	  img.offsetTop;
+	  objectFitImages(img);
+	  img.classList.add('imgloaded');
+	}
+
+	function nishikiInview(el) {
+	  var rect = el.getBoundingClientRect();
+	  return rect.bottom >= 0 && rect.right >= 0 && rect.top <= (window.innerHeight || document.documentElement.clientHeight) && rect.left <= (window.innerWidth || document.documentElement.clientWidth);
+	}
+
+	document.addEventListener('DOMContentLoaded', nishikiLinkControll);
+
+	function nishikiLinkControll() {
+	  var menuItems = document.querySelectorAll('.menu-items');
+
+	  if (!!menuItems) {
+	    menuItems.forEach(function (menu, i) {
+	      var menuItemsAnchor = menu.querySelectorAll('a[href^="#"]');
+	      menuItemsAnchor.forEach(function (anchor, j) {
+	        anchor.addEventListener('click', function () {
+	          var parent = anchor.parentNode;
+	          var panel = menu.parentNode;
+
+	          if (!!panel.classList.contains('panel-open')) {
+	            if (!!parent.classList.contains('anchor')) {
+	              panel.classList.remove('panel-open');
+	              panel.classList.add('panel-close');
+	              document.body.classList.remove('overflow-hidden');
+	              var menuAnchorTimer = null;
+	              clearTimeout(menuAnchorTimer);
+	              menuAnchorTimer = setTimeout(function () {
+	                setTimeout(function () {
+	                  panel.classList.remove('panel-close');
+	                }, 200);
+	              }, speed / 3);
+	            }
+	          }
+	        });
+	      });
+	    });
+	  }
+	}
+
+	var objectFitImages = function () {
+
+	  var OFI = 'bfred-it:object-fit-images';
+	  var propRegex = /(object-fit|object-position)\s*:\s*([-.\w\s%]+)/g;
+	  var testImg = typeof Image === 'undefined' ? {
+	    style: {
+	      'object-position': 1
+	    }
+	  } : new Image();
+	  var supportsObjectFit = ('object-fit' in testImg.style);
+	  var supportsObjectPosition = ('object-position' in testImg.style);
+	  var supportsOFI = ('background-size' in testImg.style);
+	  var supportsCurrentSrc = typeof testImg.currentSrc === 'string';
+	  var nativeGetAttribute = testImg.getAttribute;
+	  var nativeSetAttribute = testImg.setAttribute;
+	  var autoModeEnabled = false;
+
+	  function createPlaceholder(w, h) {
+	    return "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='" + w + "' height='" + h + "'%3E%3C/svg%3E";
+	  }
+
+	  function polyfillCurrentSrc(el) {
+	    if (el.srcset && !supportsCurrentSrc && window.picturefill) {
+	      var pf = window.picturefill._;
+
+	      if (!el[pf.ns] || !el[pf.ns].evaled) {
+	        pf.fillImg(el, {
+	          reselect: true
+	        });
+	      }
+
+	      if (!el[pf.ns].curSrc) {
+	        el[pf.ns].supported = false;
+	        pf.fillImg(el, {
+	          reselect: true
+	        });
+	      }
+
+	      el.currentSrc = el[pf.ns].curSrc || el.src;
+	    }
+	  }
+
+	  function getStyle(el) {
+	    var style = getComputedStyle(el).fontFamily;
+	    var parsed;
+	    var props = {};
+
+	    while ((parsed = propRegex.exec(style)) !== null) {
+	      props[parsed[1]] = parsed[2];
+	    }
+
+	    return props;
+	  }
+
+	  function setPlaceholder(img, width, height) {
+	    var placeholder = createPlaceholder(width || 1, height || 0);
+
+	    if (nativeGetAttribute.call(img, 'src') !== placeholder) {
+	      nativeSetAttribute.call(img, 'src', placeholder);
+	    }
+	  }
+
+	  function onImageReady(img, callback) {
+	    if (img.naturalWidth) {
+	      callback(img);
+	    } else {
+	      setTimeout(onImageReady, 100, img, callback);
+	    }
+	  }
+
+	  function fixOne(el) {
+	    var style = getStyle(el);
+	    var ofi = el[OFI];
+	    style['object-fit'] = style['object-fit'] || 'fill';
+
+	    if (!ofi.img) {
+	      if (style['object-fit'] === 'fill') {
+	        return;
+	      }
+
+	      if (!ofi.skipTest && supportsObjectFit && !style['object-position']) {
+	          return;
+	        }
+	    }
+
+	    if (!ofi.img) {
+	      ofi.img = new Image(el.width, el.height);
+	      ofi.img.srcset = nativeGetAttribute.call(el, 'data-ofi-srcset') || el.srcset;
+	      ofi.img.src = nativeGetAttribute.call(el, 'data-ofi-src') || el.src;
+	      nativeSetAttribute.call(el, 'data-ofi-src', el.src);
+
+	      if (el.srcset) {
+	        nativeSetAttribute.call(el, 'data-ofi-srcset', el.srcset);
+	      }
+
+	      setPlaceholder(el, el.naturalWidth || el.width, el.naturalHeight || el.height);
+
+	      if (el.srcset) {
+	        el.srcset = '';
+	      }
+
+	      try {
+	        keepSrcUsable(el);
+	      } catch (err) {
+	        if (window.console) {
+	          console.warn('https://bit.ly/ofi-old-browser');
+	        }
+	      }
+	    }
+
+	    polyfillCurrentSrc(ofi.img);
+	    el.style.backgroundImage = 'url("' + (ofi.img.currentSrc || ofi.img.src).replace(/"/g, '\\"') + '")';
+	    el.style.backgroundPosition = style['object-position'] || 'center';
+	    el.style.backgroundRepeat = 'no-repeat';
+	    el.style.backgroundOrigin = 'content-box';
+
+	    if (/scale-down/.test(style['object-fit'])) {
+	      onImageReady(ofi.img, function () {
+	        if (ofi.img.naturalWidth > el.width || ofi.img.naturalHeight > el.height) {
+	          el.style.backgroundSize = 'contain';
+	        } else {
+	          el.style.backgroundSize = 'auto';
+	        }
+	      });
+	    } else {
+	      el.style.backgroundSize = style['object-fit'].replace('none', 'auto').replace('fill', '100% 100%');
+	    }
+
+	    onImageReady(ofi.img, function (img) {
+	      setPlaceholder(el, img.naturalWidth, img.naturalHeight);
+	    });
+	  }
+
+	  function keepSrcUsable(el) {
+	    var descriptors = {
+	      get: function get(prop) {
+	        return el[OFI].img[prop ? prop : 'src'];
+	      },
+	      set: function set(value, prop) {
+	        el[OFI].img[prop ? prop : 'src'] = value;
+	        nativeSetAttribute.call(el, 'data-ofi-' + prop, value);
+	        fixOne(el);
+	        return value;
+	      }
+	    };
+	    Object.defineProperty(el, 'src', descriptors);
+	    Object.defineProperty(el, 'currentSrc', {
+	      get: function get() {
+	        return descriptors.get('currentSrc');
+	      }
+	    });
+	    Object.defineProperty(el, 'srcset', {
+	      get: function get() {
+	        return descriptors.get('srcset');
+	      },
+	      set: function set(ss) {
+	        return descriptors.set(ss, 'srcset');
+	      }
+	    });
+	  }
+
+	  function hijackAttributes() {
+	    function getOfiImageMaybe(el, name) {
+	      return el[OFI] && el[OFI].img && (name === 'src' || name === 'srcset') ? el[OFI].img : el;
+	    }
+
+	    if (!supportsObjectPosition) {
+	      HTMLImageElement.prototype.getAttribute = function (name) {
+	        return nativeGetAttribute.call(getOfiImageMaybe(this, name), name);
+	      };
+
+	      HTMLImageElement.prototype.setAttribute = function (name, value) {
+	        return nativeSetAttribute.call(getOfiImageMaybe(this, name), name, String(value));
+	      };
+	    }
+	  }
+
+	  function fix(imgs, opts) {
+	    var startAutoMode = !autoModeEnabled && !imgs;
+	    opts = opts || {};
+	    imgs = imgs || 'img';
+
+	    if (supportsObjectPosition && !opts.skipTest || !supportsOFI) {
+	      return false;
+	    }
+
+	    if (imgs === 'img') {
+	      imgs = document.getElementsByTagName('img');
+	    } else if (typeof imgs === 'string') {
+	      imgs = document.querySelectorAll(imgs);
+	    } else if (!('length' in imgs)) {
+	      imgs = [imgs];
+	    }
+
+	    for (var i = 0; i < imgs.length; i++) {
+	      imgs[i][OFI] = imgs[i][OFI] || {
+	        skipTest: opts.skipTest
+	      };
+	      fixOne(imgs[i]);
+	    }
+
+	    if (startAutoMode) {
+	      document.body.addEventListener('load', function (e) {
+	        if (e.target.tagName === 'IMG') {
+	          fix(e.target, {
+	            skipTest: opts.skipTest
+	          });
+	        }
+	      }, true);
+	      autoModeEnabled = true;
+	      imgs = 'img';
+	    }
+
+	    if (opts.watchMQ) {
+	      window.addEventListener('resize', fix.bind(null, imgs, {
+	        skipTest: opts.skipTest
+	      }));
+	    }
+	  }
+
+	  fix.supportsObjectFit = supportsObjectFit;
+	  fix.supportsObjectPosition = supportsObjectPosition;
+	  hijackAttributes();
+	  return fix;
+	}();
+
+}());

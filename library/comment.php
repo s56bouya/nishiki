@@ -1,6 +1,6 @@
 <?php
 // Customize Comment
-function nishiki_comment_template($comment, $args, $depth) {
+function nishiki_comment_template( $comment, $args, $depth ) {
 	if ( 'div' === $args['style'] ) {
 		$tag       = 'div';
 		$add_below = 'comment';

@@ -6,64 +6,64 @@
 if ( ! class_exists( 'Nishiki_About_Page' ) ) {
 	class Nishiki_About_Page{
 
-	  public $menu_title = '';
+		public $menu_title = '';
 
-	  /**
-		 * Construct
-		 */
-	  public function __construct() {
-			add_action( 'admin_menu', array( $this, 'nishiki_about_page' ) );
-	    add_action( 'after_switch_theme', array( $this, 'nishiki_switch_theme' ) );
+		/**
+			 * Construct
+			 */
+		public function __construct() {
+				add_action( 'admin_menu', array( $this, 'nishiki_about_page' ) );
+			add_action( 'after_switch_theme', array( $this, 'nishiki_switch_theme' ) );
 		}
 
-	  /**
-	   * Active Theme Notice
-	   */
-	  function nishiki_about_page_notice() {
-	    $theme_data = wp_get_theme('nishiki');
-			$message = sprintf( wp_kses( __( 'Welcome and thanks for choosing %1$s theme. Please visit our <a href="%2$s">about page</a>.', 'nishiki' ), array( 'a' => array( 'href' => array() ) ) ), esc_attr( $theme_data->Name ), esc_url( admin_url( 'themes.php?page=nishiki-about' ) ) );
-			printf( '<div class="updated notice notice-success notice-alt is-dismissible"><p>%s</p></div>', $message );
-	  }
+		/**
+		 * Active Theme Notice
+		 */
+		function nishiki_about_page_notice() {
+			$theme_data = wp_get_theme('nishiki');
+				$message = sprintf( wp_kses( __( 'Welcome and thanks for choosing %1$s theme. Please visit our <a href="%2$s">about page</a>.', 'nishiki' ), array( 'a' => array( 'href' => array() ) ) ), esc_attr( $theme_data->Name ), esc_url( admin_url( 'themes.php?page=nishiki-about' ) ) );
+				printf( '<div class="updated notice notice-success notice-alt is-dismissible"><p>%s</p></div>', $message );
+		}
 
-	  /**
-	   * Switch Theme
-	   */
-	  function nishiki_switch_theme() {
-	    add_action( 'admin_notices', array( $this, 'nishiki_about_page_notice' ) );
-    }
+		/**
+		 * Switch Theme
+		 */
+		function nishiki_switch_theme() {
+			add_action( 'admin_notices', array( $this, 'nishiki_about_page_notice' ) );
+		}
 
 		/**
 		 * Add Theme Page
 		 */
-	  public function nishiki_about_page() {
-	  	$this->menu_title = __( 'Nishiki About Page', 'nishiki' );
-		  add_theme_page(
-		  	esc_html__( 'Nishiki About Page', 'nishiki' ),
-				$this->menu_title,
-				'edit_theme_options',
-				'nishiki-about',
-				array( $this, 'nishiki_theme_info_page' )
-			);
-	  }
+		public function nishiki_about_page() {
+			$this->menu_title = __( 'Nishiki About Page', 'nishiki' );
+			add_theme_page(
+				esc_html__( 'Nishiki About Page', 'nishiki' ),
+					$this->menu_title,
+					'edit_theme_options',
+					'nishiki-about',
+					array( $this, 'nishiki_theme_info_page' )
+				);
+		}
 
-	  /**
-	   * Tab Array
-	   */
-	  public function nishiki_tab_array() {
-		  $nishiki_tab_array = array(
-		  	'welcome'		=> __( 'About Theme', 'nishiki' ),
-				'iconfont'	=> __( 'Use Icon', 'nishiki' ),
-		  );
-
-		  return $nishiki_tab_array;
-	  }
-
-	  /**
-		 * Theme Page Info
+		/**
+		 * Tab Array
 		 */
-	  public function nishiki_theme_info_page(){
-		  $theme_data = wp_get_theme('nishiki');
-		  ?>
+		public function nishiki_tab_array() {
+			$nishiki_tab_array = array(
+				'welcome'  => __( 'About Theme', 'nishiki' ),
+				'iconfont' => __( 'Use Icon', 'nishiki' ),
+			);
+
+			return $nishiki_tab_array;
+		}
+
+		/**
+			 * Theme Page Info
+			 */
+		public function nishiki_theme_info_page(){
+			$theme_data = wp_get_theme('nishiki');
+			?>
 				<div class="wrap about-wrap theme_info_wrapper">
 					<h1><?php printf(esc_html__('Welcome to Nishiki - Version %1s', 'nishiki'), esc_html( $theme_data->Version ) ); ?></h1>
 					<div class="about-text"><?php esc_html_e( 'Nishiki is a fully responsive theme. Elegance,Refined,Multifunctional. In your admin panel, go to Appearance -> Customize. About 80 customization can be done without writing the code. responsive layout, front page setting, movie setting, etc. Customization often required for web production / website operation can be set.', 'nishiki' ); ?></div>
@@ -84,66 +84,66 @@ if ( ! class_exists( 'Nishiki_About_Page' ) ) {
 					<?php $this->create_tab(); ?>
 					<?php $this->create_tab_content(); ?>
 				</div>
-		  <?php
-	  }
+			<?php
+		}
 
-	  /**
-	   * Create Tab
-	   */
-	  public function create_tab() {
-		  $admin_url = 'themes.php?page=nishiki-about';
-		  $flag       = false;
-		  $tab_array = $this->nishiki_tab_array();
+		/**
+		 * Create Tab
+		 */
+		public function create_tab() {
+			$admin_url = 'themes.php?page=nishiki-about';
+			$flag       = false;
+			$tab_array = $this->nishiki_tab_array();
 
-		  echo '<div class="nav-tab-wrapper">';
-		  foreach ( $tab_array as $key => $val ) {
-			  $active = '';
-			  if ( ! isset( $_GET['tab'] ) && $flag === false ) {
-				  $active = ' nav-tab-active';
-				  $flag = 1;
-			  } elseif ( isset( $_GET['tab'] ) && $key === $_GET['tab'] && $flag === false ) {
-				  $active = ' nav-tab-active';
-			  }
-			  echo '<a href="' . esc_url(
-					  add_query_arg(
-						  array(
-							  'tab' => $key,
-						  ), $admin_url
-					  )
-				  ) . '" class="nav-tab' . esc_attr( $active ) . '">' . esc_html( $val ) . '</a>';
-		  }
+			echo '<div class="nav-tab-wrapper">';
+			foreach ( $tab_array as $key => $val ) {
+				$active = '';
+				if ( ! isset( $_GET['tab'] ) && $flag === false ) {
+					$active = ' nav-tab-active';
+					$flag = 1;
+				} elseif ( isset( $_GET['tab'] ) && $key === $_GET['tab'] && $flag === false ) {
+					$active = ' nav-tab-active';
+				}
+				echo '<a href="' . esc_url(
+						add_query_arg(
+							array(
+								'tab' => $key,
+							), $admin_url
+						)
+					) . '" class="nav-tab' . esc_attr( $active ) . '">' . esc_html( $val ) . '</a>';
+			}
 
-		  echo '</div>';
-	  }
+			echo '</div>';
+		}
 
 
-	  /**
-	   * Create Tab Content
-	   */
-	  public function create_tab_content() {
-		  $tab_array = $this->nishiki_tab_array();
-		  $flag = false;
+		/**
+		 * Create Tab Content
+		 */
+		public function create_tab_content() {
+			$tab_array = $this->nishiki_tab_array();
+			$flag = false;
 
-		  foreach ( $tab_array as $key => $val ) {
-			  if ( ! isset( $_GET['tab'] ) && $flag === false ) {
-				  $flag = true;
-			  } elseif ( isset( $_GET['tab'] ) && $key === $_GET['tab'] && $flag === false ) {
-				  $flag = true;
-			  }
+			foreach ( $tab_array as $key => $val ) {
+				if ( ! isset( $_GET['tab'] ) && $flag === false ) {
+					$flag = true;
+				} elseif ( isset( $_GET['tab'] ) && $key === $_GET['tab'] && $flag === false ) {
+					$flag = true;
+				}
 
-			  if ( $flag === true ) {
-				  $this->$key();
+				if ( $flag === true ) {
+					$this->$key();
 
-				  break;
-			  }
-		  }
-	  }
+					break;
+				}
+			}
+		}
 
-	  /**
-	   * Welcome Page.
-	   */
-	  public function welcome() {
-	  	?>
+		/**
+		 * Welcome Page.
+		 */
+		public function welcome() {
+			?>
 			<h3><?php esc_html_e('Please rating Nishiki', 'nishiki'); ?></h3>
 			<p><?php esc_html_e('Nishiki is a freshly made Japanese theme. If you like this theme, please rating Nishiki theme directory. Your evaluation will be encouraging my future development and management.', 'nishiki'); ?></p>
 			<a target="_blank" href="https://wordpress.org/support/theme/nishiki/reviews/?filter=5" class="button button-primary"><?php esc_html_e('Rating Nishiki theme directory', 'nishiki'); ?></a>
@@ -151,14 +151,14 @@ if ( ! class_exists( 'Nishiki_About_Page' ) ) {
 			<div class="theme_info_right">
 				<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/screenshot.png" alt="Theme Screenshot" />
 			</div>
-<?php
+			<?php
 		}
 
-	  /**
-	   * Plugin Page.
-	   */
-	  public function plugin() {
-	  	?>
+		/**
+		 * Plugin Page.
+		 */
+		public function plugin() {
+			?>
 			<h3><a target="_blank" href="https://support.animagate.com/product/wp-nishiki-growing-beauty/">Nishiki Growing Beauty Plugin</a></h3>
 			<p><?php esc_html_e( 'Nishiki Growing Beauty adds various functions that are useful for increasing efficiency of customization and attracting and converting, towards people who use the official WordPress theme Nishiki to manage websites, and on the management screen It is an integrated plug-in that can be set and operated easily. Plug-in body with basic functions such as theme optimization and script addition can be used for free. In addition, we also have some filtering functions for advanced WordPress customizers.', 'nishiki'); ?></p>
 				<ul>
@@ -172,14 +172,14 @@ if ( ! class_exists( 'Nishiki_About_Page' ) ) {
 					<li><a target="_blank" href="https://support.animagate.com/product/nishiki-gb-meta/"><?php esc_html_e( 'Schema.org,OGP[Open Graph Protocol]', 'nishiki' ); ?></a></li>
 					<li><a target="_blank" href="https://support.animagate.com/product/nishiki-gb-content/"><?php esc_html_e( 'Content', 'nishiki' ); ?></a></li>
 				</ul>
-<?php
-	  }
+			<?php
+		}
 
-	  /**
-	   * Iconfont Page.
-	   */
-	  public function iconfont() {
-	  	?>
+		/**
+		 * Iconfont Page.
+		 */
+		public function iconfont() {
+			?>
 				<ul class="dashboard-icons">
 					<li><i class="icomoon icon-500px"></i>500px</li>
 					<li><i class="icomoon icon-accessibility"></i>accessibility</li>
@@ -679,10 +679,9 @@ if ( ! class_exists( 'Nishiki_About_Page' ) ) {
 					<li><i class="icomoon icon-zoom-in"></i>zoom-in</li>
 					<li><i class="icomoon icon-zoom-out"></i>zoom-out</li>
 				</ul>
-<?php
-	  }
+			<?php
+		}
+	}
 
-  }
-
-  $output = New Nishiki_About_Page();
+	$output = New Nishiki_About_Page();
 }

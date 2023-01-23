@@ -16,23 +16,23 @@ if ( post_password_required() ) {
 	if ( have_comments() ) : ?>
 		<h2 class="comments-title">
 			<?php
-				$comments_number = get_comments_number();
-				if ( '1' === $comments_number ) {
-					/* translators: %s: post title */
-					printf( esc_html_x( '%s Comment', 'comments title', 'nishiki' ), get_the_title() );
-				} else {
-					printf( // WPCS: XSS OK.
-						/* translators: 1: number of comments, 2: post title */
-			  			esc_html( _nx(
-							'%1$s Comment', // single
-							'%1$s Comments', // plural
-							$comments_number, // number
-							'comments title', // context
-							'nishiki'
-							)
-						), esc_html( number_format_i18n( $comments_number ) ), get_the_title()
-					);
-				}
+			$comments_number = get_comments_number();
+			if ( '1' === $comments_number ) {
+				/* translators: %s: post title */
+				printf( esc_html_x( '%s Comment', 'comments title', 'nishiki' ), get_the_title() );
+			} else {
+				printf( // WPCS: XSS OK.
+					/* translators: 1: number of comments, 2: post title */
+					esc_html( _nx(
+						'%1$s Comment', // single
+						'%1$s Comments', // plural
+						$comments_number, // number
+						'comments title', // context
+						'nishiki'
+						)
+					), esc_html( number_format_i18n( $comments_number ) ), get_the_title()
+				);
+			}
 			?>
 		</h2>
 
@@ -59,7 +59,7 @@ if ( post_password_required() ) {
 	if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) : ?>
 
 		<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'nishiki' ); ?></p>
-	<?php
+		<?php
 	endif;
 
 	comment_form();
