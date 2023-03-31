@@ -2138,7 +2138,8 @@ body#tinymce.wp-editor input, body#tinymce.wp-editor textarea {
   font-size: 1rem;
 }
 body#tinymce.wp-editor > h2 {
-  margin: 3.5rem 0 1.5rem;
+  margin-top: 3.5rem;
+  margin-bottom: 1.5rem;
   padding: 1.5rem 0 1.4rem;
   border-top-width: 1px;
   border-top-style: solid;
@@ -2146,19 +2147,24 @@ body#tinymce.wp-editor > h2 {
   border-bottom-style: solid;
 }
 body#tinymce.wp-editor > h3 {
-  margin: 2.5rem 0 1.5rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1.5rem;
 }
 body#tinymce.wp-editor > h4 {
-  margin: 2.5rem 0 1.5rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1.5rem;
 }
 body#tinymce.wp-editor > h5 {
-  margin: 2.5rem 0 1.5rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1.5rem;
 }
 body#tinymce.wp-editor > h6 {
-  margin: 1.5rem 0;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 body#tinymce.wp-editor p {
-  margin: 1.5rem 0;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 body#tinymce.wp-editor blockquote {
   margin-top: 2.5rem;
@@ -2259,8 +2265,11 @@ body#tinymce.wp-editor pre {
   white-space: pre-wrap;
   word-wrap: break-word;
 }
-body#tinymce.wp-editor h2 {
+body#tinymce.wp-editor h1 {
   font-size: 1.7rem;
+}
+body#tinymce.wp-editor h2 {
+  font-size: 1.5rem;
 }
 body#tinymce.wp-editor h3 {
   font-size: 1.4rem;
@@ -2281,7 +2290,8 @@ body#tinymce.wp-editor h6 {
     line-height: 1.86;
   }
   body#tinymce.wp-editor h2 {
-    margin: 2rem 0 1rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
     padding: 0.7rem 0;
     font-size: 1.4rem;
   }

@@ -1,6 +1,4 @@
-<?php
-get_header();
-?>
+<?php get_header(); ?>
 	<main id="main" class="site-main front-page" role="main">
 		<?php get_template_part('parts/front/main-visual'); ?>
 		<?php if( get_theme_mod( 'setting_front_page_home_content_display', false ) === true ){ ?>

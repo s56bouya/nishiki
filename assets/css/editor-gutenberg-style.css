@@ -2187,8 +2187,11 @@ body, button, input, select, textarea {
   border-bottom-width: 1px;
   border-bottom-style: solid;
 }
-.editor-styles-wrapper h2 {
+.editor-styles-wrapper h1 {
   font-size: 1.7rem;
+}
+.editor-styles-wrapper h2 {
+  font-size: 1.5rem;
 }
 .editor-styles-wrapper h3 {
   font-size: 1.4rem;
@@ -2222,10 +2225,10 @@ body, button, input, select, textarea {
   box-sizing: border-box;
 }
 .editor-styles-wrapper .alignwide, .editor-styles-wrapper .wp-block-gallery.alignwide {
-  width: 85vw;
-  max-width: 85vw;
-  margin-right: calc(-42.5vw + 50%);
-  margin-left: calc(-42.5vw + 50%);
+  width: 1200px;
+  max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
 }
 .editor-styles-wrapper .editor-post-title__block,
 .editor-styles-wrapper .editor-default-block-appender {
