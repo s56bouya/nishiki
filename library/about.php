@@ -21,8 +21,8 @@ if ( ! class_exists( 'Nishiki_About_Page' ) ) {
 		 */
 		function nishiki_about_page_notice() {
 			$theme_data = wp_get_theme('nishiki');
-				$message = sprintf( wp_kses( __( 'Welcome and thanks for choosing %1$s theme. Please visit our <a href="%2$s">about page</a>.', 'nishiki' ), array( 'a' => array( 'href' => array() ) ) ), esc_attr( $theme_data->Name ), esc_url( admin_url( 'themes.php?page=nishiki-about' ) ) );
-				printf( '<div class="updated notice notice-success notice-alt is-dismissible"><p>%s</p></div>', $message );
+			$message = sprintf( wp_kses( __( 'Welcome and thanks for choosing %1$s theme. Please visit our <a href="%2$s">about page</a>.', 'nishiki' ), array( 'a' => array( 'href' => array() ) ) ), esc_attr( $theme_data->Name ), esc_url( admin_url( 'themes.php?page=nishiki-about' ) ) );
+			printf( '<div class="updated notice notice-success notice-alt is-dismissible"><p>%s</p></div>', $message );
 		}
 
 		/**
