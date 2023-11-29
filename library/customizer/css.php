@@ -40,7 +40,6 @@ function nishiki_customizer_css(){
 	// Site Sub Text Color
 	$site_sub_text_color = esc_html( get_theme_mod( 'setting_site_sub_text_color', '#aaaaaa' ) );
 	$output .= "
-		.articles footer,.articles footer a{color:{$site_sub_text_color};}
 		aside section a,aside section ul li,.comments-area .comment-list li .comment-body,.comments-area .comment-form-comment{border-color:{$site_sub_text_color};}
 		.nav_pc a:hover{color:{$site_sub_text_color};}
 		.comments-area .comment-list li .comment-date,.comments-area cite,.comments-area cite a{color:{$site_sub_text_color};}

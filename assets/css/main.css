@@ -3263,15 +3263,23 @@ aside.sidebar ul li a, aside.sidebar ol li a {
   word-wrap: break-word;
 }
 .articles article figure {
+  overflow: hidden;
   margin-bottom: 0.3rem;
 }
 .articles article figure img {
   width: 100%;
   max-width: 100%;
   height: auto;
+  transition: all 0.3s ease;
   aspect-ratio: 16/9;
   -o-object-fit: cover;
      object-fit: cover;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  will-change: transform;
+}
+.articles article figure img:hover {
+  transform: scale(1.05);
 }
 .articles article header {
   margin: 0.7rem 0 0.2rem;
@@ -3357,6 +3365,9 @@ aside.sidebar ul li a, aside.sidebar ol li a {
 .articles article:hover .post-image .readmore {
   opacity: 1;
   transition: all 300ms ease-out;
+}
+.articles article a:hover {
+  color: currentColor;
 }
 
 /***********************
