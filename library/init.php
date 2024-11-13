@@ -143,12 +143,12 @@ function nishiki_header_image_tag( $html, $header, $attr ){
  * Translate
  *****************/
 
-if( ! function_exists( 'nishiki_pro_load_textdomain' ) ) {
-	function nishiki_pro_load_textdomain(){
+if( ! function_exists( 'nishiki_load_textdomain' ) ) {
+	function nishiki_load_textdomain(){
 		load_theme_textdomain( 'nishiki', get_template_directory() . '/languages' );
 	}
 
-	add_action( 'after_setup_theme', 'nishiki_pro_load_textdomain' );
+	add_action( 'after_setup_theme', 'nishiki_load_textdomain' );
 }
 
 /*****************
