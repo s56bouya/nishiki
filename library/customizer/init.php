@@ -40,7 +40,7 @@ define('NISHIKI_SECTION_NUM', apply_filters('nishiki_section_num', 4));
 define('NISHIKI_FEATURED_ITEM_NUM', apply_filters('nishiki_featured_item_num', 3));
 
 // Footer Credit
-define( 'NISHIKI_CREDIT', __( 'Powered by WordPress.<br><a target="_blank" href="https://wordpress.org/themes/nishiki/">The Nishiki theme</a> is Supported by <a target="_blank" href="https://support.animagate.com/product/wp-nishiki/">AnimaGate, Inc.</a>', 'nishiki' ) );
+define( 'NISHIKI_CREDIT', 'Powered by WordPress.<br><a target="_blank" href="https://wordpress.org/themes/nishiki/">The Nishiki theme</a> is Supported by <a target="_blank" href="https://support.animagate.com/product/wp-nishiki/">AnimaGate, Inc.</a>' );
 
 function nishiki_panel_count() {
 	$panel_count = 0;
