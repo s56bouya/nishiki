@@ -1,7 +1,7 @@
 === Nishiki ===
 Requires at least: WordPress 6.0
-Tested up to: WordPress 6.6
-Version: 2.12.0
+Tested up to: WordPress 6.7
+Version: 2.13.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: one-column, two-columns, right-sidebar, left-sidebar, flexible-header, accessibility-ready, custom-colors, custom-header, custom-menu, custom-logo, featured-images, footer-widgets, post-formats, sticky-post, theme-options, threaded-comments, translation-ready, blog, entertainment, portfolio, editor-style, block-styles, wide-blocks, footer-widgets, full-width-template

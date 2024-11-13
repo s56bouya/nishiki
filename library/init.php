@@ -143,7 +143,13 @@ function nishiki_header_image_tag( $html, $header, $attr ){
  * Translate
  *****************/
 
-load_theme_textdomain( 'nishiki', get_template_directory() . '/languages' );
+if( ! function_exists( 'nishiki_pro_load_textdomain' ) ) {
+	function nishiki_pro_load_textdomain(){
+		load_theme_textdomain( 'nishiki', get_template_directory() . '/languages' );
+	}
+
+	add_action( 'after_setup_theme', 'nishiki_pro_load_textdomain' );
+}
 
 /*****************
  * Register Nav
