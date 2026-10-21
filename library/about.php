@@ -667,7 +667,7 @@ if ( ! class_exists( 'Nishiki_About_Page' ) ) {
 					<li><i class="icomoon icon-woman"></i>woman</li>
 					<li><i class="icomoon icon-wondering"></i>wondering</li>
 					<li><i class="icomoon icon-wondering2"></i>wondering2</li>
-					<li><i class="icomoon icon-wordpress"></i>wordpress</li>
+					<li><i class="icomoon icon-wordpress"></i>WordPress</li>
 					<li><i class="icomoon icon-wrench"></i>wrench</li>
 					<li><i class="icomoon icon-xing"></i>xing</li>
 					<li><i class="icomoon icon-xing2"></i>xing2</li>
